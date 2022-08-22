@@ -76,7 +76,7 @@ abstract class InvestorPagerBaseFragment : PagerBaseFragment(), ContainerChild {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         menu.clear()
-        menu.add(Menu.NONE, R.id.nav_feedback, 1, R.string.app_menu_title_send_feedback)
+        //menu.add(Menu.NONE, R.id.nav_feedback, 1, R.string.app_menu_title_send_feedback)
         inflater.inflate(getOptionsMenu(), menu)
     }
 

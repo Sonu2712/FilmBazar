@@ -50,18 +50,12 @@ class HomeFragment : InvestorBaseFragment() , HomeView{
     }
 
     override fun getOptionsMenu(): Int {
-        return R.menu.app_feedback_menu
+        return R.menu.home_menu
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.nav_notification -> {
-                true
-            }
-            R.id.nav_profile -> {
-                true
-            }
-            R.id.nav_fund_transfer -> {
                 true
             }
             else -> super.onOptionsItemSelected(item)
