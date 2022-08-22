@@ -21,7 +21,8 @@ include(
         ":tokenmanager",
         ":debugview",
         ":debugviewcore",
-        ":rx_preferences"
+        ":rx_preferences",
+        ":groupie_extensions"
 )
 
 rootProject.name = "FilmBazar"
@@ -51,3 +52,4 @@ project(":domaincore").projectDir = File("helper/domaincore")
 project(":tokenmanager").projectDir = File("helper/tokenmanager")
 project(":debugview").projectDir = File("helper/debugview")
 project(":debugviewcore").projectDir = File("helper/debugviewcore")
+project(":groupie_extensions").projectDir = File("helper/groupie_extensions")

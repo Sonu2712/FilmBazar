@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion Versions.compileSdkVersion
+  buildToolsVersion Versions.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion Versions.minSdkVersion
+    targetSdkVersion Versions.targetSdkVersion
+    vectorDrawables.useSupportLibrary true
+  }
+
+  dataBinding {
+    enabled = true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  implementation GroupieDependencies.core
+  implementation GroupieDependencies.dataBinding
+
+  compileOnly KotlinDependencies.kotlin
+  compileOnly RxDependencies.java
+
+  implementation project(":core_ui")
+  implementation project(":appcore")
+
+  kapt Dependencies.dataBinding
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
