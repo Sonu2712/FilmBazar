@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.MoslTheme.HeaderText.Header" parent="@style/FiraSans14Pt">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
-    </style>
-
-    <style name="Widget.MoslTheme.HeaderText.Resend" parent="@style/FiraSans14Pt">
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-    </style>
-
 
 </resources>

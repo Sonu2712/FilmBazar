@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="login_titles">
-        <item>Customer</item>
-        <item>Guest</item>
-        <item>Open Account</item>
-        <item>Signup</item>
-    </string-array>
-</resources>
+<resources></resources>

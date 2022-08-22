@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="button_login">લોગઈન કરો</string>
-    <string name="button_proceed">આગળ વધો</string>
-    <string name="button_open_account">એકાઉન્ટ ખોલો</string>
     <string name="button_open_an_account">એકાઉન્ટ ખોલો</string>
-    <string name="button_generate_password">પાસવર્ડ જનરેટ કરો</string>
-    <string name="button_generate_otp">ઓટીપી જનરેટ કરો</string>
-    <string name="button_send_otp">ઓ.ટી.પી મોકલો</string>
     <string name="button_info_dialog"> હમણાં જ  પ્રયત્ન કરો</string>
-    <string name="button_change_password">અપડેટ કરો</string>
-    <string name="button_label_edit">સંપાદિત કરો</string>
-    <string name="GS_ALL_EMPTY_MSG">કૃપા કરી તમામ વિગત દાખલ કરો</string>
-    <string name="msg_valid_mobile_number">કૃપા કરીને માન્ય મોબાઈલ નંબર દાખલ કરો</string>
-    <string name="msg_valid_otp">યોગ્ય ઓ.ટી.પી દાખલ કરો</string>
-    <string name="CP_OLD_PASSWORD_EMPTY_MSG">કૃપા કરીને જૂનો પાસવર્ડ દાખલ કરો.</string>
-    <string name="CP_NEW_PASSWORD_EMPTY_MSG">કૃપા કરી નવો પાસવર્ડ દાખલ કરો.</string>
-    <string name="CP_OLD_NEW_SAME_MSG">જૂનો પાસવર્ડ અને નવો પાસવર્ડ સમાન હોઈ શકે નહીં</string>
-    <string name="CP_CONFIRM_PASSWORD_EMPTY">કૃપા કરીને નવો પાસવર્ડ ફરીથી દાખલ કરો</string>
-    <string name="CP_CONFIRM_NEW_SAME_MSG">કૃપા કરીને નવા અને કન્ફર્મ ફિલ્ડમાં સમાન પાસવર્ડ દાખલ કરો.</string>
 
     <string name="error_msg_client_code_mobile_no_email_id_empty">કૃપા કરીને મોબાઈલ નંબર દાખલ કરો / ઈ-મેઈલ આઈ.ડી / ગ્રાહક કોડ </string>
-    <string name="error_msg_mobile_no_invalid">કૃપા કરીને માન્ય મોબાઈલ નંબર દાખલ કરો</string>
-    <string name="error_msg_mobile_no_empty">કૃપા કરીને મોબાઈલ નંબર દાખલ કરો</string>
-    <string name="error_msg_dob_invalid">કૃપા કરી માન્ય જન્મ તારીખ દાખલ કરો</string>
-    <string name="FP_VALID_EMAIL">કૃપા કરીને માન્ય ઈ-મેઈલ એડ્રેસ દાખલ કરો</string>
-    <string name="FP_VALID_PAN">કૃપા કરીને માન્ય પાન દાખલ કરો</string>
-    <string name="FP_PAN_EMPTY">કૃપા કરીને પાન અથવા જન્મ તારીખ દાખલ કરો</string>
-    <string name="text_label_i_accept_tnc"><u> હું નિયમ અને શરત સ્વીકારું છું</u></string>
-
-    <string name="text_label_fingerprint_success">ફિંગરપ્રિન્ટની ઓળખ થયેલ છે</string>
-    <string name="text_label_fingerprint_not_recognized">ફિંગરપ્રિન્ટની ઓળખ થયેલ નથી. ફરી થી પ્રયત્ન કરો</string>
 
     <string name="msg_password_empty">કૃપા કરીને પાસવર્ડ દાખલ કરો</string>
     <string name="text_label_guest_info_message">સેગમેન્ટ્સમાં સહેલાઇથી બજારોને ટ્રેક કરો અને મોનિટર કરો</string>
@@ -37,59 +12,19 @@
     <string name="text_label_guest_info_message_2">અમારા એડવાન્સ અને વ્યક્તિગત ઉત્પાદની વિશાળ શ્રેણી દ્વારા બ્રાઉઝ કરો</string>
     <string name="text_label_guest_info_message_3">તમારા પોર્ટફોલિયોનું વિશ્લેષણ કરો અને પુનર્ગઠન ટૂલ દ્વારા કસ્ટમાઇઝ કરેલી ભલામણો મેળવો</string>
 
-    <string name="validate_name">કૃપા કરીને નામ દાખલ કરો</string>
-    <string name="enter_valid_mobile_number">કૃપા કરીને માન્ય મોબાઈલ નંબર દાખલ કરો</string>
-    <string name="validate_city">કૃપા કરીને શહેર પસંદ કરો</string>
-    <string name="validate_check_box">કૃપા કરીને નિયમ અને શરત તપાસો</string>
-    <string name="text_message_registration_status_5">પ્રિય યુઝર , તમે પહેલાથી જ અમારી સાથે રજીસ્ટર થયેલ છો!\nકૃપા કરીને તમારા રજીસ્ટર કરેલ મોબાઈલ નંબરનો ઉપયોગ કરીને એપ્લિકેશન ફરી શરૂ કરો.</string>
     <string name="menu_view_markets">બજાર જુઓ</string>
-    <string name="msg_password_policy">1) પાસવર્ડની લંબાઈ મહત્તમ 10 અક્ષરની હોઈ શકે છે. \n2) પાસવર્ડ તમારા ગ્રાહક કોડ સમાન હોઈ શકે નહીં. \n3) પાસવર્ડમાં AtoZ માંથી ઓછામાં ઓછો 1 મૂળાક્ષર હોવો જોઈએ. \n4) પાસવર્ડમાં 0-9 માંથી ઓછામાં ઓછી 1 સંખ્યા અથવા ઓછામાં ઓછો 1 વિશિષ્ટ અક્ષર હોવો જોઈએ!</string>
-    <string name="info_message_eky_tnc">કૃપા કરીને નોંધો કે સંપર્ક વિગત સબમિટ કરીને, તમે મોતીલાલ ઓસ્વાલ સિક્યોરિટીઝ લિમિટેડને તમારો સંપર્ક કરવા અને પ્રમોશનલ સંદેશાવ્યવહાર કરવા માટે અધિકૃત કરી રહ્યાં છો, તેમ છતાં, તમે ટેલિકોમ અનસોલિસ્ટેટેડ કમર્શિયલ કમ્યુનિકેશન્સ રેગ્યુલેશન્સ, 2007 હેઠળ સ્થાપિત નેશનલ ડુ નોટ કોલ રજિસ્ટ્રી હેઠળ રજીસ્ટર થયેલ હોઈ શકો છો અથવા ટેલિકોમ કમર્શિયલ કમ્યુનિકેશન્સ કસ્ટમર પ્રેફરન્સ રેગ્યુલેશન્સ, 2010ના નવા નિયમન હેઠળ સ્થાપિત નેશનલ કસ્ટમર પ્રેફરન્સ રજિસ્ટ્રી હેઠળ રજીસ્ટર કરી શકો છો અથવા રજીસ્ટર થયેલ હોઈ શકો છો.</string>
     <string name="text_hint_customer_login">મોબાઈલ નંબર / ઈ-મેઈલ આઈ.ડી / ગ્રાહક કોડ</string>
-    <string name="text_hint_dob_pan">જન્મ તારીખ/પાન</string>
     <string name="text_label_welcome_to_mo_investor">આપનું એમ.ઓ ઈન્વેસ્ટરમાં સ્વાગત છે</string>
 
-    <string name="text_fingerprint_hint">ચાલુ રાખવા માટે ઉપકરણ સ્કેનર પર તમારી ફિંગરપ્રિન્ટ સ્કેન કરો</string>
-    <string name="hint_text_enter_your_pan">જન્મતારીખ [DD/MM/YYYY] / પાન</string>
-    <string name="page_title_verify_pan_dob">પાન/જન્મતારીખ ચકાસો</string>
-    <string name="btn_continue">ચાલુ રાખો</string>
-    <string name="lbl_mobile_number">મોબાઈલ નંબર</string>
-    <string name="button_continue">ચાલુ રાખો</string>
-    <string name="lbl_client_code">ક્લાયંટ કોડ / મોબાઇલ નંબર / ઇમેઇલ આઈડી</string>
     <string name="hint_password_customer_login">કૃપા કરીને પાસવર્ડ દાખલ કરો</string>
-    <string name="hint_otp_customer_login">કૃપા કરીને ઓટીપી દાખલ કરોं</string>
     <string name="lbl_try_as_a_guest">અતિથિ તરીકે પ્રયત્ન કરો</string>
     <string name="lbl_try_it_now">હમણાં જ  પ્રયત્ન કરો</string>
     <string name="lbl_don_t_have_an_account">શું તમારું એકાઉન્ટ નથી? </string>
     <string name="lbl_open_account">એકાઉન્ટ ખોલો</string>
-    <string name="lbl_name_open_account">નામ</string>
     <string name="lbl_name_already_a_user">પહેલાથી જ યુઝર છો?</string>
     <string name="lbl_name_login">લોગઈન કરો</string>
-    <string name="lbl_mobile_number_open_account">મોબાઈલ નંબર</string>
-    <string name="lbl_partner_code_optional">ભાગીદાર કોડ (વૈકલ્પિક)</string>
     <string name="text_label_why_login_as_guest">અતિથિ તરીકે લોગઈન કરો?</string>
-    <string name="msg_password_change">પાસવર્ડ સફળતાપૂર્વક બદલવામાં આવ્યો છે</string>
-    <string name="login_password_changed_msg">તમારો પાસવર્ડ બદલાઈ ગયો છે. કૃપા કરીને ચાલુ રાખવા માટે ફરીથી લોગઈન કરો.</string>
 
     <string name="text_label_generate_password">નવો પાસવર્ડ સેટ કરો</string>
-    <string name="text_label_partner_code">શું તમારી પાસે ભાગીદાર કોડ છે?</string>
-    <string name="text_label_disclaimer">અસ્વીકરણ</string>
-    <string name="text_label_sign_up_guest">અતિથિ તરીકે લોગઈન કરો</string>
 
-    <string name="text_label_firm_name">પેઢીનું નામ:</string>
-    <string name="text_label_firm_code">પેઢી કોડ:</string>
-    <string name="text_label_partner_details">ભાગીદાર કોડ:</string>
-    <string name="msg_get_associated_with_partner">શું તમે પસંદ કરેલ ભાગીદાર સાથે જોડાવા માંગો છો?</string>
-    <string name="title_change_password">સુધી માન્ય</string>
-    <string name="text_label_change_password">પાસવર્ડ બદલો</string>
-    <string name="lbl_old_password">કૃપા કરીને જૂનો પાસવર્ડ દાખલ કરો</string>
-    <string name="lbl_old_password_otp">કૃપા કરીને જૂનો પાસવર્ડ / ઓટીપી દાખલ કરો</string>
-    <string name="hint_confirm_password">કૃપા કરીને નવા પાસવર્ડની પુષ્ટિ કરો</string>
-    <string name="lbl_password_policy">પાસવર્ડ નીતિ</string>
-    <string name="text_label_address">સરનામું:</string>
-    <string name="button_label_password_policy">પાસવર્ડ નીતિ</string>
-    <string name="hint_change_password_new_password">કૃપા કરીને નવો પાસવર્ડ દાખલ કરો</string>
-    <string name="text_label_OR">અથવા</string>
-    <string name="prompt_message_enter_pan_dob">કૃપા કરીને તમારા ડીઓબી / પેન દાખલ કરો</string>
-    <string name="text_label_re_send_otp">ઓટીપી ફરીથી મોકલો</string>
 </resources>

@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_default">20dp</dimen>
     <dimen name="margin_extra">10dp</dimen>
-    <dimen name="icon_elevation">4dp</dimen>
     <dimen name="toolbar_height_large">56dp</dimen>
-    <dimen name="min_width_dob_dialog">320dp</dimen>
-    <dimen name="min_height_dob_dialog">240dp</dimen>
-    <dimen name="fingerprint_image_dimension">48dp</dimen>
-    <dimen name="progress_bar_dimension">24dp</dimen>
-    <dimen name="min_height_button_update">56dp</dimen>
     <dimen name="min_height_client_code">48dp</dimen>
     <dimen name="min_height_button_login">56dp</dimen>
-    <dimen name="min_height_dob_pan">48dp</dimen>
-    <dimen name="min_height_generate_password">56dp</dimen>
-    <dimen name="min_height_mobile_number">48dp</dimen>
-    <dimen name="min_height_send_otp_guest_login">56dp</dimen>
     <dimen name="min_height_row_1">56dp</dimen>
     <dimen name="min_height_row_2">56dp</dimen>
     <dimen name="info_icon_dimension">40dp</dimen>
-    <dimen name="min_height_open_account">56dp</dimen>
     <dimen name="image_login_header_dimension">56dp</dimen>
 </resources>

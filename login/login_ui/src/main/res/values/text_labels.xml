@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="text_label_generate_password">Set New Password</string>
-    <string name="text_label_partner_code">Do You Have A Partner Code?</string>
-    <string name="text_label_disclaimer">Disclaimer</string>
-    <string name="text_label_sign_up_guest">Login as Guest</string>
 
-    <string name="text_label_firm_name">Firm Name:</string>
-    <string name="text_label_firm_code">Firm Code:</string>
-    <string name="text_label_partner_details">Partner Code:</string>
-    <string name="text_label_address">Address:</string>
-    <string name="msg_get_associated_with_partner">Do you want to get associated with selected partner?</string>
 </resources>
