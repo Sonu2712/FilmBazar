@@ -79,9 +79,6 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
 
     lateinit var binding: ActivityCommonbaseBinding
     internal var snackbar: Snackbar? = null
-    internal var pageHelpBannerId: String = ""
-    internal var mpageId: String = ""
-    internal var isOnPageHelpEnabled = false
     private var doubleBackToExitPressedOnce = false
 
     @Inject
@@ -151,7 +148,6 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
         binding.toolBar.title = ""
         setSupportActionBar(binding.toolBar)
         binding.toolBar.setNavigationMode(goBack = false)
-        setupMenuDrawer()
         setupBottomBar()
         if (savedInstanceState == null) {
             val uniqueId = intent.data.getUniqueId()
@@ -294,56 +290,14 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
         return snackbar
     }
 
-    private fun setupMenuDrawer() {
-        binding.drawerLayout.addDrawerListener(object : DrawerLayout.SimpleDrawerListener() {
-            override fun onDrawerClosed(drawerView: View) {
-                activityNavHelper.handlePendingMenuAction()
-            }
-
-            override fun onDrawerOpened(drawerView: View) {
-                super.onDrawerOpened(drawerView)
-            }
-        })
-
-        binding.drawerMenu.onMenuClicked()
-            .subscribe { menu ->
-                if (menu.pageId.isNotEmpty()) {
-                    when (menu.pageId) {
-                        NAVIGATE_TO_LOGOUT -> {
-                            showDialogForConfirmation(
-                                getString(R.string.app_msg_logout_alert),
-                                negativeButton = getString(R.string.button_label_cancel),
-                                cancelable = false
-                            ) { positiveClicked ->
-                                if (positiveClicked) {
-                                    doLogout()
-                                }
-                            }
-                        }
-
-                        else -> {
-                            activityNavHelper.onMenuClicked(menu)
-                        }
-                    }
-                    binding.drawerMenu.selectItem(menu)
-                    binding.drawerLayout.closeDrawers()
-                }
-                activityNavHelper.handlePendingMenuAction()
-
-            }.addTo(disposable)
-    }
-
     private fun setupBottomBar() {
         bottomBarView.setView(binding.bottomNavigation)
         bottomBarView.onMenuSelected()
             .subscribe {
                 val pageId = it.itemId.bottomBarStringMapper()
-                val newPageId = if (pageId == "portfolio" || pageId == "portfoliodayzero") {
-                    if (userManager.getUser()?.userConfig?.hasPortfolio == true) "portfolio" else "portfoliodayzero"
-                } else pageId
                 if (pageId == NavigationConstants.NAVIGATE_TO_MORE){
                     logoutClicked()
-                } else screenNavigator.openPage(pageId = newPageId)
+                } else screenNavigator.openPage(pageId = pageId)
             }.addTo(disposable)
         bottomBarView.start()
     }

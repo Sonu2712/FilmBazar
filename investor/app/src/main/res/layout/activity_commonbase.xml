@@ -67,20 +67,4 @@
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </LinearLayout>
-
-    <com.film.bazar.coreui.appcoreui.views.NonConsumingScrimInsetsFrameLayout
-        android:layout_width="@dimen/drawerLayoutWidth"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="?colorSurface"
-        android:fitsSystemWindows="true"
-        app:insetForeground="@color/app_inset_foreground_color">
-
-        <com.film.bazar.drawermenu.DrawerMenuView
-            android:id="@+id/drawer_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true" />
-
-    </com.film.bazar.coreui.appcoreui.views.NonConsumingScrimInsetsFrameLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
