@@ -1,6 +1,25 @@
 package com.film.bazar.home_data.repository
 
+import com.film.bazar.home_domain.MovieBanner
 import com.film.bazar.home_domain.MovieInfo
+import com.film.bazar.home_domain.MovieTab
+
+val movieBanner = listOf(
+    MovieBanner(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        deeplink = ""
+    ),
+    MovieBanner(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        deeplink = ""
+    ),
+    MovieBanner(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        deeplink = ""
+    )
+)
+
+val movieTab = listOf(MovieTab.OngoingProject, MovieTab.PastProjects)
 
 val movieInfo = listOf(
     MovieInfo(

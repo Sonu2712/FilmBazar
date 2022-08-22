@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvBanner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_normal"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/imgScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?background"
+        android:contentDescription="imgscreensheet"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/app_ice_need_to_remove_1" />
+</androidx.cardview.widget.CardView>

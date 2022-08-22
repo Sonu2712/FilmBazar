@@ -1,4 +1,4 @@
-package com.film.bazar.home_ui.items
+package com.film.bazar.home_ui.movieinfo
 
 import android.view.View
 import coil.api.load
