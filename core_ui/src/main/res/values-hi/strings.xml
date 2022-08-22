@@ -37,7 +37,6 @@
     <string name="app_menu_title_send_feedback">प्रतिक्रिया भेजें</string>
 
     <string name="alert_title_rate_app">हमारे ऍप को रेट करें</string>
-    <string name="alert_message_rate_our_app">हमें प्रसन्नता है कि आपने मोतीलाल ओसवाल ट्रेडिंग एप्लिकेशन को पसंद किया! कृपया थोड़ा सा समय देकर अपने अनुभव को रेटिंग दें। आपका बहुत-बहुत धन्यवाद!</string>
     <string name="button_label_sure">निश्चित करें</string>
     <string name="button_label_later">बाद में</string>
     <string name="tr_text_label_total_gl">कुल लाभ/हानि</string>

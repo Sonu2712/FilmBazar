@@ -1,5 +1,5 @@
 <resources>
-    <string name="alert_dialog_title">Motilal Oswal</string>
+    <string name="alert_dialog_title">Film Bazar</string>
     <string name="button_label_ok">OK</string>
     <string name="button_label_cancel">Cancel</string>
     <!--Error Messages-->

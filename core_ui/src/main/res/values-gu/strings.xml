@@ -38,7 +38,6 @@
     <string name="app_menu_title_send_feedback">પ્રતિસાદ મોકલો</string>
 
     <string name="alert_title_rate_app">અમારી એપ્લિકેશન ને રેટ કરો</string>
-    <string name="alert_message_rate_our_app">"અમને આનંદ છે કે તમે મોતીલાલ ઓસ્વાલ ટ્રેડિંગ એપ્લિકેશનને પ્રેમ કરો છો! ૃપા કરીને તમારા અનુભવને રેટ કરવા માટે થોડો સમય કાઢો.ખૂબ આભાર!"</string>
     <string name="button_label_sure">ખાત્રિ કર</string>
     <string name="button_label_later">પછીથી</string>
     <string name="tr_text_label_total_gl">કુલ  નફો/નુકશાન</string>
