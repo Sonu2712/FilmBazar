@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/tvWelcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1D3557"
         app:cardCornerRadius="16dp"
         app:cardElevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,7 +15,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#1D3557">
 
             <FrameLayout
                 android:id="@+id/flBannerInfo"
@@ -30,8 +30,10 @@
                     android:id="@+id/imgScreen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?background"
                     android:contentDescription="imgscreensheet"
                     android:minHeight="200dp"
+                    android:scaleType="fitXY"
                     tools:src="@drawable/app_ice_need_to_remove" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,10 +49,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/fira_sans_bold"
-                        tools:text="Doctor Strange in the Multiverse of Madness"
                         android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Doctor Strange in the Multiverse of Madness" />
 
                     <TextView
                         android:id="@+id/tvSubTitleLabel"
@@ -68,11 +70,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        tools:text="Sam Raimi"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toTopOf="@+id/tvSubTitleLabel"
                         app:layout_constraintStart_toEndOf="@+id/tvSubTitleLabel"
-                        app:layout_constraintTop_toBottomOf="@+id/tvSubTitleLabel" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubTitleLabel"
+                        tools:text="Sam Raimi" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -231,6 +233,6 @@
                 app:layout_constraintTop_toTopOf="@+id/tvTargetValue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 </layout>

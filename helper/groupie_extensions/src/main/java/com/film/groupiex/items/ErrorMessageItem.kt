@@ -2,9 +2,9 @@ package com.film.groupiex.items
 
 import android.view.View
 import android.view.ViewGroup.LayoutParams
-import com.mosl.app.core.error.ErrorModel
-import com.mosl.app.core.error.getErrorOnFailure
-import com.mosl.app.core.events.DataAction
+import com.film.app.core.error.ErrorModel
+import com.film.app.core.error.getErrorOnFailure
+import com.film.app.core.events.DataAction
 import com.film.groupiex.R
 import com.film.groupiex.databinding.ItemErrorMessageBinding
 import com.xwray.groupie.databinding.BindableItem

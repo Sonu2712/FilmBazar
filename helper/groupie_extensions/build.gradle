@@ -32,6 +32,7 @@ android {
 dependencies {
   implementation GroupieDependencies.core
   implementation GroupieDependencies.dataBinding
+  implementation AndroidxDependencies.recyclerView
 
   compileOnly KotlinDependencies.kotlin
   compileOnly RxDependencies.java

@@ -31,7 +31,7 @@ android {
 dependencies {
     implementation(project(":annotations"))
     implementation(project(":moslcommons"))
-    implementation(project(":moslcommons"))
+    implementation(project(":groupie_extensions"))
 
     implementation(project(":appuser"))
     api(project(":home_domain"))

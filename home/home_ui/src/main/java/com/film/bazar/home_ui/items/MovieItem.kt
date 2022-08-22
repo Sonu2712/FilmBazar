@@ -24,14 +24,14 @@ class MovieItem(
         viewBinding.apply {
             imgScreen
                 .load(data.imgUrl)
-            tvSubTitleValue.text = data.title
+            tvTitle.text = data.title
             tvSubTitleValue.text = data.directorName
             tvDaysValue.text = data.noOfDaysLeft.toString()
             tvPeopleInvestedValue.text = data.noOfPeopleInvt.toFormattedValue()
             tvFoundedPer.text = "${data.perFoundProgress}%"
             pbGrowth.progress = data.perFoundProgress
             tvTargetValue.text = data.targetAmount.toRoundedRupees()
-            tvTargetGoal.text = "of {data.targetAmount.toRoundedRupees()} goals"
+            tvTargetGoal.text = "of ${data.targetAmount.toRoundedRupees()} goals"
             btnBuy.text = data.orderAction
         }
     }
