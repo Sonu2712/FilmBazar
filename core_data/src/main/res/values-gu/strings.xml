@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="asset_type_all">તમામ</string>
+    <string name="asset_type_equity">ઈક્વિટી</string>
+    <string name="asset_type_fno">એફ.એન.ઓ</string>
+    <string name="asset_type_currency">ચલણ</string>
+    <string name="asset_type_commodity">કોમોડિટી</string>
+    <string name="asset_type_mutual_fund">મ્યુચ્યુઅલ ફંડ</string>
+
+    <string name="product_type_intraday">સામાન્ય</string>
+    <string name="product_type_delivery">ડિલિવરી</string>
+    <string name="product_type_sell_from_dp">ડી.પીમાંથી વેચો</string>
+    <string name="product_type_margin_plus">માર્જિન+</string>
+    <string name="product_type_value_plus">મૂલ્ય+</string>
+    <string name="product_type_option_plus">વિકલ્પ+</string>
+    <string name="product_type_btst">બી.ટી.એસ.ટી</string>
+    <string name="product_type_mtf">MTF</string>
+
+    <string name="order_type_limit">મર્યાદા</string>
+    <string name="order_type_market">બજાર</string>
+    <string name="order_type_stop_loss">સ્ટોપ લોસ</string>
+
+    <string name="order_life_day">દિવસ</string>
+    <string name="order_life_ioc">આઈ.ઓ.સી</string>
+    <string name="order_life_gtd">જી.ટી.ડી</string>
+    <string name="order_life_gtc">જી.ટી.સી</string>
+
+    <string name="order_action_buy">ખરીદો</string>
+    <string name="order_action_sell">વેચો</string>
+
+    <string name="exchange_type_nse">એન.એસ.ઈ</string>
+    <string name="exchange_type_bse">બી.એસ.ઈ</string>
+    <string name="exchange_type_mcx">એમ.સી.એક્સ</string>
+    <string name="exchange_type_ncdex">એન.સી.ડી.ઈ.એક્સ</string>
+
+    <string name="quote_tab_cash">કેશ</string>
+    <string name="quote_tab_futures">વાયદા</string>
+    <string name="quote_tab_options">વિકલ્પ</string>
+
+    <string name="quote_tab_bonds">બોન્ડ્સ</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_content_description_investor_app_icon" translatable="false">Investor app icon</string>
+    <string name="app_content_description_menu_group_image" translatable="false">menu group image</string>
+</resources>

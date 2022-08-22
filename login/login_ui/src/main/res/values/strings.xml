@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name" translatable="false">login_ui</string>
+    <string name="GS_ALL_EMPTY_MSG">Please enter all the details</string>
+    <string name="msg_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="msg_valid_otp">Enter proper OTP</string>
+    <string name="CP_OLD_PASSWORD_EMPTY_MSG">Please enter old password.</string>
+    <string name="CP_NEW_PASSWORD_EMPTY_MSG">Please enter a new password.</string>
+    <string name="CP_OLD_NEW_SAME_MSG">Old password and New password cannot be same</string>
+    <string name="CP_CONFIRM_PASSWORD_EMPTY">Please enter the new password again</string>
+    <string name="CP_CONFIRM_NEW_SAME_MSG">Please enter the same password in New and Confirm fields.</string>
+
+    <string name="error_msg_client_code_mobile_no_email_id_empty">Please enter Mobile No. / Email ID / Client Code</string>
+    <string name="error_msg_mobile_no_invalid">Please enter valid Mobile Number</string>
+    <string name="error_msg_mobile_no_empty">Please enter Mobile Number</string>
+    <string name="error_msg_dob_invalid">Please enter valid DOB</string>
+    <string name="FP_VALID_EMAIL">Please enter valid email address</string>
+    <string name="FP_VALID_PAN">Please enter valid PAN</string>
+    <string name="FP_PAN_EMPTY">Please enter PAN or DOB</string>
+    <string name="text_label_i_accept_tnc"><u>I accept the Terms &amp; Conditions</u></string>
+
+    <string name="text_label_fingerprint_success">Fingerprint recognized</string>
+    <string name="text_label_fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+
+    <string name="msg_password_empty">Please enter password</string>
+    <string name="text_label_guest_info_message">Track &amp; Monitor Markets conveniently across segments on the Go</string>
+    <string name="text_label_guest_info_message_1">Create your own Watchlist &amp; Track your favourite Stocks / Contracts from anywhere</string>
+    <string name="text_label_guest_info_message_2">Browse through our wide range of Advanced &amp; Personalized Product Offerings</string>
+    <string name="text_label_guest_info_message_3">Analyze your portfolio &amp; get customized recommendations through Restructuring Tool</string>
+    <string name="text_label_change_password">Change Password</string>
+
+    <string name="validate_name">Please enter name</string>
+    <string name="enter_valid_mobile_number">Enter Valid Mobile Number</string>
+    <string name="validate_city">Please Select city</string>
+    <string name="validate_check_box">Please Check Terms and Conditions</string>
+    <string name="text_message_registration_status_5">Dear User, you are already registered with us!\nPlease resume the application using your registered mobile number.</string>
+    <string name="menu_view_markets">View Markets</string>
+    <string name="msg_password_policy">1) Password length can be maximum 10 characters\n2) Password cannot be same as your Client Code\n3) Password should contain at-least 1 alphabet from AtoZ\n4) Password should contain at-least 1 number from  0-9 or at-least 1 special character !@#$%&amp;*</string>
+    <string name="info_message_eky_tnc">Please note that by submitting the contact details, you are authorizing Motilal Oswal Securities Limited to
+        contact you and send promotional communication even though you may be registered under National Do Not Call Registry
+        established under the Telecom Unsolicited Commercial Communications Regulations, 2007 or registered or may register under the
+        National Customer Preference Register established under new regulation viz the Telecom Commercial Communications Customer
+        Preference Regulations, 2010.</string>
+    <string name="text_hint_customer_login"> Mobile No. / Email ID / Client Code</string>
+    <string name="text_hint_dob_pan">DOB/PAN</string>
+    <string name="text_label_welcome_to_mo_investor">Welcome to MO Investor</string>
+
+    <string name="text_fingerprint_hint">Scan your fingerprint on the device scanner to continue</string>
+    <string name="text_label_OR">OR</string>
+    <string name="prompt_message_enter_pan_dob">Please enter your DOB/PAN</string>
+    <string name="hint_text_enter_your_pan">DOB [DD/MM/YYYY] / PAN</string>
+    <string name="page_title_verify_pan_dob">Verify PAN/DOB</string>
+    <string name="btn_continue">Continue</string>
+    <string name="lbl_mobile_number">Mobile Number</string>
+    <string name="button_continue">Continue</string>
+    <string name="lbl_client_code">Client Code / Mobile No / Email ID</string>
+    <string name="lbl_old_password_otp">Please enter old password/OTP</string>
+    <string name="lbl_old_password">Please enter old password</string>
+    <string name="hint_confirm_password">Please confirm new password</string>
+    <string name="lbl_password_policy">Password Policy</string>
+    <string name="hint_password_customer_login">Please Enter Password</string>
+    <string name="hint_otp_customer_login">Please Enter OTP</string>
+    <string name="lbl_try_as_a_guest">Try as a Guest Now</string>
+    <string name="lbl_try_it_now">Try it Now</string>
+    <string name="lbl_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="lbl_open_account">Open Account</string>
+    <string name="lbl_name_open_account">Name</string>
+    <string name="lbl_name_already_a_user">Already a user?</string>
+    <string name="lbl_name_login">Login</string>
+    <string name="lbl_mobile_number_open_account">Mobile Number</string>
+    <string name="lbl_partner_code_optional">Partner Code (Optional)</string>
+    <string name="text_label_why_login_as_guest">Why login as guest?</string>
+    <string name="hint_change_password_new_password">Please enter new password</string>
+    <string name="msg_password_change">Password Changed Successfully</string>
+    <string name="login_password_digits" translatable="false">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&amp;*()_+=-{}[]:;&quot;&apos;&lt;&gt;,.?/|\\</string>
+    <string name="login_password_changed_msg">Your Password has been changed. Please re-login to continue</string>
+    <string name="text_label_re_send_otp">Re-send OTP</string>
+    <string name="login_msg_password_expired">Your password is expired. Please change the password to continue</string>
+</resources>

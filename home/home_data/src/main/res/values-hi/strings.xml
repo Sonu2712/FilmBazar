@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_news_my_news">मेरे समाचार</string>
+    <string name="home_news_market_commentary">मार्केट टिपण्णी</string>
+    <string name="home_market_top_gainers">टॉप गेनर</string>
+    <string name="home_market_top_losers">टॉप लूज़र</string>
+    <string name="home_ipo_ongoing">चल रही है (%d)</string>
+    <string name="home_ipo_upcoming">आगामी (%d)</string>
+    <string name="home_market_active_by_value">सक्रिय मूल्य द्वारा</string>
+    <string name="home_market_active_by_volume">सक्रिय वोल्यूम द्वारा</string>
+</resources>

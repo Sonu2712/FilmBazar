@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorAccent">?colorSecondary</item>
+        <item name="background">@color/color_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@drawable/app_ic_splash</item>
+    </style>
+
+
+</resources>

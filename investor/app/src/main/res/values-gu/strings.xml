@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_menu_label_markets">બજાર</string>
+    <string name="app_menu_label_reports">રિપોર્ટ</string>
+    <string name="app_menu_label_research_reports">સંશોધન રિપોર્ટ</string>
+    <string name="app_menu_label_advice">સલાહ</string>
+    <string name="app_menu_label_advice_calls">કોલ્સ</string>
+    <string name="app_menu_label_advice_basket">બાસ્કેટ</string>
+    <string name="app_menu_label_edu_mo">એડૂ એમ.ઓ</string>
+    <string name="app_menu_label_refer_earn">રેફર કરો અને કમાઓ</string>
+    <string name="app_menu_label_order_confirmation">ઓર્ડરનું પુષ્ટિકરણ કરો</string>
+    <string name="app_menu_label_value_pack">વેલ્યુ પેક - નવીકરણ બંધ</string>
+    <string name="app_menu_label_pro_partner_dashboard">પ્રો-પાર્ટનર ડેશબોર્ડ</string>
+    <string name="app_menu_label_stock_alert">ચેતવણી</string>
+    <string name="app_menu_label_about_us">અમારા વિશે</string>
+    <string name="app_menu_label_chat">અમારી સાથે ચેટ કરો</string>
+    <string name="app_menu_label_market_equity">ઈક્વિટી</string>
+    <string name="app_menu_label_market_fno">ડેરિવેટિવ્સ</string>
+    <string name="app_menu_label_market_currency">ચલણ </string>
+    <string name="app_menu_label_market_commodity">કોમોડિટી</string>
+    <string name="app_menu_label_family_report">કૌટુંબિક રિપોર્ટ</string>
+    <string name="app_menu_label_invest_now">હમણાં જ રોકાણ કરો</string>
+    <string name="app_menu_label_gold">મીગોલ્ડમાં રોકાણ કરો</string>
+    <string name="app_menu_label_insurance">જીવન વીમો</string>
+    <string name="app_menu_label_suggest_me">મને ટૂલ સૂચવો (એસ.એમ.ટી)</string>
+    <string name="app_menu_label_sip_etf_order_book">સ્ટોક એસ.આઈ.પી ઓર્ડર બુક</string>
+    <string name="app_menu_label_ipo_bond">આઈ.પી.ઓ / ઓ.એસ.એસ / બાય-બેક / બોન્ડ / એફ.ડી</string>
+    <string name="app_menu_label_news">સમાચાર</string>
+    <string name="app_menu_label_fund_transfer">ફંડ હસ્તાંતરણ</string>
+    <string name="app_menu_label_switch_to_trader">એમ.ઓ ટ્રેડર પર સ્વિચ કરો</string>
+    <string name="app_menu_label_portfolio">પોર્ટફોલિયો</string>
+    <string name="app_menu_label_invest_in_mf">એમ.એફમાં રોકાણ કરો</string>
+    <string name="app_menu_label_logout">લોગઆઉટ</string>
+    <string name="app_menu_label_home">હોમ</string>
+    <string name="app_menu_label_other_essential">અન્ય જરૂરિયાત</string>
+    <string name="app_menu_label_smt">એસ.એમ.ટી</string>
+
+    <string name="app_network_unavailable">નેટવર્ક ઉપલબ્ધ નથી</string>
+    <string name="app_msg_logout_alert">શું તમે ખરેખર લોગઆઉટ કરવા માંગો છો?</string>
+
+    <string name="app_text_label_financial_fitness_begins_here">નાણાકીય તંદુરસ્તી અહીં શરૂ થાય છે</string>
+
+    <string name="app_text_label_open_user_welcome_guest">અતિથિ આપનું સ્વાગત છે</string>
+    <string name="app_text_label_already_have_an_account_in_open_user">શું પહેલાંથી જ એકાઉન્ટ છે?</string>
+    <string name="app_text_lable_login_in_open_user_menu_header">લોગઈન કરો</string>
+
+    <string name="app_logged_in_client_code">યુઝર આઈ.ડી: %1$s</string>
+
+    <string name="app_menu_title_home">હોમ</string>
+    <string name="app_menu_title_search">શોધો</string>
+    <string name="app_text_alert_no_network_alert">તમે ઓફલાઈન છો! તમારું ઈન્ટરનેટ કનેક્શન તપાસો.</string>
+    <string name="app_text_alert_rooted_device">તમારું ઉપકરણ રૂટેડ થયેલ છે. તમે એપ્લિકેશનનો ઉપયોગ કરી શકશો નહીં!!</string>
+    <string name="app_text_alert_check_network">નેટવર્ક તપાસો</string>
+    <string name="app_text_alert_exit_app">એપ માંથી બહાર નીકળો</string>
+    <string name="app_msg_log_out_successful">સફળતાપૂર્વક લોગઆઉટ થયું</string>
+    <string name="app_msg_click_again_to_exit">કૃપા કરી બહાર નીકળવા માટે ફરીથી પાછા જાઓ પર ક્લિક કરો</string>
+
+    <!--    <string name="app_basket_preview_disclaimer_text">જો કોઈ હોલ્ડિંગ્સ પોર્ટફોલિયો / ડિમેટમાં ઉપલબ્ધ ન હોય તો, તે વેચવા માટે ધ્યાનમાં લેવામાં આવશે નહીં.</string>-->
+
+    <string name="app_button_label_call_to_trade">ટ્રેડ માટે કોલ</string>
+    <string name="app_button_label_open_account_in_open_user_menu">એકાઉન્ટ ખોલો</string>
+
+    <string name="app_menu_label_US_EQUITIES">યુ.એસ ઇક્વિટીમાં રોકાણ કરો</string>
+
+    <string name="app_menu_label_advisory_products">ઇન્ટેલલિગેન્ટ સલાહકારી પોર્ટફોલીઓસ</string>
+    <string name="app_menu_label_most_guide">એમ.ઓ.એસ.ટી ગાઈડ</string>
+    <string name="info_message_feed_delayed">અતિથિ વપરાશકર્તાઓ માટે, દરો 15 મિનિટ મોડા આવે છે. \nનિફ્ટી દર ફક્ત પોસ્ટ લોગિન પર ઉપલબ્ધ હશે.</string>
+    <string name="app_page_title_mo_credits_menu">એમ.ઓ ક્રેડિટ્સ</string>
+    <string name="app_menu_label_learn">લર્ન</string>
+    <string name="app_menu_label_most_webinar">વેબિનાર</string>
+
+    <string name="app_menu_label_flexi_loan">ફ્લેક્સી લોન</string>
+
+</resources>

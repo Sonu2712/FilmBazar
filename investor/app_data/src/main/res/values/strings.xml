@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">data</string>
+
+    <string name="research_report_filter_daily">Daily</string>
+    <string name="research_report_filter_regular">Regular</string>
+    <string name="research_report_filter_weekly">Weekly</string>
+    <string name="research_report_filter_monthly">Monthly</string>
+    <string name="research_report_filter_quarterly">Quarterly</string>
+    <string name="research_report_filter_yearly">Yearly</string>
+    <string name="research_report_filter_none">None</string>
+
+    <string name="research_report_type_my_portfolio_reports">My Portfolio Reports</string>
+    <string name="research_report_type_most_viewed_reports">Most Viewed Reports</string>
+    <string name="research_report_type_company_reports">Company Reports</string>
+    <string name="research_report_type_sector_reports">Sector Reports</string>
+    <string name="research_report_type_thematic_reports">Thematic Reports</string>
+    <string name="research_report_type_market_analysis_reports">Market Analysis Reports</string>
+
+    <string name="news_type_my_news">My News</string>
+    <string name="news_type_market_commentary">Market Commentary</string>
+    <string name="news_type_special_coverage">Special Coverage</string>
+    <string name="news_type_equity">Equity</string>
+    <string name="news_type_commodity">Commodity</string>
+    <string name="news_type_corp_action">Corp Action</string>
+    <string name="news_type_economic_events">Economic Events</string>
+
+    <string name="button_label_do_not_show_again">Do not show again</string>
+</resources>

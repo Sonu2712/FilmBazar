@@ -1,0 +1,41 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_from"
+        style="@style/Widget.MoslTheme.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0" />
+
+    <SeekBar
+        android:id="@+id/tv_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="50dp"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_large"
+        android:paddingEnd="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_extra_small"
+        android:progressDrawable="@drawable/seek_bar_color"
+        android:progressTint="@color/pumpkin"
+        android:splitTrack="false"
+        android:thumb="@drawable/seek_bar_indicator"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/tv_to"
+        style="@style/Widget.MoslTheme.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0" />
+</merge>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_menu_label_markets">Markets</string>
+    <string name="app_menu_label_reports">Reports</string>
+    <string name="app_menu_label_research_reports">Research Reports</string>
+    <string name="app_menu_label_advice">Advice</string>
+    <string name="app_menu_label_advice_calls">Calls</string>
+    <string name="app_menu_label_advice_basket">Basket</string>
+    <string name="app_menu_label_edu_mo">EDUMO</string>
+    <string name="app_menu_label_learn">Learn</string>
+    <string name="app_menu_label_refer_earn">Refer and Earn</string>
+    <string name="app_menu_label_order_confirmation">Order Confirmation</string>
+    <string name="app_menu_label_value_pack">Value Pack - Stop Renewal</string>
+    <string name="app_menu_label_pro_partner_dashboard">Pro-Partner Dashboard</string>
+    <string name="app_menu_label_additional_segment_services">Additional Segment Services</string>
+    <string name="app_menu_label_stock_alert">Alerts</string>
+    <string name="app_menu_label_about_us">About Us</string>
+    <string name="app_menu_label_chat">Chat With Us</string>
+    <string name="app_menu_label_market_equity">Equity</string>
+    <string name="app_menu_label_market_fno">Derivatives</string>
+    <string name="app_menu_label_market_currency">Currency</string>
+    <string name="app_menu_label_market_commodity">Commodity</string>
+    <string name="app_menu_label_family_report">Family Reports</string>
+    <string name="app_menu_label_invest_now">Invest Now</string>
+    <string name="app_menu_label_advisory_products">Intelligent Advisory Portfolio’s</string>
+    <string name="app_menu_label_gold">Invest in ME Gold</string>
+    <string name="app_menu_label_insurance">Life Insurance</string>
+    <string name="app_menu_label_suggest_me">Suggest Me Tool (SMT)</string>
+    <string name="app_menu_label_sip_etf_order_book">Stock SIP Order Book</string>
+    <string name="app_menu_label_ipo_bond">IPO / OFS / BuyBack / Bonds / FD</string>
+    <string name="app_menu_label_news">News</string>
+    <string name="app_menu_label_fund_transfer">Fund Transfer</string>
+    <string name="app_menu_label_switch_to_trader">Switch to MO Trader</string>
+    <string name="app_menu_label_portfolio">Portfolio</string>
+    <string name="app_menu_label_invest_in_mf">Invest In MF</string>
+    <string name="app_menu_label_logout">Logout</string>
+    <string name="app_menu_label_home">Home</string>
+    <string name="app_menu_label_other_essential">Other Essentials</string>
+    <string name="app_menu_label_smt">SMT</string>
+    <string name="app_menu_label_most_guide">MOSt Guide</string>
+    <string name="app_menu_label_most_webinar">Webinar</string>
+    <string name="app_menu_label_US_EQUITIES">Invest in US Equities</string>
+    <string name="app_menu_label_flexi_loan">Flexi Loan</string>
+</resources>

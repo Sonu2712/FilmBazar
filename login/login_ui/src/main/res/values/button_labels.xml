@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_login">Login</string>
+    <string name="button_proceed">Proceed</string>
+    <string name="button_open_account">Open Account</string>
+    <string name="button_open_an_account">Open An Account</string>
+    <string name="button_refer_and_earn" translatable="false">Refer and Earn</string>
+    <string name="button_generate_password">Generate Password</string>
+    <string name="button_generate_otp">Generate OTP</string>
+    <string name="button_send_otp">Send OTP</string>
+    <string name="button_info_dialog">Try IT Now</string>
+    <string name="button_change_password">Update</string>
+    <string name="button_label_edit">Edit</string>
+
+</resources>

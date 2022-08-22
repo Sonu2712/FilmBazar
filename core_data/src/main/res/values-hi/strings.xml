@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="order_action_buy">खरीदें</string>
+    <string name="order_action_sell">बेचें</string>
+
+    <string name="asset_type_all">सभी</string>
+    <string name="asset_type_equity">इक्विटी</string>
+    <string name="asset_type_fno">एफ.एन.ओ</string>
+    <string name="asset_type_currency">करेंसी</string>
+    <string name="asset_type_commodity">कमोडिटी</string>
+    <string name="asset_type_mutual_fund">म्यूचुअल फंड</string>
+
+    <string name="product_type_intraday">साधारण</string>
+    <string name="product_type_delivery">डिलीवरी</string>
+    <string name="product_type_sell_from_dp">डीपी से बेचते हैं</string>
+    <string name="product_type_margin_plus">मार्जिन+</string>
+    <string name="product_type_value_plus">वैल्यू+</string>
+    <string name="product_type_option_plus">ऑप्शन+</string>
+    <string name="product_type_btst">बी.टी.एस.टी</string>
+    <string name="product_type_mtf">MTF</string>
+
+    <string name="order_life_day">दिन</string>
+    <string name="order_life_ioc">आई.ओ.सी.</string>
+    <string name="order_life_gtd">जी.टी.डी</string>
+    <string name="order_life_gtc">जी.टी.सी.</string>
+
+    <string name="order_type_market">मार्केट</string>
+    <string name="order_type_stop_loss">स्टॉप लॉस</string>
+    <string name="order_type_limit">लिमिट</string>
+
+
+    <string name="exchange_type_nse">एन.एस.ई</string>
+    <string name="exchange_type_bse">बी.एस.ई</string>
+    <string name="exchange_type_mcx">एम.सी.एक्स</string>
+    <string name="exchange_type_ncdex">एन.सी.डी.ई.एक्स</string>
+
+    <string name="quote_tab_cash">कैश</string>
+    <string name="quote_tab_futures">फ्यूचर्स</string>
+    <string name="quote_tab_options">ऑप्शन</string>
+
+    <string name="quote_tab_bonds">बॉन्ड्स</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/app_splash_icon_dimension"
+        android:layout_height="@dimen/app_splash_icon_dimension"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_content_description_investor_app_icon"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintBottom_toTopOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/FiraSans20PtMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:gravity="center"
+        android:text="@string/app_text_label_financial_fitness_begins_here"
+        android:textAllCaps="true"
+        android:textColor="@color/action_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/app_splash_progress_bar_dimension"
+        android:layout_height="@dimen/app_splash_progress_bar_dimension"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTooltip"
+        style="@style/FiraSans12Pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/info_message_feed_delayed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

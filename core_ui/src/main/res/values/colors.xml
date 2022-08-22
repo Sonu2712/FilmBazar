@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">@color/pumpkin</color>
+    <color name="color_primary_variant">@color/light_peach</color>
+    <color name="color_secondary">@color/orangey_yellow</color>
+    <color name="color_secondary_variant">@color/orangey_yellow</color>
+
+    <color name="color_background">@color/white_four</color>
+    <color name="color_surface">@color/white_three</color>
+    <color name="color_error">@color/copper</color>
+
+    <color name="color_on_primary">@color/white_three</color>
+    <color name="color_on_secondary">@color/black</color>
+    <color name="color_on_background">@color/warm_grey</color>
+    <color name="color_on_surface">@color/warm_grey</color>
+    <color name="color_on_error">@color/white</color>
+    <color name="icon_color">@color/black</color>
+    <color name="icon_color_light">@color/warm_grey</color>
+
+    <color name="primary_text_color">@color/warm_grey</color>
+    <color name="secondary_text_color">@color/black</color>
+    <color name="action_text_color">@color/pumpkin</color>
+    <color name="text_color_green">@color/green</color>
+
+    <color name="sell_color">@color/copper</color>
+    <color name="buy_color">@color/leafy_green</color>
+
+    <color name="toolbar_color">@color/white_three</color>
+    <color name="tab_bottom_view_color">@color/white</color>
+
+    <color name="sub_menu_text_color">@color/greyish_brown</color>
+    <color name="main_menu_text_color">@color/black</color>
+
+    <color name="drawer_header_color">@color/white_five</color>
+    <color name="color_initials">@color/warm_grey</color>
+    <color name="color_avatar">@color/lightwhite</color>
+
+
+    <color name="icon_background">@color/white_five</color>
+    <color name="background_header_color">@color/alabaster</color>
+    <color name="background_buy_color">@color/light_sage</color>
+    <color name="background_sell_color">@color/very_light_pink</color>
+    <color name="background_sector_color">@color/pale</color>
+    <color name="divider_color">@color/lightwhite</color>
+    <color name="white_text_color">@color/white_three</color>
+    <color name="background_dark">@color/white_two</color>
+
+    <color name="text_color_buy">@color/buy_color</color>
+    <color name="text_color_sell">@color/sell_color</color>
+
+    <color name="search_text_background_color">@color/white_two</color>
+    <color name="other_reports_background_color">@color/white_two</color>
+
+    <color name="text_view_line_color">@color/warm_grey</color>
+    <color name="list_alternate_color">@color/white_five</color>
+    <color name="coachmark_bg">#E6C0C0C0</color>
+    <color name="advice_closed_calls_background">#FFFFFF</color>
+    <color name="colorHyperLink">#2596be</color>
+
+    <color name="colorBlackFundWIseAllocationLabel">#343232</color>
+<!--    <color name="colorNotSelectedDot">#f7fbfb</color>-->
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="background_color_error">#d53b23</color>
+    <color name="background_color_success">#5eb73b</color>
+    <color name="background_color_confirmation">#fcae16</color>
+</resources>

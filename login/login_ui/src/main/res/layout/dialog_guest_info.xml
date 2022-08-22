@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_large"
+        android:background="?colorSurface"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Widget.MoslTheme.HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_label_why_login_as_guest"
+            android:textColor="@color/text_color_guest_info_header"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_large"
+            app:drawableLeftCompat="@drawable/ic_bullet"
+            android:drawablePadding="@dimen/padding_large"
+            android:text="@string/text_label_guest_info_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_large"
+            app:drawableLeftCompat="@drawable/ic_bullet"
+            android:drawablePadding="@dimen/padding_large"
+            android:text="@string/text_label_guest_info_message_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_large"
+            android:drawablePadding="@dimen/padding_large"
+            android:text="@string/text_label_guest_info_message_2"
+            app:drawableLeftCompat="@drawable/ic_bullet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_large"
+            android:drawablePadding="@dimen/padding_large"
+            android:text="@string/text_label_guest_info_message_3"
+            app:drawableLeftCompat="@drawable/ic_bullet" />
+
+        <Button
+            android:id="@+id/btnTryNow"
+            style="@style/Widget.MoslTheme.CardFlatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/button_info_dialog" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|right"
+        app:srcCompat="@drawable/ic_cancel_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+</FrameLayout>

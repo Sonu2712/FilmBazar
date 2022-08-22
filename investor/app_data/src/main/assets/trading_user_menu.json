@@ -1,0 +1,83 @@
+{
+  "allMenus": [
+    {
+      "identifier": "logout",
+      "title": "Logout",
+      "titleHi": "लॉग आउट करें",
+      "titleGu": "લોગઆઉટ",
+      "isExpandable": false,
+      "isEnabled": true,
+      "style": 3,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    }
+  ],
+  "bottomMenus": [
+    {
+      "id": "home",
+      "title": "Home",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "search",
+      "title": "Wallet",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "watchlisthome",
+      "title": "More",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    }
+  ],
+  "startUpMenus": [
+    {
+      "id": "home",
+      "title": "Home",
+      "titleHi": "होम",
+      "titleGu": "હોમ"
+    },
+    {
+      "id": "marketequity",
+      "title": "Markets",
+      "titleHi": "मार्केट",
+      "titleGu": "બજાર"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "titleHi": "पोर्टफोलियो",
+      "titleGu": "પોર્ટફોલિયોનું"
+    },
+    {
+      "id": "tradingreport",
+      "title": "Trading Reports",
+      "titleHi": "ट्रेडिंग रिपोर्ट",
+      "titleGu": "ટ્રેડિંગ રિપોર્ટ"
+    },
+    {
+      "id": "watchlisthome",
+      "title": "Watchlist",
+      "titleHi": "वॉचलिस्ट",
+      "titleGu": "વોચલિસ્ટ"
+    }
+  ],
+  "pinkAssist": []
+}

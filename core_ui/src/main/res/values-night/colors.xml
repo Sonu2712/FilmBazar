@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- &lt;!&ndash;DARK COLOR THEME&ndash;&gt;
+    &lt;!&ndash;The same color values are defined for dark theme, but with values more appropriate for &ndash;&gt;
+    &lt;!&ndash;low-luminance UIs. These colors will be used by night/themes.xml.&ndash;&gt;
+
+    <color name="color_primary">@color/pumpkin</color>
+    <color name="color_primary_variant">@color/light_peach</color>
+    <color name="color_secondary">@color/orangey_yellow</color>
+    <color name="color_secondary_variant">@color/orangey_yellow</color>
+
+    <color name="color_background">@color/darkGrey</color>
+    <color name="color_surface">@color/lightGrey</color>
+    <color name="color_error">@color/lightRed</color>
+
+    <color name="color_on_primary">@color/white_three</color>
+    <color name="color_on_secondary">@color/black</color>
+    <color name="color_on_background">@color/white</color>
+    <color name="color_on_surface">@color/white</color>
+    <color name="color_on_error">@color/black</color>
+    <color name="icon_color">@color/white</color>
+
+    <color name="primary_text_color">@color/white</color>
+    <color name="secondary_text_color">@color/alabaster</color>
+
+    <color name="sell_color">@color/copper</color>
+    <color name="buy_color">@color/leafy_green</color>
+
+    <color name="toolbar_color">@color/black</color>
+
+    <color name="drawer_header_color">@color/darkGrey</color>
+
+    <color name="icon_background">@color/white_five</color>
+    <color name="sub_menu_text_color">@color/white_five</color>
+    <color name="main_menu_text_color">@color/white_five</color>
+    <color name="divider_color">@color/alabaster</color>
+    <color name="background_header_color">@color/alabaster</color>
+    <color name="background_buy_color">@color/light_sage</color>
+    <color name="background_sell_color">@color/very_light_pink</color>
+    <color name="background_sector_color">@color/pale</color>
+    <color name="white_text_color">@color/white</color>
+-->
+</resources>

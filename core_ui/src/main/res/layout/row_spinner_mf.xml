@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text1"
+    style="@style/Widget.MoslTheme.Value"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_surface"
+    android:gravity="start"
+    android:maxLines="1"
+    android:padding="@dimen/padding_medium"
+    android:textColor="@color/secondary_text_color"
+    tools:text="Select Group Select Group Select Group Select Group Select Group Select Group Select Group" />

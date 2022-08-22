@@ -1,0 +1,20 @@
+{
+  "retargeting_conversion_type": "none",
+  "orig_cost": "0.0",
+  "af_prt": "momentus",
+  "is_first_launch": false,
+  "af_click_lookback": "7d",
+  "iscache": true,
+  "click_time": "2021-08-04 05:52:43.779",
+  "match_type": "gp_referrer",
+  "appsflyer_id": "1628056392805-3517141803068164670",
+  "campaign_id": "128",
+  "install_time": "2021-08-04 05:53:14.410",
+  "af_c_id": "128",
+  "agency": "momentus",
+  "clickid": "610a2b2a958141033d627ae8",
+  "af_siteid": "2_",
+  "af_status": "Non-organic",
+  "cost_cents_USD": "0",
+  "campaign": "None"
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.film.bazar">
+
+    <!-- Dangerous -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--Normal-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name="com.film.bazar.MOSLApplicationImpl"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/main_app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/MoslTheme"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup, android:label,android:theme">
+        <activity
+            android:exported="true"
+            android:name=".splash.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".core.MOSLCommonActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/main_app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="filmbazar.app"
+                    android:scheme="mosl" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.film.login_ui.core.LoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/main_app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="PUSHAMPLIFY_APIKEY"
+            android:value="a6d67680-772c-447e-a21e-2348064ab656" />
+        <meta-data
+            android:name="PUSHAMPLIFY_INTERVAL_MINS"
+            android:value="30" />
+
+        <!--NetCore-->
+        <meta-data
+            android:name="SMT_APP_ID"
+            android:value="@string/smart_tech_id" />
+
+        <!-- Net Core Product Experience  start ! -->
+        <meta-data
+            android:name="HANSEL_APP_ID"
+            android:value="@string/hansel_app_id" />
+
+        <meta-data
+            android:name="HANSEL_APP_KEY"
+            android:value="@string/hansel_app_key" />
+        <!--  Net Core Product Experience End !-->
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="@string/ekyc_jet_truecaller_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/provider_authority"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+    </application>
+
+    <dist:module dist:instant="true" />
+
+    <queries>
+        <!--For Android11 need to add https://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9 -->
+        <package android:name="mosl.powerapp.com" />
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+    </queries>
+
+</manifest>

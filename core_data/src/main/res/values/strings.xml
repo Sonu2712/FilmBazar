@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name" translatable="false">core_data</string>
+
+    <string name="asset_type_all">ALL</string>
+    <string name="asset_type_equity">Equity</string>
+    <string name="asset_type_fno">FNO</string>
+    <string name="asset_type_currency">Currency</string>
+    <string name="asset_type_commodity">Commodity</string>
+    <string name="asset_type_mutual_fund">Mutual Fund</string>
+
+    <string name="product_type_intraday">Normal</string>
+    <string name="product_type_delivery">Delivery</string>
+    <string name="product_type_sell_from_dp">Sell from DP</string>
+    <string name="product_type_margin_plus">Margin+</string>
+    <string name="product_type_value_plus">Value+</string>
+    <string name="product_type_option_plus">Option+</string>
+    <string name="product_type_btst">BTST</string>
+    <string name="product_type_mtf">MTF</string>
+
+    <string name="order_type_limit">Limit</string>
+    <string name="order_type_market">Market</string>
+    <string name="order_type_stop_loss">Stop Loss</string>
+
+    <string name="order_life_day">DAY</string>
+    <string name="order_life_ioc">IOC</string>
+    <string name="order_life_gtd">GTD</string>
+    <string name="order_life_gtc">GTC</string>
+
+    <string name="order_action_buy">BUY</string>
+    <string name="order_action_sell">SELL</string>
+
+    <string name="exchange_type_nse">NSE</string>
+    <string name="exchange_type_bse">BSE</string>
+    <string name="exchange_type_mcx">MCX</string>
+    <string name="exchange_type_ncdex">NCDEX</string>
+
+    <string name="quote_tab_cash">Cash</string>
+    <string name="quote_tab_futures">Futures</string>
+    <string name="quote_tab_options">Options</string>
+    <string name="quote_tab_bonds">Bonds</string>
+
+
+</resources>

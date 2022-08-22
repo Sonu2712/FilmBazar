@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_report_filter_daily">रोजाना</string>
+    <string name="research_report_filter_regular">नियमित</string>
+    <string name="research_report_filter_weekly">साप्ताहिक</string>
+    <string name="research_report_filter_monthly">मासिक</string>
+    <string name="research_report_filter_quarterly">त्रैमासिक</string>
+    <string name="research_report_filter_yearly">सालाना</string>
+    <string name="research_report_filter_none">None</string>
+
+    <string name="research_report_type_my_portfolio_reports">मेरा पोर्टफोलियो रिपोर्ट</string>
+    <string name="research_report_type_most_viewed_reports">सर्वाधिक देखी गई रिपोर्ट</string>
+    <string name="research_report_type_company_reports">कंपनी की रिपोर्ट</string>
+    <string name="research_report_type_sector_reports">क्षेत्रवार रिपोर्ट</string>
+    <string name="research_report_type_thematic_reports">विषयगत रिपोर्ट</string>
+    <string name="research_report_type_market_analysis_reports">मार्केट विश्लेषण की रिपोर्ट</string>
+
+
+    <string name="news_type_my_news">मेरे समाचार</string>
+    <string name="news_type_market_commentary">मार्केट टिपण्णी</string>
+    <string name="news_type_special_coverage">विशेष कवरेज</string>
+    <string name="news_type_equity">इक्विटी</string>
+    <string name="news_type_commodity">कमोडिटी</string>
+    <string name="news_type_corp_action">कॉर्पोरेट एक्शन</string>
+    <string name="news_type_economic_events">आर्थिक इवेंट</string>
+    <string name="button_label_do_not_show_again">फिर से मत दिखाओ</string>
+</resources>

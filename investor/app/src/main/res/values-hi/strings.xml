@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_button_label_call_to_trade">कॉल टू ट्रेड</string>
+
+
+    <string name="app_menu_label_markets">मार्केट</string>
+    <string name="app_menu_label_reports">रिपोर्ट</string>
+    <string name="app_menu_label_research_reports">विश्लेषण रिपोर्ट</string>
+    <string name="app_menu_label_edu_mo">एडु एम.ओ</string>
+    <string name="app_menu_label_refer_earn">रेफर करें और कमाएं</string>
+    <string name="app_menu_label_chat">हमसे चैट करें</string>
+    <string name="app_menu_label_market_equity">इक्विटी</string>
+    <string name="app_menu_label_market_fno">डेरिवेटिव्स</string>
+    <string name="app_menu_label_market_currency">करेंसी</string>
+    <string name="app_menu_label_market_commodity">कमोडिटी</string>
+    <string name="app_menu_label_family_report">फैमिली की रिपोर्ट</string>
+    <string name="app_menu_label_advisory_products">इंटेलीजेंट सलाहकारी पोर्टफ़ोलिओस</string>
+    <string name="app_menu_label_gold">मीगोल्ड में निवेश करें</string>
+    <string name="app_menu_label_insurance">जीवन बीमा</string>
+    <string name="app_menu_label_suggest_me">सजेस्ट मी टूल (एस.एम.टी)</string>
+    <string name="app_menu_label_ipo_bond">आई.पी.ओ / ओ.एफ.एस / बाईबैक / बॉन्ड / एफ.डी</string>
+    <string name="app_menu_label_news">समाचार</string>
+    <string name="app_menu_label_fund_transfer">फंड ट्रांसफर</string>
+    <string name="app_menu_label_switch_to_trader">एम.ओ ट्रेडर पर जाएं </string>
+    <string name="app_menu_label_portfolio">पोर्टफोलियो</string>
+    <string name="app_menu_label_invest_in_mf">एम.एफ में निवेश करें</string>
+    <string name="app_menu_label_advice">सलाह</string>
+    <string name="app_menu_label_advice_calls">कॉल</string>
+    <string name="app_menu_label_advice_basket">बास्केट</string>
+    <string name="app_menu_label_order_confirmation">ऑर्डर की पुष्टि</string>
+    <string name="app_menu_label_value_pack">वैल्यू पैक – नवीकरण बंद</string>
+    <string name="app_menu_label_pro_partner_dashboard">प्रो-पार्टनर डैशबोर्ड</string>
+    <string name="app_menu_label_stock_alert">अलर्ट</string>
+    <string name="app_menu_label_invest_now">अभी निवेश करें</string>
+    <string name="app_menu_label_sip_etf_order_book">स्टॉक एसआईपी ऑर्डर बुक</string>
+    <string name="app_menu_label_logout">लॉग आउट करें</string>
+    <string name="app_menu_label_home">होम</string>
+    <string name="app_menu_label_other_essential">अन्य आवश्यक वस्तुएं</string>
+    <string name="app_menu_label_smt">एस.एम.टी</string>
+
+
+    <string name="app_text_lable_login_in_open_user_menu_header">लॉग इन करें</string>
+    <string name="app_network_unavailable">नेटवर्क उपलब्ध नहीं</string>
+    <string name="app_msg_logout_alert">क्या आप वास्तव में लॉगआउट करना चाहते हैं?</string>
+    <string name="app_text_label_financial_fitness_begins_here">यहां वित्तीय फिटनेस शुरू होती है</string>
+    <string name="app_text_label_open_user_welcome_guest">अतिथि का स्वागत</string>
+    <string name="app_logged_in_client_code">यूज़र आईडी: %1$s</string>
+    <string name="app_menu_title_home">घर</string>
+    <string name="app_menu_title_search">खोज</string>
+    <string name="app_text_alert_no_network_alert">आप ऑफ़लाइन हैं! अपना इंटरनेट संपर्क जांचे।</string>
+    <string name="app_text_alert_check_network">नेटवर्क की जाँच करें</string>
+    <string name="app_text_alert_exit_app">ऐप से बाहर निकलें</string>
+
+    <string name="app_button_label_open_account_in_open_user_menu">खाता खोलें</string>
+
+    <string name="app_menu_label_about_us">हमारे बारे में</string>
+    <string name="app_text_label_already_have_an_account_in_open_user">क्या आपके पास पहले से एक खाता मौजूद है?</string>
+    <string name="app_msg_log_out_successful">लॉग आउट सफलतापूर्वक</string>
+    <string name="app_msg_click_again_to_exit">कृपया बाहर निकलने के लिए फिर से क्लिक करें</string>
+
+    <!--    <string name="app_basket_preview_disclaimer_text">पोर्टफोलियो / डीमैट में उपलब्ध नहीं होने की स्थिति में, उन्हें बेचने के लिए विचार नहीं किया जाएगा।</string>-->
+    <string name="app_text_alert_rooted_device">आपका उपकरण निहित है। आप आवेदन का उपयोग नहीं कर पाएंगे !!</string>
+
+    <string name="info_message_feed_delayed">अतिथि उपयोगकर्ताओं के लिए, दरों में 15 मिनट की देरी है। \nनिफ्टी की दर केवल पोस्ट लॉगइन पर उपलब्ध होगी।</string>
+    <string name="app_menu_label_most_guide">एम.ओ.एस.टी गाइड</string>
+    <string name="app_menu_label_US_EQUITIES">यू .एस. इक्विटी में निवेश करें</string>
+
+    <string name="app_page_title_mo_credits_menu">एम.ओ क्रेडिट्स</string>
+    <string name="app_menu_label_learn">लर्न</string>
+    <string name="app_menu_label_most_webinar">वेबिनार</string>
+    1
+    <string name="app_menu_label_flexi_loan">फ्लेक्सी लोन</string>
+</resources>

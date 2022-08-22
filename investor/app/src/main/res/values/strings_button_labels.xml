@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_button_label_call_to_trade">Call To Trade</string>
+    <string name="app_button_label_open_account_in_open_user_menu">Open Account</string>
+    <string name="button_label_fragment_2_primary_button" translatable="false">Primary Button</string>
+    <string name="button_label_fragment_2_secondary_button" translatable="false">Secondary Button</string>
+    <string name="button_label_fragment_2_primary_action_btn" translatable="false">Primary Action Btn</string>
+    <string name="button_label_fragment_2_buy_button" translatable="false">Buy Button</string>
+    <string name="button_label_feature_main_hello" translatable="false">Hello</string>
+
+</resources>

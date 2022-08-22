@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">login</string>
+    <string name="alert_dialog_title">Motilal Oswal</string>
+</resources>

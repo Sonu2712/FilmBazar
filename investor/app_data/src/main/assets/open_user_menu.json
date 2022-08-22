@@ -1,0 +1,769 @@
+{
+  "allMenus": [
+    {
+      "identifier": "advicebaskets",
+      "title": "Start Investing with |₹ 250 only|",
+      "titleHi": "केवल |₹ 250| से निवेश शुरू करें",
+      "titleGu": "માત્ર |₹ 250| થી રોકાણ શરૂ કરો",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/advicebasket.png",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "ipov2",
+      "title": "IPO",
+      "titleHi": "आई.पी.ओ",
+      "titleGu": "આઈ.પી.ઓ",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/advicebasket.png",
+      "items": [],
+      "isDynamic": true
+    },
+    {
+      "identifier": "usequities",
+      "title": "Invest in US Equities",
+      "titleHi": "यू .एस. इक्विटी में निवेश करें",
+      "titleGu": "યુ.એસ ઇક્વિટીમાં રોકાણ કરો",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/usequities.png",
+      "items": [],
+      "isDynamic": true
+    },
+    {
+      "identifier": "additionalsegmentservices",
+      "title": "Activate Derivatives",
+      "titleHi": "डेरिवेटिव सक्रिय करें",
+      "titleGu": "ડેરિવેટિવ્ઝ સક્રિય કરો",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/ActivateDerivatives.png",
+      "items": [],
+      "isDynamic": true
+    },
+    {
+      "identifier": "instaoptiondashboard",
+      "title": "Options Store",
+      "titleHi": "विकल्प स्टोर",
+      "titleGu": "વિકલ્પો સ્ટોર",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "fundtransfer",
+      "title": "Fund Transfer",
+      "titleHi": "फंड ट्रांसफर",
+      "titleGu": "ફંડ હસ્તાંતરણ",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "markets",
+      "title": "Markets",
+      "titleHi": "मार्केट",
+      "titleGu": "બજાર",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "marketequity",
+          "title": "Equity",
+          "titleHi": "इक्विटी",
+          "titleGu": "ઈક્વિટી",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "marketfno",
+          "title": "Derivatives",
+          "titleHi": "डेरिवेटिव्स",
+          "titleGu": "ડેરિવેટિવ્સ",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "marketcurrency",
+          "title": "Currency",
+          "titleHi": "करेंसी",
+          "titleGu": "ચલણ",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "marketcommodity",
+          "title": "Commodity",
+          "titleHi": "कमोडिटी",
+          "titleGu": "કોમોડિટી",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": false
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "recommendation",
+      "title": "Advice",
+      "titleHi": "सलाह",
+      "titleGu": "સલાહ",
+      "isExpandable": true,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "recommendation",
+          "title": "Calls",
+          "titleHi": "कॉल",
+          "titleGu": "કોલ્સ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "advicebaskets",
+          "title": "Basket",
+          "titleHi": "बास्केट",
+          "titleGu": "બાસ્કેટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "adviceindexview",
+          "title": "Index View ",
+          "titleHi": "इंडेक्स आलोकन",
+          "titleGu": "ઈન્ડેક્સ પર એક નજર",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "advicemosmallcase",
+          "title": "MO Smallcases",
+          "titleHi": "MO स्मॉलकेस",
+          "titleGu": "MO સ્મોલકેસ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "adviceallsmallcases",
+          "title": "All Smallcases",
+          "titleHi": "सभी स्मॉलकेस",
+          "titleGu": "બધા સ્મોલકેસ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "aceproducts",
+      "title": "Intelligent Advisory Portfolios",
+      "titleHi": "इंटेलीजेंट एडवायसरी पोर्टफ़ोलिओस",
+      "titleGu": "ઇન્ટેલલિગેન્ટ એડવાઇસરી પોર્ટફોલીઓસ",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/IAP.png",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "mfhome",
+      "title": "Mutual Funds",
+      "titleHi": "म्यूचुअल फंड्स",
+      "titleGu": "મ્યુચ્યુઅલ ફંડ",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "investnow",
+      "title": "Other Products/Tools",
+      "titleHi": "अन्य उत्पाद/उपकरण",
+      "titleGu": "અન્ય ઉત્પાદનો/સાધનો",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "ipov2",
+          "title": "IPO",
+          "titleHi": "आई.पी.ओ",
+          "titleGu": "આઈ.પી.ઓ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "ipobonds",
+          "title": "Bonds / BuyBack / FD / OFS",
+          "titleHi": "बॉन्ड / बाईबैक / एफ.डी / ओ.एफ.एस",
+          "titleGu": "બોન્ડ / બાય-બેક / ઓ.એસ.એસ / એફ.ડી",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "healthInsurance",
+          "title": "Insurance",
+          "titleHi": "बीमा",
+          "titleGu": "વીમો",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "stocksiphome",
+          "title": "Stock SIP",
+          "titleHi": "स्टॉक एसआईपी",
+          "titleGu": "સ્ટોક એસ.આઈ.પી",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "suggestme",
+          "title": "Suggest Me Tool (SMT)",
+          "titleHi": "सजेस्ट मी टूल (एस.एम.टी)",
+          "titleGu": "મને ટૂલ સૂચવો (એસ.એમ.ટી)",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "usequities",
+          "title": "Invest in US Equities",
+          "titleHi": "यू .एस. इक्विटी में निवेश करें",
+          "titleGu": "યુ.એસ ઇક્વિટીમાં રોકાણ કરો",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "bulkorder",
+          "title": "Bulk Order",
+          "titleHi": "बल्क ऑर्डर",
+          "titleGu": "જથ્થબંધ ઓર્ડર",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "stockalert",
+      "title": "Alert",
+      "titleHi": "अलर्ट",
+      "titleGu": "ચેતવણી",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "flexiloan",
+      "title": "Flexi Loan",
+      "titleHi": "फ्लेक्सी लोन",
+      "titleGu": "ફ્લેક્સી લોન",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/flexi-loan.png",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "reports",
+      "title": "Reports",
+      "titleHi": "रिपोर्ट",
+      "titleGu": "રિપોર્ટ",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "researchreport",
+          "title": "Research Reports",
+          "titleHi": "विश्लेषण रिपोर्ट",
+          "titleGu": "સંશોધન રિપોર્ટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "tradingreport",
+          "title": "Trading Reports",
+          "titleHi": "ट्रेडिंग रिपोर्ट",
+          "titleGu": "ટ્રેડિંગ રિપોર્ટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "dematholdings",
+          "title": "Holdings",
+          "titleHi": "होल्डिंग्स",
+          "titleGu": "હોલ્ડિંગ્સ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "operationalreport",
+          "title": "Operational Reports",
+          "titleHi": "ऑपरेशनल रिपोर्ट",
+          "titleGu": "ઓપરેશનલ રિપોર્ટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "mfreports",
+          "title": "Mutual Fund Reports",
+          "titleHi": "म्यूचुअल फंड रिपोर्ट",
+          "titleGu": "મ્યુચ્યુઅલ ફંડ રિપોર્ટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "ledgersummary",
+          "title": "Ledger",
+          "titleHi": "बहीखाता",
+          "titleGu": "લેજર",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "contractnotes",
+          "title": "Contract Note",
+          "titleHi": "कॉन्ट्रैक्ट नोट",
+          "titleGu": "કરાર નોંધ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "stocksiporderbook",
+          "title": "Stock SIP Order Book",
+          "titleHi": "स्टॉक एसआईपी ऑर्डर बुक",
+          "titleGu": "સ્ટોક એસ.આઈ.પી ઓર્ડર બુક",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "familyreport",
+          "title": "Family Reports",
+          "titleHi": "फैमिली की रिपोर्ट",
+          "titleGu": "કૌટુંબિક રિપોર્ટ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "circular",
+          "title": "Circulars",
+          "titleHi": "परिपत्र",
+          "titleGu": "પરિપત્ર",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "healthinsuranceorders",
+          "title": "Health Insurance Orders",
+          "titleHi": "स्वास्थ्य बीमा आदेश",
+          "titleGu": "હેલ્થ ઈન્સ્યોરન્સ ઓર્ડર્સ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": true
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "newshome",
+      "title": "News",
+      "titleHi": "समाचार",
+      "titleGu": "સમાચાર",
+      "isExpandable": false,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "learn",
+      "title": "Learn",
+      "titleHi": "लर्न",
+      "titleGu": "લર્ન",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "education",
+          "title": "EDUMO",
+          "titleHi": "एडु एम.ओ",
+          "titleGu": "એડૂ એમ.ઓ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "webinar",
+          "title": "Webinar",
+          "titleHi": "वेबिनार",
+          "titleGu": "વેબિનાર",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "mostguide",
+          "title": "MOSt Guide",
+          "titleHi": "एम.ओ.एस.टी गाइड",
+          "titleGu": "એમ.ઓ.એસ.ટી ગાઈડ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "refernearn",
+      "title": "Refer and Earn",
+      "titleHi": "रेफर करें और कमाएं",
+      "titleGu": "રેફર કરો અને કમાઓ",
+      "isExpandable": false,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "offernrewards",
+      "title": "Offers and Rewards",
+      "titleHi": "धनदार ऑफर्स और रिवार्ड्स",
+      "titleGu": "સમૃદ્ધ ઑફર્સ અને ઇનામ",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/rewards.png",
+      "items": [],
+      "isDynamic": true
+    },
+    {
+      "identifier": "otheressentials",
+      "title": "Other Essentials",
+      "titleHi": "अन्य आवश्यक वस्तुएं",
+      "titleGu": "અન્ય જરૂરિયાત",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "",
+      "items": [
+        {
+          "identifier": "mocredits",
+          "title": "MO Credits",
+          "titleHi": "एम.ओ क्रेडिट्स",
+          "titleGu": "એમ.ઓ ક્રેડિટ્સ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "propartnerdashboard",
+          "title": "Pro-Partner Dashboard",
+          "titleHi": "प्रो-पार्टनर डैशबोर्ड",
+          "titleGu": "પ્રો-પાર્ટનર ડેશબોર્ડ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "additionalsegmentservices",
+          "title": "Activate Derivatives",
+          "titleHi": "डेरिवेटिव सक्रिय करें",
+          "titleGu": "ડેરિવેટિવ્ઝ સક્રિય કરો",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "valuepackstoprenewal",
+          "title": "Value Pack - Stop Renewal",
+          "titleHi": "वैल्यू पैक – नवीकरण बंद",
+          "titleGu": "વેલ્યુ પેક - નવીકરણ બંધ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "orderconfirmation",
+          "title": "Order Confirmation",
+          "titleHi": "ऑर्डर की पुष्टि",
+          "titleGu": "ઓર્ડરનું પુષ્ટિકરણ કરો",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "calltotrade",
+          "title": "Call To Trade",
+          "titleHi": "कॉल टू ट्रेड",
+          "titleGu": "ટ્રેડ માટે કોલ",
+          "isEnabled": false,
+          "style": 1,
+          "isDynamic": false
+        },
+        {
+          "identifier": "segmentactivationnew",
+          "title": "Activate Derivatives",
+          "titleHi": "खंड सक्रियण",
+          "titleGu": "સેગમેન્ટ સક્રિયકરણ",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": true
+        }
+      ],
+      "isDynamic": false
+    },
+    {
+      "identifier": "investorcharter",
+      "title": "Investor Charter",
+      "titleHi": "निवेशक चार्टर",
+      "titleGu": "રોકાણકાર ચાર્ટર",
+      "isExpandable": true,
+      "isEnabled": true,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/InverstorCharter_Investor.png",
+      "items": [
+        {
+          "identifier": "researchanalyst",
+          "title": "Research Analyst",
+          "titleHi": "अनुसंधान विश्लेषक",
+          "titleGu": "સંશોધન વિશ્લેષક",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": true
+        },
+        {
+          "identifier": "investmentadvisory",
+          "title": "Investment Advisory",
+          "titleHi": "निवेश सलाह",
+          "titleGu": "રોકાણ સલાહ",
+          "isEnabled": true,
+          "style": 1,
+          "isDynamic": true
+        }
+      ],
+      "isDynamic": true
+    },
+    {
+      "identifier": "chatwithus",
+      "title": "Chat With Us",
+      "titleHi": "हमसे चैट करें",
+      "titleGu": "અમારી સાથે ચેટ કરો",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    },
+    {
+      "identifier": "contactus",
+      "title": "Contact us",
+      "titleHi": "संपर्क करें",
+      "titleGu": "અમારો સંપર્ક કરો",
+      "isExpandable": false,
+      "isEnabled": false,
+      "style": 0,
+      "icon": "https://invest.motilaloswal.com/investorimages/menuicons/ContactUs.png",
+      "items": [],
+      "isDynamic": true
+    },
+    {
+      "identifier": "motrader",
+      "title": "Switch to MO Trader",
+      "titleHi": "एम.ओ ट्रेडर पर जाएं ",
+      "titleGu": "એમ.ઓ ટ્રેડર પર સ્વિચ કરો",
+      "isExpandable": false,
+      "isEnabled": true,
+      "style": 2,
+      "icon": "",
+      "items": [],
+      "isDynamic": false
+    }
+  ],
+  "bottomMenus": [
+    {
+      "id": "home",
+      "title": "Home",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": true
+    },
+    {
+      "id": "watchlisthome",
+      "title": "Watchlist",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "mfhome",
+      "title": "Mutual Fund",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "tradingreport",
+      "title": "Reports",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "newshome",
+      "title": "News",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "marketequity",
+      "title": "Markets",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "ledgersummary",
+      "title": "Ledger",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "recommendation",
+      "title": "Advice",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "suggestme",
+      "title": "SMT",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    },
+    {
+      "id": "education",
+      "title": "EDUMO",
+      "icon": "",
+      "titleHi": "",
+      "titleGu": "",
+      "isDefault": false
+    }
+  ],
+  "startUpMenus": [
+    {
+      "id": "home",
+      "title": "Home",
+      "titleHi": "होम",
+      "titleGu": "હોમ"
+    },
+    {
+      "id": "marketequity",
+      "title": "Markets",
+      "titleHi": "मार्केट",
+      "titleGu": "બજાર"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "titleHi": "पोर्टफोलियो",
+      "titleGu": "પોર્ટફોલિયોનું"
+    },
+    {
+      "id": "tradingreport",
+      "title": "Trading Reports",
+      "titleHi": "ट्रेडिंग रिपोर्ट",
+      "titleGu": "ટ્રેડિંગ રિપોર્ટ"
+    },
+    {
+      "id": "watchlisthome",
+      "title": "Watchlist",
+      "titleHi": "वॉचलिस्ट",
+      "titleGu": "વોચલિસ્ટ"
+    }
+  ],
+  "pinkAssist": []
+}

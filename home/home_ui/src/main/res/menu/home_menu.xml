@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_notification_home"
+        android:orderInCategory="3"
+        android:title="@string/menu_notification"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile_home"
+        android:orderInCategory="2"
+        android:title="@string/menu_profile"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_fund_transfer"
+        android:icon="@drawable/ic_home_transfer_sell"
+        android:orderInCategory="1"
+        android:title="@string/menu_profile"
+        app:showAsAction="always" />
+</menu>

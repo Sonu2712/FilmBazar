@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="news_company_name">@color/greyish_brown</color>
+    <color name="news_holdings">@color/greyish_brown</color>
+    <color name="news_date_time">@color/warm_grey</color>
+    <color name="news_heading">@color/black</color>
+    <color name="news_ltp">@color/black</color>
+</resources>

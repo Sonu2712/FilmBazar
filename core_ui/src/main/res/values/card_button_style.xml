@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="CardButtonTextApperance" parent="@style/Base.TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="fontFamily">@font/fira_sans_medium</item>
+        <item name="android:fontFamily">@font/fira_sans_medium</item>
+        <item name="android:letterSpacing" tools:ignore="NewApi">0</item>
+    </style>
+
+    <style name="Widget.MoslTheme.CardPrimaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearanceButton">@style/CardButtonTextApperance</item>
+        <item name="backgroundTint">?colorSurface</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="strokeColor">@color/oultline_button_stroke_color</item>
+    </style>
+
+    <style name="Widget.MoslTheme.CardFlatButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="textAppearanceButton">@style/CardButtonTextApperance</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="Widget.MoslTheme.FlatButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="textAppearanceButton">@style/ButtonTextApperance</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="Widget.MoslTheme.CardSellButton" parent="Widget.MoslTheme.FlatButton">
+        <item name="backgroundTint">@color/sell_color</item>
+    </style>
+
+    <style name="Widget.MoslTheme.CardBuyButton" parent="Widget.MoslTheme.FlatButton">
+        <item name="backgroundTint">@color/buy_color</item>
+    </style>
+
+</resources>

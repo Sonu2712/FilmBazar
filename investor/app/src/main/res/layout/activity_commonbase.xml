@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".core.MOSLCommonActivity"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <com.film.bazar.coreui.views.InvestorToolbar
+                    android:id="@+id/tool_bar"
+                    style="@style/Widget.MoslTheme.Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <FrameLayout
+                    android:id="@+id/activityFrameLayout"
+                    android:background="?background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            style="@style/Widget.MoslTheme.Text"
+            android:background="#E63946"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:labelVisibilityMode="labeled">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </LinearLayout>
+
+    <com.film.bazar.coreui.appcoreui.views.NonConsumingScrimInsetsFrameLayout
+        android:layout_width="@dimen/drawerLayoutWidth"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?colorSurface"
+        android:fitsSystemWindows="true"
+        app:insetForeground="@color/app_inset_foreground_color">
+
+        <com.film.bazar.drawermenu.DrawerMenuView
+            android:id="@+id/drawer_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true" />
+
+    </com.film.bazar.coreui.appcoreui.views.NonConsumingScrimInsetsFrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Top level DayNight theme to be used in AndroidManifest.xml-->
+    <style name="MoslTheme" parent="Base.MoslTheme" />
+
+    <style name="LoginTheme" parent="MoslTheme">
+        <item name="background">@android:color/transparent</item>
+        <item name="actionMenuTextColor">@color/action_text_color</item>
+        <item name="colorControlNormal">@color/action_text_color</item>
+    </style>
+
+    <!--Base custom theme which will be shared between both light and dark theme variants-->
+    <style name="Base.MoslTheme" parent="Base.ThemeBuilder">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@color/color_on_error</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:fontFamily">@font/fira_sans</item>
+
+<!--        <item name="android:background">@color/color_background</item>-->
+        <!--Material type attributes-->
+        <!--<item name="textAppearanceHeadline1">@style/TextAppearance.MoslTheme.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MoslTheme.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MoslTheme.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MoslTheme.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MoslTheme.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MoslTheme.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MoslTheme.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MoslTheme.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MoslTheme.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MoslTheme.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MoslTheme.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MoslTheme.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MoslTheme.Overline</item>-->
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MoslTheme.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MoslTheme.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.MoslTheme.LargeComponent
+        </item>
+
+        <!--Component styles-->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert
+        </item>
+        <item name="bottomSheetDialogTheme">@style/Widget.MoslTheme.BottomSheetDialogTheme</item>
+        <item name="navigationViewStyle">@style/Widget.MoslTheme.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.MoslTheme.Toolbar</item>
+        <item name="buttonStyle">@style/Widget.MoslTheme.PrimaryButton</item>
+        <item name="android:buttonStyle">@style/Widget.MoslTheme.PrimaryButton</item>
+        <item name="textInputStyle">@style/Widget.MoslTheme.EditText.Normal</item>
+        <item name="editTextStyle">@style/Widget.MoslTheme.EditTextView</item>
+        <item name="spinnerStyle">@style/Widget.MoslTheme.spinner</item>
+        <item name="checkboxStyle">@style/Widget.MoslTheme.checkbox</item>
+        <item name="materialCardViewStyle">@style/Widget.MoslTheme.Card</item>
+        <item name="cardViewStyle">@style/Widget.MoslTheme.Card</item>
+        <item name="textAppearanceButton">@style/ButtonTextApperanceBase</item>
+        <item name="snackbarStyle">@style/Widget.MoslTheme.Snackbar</item>
+    </style>
+
+    <style name="Base.ThemeBuilder" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
+        <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
+        <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
+
+        <item name="android:statusBarColor" tools:ignore="NewApi">?android:colorBackground</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi">?android:colorBackground</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">?colorControlHighlight</item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorAccent">?colorSecondary</item>
+
+        <item name="colorFillColor">?colorPrimaryVariant</item>
+        <item name="colorStrokeColor">?colorPrimary</item>
+        <item name="toolbarColor">@color/toolbar_color</item>
+        <item name="background">@color/color_background</item>
+    </style>
+
+    <style name="MoslTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

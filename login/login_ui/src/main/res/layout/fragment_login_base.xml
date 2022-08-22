@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_ic_splash"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <FrameLayout
+                android:id="@+id/flLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/color_surface"
+            android:gravity="bottom"
+            android:minHeight="@dimen/min_height_row_1"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvRow1Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/lbl_try_as_a_guest"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <ImageView
+                    android:id="@+id/ivInfo"
+                    android:layout_width="@dimen/info_icon_dimension"
+                    android:layout_height="@dimen/info_icon_dimension"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:padding="@dimen/padding_normal"
+                    app:srcCompat="@drawable/ic_login_information" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRow1Action"
+                style="@style/Widget.MoslTheme.DecorativeText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center|end"
+                android:text="@string/lbl_try_it_now"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height_small"
+            android:background="@color/login_separator"
+            app:layout_constraintBottom_toTopOf="@id/llRow2" />
+
+        <LinearLayout
+            android:id="@+id/llRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/color_surface"
+            android:minHeight="@dimen/min_height_row_2"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal">
+
+            <TextView
+                android:id="@+id/tvRow2Label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/lbl_don_t_have_an_account"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvRow2Action"
+                style="@style/Widget.MoslTheme.DecorativeText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center|end"
+                android:text="@string/lbl_open_account"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

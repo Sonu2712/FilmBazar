@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_label_fragment_2_primary_button" translatable="false">Primary Button</string>
+    <string name="button_label_fragment_2_secondary_button" translatable="false">Secondary Button</string>
+    <string name="button_label_fragment_2_primary_action_btn" translatable="false">Primary Action Btn</string>
+    <string name="button_label_fragment_2_buy_button" translatable="false">Buy Button</string>
+    <string name="button_label_feature_main_hello" translatable="false">Hello</string>
+    <string name="text_label_fragment_2_header_1" translatable="false">Header 1</string>
+    <string name="text_label_fragment_2_actionable_header" translatable="false">Actionable Header</string>
+    <string name="text_label_fragment_2_header_2" translatable="false">Header 2</string>
+    <string name="text_label_fragment_2_header_info" translatable="false">Header Info</string>
+    <string name="button_label_fragment_2_secondary_action_btn" translatable="false">Secondary action btn</string>
+    <string name="button_label_fragment_2_sell_button" translatable="false">Sell Button</string>
+    <string name="text_label_fragment_2_outline_textview" translatable="false">OutLine TextView</string>
+    <string name="hint_fragment_2_textview_with_background" translatable="false">TextView With Background</string>
+    <string name="text_label_fragment_2_chip" translatable="false">Chip</string>
+    <string name="text_label_fragment_2_chip_with_icon" translatable="false">Chip with icon</string>
+    <string name="text_label_fragment_2_chip_with_background" translatable="false">Chip with Background</string>
+    <string name="tab_label_fragment_2_monday" translatable="false">Monday</string>
+    <string name="tab_label_fragment_2_tuesday" translatable="false">Tuesday</string>
+    <string name="tab_label_fragment_2_wednesday" translatable="false">Wednesday</string>
+    <string name="hint_dashboard_search" translatable="false">Search</string>
+    <string name="hint_feature_main_spinner" translatable="false">Spinner</string>
+</resources>

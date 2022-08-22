@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_pink_assist"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:srcCompat="@drawable/app_ic_pink_assist_logo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_extra"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_large"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/include_login_header" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilClientCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_extra_large"
+                            android:theme="@style/Widget.MoslTheme.EditText.Normal"
+                            app:boxBackgroundColor="?colorSurface"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edClientCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/text_hint_customer_login"
+                                android:imeOptions="actionNext"
+                                android:inputType="text|textCapCharacters"
+                                android:maxLines="1"
+                                android:minHeight="@dimen/min_height_client_code"
+                                android:padding="@dimen/padding_medium" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:theme="@style/Widget.MoslTheme.EditText.Normal"
+                            app:boxBackgroundColor="?colorSurface"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tilClientCode"
+                            app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/color_primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edClientPass"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/login_password_digits"
+                                android:drawablePadding="@dimen/padding_medium"
+                                android:imeOptions="actionDone"
+                                android:inputType="text|textPassword|textNoSuggestions"
+                                android:maxLines="1"
+                                android:padding="@dimen/padding_medium"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.film.bazar.coreui.views.AutoReadOTPView
+                            android:id="@+id/autoReadOtp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/otpMessage"
+                            style="@style/Widget.MoslTheme.ReportsTextPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:gravity="center"
+                            tools:text="Otp message" />
+
+                        <Button
+                            android:id="@+id/btnLogin"
+                            style="@style/Widget.MoslTheme.SecondaryButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:minHeight="@dimen/min_height_button_login"
+                            android:text="@string/button_login"
+                            android:textSize="@dimen/text_size_medium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tilPassword" />
+
+                        <TextView
+                            android:id="@+id/txtForgotPass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_medium"
+                            android:text="@string/text_label_generate_password"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/llGuest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvGuest"
+                        style="@style/Widget.MoslTheme.DecorativeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/lbl_try_as_a_guest"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivGuestInfo"
+                        android:layout_width="@dimen/info_icon_dimension"
+                        android:layout_height="@dimen/info_icon_dimension"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/padding_normal"
+                        app:srcCompat="@drawable/ic_login_information" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnOpenAccount"
+            style="@style/Widget.MoslTheme.SecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_extra"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginRight="@dimen/margin_extra"
+            android:minHeight="@dimen/min_height_button_login"
+            android:text="@string/button_open_an_account"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout>

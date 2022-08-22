@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_network_unavailable">Network Not Available</string>
+    <string name="app_msg_logout_alert">Do you really want to logout?</string>
+
+    <string name="app_text_label_financial_fitness_begins_here">Financial Fitness Begins Here</string>
+
+    <string name="app_text_label_open_user_welcome_guest">Welcome Guest</string>
+    <string name="app_text_label_already_have_an_account_in_open_user">Already have an account?</string>
+    <string name="app_text_lable_login_in_open_user_menu_header">Login</string>
+
+    <string name="app_logged_in_client_code">User ID: %1$s</string>
+
+    <string name="app_menu_title_home">Home</string>
+    <string name="app_menu_title_search">Search</string>
+    <string name="app_text_alert_no_network_alert">You\'re offline! Check your internet connection.</string>
+    <string name="app_text_alert_rooted_device">Your device is rooted. You will not be able to use the application!!</string>
+    <string name="app_text_alert_check_network">Check Network</string>
+    <string name="app_text_alert_exit_app">Exit App</string>
+    <string name="app_msg_log_out_successful">Logged Out Successfully</string>
+    <string name="app_msg_click_again_to_exit">Please click back again to exit</string>
+
+    <string name="info_message_feed_delayed">For Guest Users, rates are delayed by 15 Minutes. \nNifty rates will be available only on post login.</string>
+
+</resources>

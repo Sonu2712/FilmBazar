@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_dialog_title">मोतीलाल ओसवाल</string>
+    <string name="button_label_cancel">रद्द करें</string>
+    <string name="button_label_ok">ठीक है</string>
+    <string name="check_connection">कृपया अपने इंटरनेट कनेक्टिविटी की जाँच करें</string>
+    <string name="error_message_no_data_available">डाटा उपलब्ध नहीं है</string>
+    <string name="error_message_validation_failed">डेटा पुष्टिकरण सफल नहीं हुआ</string>
+    <string name="network_failure">आपके इंटरनेट सिग्नल वापस आने पर हम आपकी बेहतर सेवा कर सकते हैं।</string>
+    <string name="no_intent_handler">इस कार्य को करने के लिए कोई एप्लिकेशन उपलब्ध नहीं हैं।</string>
+    <string name="service_failure">शायद कुछ सर्वर त्रुटि हुई</string>
+    <string name="unknown_failure">प्रक्रिया पूरी नहीं हो सकी ! पुनः प्रयास करे</string>
+</resources>

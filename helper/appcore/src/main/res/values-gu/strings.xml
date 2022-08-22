@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_dialog_title">મોતીલાલ ઓસ્વાલ</string>
+    <string name="button_label_ok">ઠીક છે</string>
+    <string name="button_label_cancel">રદ્દ કરો</string>
+    <string name="network_failure">એકવાર તમારી પાસે તમારું ઇન્ટરનેટ સિગ્નલ પાછું આવે પછી અમે તમને વધુ સારી સેવા આપી શકીએ છીએ.</string>
+    <string name="service_failure">લાગે છે કે ત્યાં કેટલીક સર્વર ભૂલ છે</string>
+    <string name="unknown_failure">અરેરે! કંઈક ખોટું થયું. મેહરબાની કરી ને ફરી થી પ્રયાસ કરો!</string>
+    <string name="error_message_no_data_available">કોઈ ડેટા ઉપલબ્ધ નથી</string>
+    <string name="check_connection">કૃપા કરીને તમારી ઇન્ટરનેટ કનેક્ટિવિટી તપાસો</string>
+    <string name="error_message_validation_failed">ડેટા માન્યતા નિષ્ફળ</string>
+    <string name="no_intent_handler">આ ક્રિયાને હેન્ડલ કરવા માટે કોઈ એપ્લિકેશન ઉપલબ્ધ નથી.</string>
+</resources>

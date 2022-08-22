@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="ShapeAppearance.MoslTheme.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerRadius">2dp</item>
+    </style>
+
+    <!--Shape Appearance for medium components like cards, alert dialogs-->
+    <style name="ShapeAppearance.MoslTheme.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">@dimen/medium_component_corner_size</item>
+        <item name="elevation">@dimen/medium_component_elevation</item>
+        <!--Your custom shape here-->
+    </style>
+
+    <!--Shape Appearance for large components like side and bottom navigation drawers-->
+    <style name="ShapeAppearance.MoslTheme.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">@dimen/large_component_corner_size</item>
+    </style>
+
+</resources>

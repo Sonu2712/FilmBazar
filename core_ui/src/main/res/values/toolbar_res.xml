@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tool_bar_go_back" type="id" />
+
+    <string name="text_label_drawer_menu">Drawer Menu</string>
+    <string name="text_label_go_back">Go Back</string>
+</resources>

@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion Versions.compileSdkVersion
+  buildToolsVersion Versions.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion Versions.minSdkVersion
+    targetSdkVersion Versions.targetSdkVersion
+  }
+
+  viewBinding {
+    enabled = true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  implementation AndroidxDependencies.appcompat
+  implementation AndroidxDependencies.legacy
+  implementation AndroidxDependencies.fragment
+  implementation AndroidxDependencies.constraintLayout
+
+  //Dagger
+  compileOnly DaggerDependencies.core
+  kapt DaggerDependencies.compiler
+
+  //RxJava 2.0
+  implementation RxDependencies.java
+  implementation RxDependencies.android
+  //implementation deps.mofslArtifacts.rxpreference
+
+  implementation RxBindingDependencies.bindingCore
+  implementation RxBindingDependencies.madge
+  implementation Dependencies.processPhoenix
+  implementation Dependencies.threeTen
+  implementation OkHttpDependencies.core
+  implementation RetrofitDependencies.core
+  implementation RetrofitDependencies.mock
+  implementation Dependencies.timber
+
+  implementation KotlinDependencies.kotlin
+
+  implementation project(":debugviewcore")
+  implementation project(":appcore")
+  implementation project(":rx_preferences")
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

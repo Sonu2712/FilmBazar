@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+  compileOnly KotlinDependencies.kotlin
+  compileOnly AndroidxDependencies.annotation
+  compileOnly RetrofitDependencies.rxJava
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

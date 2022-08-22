@@ -1,0 +1,14 @@
+<resources>
+    <string name="alert_dialog_title">Motilal Oswal</string>
+    <string name="button_label_ok">OK</string>
+    <string name="button_label_cancel">Cancel</string>
+    <!--Error Messages-->
+    <string name="network_failure">We can serve you better once you have your internet signal back.</string>
+    <string name="service_failure">Seems there is some Server Error</string>
+    <string name="unknown_failure">Oops! Something went wrong. Please try again!</string>
+    <string name="error_message_no_data_available">No Data Available</string>
+    <string name="check_connection">Please Check your Internet Connectivity</string>
+    <string name="error_message_validation_failed">Data Validation failed</string>
+
+    <string name="no_intent_handler">There are no applications available to handle this action.</string>
+</resources>

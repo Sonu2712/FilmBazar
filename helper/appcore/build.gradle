@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion Versions.compileSdkVersion
+  buildToolsVersion Versions.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion Versions.minSdkVersion
+    targetSdkVersion Versions.targetSdkVersion
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  compileOnly AndroidxDependencies.annotation
+  compileOnly AndroidxDependencies.material
+  compileOnly Dependencies.timber
+  compileOnly KotlinDependencies.kotlin
+
+  implementation project(":moslcommons")
+  implementation project(":validator")
+
+  compileOnly RxDependencies.java
+  compileOnly RxDependencies.android
+  compileOnly RxDependencies.relay
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

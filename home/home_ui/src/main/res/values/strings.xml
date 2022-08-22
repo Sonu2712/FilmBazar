@@ -1,0 +1,74 @@
+<resources>
+    <string name="heading_markets_today">MARKETS TODAY</string>
+    <string name="heading_key_statistics">KEY STATISTICS</string>
+    <string name="heading_ipo">IPO\'s</string>
+    <string name="heading_recommendation">RECOMMENDATIONS</string>
+    <string name="heading_stock_ideas">STOCK IDEAS</string>
+    <string name="heading_stock_basket">STOCK BASKETS</string>
+    <string name="sub_heading_stock_basket">Group of stocks based on trending themes</string>
+    <string name="heading_mutual_fund">THEME BASED MUTUAL FUNDS</string>
+    <string name="heading_explore">EXPLORE</string>
+    <string name="heading_products_for_you">PRODUCTS FOR YOU</string>
+    <string name="heading_ready_made_baskets_for_you">READYMADE BASKETS FOR YOU</string>
+    <string name="heading_most_popular_products">OUR MOST POPULAR PRODUCTS</string>
+    <string name="heading_education">EDUCATION</string>
+    <string name="heading_edumo">LEARN WITH EDUMO</string>
+    <string name="string_label_default">Default</string>
+    <string name="string_label_done">Done</string>
+    <string name="string_label_offer_price">Offer Price</string>
+    <string name="retuns_since_launch_text">Return (Since Launch)</string>
+    <string name="string_label_issue_type">Issue Type</string>
+    <string name="string_label_open_date">Open Date</string>
+    <string name="string_label_close_date">Close Date</string>
+    <string name="string_label_lot_size">Lot Size</string>
+    <string name="text_label_no_transactions_added">You haven\'t added any transactions yet</string>
+    <string name="text_label_start_investing_today">Start investing today in our readymade solutions and products or upload your existing portfolio</string>
+    <string name="text_label_start_investing_today_new">Why wait when you an start investing with as low as <font fgcolor="#eb6400">\u20B9 250 </font>in our ready made portfolios?</string>
+    <string name="text_label_start_investing_today_sub_text">Check our expert-curated portfolios designed specially for you!</string>
+    <string name="button_label_start_investing_now">Start Investing Now</string>
+    <string name="text_label_or">OR</string>
+    <string name="button_label_view_our_recommendations">View our recommendations</string>
+    <string name="text_label_invest_in_stocks">I want to Invest in Stocks</string>
+    <string name="lbl_read_more">Read More</string>
+    <string name="title_portfolio_overview">Portfolio Overview</string>
+    <string name="btn_view_details">View Details</string>
+    <string name="lbl_current_value">Current Value</string>
+    <string name="lbl_basket_returns_value">Basket Returns</string>
+    <string name="lbl_average_returns_value">Avg. Returns</string>
+    <string name="lbl_overall_g_l">Overall G/L</string>
+    <string name="lbl_total_g_l">Total G/L</string>
+    <string name="lbl_total_gain">Total Gain</string>
+    <string name="lbl_total_loss">Total Loss</string>
+    <string name="lbl_ledger_avail">Ledger Available</string>
+    <string name="home_lbl_ledger_cash_avail">Cash Balance</string>
+    <string name="home_lbl_ledger_avail_margin">Available Margin</string>
+    <string name="text_label_currently_there_are_no_news_on_your_portfolio">Currently there are no news on your Portfolio.</string>
+    <string name="header_label_gainer_symbol">Symbol</string>
+    <string name="header_label_gainer_ltp">LTP</string>
+    <string name="header_label_gainer_volume">Volume</string>
+    <string name="header_label_gainer_value">Value</string>
+    <string name="header_label_gainer_chg">Chg (Chg%)</string>
+    <string name="msg_untick_indices_to_add_new">Kindly untick any Indices / Sectors to add new</string>
+    <string name="home_advice_scrip_call_type" translatable="false">%1$s - %2$s</string>
+
+    <string name="home_lbl_stop_loss">Stop Loss</string>
+    <string name="home_lbl_target_price">Target Price</string>
+    <string name="home_lbl_reco_price">Reco Price</string>
+    <string name="edis_online_margin_pledge">E-DIS / Pledge for Margin</string>
+    <string name="transfer_to_sell" translatable="false">Transfer To Sell</string>
+    <string name="transfer_funds_home_text">Transfer Funds, Winning Stock ideas Waiting !</string>
+    <string name="fund_transfer_error_amout_msg">Please enter an amount to proceed</string>
+    <string name="home_transfer_fund">Transfer Funds</string>
+    <string name="fund_mode_of_transfer_text">Select mode of Transfer</string>
+    <string name="transfer_now_text">Transfer now</string>
+    <string name="min_inv_amt_text">Min Invt. Amt.</string>
+    <string name="no_of_stocks_text">No. of Stocks</string>
+    <string name="date_of_launch_text">Date of Launch</string>
+    <string name="did_you_know">Did You Know:</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="cmp">CMP:</string>
+    <string name="target">Target:</string>
+    <string name="fund_transfer_net_bank_amount_validation">Kindly perform UPI for less than 100 Rs. transaction</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

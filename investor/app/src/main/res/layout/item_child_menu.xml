@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txt_child_menu"
+    style="@style/Sub.Menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/app_min_height_child_menu"
+    android:paddingStart="@dimen/app_drawer_menu_start_padding"
+    android:paddingEnd="@dimen/padding_large"
+    tools:text="MOSt Focused 25 Fund" />

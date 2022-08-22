@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text_background"
+    app:drawableEndCompat="@drawable/ic_spinner_arrow_down_dark"
+    android:drawablePadding="@dimen/padding_medium"
+    android:ellipsize="none"
+    android:minHeight="32dp"
+    android:singleLine="true"
+    android:theme="@style/Roboto14Pt"
+    tools:text="Select Group" />

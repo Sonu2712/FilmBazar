@@ -1,0 +1,2 @@
+# Gradle does not buils when this file uses CRLF
+buildSrc/src/main/kotlin/*.gradle.kts  text eol=lf

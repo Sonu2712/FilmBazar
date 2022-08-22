@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_6">#0f000000</color>
+    <color name="greyish_brown">#504b4b</color>
+    <color name="black">#222020</color>
+    <color name="black_dark">#000000</color>
+    <color name="warm_grey">#888888</color>
+    <color name="translucent_black">#22000000</color>
+    <color name="pumpkin">#eb6400</color>
+    <color name="orangey_yellow">#fcae16</color>
+    <color name="pinkish_grey">#c7c7c7</color>
+    <color name="light_peach">#ffcda8</color>
+    <color name="copper">#d53b23</color>
+    <color name="yellow_light">#FFF9b2</color>
+    <color name="leafy_green">#5eb73b</color>
+    <color name="leafy_green_two">#5bb239</color>
+    <color name="light_green">#89CA7E</color>
+    <color name="green">#25d366</color>
+    <color name="white_two">#f9f9f9</color>
+    <color name="white_three">#ffffff</color>
+    <color name="light_sage">#dff1d7</color>
+    <color name="very_light_pink">#fbebe8</color>
+    <color name="very_light_pink_two">#ffecde</color>
+    <color name="pale">#ffe8d6</color>
+    <color name="white_four">#f3f3f3</color>
+    <color name="white_five">#f5f5f5</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white">#30000000</color>
+
+    <!--trading report color -->
+    <color name="pumpkin_two">#e96200</color>
+    <color name="red">#f73e2d</color>
+    <color name="yellow">#ffb230</color>
+    <color name="leafy_green_three">#17b404</color>
+
+    <!--watchlist color-->
+    <color name="beige">#fcf9f2</color>
+    <color name="light_off_white">#fff1e5</color>
+    <color name="off_white">#fef7e8</color>
+
+    <!--color for dark Mode-->
+    <color name="darkGrey">#121212</color>
+    <color name="lightGrey">#272727</color>
+    <color name="lightwhite">#dedede</color>
+    <color name="alabaster">#F9F9F9</color>
+    <color name="lightRed">#cf6679</color>
+    <color name="material_500">#44000000</color>
+    <color name="grey_material_500">#FFCDCDCD</color>
+    <color name="colorNotSelectedDot">#f7fbfb</color>
+    <color name="blackTitleColor">#111111</color>
+    <color name="greySubTittleColor">#a1a1a1</color>
+</resources>

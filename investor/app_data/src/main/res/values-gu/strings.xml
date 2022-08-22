@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_report_filter_daily">દૈનિક</string>
+    <string name="research_report_filter_regular">નિયમિત</string>
+    <string name="research_report_filter_weekly">સાપ્તાહિક</string>
+    <string name="research_report_filter_monthly">માસિક</string>
+    <string name="research_report_filter_quarterly">ત્રિમાસિક</string>
+    <string name="research_report_filter_yearly">વાર્ષિક</string>
+    <string name="research_report_filter_none">કંઈ નહીં</string>
+
+    <string name="research_report_type_my_portfolio_reports">મારો પોર્ટફોલિયો રિપોર્ટ </string>
+    <string name="research_report_type_most_viewed_reports">સૌથી વધુ જોવાયેલ રિપોર્ટ</string>
+    <string name="research_report_type_company_reports">કંપની રિપોર્ટ</string>
+    <string name="research_report_type_sector_reports">ક્ષેત્રિય રિપોર્ટ</string>
+    <string name="research_report_type_thematic_reports">વિષય અનુસાર રિપોર્ટ</string>
+    <string name="research_report_type_market_analysis_reports">બજાર વિશ્લેષણ રિપોર્ટ</string>
+
+    <string name="news_type_my_news">મારા સમાચાર</string>
+    <string name="news_type_market_commentary">બજાર ટિપ્પણી</string>
+    <string name="news_type_special_coverage">વિશેષ કવરેજ</string>
+    <string name="news_type_equity">ઈક્વિટી</string>
+    <string name="news_type_commodity">કોમોડિટી</string>
+    <string name="news_type_corp_action">કોર્પોરેટ એક્શન</string>
+    <string name="news_type_economic_events">આર્થિક ઈવેન્ટ</string>
+    <string name="button_label_do_not_show_again">ફરીથી બતાવો નહિં</string>
+</resources>

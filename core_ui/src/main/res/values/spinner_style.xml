@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.MoslTheme.spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:popupAnimationStyle">@anim/bottom_sheet_slide_in</item>
+        <item name="android:background">@color/color_surface</item>
+    </style>
+
+    <style name="Widget.MoslTheme.AutoCompleteSpinner" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@color/color_surface</item>
+        <item name="endIconDrawable">@drawable/ic_spinner_arrow_down</item>
+    </style>
+
+</resources>

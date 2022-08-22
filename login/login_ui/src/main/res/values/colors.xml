@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="login_separator">@color/lightwhite</color>
+    <color name="text_color_guest_info_header">@color/black</color>
+</resources>

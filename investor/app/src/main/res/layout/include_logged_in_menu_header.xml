@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clUserInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/drawer_header_color"
+    android:padding="@dimen/padding_normal">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/app_avatar_circle_dimension"
+        android:layout_height="@dimen/app_avatar_circle_dimension"
+        android:src="@mipmap/ic_app_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInitial"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        tools:text="JD"
+        android:textColor="@color/color_initials"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tvClientName"
+        style="@style/Widget.MoslTheme.DecorativeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:ellipsize="none"
+        android:maxLines="2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@id/ivVideo"
+        app:layout_constraintRight_toLeftOf="@id/ivVideo"
+        app:layout_constraintLeft_toRightOf="@id/guideLine"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        tools:text="Mohan venkata ratnam seelam "
+        />
+
+    <ImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="@dimen/padding_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvClientName"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        app:srcCompat="@drawable/ic_play"
+        />
+
+    <TextView
+        android:id="@+id/tvClientCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        style="@style/FiraSans12Pt"
+        tools:text="User ID: ABCDE12345"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintLeft_toRightOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tvClientName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

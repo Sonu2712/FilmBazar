@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_drawer_menu_start_padding">60dp</dimen>
+    <dimen name="app_splash_icon_dimension">48dp</dimen>
+    <dimen name="app_splash_progress_bar_dimension">40dp</dimen>
+    <dimen name="app_avatar_circle_dimension">48dp</dimen>
+    <dimen name="app_min_height_open_user_header_menu">56dp</dimen>
+    <dimen name="app_min_height_child_menu">48dp</dimen>
+
+    <dimen name="login_action_text_height">32dp</dimen>
+</resources>
