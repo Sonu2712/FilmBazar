@@ -8,7 +8,6 @@ import com.film.annotations.ActivityScoped
 import com.film.app.core.rx.applyUiModel
 import com.film.bazar.appuser.repository.UserManager
 import com.film.bazar.domain.drawermenu.MenuDataSourceRepository
-import com.film.bazar.drawermenu.data.AppMenu
 import com.film.bazar.util.upcomingUserChanges
 import com.film.commons.data.onFailure
 import com.film.commons.data.onSuccess
@@ -52,15 +51,6 @@ class BottomBarView @Inject constructor(
 
     override fun pageOpened(fragment: Fragment) {
         bottomBar.selectBottomMenuForPage(fragment)
-    }
-
-    fun selectMenu(menu: AppMenu) {
-        val menuItem = bottomBar.menu.findItem(menu.pageId.bottomBarIntMapper())
-        if (menuItem != null) {
-            menuItem.isChecked = true
-        } else {
-            bottomBar.clearSelection()
-        }
     }
 
     fun toggleVisibility(show: Boolean) {

@@ -4,10 +4,10 @@ import android.os.Build
 import android.view.View
 import coil.api.load
 import com.film.bazar.R
+import com.film.bazar.bottombar.getIcon
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.databinding.ItemBaseMenuBinding
 import com.film.bazar.domain.drawermenu.BaseMenu
-import com.film.bazar.drawermenu.data.getIcon
 import com.xwray.groupie.ExpandableGroup
 import com.xwray.groupie.ExpandableItem
 import com.xwray.groupie.OnItemClickListener

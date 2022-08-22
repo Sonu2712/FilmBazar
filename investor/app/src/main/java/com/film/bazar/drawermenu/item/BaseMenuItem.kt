@@ -6,13 +6,12 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import coil.api.load
 import com.film.bazar.R
-import com.film.bazar.constants.NavigationConstants
+import com.film.bazar.bottombar.getIcon
 import com.film.bazar.coreui.groupie.VBViewHolder
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.databinding.ItemBaseMenuBinding
 import com.film.bazar.domain.drawermenu.AppMenu
 import com.film.bazar.domain.drawermenu.BaseMenu
-import com.film.bazar.drawermenu.data.getIcon
 
 class BaseMenuItem(
     private val baseMenu: BaseMenu

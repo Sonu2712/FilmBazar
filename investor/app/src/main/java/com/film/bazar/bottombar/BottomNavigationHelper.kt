@@ -1,5 +1,4 @@
 package com.film.bazar.bottombar
-import android.content.Context
 import android.view.Menu
 import androidx.core.view.get
 import androidx.core.view.size
@@ -10,7 +9,6 @@ import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_MORE
 import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_PORTFOLIO
 import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_WALLET
 import com.film.bazar.domain.drawermenu.UBottomBarMenu
-import com.film.bazar.drawermenu.data.getIcon
 import com.film.bazar.home_ui.HomeFragment
 
 interface BottomBarHelper {
