@@ -341,7 +341,7 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
         binding.toolBar.setCustomView(state.toolbarView)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             binding.appBar.elevation = if (state.showShadow) {
-                8f
+                0f
             } else 0f
         }
         setTitleAndOverflow(state.appTitle)
@@ -398,7 +398,6 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.app_feedback_menu, menu)
         return true
     }
 

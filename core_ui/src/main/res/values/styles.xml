@@ -7,6 +7,7 @@
         <item name="android:theme">@style/Base.MoslTheme</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="titleTextAppearance">@style/TextAppearance.MoslTheme.Toolbar</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.FilmTheme.ToolbarSubTitle</item>
         <item name="android:background">?toolbarColor</item>
         <item name="titleMargin">0dp</item>
         <item name="contentInsetStart">0dp</item>
@@ -15,9 +16,14 @@
 
     <style name="TextAppearance.MoslTheme.Toolbar" parent="">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textColor">#1D3557</item>
         <item name="android:fontFamily">@font/fira_sans_medium</item>
-        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.FilmTheme.ToolbarSubTitle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#E53946</item>
+        <item name="android:fontFamily">@font/fira_sans_medium</item>
     </style>
 
     <style name="RadioSelection" parent="Widget.MoslTheme.RadioButtonBase">

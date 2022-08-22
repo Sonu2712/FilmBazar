@@ -21,10 +21,11 @@ class InvestorToolbar @JvmOverloads constructor(
     fun setAppTitle(appTitle: AppTitle) {
         if (appTitle.hasTitle()) {
             if (appTitle.hasStringRes()) {
-                title = context.getString(appTitle.title).toUpperCase(Locale.ENGLISH)
+                title = context.getString(appTitle.title)
+                subtitle = "bazar"
 
             } else {
-                title = appTitle.titleStr!!.toUpperCase(Locale.ENGLISH)
+                title = appTitle.titleStr!!
             }
         } else {
             title = ""
@@ -51,7 +52,7 @@ class InvestorToolbar @JvmOverloads constructor(
             setNavigationContentDescription(R.string.text_label_go_back)
         } else {
             setTag(R.id.tool_bar_go_back, false)
-            setNavigationIcon(R.drawable.navigation_icon)
+            setNavigationIcon(R.drawable.app_ic_film)
             setNavigationContentDescription(R.string.text_label_drawer_menu)
         }
         if (!showNavigationIcon) navigationIcon = null

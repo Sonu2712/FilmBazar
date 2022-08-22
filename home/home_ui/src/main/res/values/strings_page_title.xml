@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="page_title_home">Home</string>
+    <string name="page_title_home">film</string>
     <string name="page_title_portfolio">Portfolio</string>
 </resources>
