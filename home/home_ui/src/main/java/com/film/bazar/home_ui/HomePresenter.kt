@@ -14,7 +14,7 @@ class HomePresenter @Inject constructor(
     override fun start() {
         Observable.merge(onFetchCalled(), onRetryCalled())
             .switchMap {
-                repository.welcomeHome()
+                repository.getHomeData()
                     .compose(applyUiModel())
             }.subscribe(view::renderWelcome)
             .addTo(disposable)

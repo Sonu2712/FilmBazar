@@ -3,12 +3,17 @@ package com.film.bazar.home_ui
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.film.app.core.events.DataAction
 import com.film.bazar.coreui.core.InvestorBaseFragment
 import com.film.commons.data.UiModel
 import com.film.commons.data.onSuccess
 import com.film.bazar.coreui.core.MOSLCommonFragment
+import com.film.bazar.home_domain.MovieInfo
 import com.film.bazar.home_ui.databinding.FragmentHomeBinding
+import com.film.commons.data.onFailure
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.GroupieViewHolder
 import javax.inject.Inject
 
 
@@ -17,6 +22,9 @@ class HomeFragment : InvestorBaseFragment() , HomeView{
 
     @Inject
     lateinit var presenter: HomePresenter
+    lateinit var mLayoutManager: LinearLayoutManager
+    internal lateinit var groupAdapter: GroupAdapter<GroupieViewHolder>
+
 
     override fun getLayout(): Int {
         return R.layout.fragment_home
@@ -39,9 +47,13 @@ class HomeFragment : InvestorBaseFragment() , HomeView{
         dataActionSubject.onNext(DataAction.Fetch)
     }
 
-    override fun renderWelcome(uiModel: UiModel<String>) {
+    override fun renderWelcome(uiModel: UiModel<List<MovieInfo>>) {
+        toggleProgressBar(uiModel.inProgress)
+        uiModel.onFailure {
+
+        }
         uiModel.onSuccess {
-            binding.tvWelcome.text = it
+
         }
     }
 
