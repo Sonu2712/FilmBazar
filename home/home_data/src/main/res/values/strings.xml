@@ -1,12 +1,3 @@
 <resources>
-    <string name="app_name" translatable="false">home</string>
-    <string name="home_market_top_gainers">Top Gainers</string>
-    <string name="home_market_top_losers">Top Losers</string>
-    <string name="home_market_active_by_value">Active by Value</string>
-    <string name="home_market_active_by_volume">Active by Volume</string>
-    <string name="home_news_my_news">My News</string>
-    <string name="home_news_market_commentary">MARKET COMMENTARY</string>
-    <string name="home_ipo_ongoing">Ongoing (%d)</string>
-    <string name="home_ipo_upcoming">Upcoming (%d)</string>
 
 </resources>

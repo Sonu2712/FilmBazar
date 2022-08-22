@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="heading_markets_today_action_title">View All</string>
-    <string name="heading_investment_baskets_action_title">KNOW MORE</string>
-    <string name="heading_recommendation_action_title">View %d Open Calls</string>
-    <string name="heading_stock_ideas_action_title">View %d More Ideas</string>
-    <string name="heading_investment_basket_title">START INVESTING WITH ₹ %d ONLY</string>
 
 
-    <string name="heading_ipo_action_title">View Details</string>
-    <string name="tab_heading_my_news">My News</string>
-    <string name="tab_heading_edumo">edumo</string>
-    <string name="tab_heading_markets_today">Market Today</string>
-    <string name="tab_heading_key_statistics">Key Statistics</string>
-    <string name="tab_heading_blogs">blogs</string>
-<string name="tab_heading_indian">Indian Indices</string>
-<string name="tab_heading_global">Global Indices</string>
-<string name="tab_heading_sector">Sectors</string>
-<string name="string_label_edit_markets">Edit Markets</string>
-<string name="button_label_invest_now">Invest Now</string>
-<string name="button_explore_more_ready_made_baskets">Explore More Ready Made Baskets</string>
-<string name="button_label_download_prospect">Download Prospect</string>
-    </resources>
+</resources>

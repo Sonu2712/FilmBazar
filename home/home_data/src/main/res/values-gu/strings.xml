@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="home_market_top_gainers">ટોચના લાભ મેળવનારા</string>
-    <string name="home_market_top_losers">ટોચના લાભ ગુમાવનારા</string>
-    <string name="home_market_active_by_value">મૂલ્ય દ્વારા સક્રિય</string>
-    <string name="home_market_active_by_volume">વોલ્યુમ દ્વારા સક્રિય</string>
-    <string name="home_news_my_news">મારા સમાચાર</string>
-    <string name="home_news_market_commentary">બજાર ટિપ્પણી</string>
-    <string name="home_ipo_ongoing">ચાલી રહેલ  (%d)</string>
-    <string name="home_ipo_upcoming">આવી રહેલ (%d)</string>
-</resources>
+<resources></resources>
