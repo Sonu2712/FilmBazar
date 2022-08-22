@@ -20,21 +20,15 @@ interface BottomBarHelper {
 /*======Call after user changed or first time when app started*/
 fun BottomNavigationView.setBottomBarItems(
     itemList: List<String>,
-    context: Context,
     bottomMenu : List<UBottomBarMenu>,
-    startupPageId : String,
-    hasPortfolio : Boolean
+    startupPageId : String
 ) {
     val visibleIds = mutableListOf<Int>()
     menu.clear()
-    val selectedBottomMenu = if (itemList.isNullOrEmpty()) bottomMenu else bottomMenu
+    val selectedBottomMenu = bottomMenu
         .filter { itemList.contains(it.id) || it.isDefault }
 
-    val newSelectedBottomMenu = selectedBottomMenu.map {
-        if(it.id == "portfolio" || it.id == "portfoliodayzero")
-            if (hasPortfolio) it.copy(id = "portfolio") else it.copy(id = "portfoliodayzero")
-        else it
-    }
+    val newSelectedBottomMenu = selectedBottomMenu.map { it }
 
     newSelectedBottomMenu.forEach { menuModel ->
         val menuId = menuModel.id.bottomBarIntMapper()

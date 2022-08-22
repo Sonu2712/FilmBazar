@@ -69,37 +69,15 @@ class BottomBarView @Inject constructor(
 
     protected fun refreshBottomBar() {
         if (userManager.isLoggedIn()) {
-            val context = this.bottomBar.context
-            val startupScreen = userManager.getUser()?.userConfig?.userSettings?.startupScreen
-            val startupPageScreen =
-                if (startupScreen == "portfolio" || startupScreen == "portfoliodayzero")
-                    if (userManager.getUser()?.userConfig?.hasPortfolio == true) "portfolio" else "portfoliodayzero"
-                else startupScreen
-            val startupPageId =
-                if (startupPageScreen.isNullOrEmpty()) "home"
-                else startupPageScreen
             menuRepository.getMenuItems()
                 .compose(applyUiModel())
                 .subscribe {
                     it.onFailure { Timber.e("it") }
                     it.onSuccess { appMenu ->
-                        val optionalSelectedMenu =
-                            preferences.getString("", "")
-                        val primaryMenu =
-                            userManager.getUser()?.userConfig?.userSettings?.bottomMenu
-                                ?: emptyList()
-                        val bottomMenu = if (primaryMenu.isNullOrEmpty()) appMenu.bottomMenu
-                        else appMenu.bottomMenu.filter { data1 ->
-                            primaryMenu.any { data1.id == it }
-                        }
-
                         bottomBar.setBottomBarItems(
-                            if (optionalSelectedMenu.isNullOrEmpty()) emptyList() else bottomMenu.filter { !it.isDefault }
-                                .map { it.id },
-                            context,
-                            bottomMenu,
-                            startupPageId,
-                            userManager.getUser()?.userConfig?.hasPortfolio ?: false
+                            emptyList(),
+                            appMenu.bottomMenu,
+                            appMenu.bottomMenu.first().id
                         )
                     }
                 }.addTo(disposable)

@@ -26,7 +26,7 @@ data class UserConfig(
         onPageHelp = false,
         startupScreen = "home",
         language = AppLanguage.ENGLISH,
-        bottomMenu = listOf("home", "portfolio", "search", "logout"),
+        bottomMenu = listOf("home", "portfolio", "wallet", "more"),
         adBanner = true
     ),
     @SerializedName("portfolioVideoUrl")

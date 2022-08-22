@@ -31,7 +31,7 @@
       "isDefault": true
     },
     {
-      "id": "search",
+      "id": "wallet",
       "title": "Wallet",
       "icon": "",
       "titleHi": "",
@@ -39,7 +39,7 @@
       "isDefault": true
     },
     {
-      "id": "watchlisthome",
+      "id": "more",
       "title": "More",
       "icon": "",
       "titleHi": "",

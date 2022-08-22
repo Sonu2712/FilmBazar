@@ -229,6 +229,18 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
             .addTo(disposable)
     }
 
+    fun logoutClicked(){
+        showDialogForConfirmation(
+            getString(R.string.app_msg_logout_alert),
+            negativeButton = getString(R.string.button_label_cancel),
+            cancelable = false
+        ) { positiveClicked ->
+            if (positiveClicked) {
+                doLogout()
+            }
+        }
+    }
+
     fun doLogout() {
         loginRepository
             .logoutUser()
@@ -330,7 +342,7 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
                     if (userManager.getUser()?.userConfig?.hasPortfolio == true) "portfolio" else "portfoliodayzero"
                 } else pageId
                 if (pageId == NavigationConstants.NAVIGATE_TO_MORE){
-                    doLogout()
+                    logoutClicked()
                 } else screenNavigator.openPage(pageId = newPageId)
             }.addTo(disposable)
         bottomBarView.start()
