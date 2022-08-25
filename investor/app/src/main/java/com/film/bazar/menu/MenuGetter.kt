@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import com.film.bazar.constants.NavigationConstants
 import com.film.bazar.home_ui.HomeFragment
 import com.film.bazar.appusercore.model.UserType
+import com.film.bazar.notification.NotificationFragment
 
 object MenuGetter {
 
@@ -12,6 +13,7 @@ object MenuGetter {
     fun getFragment(@NavigationConstants menuCode: String): Fragment? {
         return when (menuCode) {
             NavigationConstants.NAVIGATE_TO_HOME -> HomeFragment()
+            NavigationConstants.NAVIGATE_TO_NOTIFICATION -> NotificationFragment()
             else -> null
         }
     }

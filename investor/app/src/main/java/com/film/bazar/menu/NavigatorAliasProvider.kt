@@ -7,6 +7,7 @@ import com.film.bazar.helper.CustomNavigator
 import com.film.bazar.helper.CustomNavigatorImpl
 import com.film.bazar.helper.urlnavigator.UrlNavigatorImpl
 import com.film.bazar.coreui.navigatorlib.BaseNavigator
+import com.film.bazar.home_ui.HomeInterNavigator
 import dagger.Binds
 import dagger.Module
 
@@ -29,4 +30,8 @@ abstract class NavigatorAliasProvider {
 
     @Binds
     abstract fun provideCommonNavigator(screenNavigator: ScreenNavigatorImpl): CommonNavigator
+
+    @Binds
+    abstract fun provideHomeInterNavigator(interNavigatorImpl: InterModuleNavigatorImpl): HomeInterNavigator
+
 }

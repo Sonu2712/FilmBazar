@@ -8,7 +8,8 @@ import javax.inject.Inject
 
 class HomePresenter @Inject constructor(
     view: HomeView,
-    val repository: HomeRepository
+    val repository: HomeRepository,
+    val navHandler: HomeNavigationHandler
 ) : BasePresenter<HomeView>(view = view) {
 
     override fun start() {
@@ -21,6 +22,10 @@ class HomePresenter @Inject constructor(
 
         view.onFilterClicked()
             .subscribe { view.showSortFilterBottomSheet() }
+            .addTo(disposable)
+
+        view.onNavigationEvent()
+            .subscribe { navHandler.handle(it.event) }
             .addTo(disposable)
     }
 

@@ -123,6 +123,10 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
             .show(childFragmentManager, "SortFilterBottomSheet")
     }
 
+    override fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent> {
+        return uiEvent.ofType()
+    }
+
     override fun getOptionsMenu(): Int {
         return R.menu.home_menu
     }
@@ -130,6 +134,7 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.nav_notification -> {
+                uiEvent.onNext(HomeNavEvent.NotificationEvent)
                 true
             }
             else -> super.onOptionsItemSelected(item)

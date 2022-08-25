@@ -8,5 +8,6 @@ abstract class HomeModule {
     @Binds
     abstract fun provideHomeView(fragment: HomeFragment): HomeView
 
-
+    @Binds
+    abstract fun provideHomeNavigator(navigatorImpl: HomeNavigatorImpl): HomeNavigator
 }

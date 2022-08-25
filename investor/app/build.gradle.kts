@@ -182,6 +182,7 @@ dependencies {
     implementation(project(":moslcommons"))
     implementation(project(":annotations"))
     implementation(project(":flashbar"))
+    implementation(project(":groupie_extensions"))
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(KotlinDependencies.kotlin)
@@ -228,6 +229,7 @@ dependencies {
     implementation(RetrofitDependencies.rxJava)
     debugImplementation(RetrofitDependencies.mock)
     implementation(RxBindingDependencies.swipeRefresh)
+    implementation(Dependencies.circleImageView)
 
     implementation(OkHttpDependencies.core)
     implementation(OkHttpDependencies.okio)

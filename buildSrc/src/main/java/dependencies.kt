@@ -40,6 +40,7 @@ object Dependencies {
     const val toolTipBaloon = "com.github.skydoves:balloon:1.4.0"
     const val threeTen = "com.jakewharton.threetenabp:threetenabp:1.2.4"
     const val dataBinding = "androidx.databinding:databinding-compiler:${Versions.android_plugin_version}"
+    const val circleImageView = "de.hdodenhof:circleimageview:3.1.0"
 }
 
 object PluginsDependencies {
