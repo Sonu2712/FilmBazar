@@ -18,6 +18,10 @@ class HomePresenter @Inject constructor(
                     .compose(applyUiModel())
             }.subscribe(view::renderWelcome)
             .addTo(disposable)
+
+        view.onFilterClicked()
+            .subscribe { view.showSortFilterBottomSheet() }
+            .addTo(disposable)
     }
 
 }

@@ -17,11 +17,15 @@ import com.film.bazar.home_ui.moviebanner.MovieBannerManager
 import com.film.bazar.home_ui.movieinfo.MovieInfoManager
 import com.film.bazar.home_ui.movieinfo.MovieItem
 import com.film.bazar.home_ui.movietab.MovieTabManager
+import com.film.bazar.home_ui.sortfilter.SortFilterBottomSheetFragment
 import com.film.commons.data.onFailure
+import com.film.commons.rx.ofType
 import com.film.groupiex.section.DataManagerSection
 import com.xwray.groupie.Group
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
 
@@ -30,6 +34,7 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
 
     @Inject
     lateinit var presenter: HomePresenter
+    private val uiEvent = PublishSubject.create<HomeUiEvent>()
     lateinit var section: DataManagerSection
     lateinit var mLayoutManager: LinearLayoutManager
     internal lateinit var groupAdapter: GroupAdapter<GroupieViewHolder>
@@ -63,7 +68,7 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
 
     private fun setupRecyclerView(){
         bannerManager = MovieBannerManager()
-        tabManager = MovieTabManager()
+        tabManager = MovieTabManager(uiEvent)
         infoManager = MovieInfoManager()
 
         section = DataManagerSection(onRetryClick)
@@ -107,6 +112,15 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
 
     override fun isDataEmpty(): Boolean {
         return section.isDataEmpty
+    }
+
+    override fun onFilterClicked(): Observable<HomeUiEvent.OpenSortFilterBottomSheet> {
+        return uiEvent.ofType()
+    }
+
+    override fun showSortFilterBottomSheet() {
+        SortFilterBottomSheetFragment()
+            .show(childFragmentManager, "SortFilterBottomSheet")
     }
 
     override fun getOptionsMenu(): Int {

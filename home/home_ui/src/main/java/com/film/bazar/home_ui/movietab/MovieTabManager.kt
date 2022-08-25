@@ -2,11 +2,15 @@ package com.film.bazar.home_ui.movietab
 
 import com.film.bazar.coreui.tabs.SimpleTabListener
 import com.film.bazar.home_domain.MovieTab
+import com.film.bazar.home_ui.HomeUiEvent
 import com.google.android.material.tabs.TabLayout
 import com.xwray.groupie.Group
 import com.xwray.groupie.Section
+import io.reactivex.rxjava3.subjects.PublishSubject
 
-class MovieTabManager() {
+class MovieTabManager(
+    val uiEvent: PublishSubject<HomeUiEvent>
+) {
     var currentTab: MovieTab = MovieTab.OngoingProject
     lateinit var movieTabItem: MovieTabItem
 
@@ -27,7 +31,7 @@ class MovieTabManager() {
                 }
             })
         section.add(movieTabItem)
-        section.setFooter(MovieFilterItem())
+        section.setFooter(MovieFilterItem(uiEvent))
         return section
     }
 }
