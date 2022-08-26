@@ -27,9 +27,6 @@ class ProfilePresenter @Inject constructor(
                     .compose(applyUiModel())
             }.subscribe {
                 view.renderSuccessLogout(it)
-                it.onSuccess {
-                    screenNavigator.openHome()
-                }
             }
             .addTo(disposable)
     }
