@@ -295,9 +295,7 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
         bottomBarView.onMenuSelected()
             .subscribe {
                 val pageId = it.itemId.bottomBarStringMapper()
-                if (pageId == NavigationConstants.NAVIGATE_TO_MORE){
-                    logoutClicked()
-                } else screenNavigator.openPage(pageId = pageId)
+               screenNavigator.openPage(pageId = pageId)
             }.addTo(disposable)
         bottomBarView.start()
     }

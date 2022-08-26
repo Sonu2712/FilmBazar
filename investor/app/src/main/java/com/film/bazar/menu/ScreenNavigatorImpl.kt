@@ -1,5 +1,6 @@
 package com.film.bazar.menu
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.film.annotations.ActivityScoped
@@ -10,6 +11,7 @@ import com.film.bazar.appuser.repository.UserManager
 import com.film.bazar.coredata.CommonBaseUrls
 import com.film.bazar.coreui.navigatorlib.*
 import com.film.bazar.helper.CustomNavigator
+import com.film.login_ui.core.LoginActivity
 import javax.inject.Inject
 
 @ActivityScoped
@@ -38,8 +40,16 @@ class ScreenNavigatorImpl @Inject constructor(
     override fun openHome() {
         if (userManager.getUserType().isCustomer) {
             openPage("home")
+        } else {
+            activity.showAppIntro()
         }
         appShortCutId.delete()
+    }
+
+    private fun AppCompatActivity.showAppIntro() {
+        val appIntroActivity = Intent(this, LoginActivity::class.java)
+        startActivity(appIntroActivity)
+        finish()
     }
 
     override fun openPage(entry: NavigationEntry) {

@@ -7,6 +7,7 @@ import com.film.bazar.home_ui.HomeFragment
 import com.film.bazar.appusercore.model.UserType
 import com.film.bazar.home_ui.detail.MovieDetailFragment
 import com.film.bazar.notification.NotificationFragment
+import com.film.bazar.profile.ProfileFragment
 
 object MenuGetter {
 
@@ -16,6 +17,7 @@ object MenuGetter {
             NavigationConstants.NAVIGATE_TO_HOME -> HomeFragment()
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> MovieDetailFragment()
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> NotificationFragment()
+            NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> ProfileFragment()
             else -> null
         }
     }
