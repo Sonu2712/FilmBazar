@@ -19,6 +19,8 @@
     <string name="app_msg_log_out_successful">Logged Out Successfully</string>
     <string name="app_msg_click_again_to_exit">Please click back again to exit</string>
 
+    <string name="app_player_error">Error initializing YouTube player: %s</string>
+
     <string name="info_message_feed_delayed">For Guest Users, rates are delayed by 15 Minutes. \nNifty rates will be available only on post login.</string>
 
 </resources>

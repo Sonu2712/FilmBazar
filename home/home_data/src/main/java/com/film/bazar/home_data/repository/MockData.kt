@@ -1,5 +1,6 @@
 package com.film.bazar.home_data.repository
 
+import android.net.Uri
 import com.film.bazar.home_domain.*
 
 val movieBanner = listOf(
@@ -207,34 +208,43 @@ fun topCrew() = CastCrew(
     )
 )
 
+private fun getThumbnail(videoId: String): String {
+    return Uri.parse("https://img.youtube.com/vi")
+        .buildUpon()
+        .appendPath(videoId)
+        .appendPath("hqdefault.jpg")
+        .build()
+        .toString()
+}
+
 fun videoInfo() = listOf(
     VideoInfo(
         id = 1,
         title = "Final Trailer",
-        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
-        videoId = "",
-        youtubeUrl = ""
+        thumbnail = getThumbnail("aWzlQ2N6qqg"),
+        videoId = "aWzlQ2N6qqg",
+        youtubeUrl = "https://www.youtube.com/watch?v=aWzlQ2N6qqg"
     ),
     VideoInfo(
         id = 1,
         title = "“Dream” Trailer",
-        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
-        videoId = "",
-        youtubeUrl = ""
+        thumbnail = getThumbnail("B9_nql5xBFo"),
+        videoId = "B9_nql5xBFo",
+        youtubeUrl = "https://www.youtube.com/watch?v=B9_nql5xBFo"
     ),
     VideoInfo(
         id = 1,
         title = "“Dream” Trailer",
-        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
-        videoId = "",
-        youtubeUrl = ""
+        thumbnail = getThumbnail("aWzlQ2N6qqg"),
+        videoId = "aWzlQ2N6qqg",
+        youtubeUrl = "https://www.youtube.com/watch?v=aWzlQ2N6qqg"
     ),
     VideoInfo(
         id = 1,
         title = "“Dream” Trailer",
-        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
-        videoId = "",
-        youtubeUrl = ""
+        thumbnail = getThumbnail("aWzlQ2N6qqg"),
+        videoId = "aWzlQ2N6qqg",
+        youtubeUrl = "https://www.youtube.com/watch?v=aWzlQ2N6qqg"
     )
 )
 

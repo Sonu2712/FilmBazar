@@ -79,6 +79,10 @@
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="adjustPan" />
 
+        <activity
+            android:name=".video.VideoPlayActivity"
+            android:screenOrientation="landscape" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -89,21 +93,6 @@
         <meta-data
             android:name="PUSHAMPLIFY_INTERVAL_MINS"
             android:value="30" />
-
-        <!--NetCore-->
-        <meta-data
-            android:name="SMT_APP_ID"
-            android:value="@string/smart_tech_id" />
-
-        <!-- Net Core Product Experience  start ! -->
-        <meta-data
-            android:name="HANSEL_APP_ID"
-            android:value="@string/hansel_app_id" />
-
-        <meta-data
-            android:name="HANSEL_APP_KEY"
-            android:value="@string/hansel_app_key" />
-        <!--  Net Core Product Experience End !-->
 
         <meta-data
             android:name="com.truecaller.android.sdk.PartnerKey"

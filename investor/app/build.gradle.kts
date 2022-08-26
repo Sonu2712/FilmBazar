@@ -284,6 +284,8 @@ dependencies {
     implementation(project(":google-pay-client-api-1.0.1"))
 //Nsdl
     implementation("com.android.volley:volley:1.1.1")
+
+    implementation(files("libs/YouTubeAndroidPlayerApi.jar"))
 }
 
 kapt {

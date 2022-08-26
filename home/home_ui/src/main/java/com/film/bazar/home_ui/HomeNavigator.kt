@@ -7,11 +7,13 @@ import javax.inject.Inject
 interface HomeNavigator {
     fun navigateToNotification()
     fun openMovieDetail(id : Int, tabType :String)
+    fun playVideo(videoId : String)
 }
 
 interface HomeInterNavigator{
     fun navigateToNotification()
     fun openMovieDetail(id: Int, tabType: String)
+    fun playVideo(videoId: String)
 }
 
 class HomeNavigatorImpl @Inject constructor(
@@ -24,5 +26,9 @@ class HomeNavigatorImpl @Inject constructor(
 
     override fun openMovieDetail(id: Int, tabType: String) {
         interNavigator.openMovieDetail(id, tabType)
+    }
+
+    override fun playVideo(videoId: String) {
+        interNavigator.playVideo(videoId)
     }
 }

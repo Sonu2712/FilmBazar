@@ -8,6 +8,8 @@ import com.film.bazar.helper.CustomNavigatorImpl
 import com.film.bazar.helper.urlnavigator.UrlNavigatorImpl
 import com.film.bazar.coreui.navigatorlib.BaseNavigator
 import com.film.bazar.home_ui.HomeInterNavigator
+import com.film.bazar.video.VideoNavigator
+import com.film.bazar.video.VideoNavigatorImpl
 import dagger.Binds
 import dagger.Module
 
@@ -33,5 +35,8 @@ abstract class NavigatorAliasProvider {
 
     @Binds
     abstract fun provideHomeInterNavigator(interNavigatorImpl: InterModuleNavigatorImpl): HomeInterNavigator
+
+    @Binds
+    abstract fun provideVideoNavigator(navigator: VideoNavigatorImpl): VideoNavigator
 
 }

@@ -14,6 +14,7 @@ sealed class HomeUiEvent {
     data class OpenCastCrew(
         val id: Int
     ) : HomeUiEvent()
+    data class PlayVideo(val videoId: String) : HomeUiEvent()
 }
 
 sealed class HomeNavEvent {

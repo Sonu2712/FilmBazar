@@ -1,9 +1,13 @@
 package com.film.bazar.menu
 
+import android.content.Intent
+import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.film.bazar.constants.NavigationConstants
 import com.film.bazar.coreui.navigator.ScreenNavigator
 import com.film.bazar.home_ui.HomeInterNavigator
+import com.film.bazar.video.VideoNavigator
+import com.film.bazar.video.VideoPlayActivity
 import javax.inject.Inject
 
 interface InterModuleNavigator {
@@ -12,7 +16,8 @@ interface InterModuleNavigator {
 
 class InterModuleNavigatorImpl @Inject constructor(
     private val activity: AppCompatActivity,
-    protected val screenNavigator: ScreenNavigator
+    protected val screenNavigator: ScreenNavigator,
+    private val videoNavigator: VideoNavigator
 ) : InterModuleNavigator , HomeInterNavigator {
     override fun openPortfolio() {
     }
@@ -23,5 +28,9 @@ class InterModuleNavigatorImpl @Inject constructor(
 
     override fun openMovieDetail(id: Int, tabType: String) {
         screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL, true)
+    }
+
+    override fun playVideo(videoId: String) {
+        videoNavigator.playVideo(videoId)
     }
 }
