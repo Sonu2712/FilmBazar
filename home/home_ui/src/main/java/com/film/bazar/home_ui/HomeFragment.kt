@@ -12,6 +12,7 @@ import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.LinearLayoutSpaceDecorator
 import com.film.bazar.home_domain.MovieData
 import com.film.bazar.home_domain.MovieInfo
+import com.film.bazar.home_domain.MovieTab
 import com.film.bazar.home_ui.databinding.FragmentHomeBinding
 import com.film.bazar.home_ui.moviebanner.MovieBannerManager
 import com.film.bazar.home_ui.movieinfo.MovieInfoManager
@@ -29,7 +30,7 @@ import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
 
-class HomeFragment : MOSLCommonFragment() , HomeView{
+class HomeFragment : MOSLCommonFragment(), HomeView {
     lateinit var binding: FragmentHomeBinding
 
     @Inject
@@ -40,7 +41,7 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
     internal lateinit var groupAdapter: GroupAdapter<GroupieViewHolder>
 
     lateinit var bannerManager: MovieBannerManager
-    lateinit var tabManager: MovieTabManager
+    //lateinit var tabManager: MovieTabManager
     lateinit var infoManager: MovieInfoManager
     var grouplist = mutableListOf<Group>()
 
@@ -66,10 +67,10 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
         dataActionSubject.onNext(DataAction.Fetch)
     }
 
-    private fun setupRecyclerView(){
+    private fun setupRecyclerView() {
         bannerManager = MovieBannerManager()
-        tabManager = MovieTabManager(uiEvent)
-        infoManager = MovieInfoManager()
+        //tabManager = MovieTabManager(uiEvent)
+        infoManager = MovieInfoManager(uiEvent)
 
         section = DataManagerSection(onRetryClick)
         groupAdapter = GroupAdapter()
@@ -92,21 +93,21 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
         }
         uiModel.onSuccess {
             section.removeAll(grouplist)
-            if (!it.banner.isNullOrEmpty()){
+            if (!it.banner.isNullOrEmpty()) {
                 val bannerGroup = bannerManager.render(it.banner)
                 section.add(bannerGroup)
                 grouplist.add(bannerGroup)
             }
-            if (!it.tab.isNullOrEmpty()){
-                val tabGroup = tabManager.render(it.tab)
-                section.add(tabGroup)
-                grouplist.add(tabGroup)
-            }
-            if (!it.info.isNullOrEmpty()){
-                val infoGroup = infoManager.render(it.info)
-                section.add(infoGroup)
-                grouplist.add(infoGroup)
-            }
+            /* if (!it.tab.isNullOrEmpty()){
+                 val tabGroup = tabManager.render(it.tab)
+                 section.add(tabGroup)
+                 grouplist.add(tabGroup)
+             }*/
+
+            val infoGroup = infoManager.render(it.model)
+            section.add(infoGroup)
+            grouplist.add(infoGroup)
+
         }
     }
 
@@ -118,12 +119,21 @@ class HomeFragment : MOSLCommonFragment() , HomeView{
         return uiEvent.ofType()
     }
 
-    override fun showSortFilterBottomSheet() {
+    override fun showSortFilterBottomSheet(tab: MovieTab) {
+        toast(tab.toString())
         SortFilterBottomSheetFragment()
             .show(childFragmentManager, "SortFilterBottomSheet")
     }
 
     override fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent> {
+        return uiEvent.ofType()
+    }
+
+    override fun getSelectedMovieTab(): MovieTab? {
+        return infoManager.currentTab
+    }
+
+    override fun onMovieInfoClicked(): Observable<HomeUiEvent.MovieDetail> {
         return uiEvent.ofType()
     }
 

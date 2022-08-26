@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/flBannerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?background"
+                android:contentDescription="imgscreensheet"
+                android:minHeight="250dp"
+                android:scaleType="fitXY"
+                tools:src="@drawable/app_ice_need_to_remove" />
+
+            <LinearLayout
+                android:id="@+id/clBannerInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Doctor Strange in the Multiverse of Madness" />
+
+                <TextView
+                    android:id="@+id/tvMovieGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/tvSubTitleLabel"
+                    app:layout_constraintStart_toEndOf="@+id/tvSubTitleLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubTitleLabel"
+                    tools:text="Actions" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flBannerInfo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvFundingProfress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Funding progress"
+                    android:textColor="#282828"
+                    android:textSize="@dimen/text_size_medium"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDays"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:text="05 days left"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvFundingProfress" />
+
+                <ProgressBar
+                    android:id="@+id/pbGrowth"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:progress="60"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFundingProfress" />
+
+                <TextView
+                    android:id="@+id/tvTargetValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Rs. 8,57,55,102"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTargetGoal"
+                    app:layout_constraintStart_toStartOf="@+id/tvFundingProfress"
+                    app:layout_constraintTop_toBottomOf="@+id/pbGrowth" />
+
+                <TextView
+                    android:id="@+id/tvTargetGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:text="of Rs 10,00,00,000 goals"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintEnd_toEndOf="@+id/pbGrowth"
+                    app:layout_constraintTop_toTopOf="@+id/tvTargetValue" />
+
+                <TextView
+                    android:id="@+id/tvInvtInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:text="Investment information"
+                    android:textColor="#282828"
+                    android:textSize="@dimen/text_size_medium"
+                    app:layout_constraintStart_toStartOf="@+id/tvFundingProfress"
+                    app:layout_constraintTop_toBottomOf="@id/tvTargetValue" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInvtInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="@+id/pbGrowth"
+                    app:layout_constraintStart_toStartOf="@+id/tvFundingProfress"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInvtInfo" />
+
+                <TextView
+                    android:id="@+id/tvMajorInvtInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Major Investors info"
+                    android:textSize="@dimen/text_size_small"
+                    app:layout_constraintEnd_toEndOf="@+id/rvInvtInfo"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/rvInvtInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/rvInvtInfo" />
+
+                <TextView
+                    android:id="@+id/tvMajorInvtInfoValue"
+                    style="@style/Widget.MoslTheme.IconButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipis
+cing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation."
+                    app:layout_constraintEnd_toEndOf="@+id/tvMajorInvtInfo"
+                    app:layout_constraintStart_toStartOf="@+id/tvMajorInvtInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMajorInvtInfo" />
+
+                <TextView
+                    android:id="@+id/tvInvtInfoText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Investment info"
+                    android:textSize="@dimen/text_size_small"
+                    app:layout_constraintEnd_toEndOf="@+id/tvMajorInvtInfoValue"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvMajorInvtInfoValue"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMajorInvtInfoValue" />
+
+                <TextView
+                    android:id="@+id/tvInvtInfoValue"
+                    style="@style/Widget.MoslTheme.IconButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipis
+cing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation."
+                    app:layout_constraintEnd_toEndOf="@+id/tvInvtInfoText"
+                    app:layout_constraintStart_toStartOf="@+id/tvInvtInfoText"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInvtInfoText" />
+
+                <TextView
+                    android:id="@+id/tvCastAndCrew"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#457B9D"
+                    android:paddingStart="@dimen/margin_large"
+                    android:text="Cast and crew"
+                    android:layout_marginTop="@dimen/margin_extra_large"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInvtInfoValue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

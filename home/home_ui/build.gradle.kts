@@ -52,4 +52,6 @@ dependencies {
     implementation(GroupieDependencies.dataBinding)
 
     implementation(OkHttpDependencies.okio)
+    implementation(Dependencies.circleImageView)
+    implementation(Dependencies.flexBox)
 }

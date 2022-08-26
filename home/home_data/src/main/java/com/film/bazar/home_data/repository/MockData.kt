@@ -1,8 +1,6 @@
 package com.film.bazar.home_data.repository
 
-import com.film.bazar.home_domain.MovieBanner
-import com.film.bazar.home_domain.MovieInfo
-import com.film.bazar.home_domain.MovieTab
+import com.film.bazar.home_domain.*
 
 val movieBanner = listOf(
     MovieBanner(
@@ -23,7 +21,7 @@ val movieTab = listOf(MovieTab.OngoingProject, MovieTab.PastProjects)
 
 val movieInfo = listOf(
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -34,7 +32,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -45,7 +43,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -56,7 +54,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -67,7 +65,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -78,7 +76,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -89,7 +87,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl ="https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -98,5 +96,183 @@ val movieInfo = listOf(
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
         orderAction = "Buy"
+    )
+)
+val movieDetail = MovieDetail(
+    bannerInfo = MovieDetailBannerInfo(
+        bannerUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        movieGenre = listOf("Action", "Adventure", "Fantasy")
+    ),
+    movieFund = MovieFund(
+        daysLeft = 10,
+        fundingPer = 12,
+        targetAmount = 349593453.0,
+        targetGoalAmount = 100000000.0
+    ),
+    invtInfo = investmentInfo(),
+    titleSubTitle = listOf(
+        TitleSubTitle(
+            invtMsg1 = "Major Investors info",
+            invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        ),
+        TitleSubTitle(
+            invtMsg1 = "Investment info",
+            invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        )
+    ),
+    castCrewDetail = CastCrewDetail(directorName = "ABC", castCrew = listOf(topCast(), topCrew())),
+    videoInfo = videoInfo()
+)
+
+fun topCast() = CastCrew(
+    title = "Top cast",
+    casts = listOf(
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        )
+    )
+)
+
+fun topCrew() = CastCrew(
+    title = "Crew",
+    casts = listOf(
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        ),
+        MovieCastCrew(
+            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            fName = "Benedict Cumberbatch",
+            lName = "Cumberbatch"
+        )
+    )
+)
+
+fun videoInfo() = listOf(
+    VideoInfo(
+        id = 1,
+        title = "Final Trailer",
+        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        videoId = "",
+        youtubeUrl = ""
+    ),
+    VideoInfo(
+        id = 1,
+        title = "“Dream” Trailer",
+        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        videoId = "",
+        youtubeUrl = ""
+    ),
+    VideoInfo(
+        id = 1,
+        title = "“Dream” Trailer",
+        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        videoId = "",
+        youtubeUrl = ""
+    ),
+    VideoInfo(
+        id = 1,
+        title = "“Dream” Trailer",
+        thumbnail = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        videoId = "",
+        youtubeUrl = ""
+    )
+)
+
+fun investmentInfo() = listOf(
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 90000000.0,
+        label = "Lorem ipsum",
+        subLabel = "Budget"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 14567.0,
+        label = "Lorem ipsum",
+        subLabel = "Peoples invested"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 0.0,
+        label = "Lorem ipsum",
+        subLabel = "Public exposure"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 50876.0,
+        label = "Lorem ipsum",
+        subLabel = "Fund raised info"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 0.0,
+        label = "Nadiadwala Grandson Entertainment",
+        subLabel = "Production house"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        numberValue = 0.0,
+        label = "Lorem ipsum",
+        subLabel = "Investment flag"
     )
 )

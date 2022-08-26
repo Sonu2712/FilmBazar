@@ -10,6 +10,9 @@ class HomeNavigationHandler @Inject constructor(
             is HomeNavEvent.NotificationEvent -> {
                 navigator.navigateToNotification()
             }
+            is HomeNavEvent.OpenVideo -> {
+                navigator.navigateToNotification()
+            }
         }
     }
 }

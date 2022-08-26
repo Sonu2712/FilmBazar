@@ -6,13 +6,16 @@ import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.coreui.helper.OTHER
 import com.film.bazar.coreui.tabs.SimpleTabListener
 import com.film.bazar.home_domain.MovieTab
+import com.film.bazar.home_ui.HomeUiEvent
 import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.ItemHeaderTabBinding
 import com.google.android.material.tabs.TabLayout
+import io.reactivex.rxjava3.subjects.PublishSubject
 
 class MovieTabItem(
     val tabs: List<MovieTab>,
-    val tabListener: SimpleTabListener
+    val tabListener: SimpleTabListener,
+    val uiEvent: PublishSubject<HomeUiEvent>
 ) : ViewBindingItem<ItemHeaderTabBinding>() {
 
     var selectedPosition = 0
@@ -43,6 +46,9 @@ class MovieTabItem(
         }
         viewBinding.tabLayout.getTabAt(selectedPosition)?.select()
         viewBinding.tabLayout.addOnTabSelectedListener(tabListener)
+        viewBinding.ivFilter.setOnClickListener {
+            uiEvent.onNext(HomeUiEvent.OpenSortFilterBottomSheet)
+        }
     }
 
     fun updatePosition(tabname: String) {

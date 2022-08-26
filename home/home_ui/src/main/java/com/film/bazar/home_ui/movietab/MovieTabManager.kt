@@ -29,7 +29,7 @@ class MovieTabManager(
                         )*/
                     }
                 }
-            })
+            }, uiEvent = uiEvent)
         section.add(movieTabItem)
         section.setFooter(MovieFilterItem(uiEvent))
         return section

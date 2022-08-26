@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="@dimen/margin_medium"
     android:orientation="vertical">
 
@@ -12,4 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@android:color/transparent" />
+    <ImageView
+        android:id="@+id/ivFilter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:padding="@dimen/padding_medium"
+        app:srcCompat="@drawable/ic_filter" />
 </LinearLayout>

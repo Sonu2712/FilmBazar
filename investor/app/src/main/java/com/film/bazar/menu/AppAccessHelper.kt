@@ -15,6 +15,7 @@ object AppAccessHelper : PageAccessHelper() {
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> true
             NavigationConstants.NAVIGATE_TO_NOTIFICATION_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_HOME -> true
+            NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> true
             else -> isAccessibleToGuestUsers(pageId)
@@ -27,6 +28,7 @@ object AppAccessHelper : PageAccessHelper() {
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> true
             NavigationConstants.NAVIGATE_TO_NOTIFICATION_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_HOME -> true
+            NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> true
             else -> isAccessibleToGuestUsers(pageId)

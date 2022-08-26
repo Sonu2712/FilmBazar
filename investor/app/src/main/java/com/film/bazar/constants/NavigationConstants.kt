@@ -23,6 +23,7 @@ annotation class NavigationConstants {
         const val NAVIGATE_TO_CHANGE_PASSWORD = "changepassword"
         const val NAVIGATE_TO_URL = "url"
         const val NAVIGATE_TO_HOME = "home"
+        const val NAVIGATE_TO_MOVIE_DETAIL = "mvoiedetail"
         const val NAVIGATE_TO_PORTFOLIO = "portfolio"
         const val NAVIGATE_TO_WALLET = "wallet"
         const val NAVIGATE_TO_MORE = "more"

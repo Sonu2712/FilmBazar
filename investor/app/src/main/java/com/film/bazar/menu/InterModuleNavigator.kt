@@ -20,4 +20,8 @@ class InterModuleNavigatorImpl @Inject constructor(
     override fun navigateToNotification() {
         screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_NOTIFICATION, true)
     }
+
+    override fun openMovieDetail(id: Int, tabType: String) {
+        screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL, true)
+    }
 }

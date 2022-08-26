@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#457B9D">
+
+    <TextView
+        android:id="@+id/tvCastAndCrew"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:drawableEnd="@drawable/ic_arrow_down"
+        android:drawablePadding="@dimen/padding_medium"
+        android:gravity="center_vertical"
+        android:text="Cast and crew"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Director:"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCastAndCrew" />
+
+    <TextView
+        android:id="@+id/tvDirectorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:text="Sam Raimi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDirector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDirector"
+        app:layout_constraintTop_toTopOf="@+id/tvDirector" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#7EB3D4"
+        app:layout_constraintEnd_toEndOf="@+id/tvDirectorName"
+        app:layout_constraintStart_toStartOf="@+id/tvDirector"
+        app:layout_constraintTop_toBottomOf="@+id/tvDirectorName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCastCrew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvDirector"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:listitem="@layout/item_cast_crew"
+        tools:spanCount="3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvDirectorName, rvCastCrew, view, tvDirector"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
