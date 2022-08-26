@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.film.app.core.events.DataAction
 import com.film.bazar.R
+import com.film.bazar.coreui.core.ContainerState
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.LinearLayoutSpaceDecorator
 import com.film.bazar.databinding.FragmentNotificationNewBinding
@@ -35,11 +36,15 @@ class NotificationFragment : MOSLCommonFragment() , NotificationView{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNotificationNewBinding.bind(view)
+        setAppTitle("Notifications")
         setupRecyclerView()
         presenter.start()
         dataActionSubject.onNext(DataAction.Fetch)
     }
 
+    override fun getInitialState(): ContainerState {
+        return ContainerState.showBackNavigation()
+    }
     private fun setupRecyclerView(){
         section = DataManagerSection(onRetryClick)
         groupAdapter = GroupAdapter()
