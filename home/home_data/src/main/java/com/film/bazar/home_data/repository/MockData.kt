@@ -5,15 +5,15 @@ import com.film.bazar.home_domain.*
 
 val movieBanner = listOf(
     MovieBanner(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         deeplink = ""
     ),
     MovieBanner(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         deeplink = ""
     ),
     MovieBanner(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         deeplink = ""
     )
 )
@@ -22,7 +22,7 @@ val movieTab = listOf(MovieTab.OngoingProject, MovieTab.PastProjects)
 
 val movieInfo = listOf(
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -33,7 +33,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -44,7 +44,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -55,7 +55,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -66,7 +66,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -77,7 +77,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -88,7 +88,7 @@ val movieInfo = listOf(
         orderAction = "Buy"
     ),
     MovieInfo(
-        imgUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         directorName = "Sam Raimi",
         noOfDaysLeft = 5,
@@ -101,7 +101,7 @@ val movieInfo = listOf(
 )
 val movieDetail = MovieDetail(
     bannerInfo = MovieDetailBannerInfo(
-        bannerUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        bannerUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
         movieGenre = listOf("Action", "Adventure", "Fantasy")
     ),
@@ -130,37 +130,37 @@ fun topCast() = CastCrew(
     title = "Top cast",
     casts = listOf(
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         )
@@ -171,37 +171,37 @@ fun topCrew() = CastCrew(
     title = "Crew",
     casts = listOf(
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         ),
         MovieCastCrew(
-            imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
             fName = "Benedict Cumberbatch",
             lName = "Cumberbatch"
         )
@@ -250,37 +250,37 @@ fun videoInfo() = listOf(
 
 fun investmentInfo() = listOf(
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 90000000.0,
         label = "Lorem ipsum",
         subLabel = "Budget"
     ),
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 14567.0,
         label = "Lorem ipsum",
         subLabel = "Peoples invested"
     ),
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 0.0,
         label = "Lorem ipsum",
         subLabel = "Public exposure"
     ),
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 50876.0,
         label = "Lorem ipsum",
         subLabel = "Fund raised info"
     ),
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 0.0,
         label = "Nadiadwala Grandson Entertainment",
         subLabel = "Production house"
     ),
     InvestmentInfo(
-        imageUrl = "https://static.toiimg.com/thumb/msid-74803363,imgsize-31425,width-400,resizemode-4/74803363.jpg",
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         numberValue = 0.0,
         label = "Lorem ipsum",
         subLabel = "Investment flag"

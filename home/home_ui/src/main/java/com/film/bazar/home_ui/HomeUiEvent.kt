@@ -3,6 +3,7 @@ package com.film.bazar.home_ui
 import io.reactivex.rxjava3.subjects.PublishSubject
 
 sealed class HomeUiEvent {
+    object GoBack : HomeUiEvent()
     object OpenSortFilterBottomSheet : HomeUiEvent()
     data class NavigationEvent(val event: HomeNavEvent) : HomeUiEvent()
 

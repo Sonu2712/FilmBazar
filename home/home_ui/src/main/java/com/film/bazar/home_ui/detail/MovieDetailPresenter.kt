@@ -1,6 +1,7 @@
 package com.film.bazar.home_ui.detail
 
 import com.film.app.core.base.BasePresenter
+import com.film.bazar.coreui.navigator.ScreenNavigator
 import com.film.bazar.home_domain.HomeRepository
 import com.film.bazar.home_ui.HomeNavigationHandler
 import com.film.commons.rx.addTo
@@ -10,6 +11,7 @@ import javax.inject.Inject
 class MovieDetailPresenter @Inject constructor(
     view: MovieDetailView,
     val repository: HomeRepository,
+    val screenNavigator: ScreenNavigator,
     val navHandler: HomeNavigationHandler
 ) : BasePresenter<MovieDetailView>(view = view){
 
@@ -26,6 +28,10 @@ class MovieDetailPresenter @Inject constructor(
                 repository.getCastCrew(it.id)
                     .compose(applyUiModel())
             }.subscribe(view::renderCarsCrew)
+            .addTo(disposable)
+
+        view.onBackClicked()
+            .subscribe { screenNavigator.goBack() }
             .addTo(disposable)
 
         view.onNavigationEvent()

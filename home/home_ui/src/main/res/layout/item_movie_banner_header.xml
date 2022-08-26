@@ -19,31 +19,46 @@
         android:scaleType="fitXY"
         tools:src="@drawable/app_ice_need_to_remove" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clBannerInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="bottom"
         android:layout_marginStart="@dimen/margin_normal"
         android:layout_marginBottom="@dimen/margin_normal"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvHedingTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/fira_sans_bold"
             android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:drawablePadding="@dimen/padding_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableStart="@drawable/ic_arrow_back_black_24dp"
+            android:text="Doctor Strange in the Multiverse of Madness" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/fira_sans_bold"
+            android:gravity="bottom"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/clInvestmentAmount"
+            app:layout_constraintStart_toStartOf="parent"
             tools:text="Doctor Strange in the Multiverse of Madness" />
 
         <HorizontalScrollView
             android:id="@+id/clInvestmentAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_large"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:id="@+id/llInvestmentAmount"
@@ -53,6 +68,6 @@
                 android:orientation="horizontal" />
 
         </HorizontalScrollView>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
 

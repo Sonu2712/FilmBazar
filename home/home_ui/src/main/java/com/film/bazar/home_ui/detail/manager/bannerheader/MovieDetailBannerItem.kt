@@ -9,13 +9,16 @@ import androidx.core.content.ContextCompat
 import coil.api.load
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.home_domain.MovieDetailBannerInfo
+import com.film.bazar.home_ui.HomeUiEvent
 import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.ItemMovieBannerHeaderBinding
 import com.google.android.material.chip.Chip
 import com.google.android.material.shape.ShapeAppearanceModel
+import io.reactivex.rxjava3.subjects.PublishSubject
 
 class MovieDetailBannerItem(
-    val data : MovieDetailBannerInfo
+    val data : MovieDetailBannerInfo,
+    val uiEvent: PublishSubject<HomeUiEvent>
 ) : ViewBindingItem<ItemMovieBannerHeaderBinding>(){
     override fun getLayout(): Int {
         return R.layout.item_movie_banner_header
@@ -32,6 +35,9 @@ class MovieDetailBannerItem(
             llInvestmentAmount.removeAllViews()
             data.movieGenre.map {
                 llInvestmentAmount.addView(createAmountChips(it, this.root.context))
+            }
+            tvHedingTitle.setOnClickListener {
+                uiEvent.onNext(HomeUiEvent.GoBack)
             }
         }
     }

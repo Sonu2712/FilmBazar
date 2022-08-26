@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.film.app.core.events.DataAction
+import com.film.bazar.coreui.core.ContainerState
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.GridLayoutSpaceDecorator
 import com.film.bazar.home_domain.CastCrewDetail
@@ -62,8 +63,12 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         dataActionSubject.onNext(DataAction.Fetch)
     }
 
+    override fun getInitialState(): ContainerState {
+        return ContainerState.HideBars
+    }
+
     private fun setupRecyclerView() {
-        bannerHeaderManager = MovieDetailBannerManager()
+        bannerHeaderManager = MovieDetailBannerManager(uiEvent)
         fundingProgressManager = FundingProgressManager()
         investmentInfoManager = InvestmentInfoManager()
         titleSubtitleManager = TitleSubtitlePairManager()
@@ -142,6 +147,10 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         uiModel.onSuccess {
             castCrewManager.renderCastCrewDetail(it)
         }
+    }
+
+    override fun onBackClicked(): Observable<HomeUiEvent.GoBack> {
+        return uiEvent.ofType()
     }
 
     override fun isDataEmpty(): Boolean {

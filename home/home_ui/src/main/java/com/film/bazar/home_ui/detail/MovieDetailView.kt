@@ -12,4 +12,5 @@ interface MovieDetailView : BaseView {
     fun renderCarsCrew(uiModel: UiModel<CastCrewDetail>)
     fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent>
     fun render(uiModel: UiModel<MovieDetail>)
+    fun onBackClicked() : Observable<HomeUiEvent.GoBack>
 }
