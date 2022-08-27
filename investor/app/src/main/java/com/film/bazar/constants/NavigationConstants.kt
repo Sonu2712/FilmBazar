@@ -14,6 +14,7 @@ import kotlin.annotation.AnnotationRetention.SOURCE
     NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT,
@@ -44,6 +45,7 @@ annotation class NavigationConstants {
 
         const val NAVIGATE_TO_HELP_SUPPORT_FRAGMENT = "helpsupport"
         const val NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT = "helppaymentrefund"
+        const val NAVIGATE_TO_WRITE_US_FRAGMENT = "writeus"
 
         const val NAVIGATE_TO_TERMS_CONDITION_FRAGMENT = "termscondition"
         const val NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT = "paymentdetails"

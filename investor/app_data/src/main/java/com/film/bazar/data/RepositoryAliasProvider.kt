@@ -2,8 +2,10 @@ package com.film.bazar.data
 
 import com.film.bazar.data.drawermenu.MenuDataSourceRepositoryImpl
 import com.film.bazar.data.notification.NotificationRepositoryImpl
+import com.film.bazar.data.profile.ProfileRepositoryImpl
 import com.film.bazar.domain.drawermenu.MenuDataSourceRepository
 import com.film.bazar.domain.drawermenu.notification.NotificationRepository
+import com.film.bazar.domain.drawermenu.profile.ProfileRepository
 import com.film.bazar.home_data.repository.HomeRepositoryProvider
 import dagger.Binds
 import dagger.Module
@@ -17,4 +19,7 @@ abstract class RepositoryAliasProvider {
 
     @Binds
     abstract fun provideNotificationRepository(repository: NotificationRepositoryImpl) : NotificationRepository
+
+    @Binds
+    abstract fun provideProfileRepository(repository : ProfileRepositoryImpl) : ProfileRepository
 }
