@@ -15,7 +15,7 @@
     <ImageView
         android:id="@+id/imgScreen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:background="?background"
         android:contentDescription="imgscreensheet"
         android:scaleType="fitXY"
