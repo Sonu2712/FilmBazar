@@ -196,7 +196,7 @@ fun Activity.showToastForWarning(
     isBackPress: Boolean = false
 ) {
     Flashbar.Builder(this)
-        .backgroundColorRes(R.color.background_color_confirmation)
+        .backgroundColorRes(R.color.green)
         .title(titleRes)
         .titleColorRes(R.color.white_text_color)
         .message(message)
@@ -217,7 +217,7 @@ fun Activity.showToastForWarning(
                 .duration(400)
                 .accelerateDecelerate()
         )
-        .icon(R.drawable.ic_warning_24dp)
+        .icon(R.drawable.ic_green_tick)
         .showIcon()
         .isCancelable(isBackPress)
         .iconAnimation(
@@ -240,7 +240,7 @@ fun Activity.showDialogForConfirmation(
     action: (Boolean) -> Unit
 ) {
     val dialog = Flashbar.Builder(this)
-        .backgroundColorRes(R.color.background_color_confirmation)
+        .backgroundColorRes(R.color.green)
         .title(title)
         .titleColorRes(R.color.white_text_color)
         .message(message)

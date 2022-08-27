@@ -11,6 +11,7 @@ import com.film.bazar.portfolio.PortfolioFragment
 import com.film.bazar.profile.ProfileFragment
 import com.film.bazar.profile.editprofile.EditProfileFragment
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
+import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundFragment
 import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
 import com.film.bazar.profile.termscondition.TermsConditionFragment
 import com.film.bazar.wallet.WalletFragment
@@ -26,6 +27,7 @@ object MenuGetter {
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> ProfileFragment()
             NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> EditProfileFragment()
             NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> HelpSupportFragment()
+            NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT -> PaymentRefundFragment()
             NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT -> TermsConditionFragment()
             NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT -> PaymentDetailsFragment()
             NavigationConstants.NAVIGATE_TO_PORTFOLIO -> PortfolioFragment()

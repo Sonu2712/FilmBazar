@@ -8,6 +8,8 @@ import com.film.bazar.profile.ProfileFragment
 import com.film.bazar.profile.ProfileModule
 import com.film.bazar.profile.editprofile.EditProfileFragment
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
+import com.film.bazar.profile.helpsupport.HelpSupportModule
+import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundFragment
 import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
 import com.film.bazar.profile.termscondition.TermsConditionFragment
 import com.film.bazar.wallet.WalletFragment
@@ -34,8 +36,11 @@ abstract class FragmentProvider {
     @ContributesAndroidInjector
     abstract fun provideEditProfileFragment() : EditProfileFragment
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [HelpSupportModule::class])
     abstract fun provideHelpSupportFragment() : HelpSupportFragment
+
+    @ContributesAndroidInjector
+    abstract fun providePaymentRefundFragment() : PaymentRefundFragment
 
     @ContributesAndroidInjector
     abstract fun provideTermsConditionFragment() : TermsConditionFragment
