@@ -5,7 +5,10 @@ import com.film.bazar.profile.helpsupport.HelpSupportFragment
 import com.film.bazar.profile.helpsupport.HelpSupportModule
 import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundFragment
 import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundModule
+import com.film.bazar.profile.helpsupport.writeus.WriteToUsModule
 import com.film.bazar.profile.helpsupport.writeus.WriteUsFragment
+import com.film.bazar.profile.helpsupport.writeus.confirmation.ConfirmationBottomSheetFragment
+import com.film.bazar.profile.helpsupport.writeus.confirmation.ConfirmationBottomSheetModule
 import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
 import com.film.bazar.profile.termscondition.TermsConditionFragment
 import dagger.Module
@@ -14,23 +17,26 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class ProfileProvider {
     @ContributesAndroidInjector(modules = [ProfileModule::class])
-    abstract fun provideProfileFragment() : ProfileFragment
+    abstract fun provideProfileFragment(): ProfileFragment
 
     @ContributesAndroidInjector
-    abstract fun provideEditProfileFragment() : EditProfileFragment
+    abstract fun provideEditProfileFragment(): EditProfileFragment
 
     @ContributesAndroidInjector(modules = [HelpSupportModule::class])
-    abstract fun provideHelpSupportFragment() : HelpSupportFragment
+    abstract fun provideHelpSupportFragment(): HelpSupportFragment
 
     @ContributesAndroidInjector(modules = [PaymentRefundModule::class])
-    abstract fun providePaymentRefundFragment() : PaymentRefundFragment
+    abstract fun providePaymentRefundFragment(): PaymentRefundFragment
 
     @ContributesAndroidInjector
-    abstract fun provideTermsConditionFragment() : TermsConditionFragment
+    abstract fun provideTermsConditionFragment(): TermsConditionFragment
 
     @ContributesAndroidInjector
-    abstract fun providePaymentDetailsFragment() : PaymentDetailsFragment
+    abstract fun providePaymentDetailsFragment(): PaymentDetailsFragment
 
-    @ContributesAndroidInjector
-    abstract fun provideWriteUsFragment() : WriteUsFragment
+    @ContributesAndroidInjector(modules = [WriteToUsModule::class])
+    abstract fun provideWriteUsFragment(): WriteUsFragment
+
+    @ContributesAndroidInjector(modules = [ConfirmationBottomSheetModule::class])
+    abstract fun provideConfirmationBottomSheetFragment(): ConfirmationBottomSheetFragment
 }

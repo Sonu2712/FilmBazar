@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="@dimen/padding_normal"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_search_close_grey" />
+
+    <ImageView
+        android:id="@+id/ivCircleTick"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_insta_checked" />
+
+    <TextView
+        android:id="@+id/tvWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="Thank you for writing to us."
+        android:textColor="#282828"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvTicketNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        tools:text="Your ticket number is QRT884995"
+        android:textColor="#282828"
+        android:textSize="@dimen/text_size_medium" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_margin="@dimen/margin_large"/>
+
+</LinearLayout>

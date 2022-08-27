@@ -54,4 +54,8 @@ class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
     override fun submitQuery(): Observable<String> {
         return Observable.just("Thanks for your feedback")
     }
+
+    override fun writeToUs(message: String): Observable<String> {
+        return Observable.just("Your ticket number is QRT884995")
+    }
 }
