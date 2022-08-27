@@ -1,6 +1,7 @@
 package com.film.bazar.profile
 
 import com.film.bazar.profile.editprofile.EditProfileFragment
+import com.film.bazar.profile.editprofile.EditProfileModule
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
 import com.film.bazar.profile.helpsupport.HelpSupportModule
 import com.film.bazar.profile.helpsupport.questionanswer.QuestionAnswerFragment
@@ -19,7 +20,7 @@ abstract class ProfileProvider {
     @ContributesAndroidInjector(modules = [ProfileModule::class])
     abstract fun provideProfileFragment(): ProfileFragment
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [EditProfileModule::class])
     abstract fun provideEditProfileFragment(): EditProfileFragment
 
     @ContributesAndroidInjector(modules = [HelpSupportModule::class])

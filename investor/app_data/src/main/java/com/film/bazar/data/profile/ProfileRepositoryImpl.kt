@@ -3,10 +3,26 @@ package com.film.bazar.data.profile
 import com.film.bazar.domain.drawermenu.profile.AnswerValue
 import com.film.bazar.domain.drawermenu.profile.ProfileRepository
 import com.film.bazar.domain.drawermenu.profile.HelpSupportQuestions
+import com.film.bazar.domain.drawermenu.profile.UserProfile
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
+
+    override fun getUserProfile(): Observable<UserProfile> {
+        return Observable.just(
+            UserProfile(
+                mNumber = "9987503045",
+                emailId = "milindh24@gmail.com",
+                panNumber = "AFJPH6357H",
+                address = "001, 15-A, Aarti, Sevenstar colony, Gokuldham, Goregaon (E), Mumbai - 400063"
+            )
+        )
+    }
+
+    override fun saveUserProfile(profile: UserProfile): Observable<String> {
+        return Observable.just("Saved Successfully")
+    }
 
     override fun getHelpSupportQuestions(): Observable<List<HelpSupportQuestions>> {
         return Observable.just(
@@ -31,7 +47,7 @@ class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
         )
     }
 
-    override fun getPaymentRefundQandA(questionId : Int): Observable<List<AnswerValue>> {
+    override fun getPaymentRefundQandA(questionId: Int): Observable<List<AnswerValue>> {
         return Observable.just(
             listOf(
                 AnswerValue(
