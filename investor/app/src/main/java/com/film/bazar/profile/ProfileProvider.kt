@@ -10,6 +10,7 @@ import com.film.bazar.profile.helpsupport.writeus.WriteToUsModule
 import com.film.bazar.profile.helpsupport.writeus.WriteUsFragment
 import com.film.bazar.profile.helpsupport.writeus.confirmation.ConfirmationBottomSheetFragment
 import com.film.bazar.profile.helpsupport.writeus.confirmation.ConfirmationBottomSheetModule
+import com.film.bazar.profile.paymentdetails.PaymentDetailModule
 import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
 import com.film.bazar.profile.termscondition.TermsConditionFragment
 import dagger.Module
@@ -32,7 +33,7 @@ abstract class ProfileProvider {
     @ContributesAndroidInjector
     abstract fun provideTermsConditionFragment(): TermsConditionFragment
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [PaymentDetailModule::class])
     abstract fun providePaymentDetailsFragment(): PaymentDetailsFragment
 
     @ContributesAndroidInjector(modules = [WriteToUsModule::class])

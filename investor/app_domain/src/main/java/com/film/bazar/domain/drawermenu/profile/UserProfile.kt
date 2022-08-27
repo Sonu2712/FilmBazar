@@ -13,3 +13,10 @@ data class UserProfile(
     val panNumber: String,
     val address: String
 )
+
+data class UserPaymentDetail(
+    val bankName: String,
+    val accHolderName: String,
+    val accNumber: String,
+    val ifscCode: String
+)

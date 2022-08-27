@@ -1,9 +1,6 @@
 package com.film.bazar.data.profile
 
-import com.film.bazar.domain.drawermenu.profile.AnswerValue
-import com.film.bazar.domain.drawermenu.profile.ProfileRepository
-import com.film.bazar.domain.drawermenu.profile.HelpSupportQuestions
-import com.film.bazar.domain.drawermenu.profile.UserProfile
+import com.film.bazar.domain.drawermenu.profile.*
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
@@ -21,6 +18,21 @@ class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
     }
 
     override fun saveUserProfile(profile: UserProfile): Observable<String> {
+        return Observable.just("Saved Successfully")
+    }
+
+    override fun getUserPaymentDetail(): Observable<UserPaymentDetail> {
+        return Observable.just(
+            UserPaymentDetail(
+                bankName = "HDFC Bank",
+                accHolderName = "Milind Anand Haldankar",
+                accNumber = "001246567903290",
+                ifscCode = "HDFC000012"
+            )
+        )
+    }
+
+    override fun saveUserPaymentDetails(data: UserPaymentDetail): Observable<String> {
         return Observable.just("Saved Successfully")
     }
 
