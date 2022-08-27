@@ -10,18 +10,20 @@ import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.databinding.FragmentProfileBinding
 import com.film.commons.data.UiModel
 import com.film.commons.data.onFailure
+import com.film.commons.data.onSuccess
 import com.film.commons.rx.ofType
 import com.jakewharton.rxbinding4.view.clicks
+import com.jakewharton.rxbinding4.widget.checkedChanges
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
 class ProfileFragment : MOSLCommonFragment(), ProfileView {
-    lateinit var binding : FragmentProfileBinding
+    lateinit var binding: FragmentProfileBinding
 
     @Inject
     lateinit var presenter: ProfilePresenter
-    val uiEvent  = PublishSubject.create<ProfileUiEvent>()
+    val uiEvent = PublishSubject.create<ProfileUiEvent>()
 
     override fun getLayout(): Int {
         return R.layout.fragment_profile
@@ -40,7 +42,7 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
         return ContainerState.showBackNavigation()
     }
 
-    private fun setupRecyclerView(){
+    private fun setupRecyclerView() {
     }
 
     override fun onLogoutClicked(): Observable<Unit> {
@@ -59,6 +61,18 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
         }
     }
 
+    override fun renderNotification(uiModel: UiModel<String>) {
+        toggleProgressBar(uiModel.inProgress)
+        uiModel.onFailure {
+            showOnFailurePopup(it)
+        }
+        uiModel.onSuccess { toast(it) }
+    }
+
+    override fun onNotificationClicked(): Observable<Boolean> {
+        return binding.swNotification.checkedChanges()
+    }
+
     override fun onLogoutConfirmed(): Observable<ProfileUiEvent.LogoutConfirmed> {
         return uiEvent.ofType()
     }
@@ -68,7 +82,6 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
         uiModel.onFailure {
             showOnFailurePopup(it)
         }
-
     }
 
     override fun onEditProfileClicked(): Observable<Unit> {

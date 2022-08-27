@@ -3,6 +3,7 @@ package com.film.bazar.profile
 import com.film.app.core.base.BasePresenter
 import com.film.bazar.constants.NavigationConstants
 import com.film.bazar.coreui.navigator.ScreenNavigator
+import com.film.bazar.domain.drawermenu.profile.ProfileRepository
 import com.film.commons.data.onSuccess
 import com.film.commons.rx.addTo
 import com.film.login.data.repository.LoginRepository
@@ -11,10 +12,27 @@ import javax.inject.Inject
 class ProfilePresenter @Inject constructor(
     view: ProfileView,
     var loginRepository: LoginRepository,
-    val screenNavigator: ScreenNavigator
+    val screenNavigator: ScreenNavigator,
+    val profileRepository: ProfileRepository
 ) : BasePresenter<ProfileView>(view) {
 
     override fun start() {
+        view.onPaymentDetailsClicked()
+            .subscribe {
+                screenNavigator.openPage(
+                    NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT,
+                    true
+                )
+            }.addTo(disposable)
+
+        view.onNotificationClicked()
+            .skip(1)
+            .switchMap {
+                profileRepository.saveNotificationStatus(it)
+                    .compose(applyUiModel())
+            }.subscribe(view::renderNotification)
+            .addTo(disposable)
+
         view.onLogoutClicked()
             .subscribe { view.showLogoutConfirmationDialog() }
             .addTo(disposable)
@@ -44,13 +62,6 @@ class ProfilePresenter @Inject constructor(
                 )
             }.addTo(disposable)
 
-        view.onPaymentDetailsClicked()
-            .subscribe {
-                screenNavigator.openPage(
-                    NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT,
-                    true
-                )
-            }.addTo(disposable)
 
         view.onLogoutConfirmed()
             .switchMap {

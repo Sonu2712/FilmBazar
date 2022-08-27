@@ -6,6 +6,10 @@ import javax.inject.Inject
 
 class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
 
+    override fun saveNotificationStatus(isEnabled: Boolean): Observable<String> {
+        return Observable.just("Saved Successfully $isEnabled")
+    }
+
     override fun getUserProfile(): Observable<UserProfile> {
         return Observable.just(
             UserProfile(
