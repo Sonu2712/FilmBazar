@@ -18,6 +18,10 @@ object AppAccessHelper : PageAccessHelper() {
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> true
+            NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> true
+            NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> true
+            NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT -> true
+            NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT -> true
             else -> isAccessibleToGuestUsers(pageId)
         }
     }

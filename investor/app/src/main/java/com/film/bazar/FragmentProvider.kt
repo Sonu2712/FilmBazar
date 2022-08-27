@@ -5,6 +5,10 @@ import com.film.bazar.notification.NotificationFragment
 import com.film.bazar.notification.NotificationModule
 import com.film.bazar.profile.ProfileFragment
 import com.film.bazar.profile.ProfileModule
+import com.film.bazar.profile.editprofile.EditProfileFragment
+import com.film.bazar.profile.helpsupport.HelpSupportFragment
+import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
+import com.film.bazar.profile.termscondition.TermsConditionFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -18,4 +22,16 @@ abstract class FragmentProvider {
 
     @ContributesAndroidInjector(modules = [ProfileModule::class])
     abstract fun provideProfileFragment() : ProfileFragment
+
+    @ContributesAndroidInjector
+    abstract fun provideEditProfileFragment() : EditProfileFragment
+
+    @ContributesAndroidInjector
+    abstract fun provideHelpSupportFragment() : HelpSupportFragment
+
+    @ContributesAndroidInjector
+    abstract fun provideTermsConditionFragment() : TermsConditionFragment
+
+    @ContributesAndroidInjector
+    abstract fun providePaymentDetailsFragment() : PaymentDetailsFragment
 }

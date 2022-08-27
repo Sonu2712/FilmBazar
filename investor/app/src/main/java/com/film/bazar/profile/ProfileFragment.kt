@@ -50,17 +50,6 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
     }
 
     private fun setupRecyclerView(){
-        section = DataManagerSection(onRetryClick)
-        groupAdapter = GroupAdapter()
-        mLayoutManager = LinearLayoutManager(context)
-        binding.rvProfile.apply {
-            adapter = groupAdapter.apply { add(section) }
-            layoutManager = mLayoutManager
-            (itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
-            addItemDecoration(
-                LinearLayoutSpaceDecorator(resources.getDimension(com.film.bazar.home_ui.R.dimen.margin_medium).toInt())
-            )
-        }
     }
 
     override fun onLogoutClicked(): Observable<Unit> {
@@ -89,6 +78,22 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
             showOnFailurePopup(it)
         }
 
+    }
+
+    override fun onEditProfileClicked(): Observable<Unit> {
+        return binding.tvEditProfile.clicks()
+    }
+
+    override fun onHelpSupportClicked(): Observable<Unit> {
+        return binding.tvHelpSupport.clicks()
+    }
+
+    override fun onTermsConditionClicked(): Observable<Unit> {
+        return binding.tvTermsCond.clicks()
+    }
+
+    override fun onPaymentDetailsClicked(): Observable<Unit> {
+        return binding.lyBank.clicks()
     }
 
     override fun isDataEmpty(): Boolean {

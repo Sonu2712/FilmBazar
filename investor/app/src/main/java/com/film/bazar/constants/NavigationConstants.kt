@@ -11,6 +11,10 @@ import kotlin.annotation.AnnotationRetention.SOURCE
     NavigationConstants.NAVIGATE_TO_NOTIFICATION,
     NavigationConstants.NAVIGATE_TO_NOTIFICATION_DETAIL,
     NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_PORTFOLIO,
     NavigationConstants.NAVIGATE_TO_WALLET,
@@ -29,8 +33,13 @@ annotation class NavigationConstants {
         const val NAVIGATE_TO_MORE = "more"
         const val NAVIGATE_TO_NOTIFICATION_DETAIL = "notificationdetail"
         const val NAVIGATE_TO_NOTIFICATION = "notification"
-        const val NAVIGATE_TO_PROFILE_FRAGMENT = "profile"
         const val NAVIGATE_TO_SETTINGS_FRAGMENT = "settings"
+
+        const val NAVIGATE_TO_PROFILE_FRAGMENT = "profile"
+        const val NAVIGATE_TO_EDIT_PROFILE_FRAGMENT = "editprofile"
+        const val NAVIGATE_TO_HELP_SUPPORT_FRAGMENT = "helopsupport"
+        const val NAVIGATE_TO_TERMS_CONDITION_FRAGMENT = "termscondition"
+        const val NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT = "paymentdetails"
     }
 
     annotation class NavigationPageIdentifier{

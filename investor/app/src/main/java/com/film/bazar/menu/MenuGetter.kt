@@ -8,6 +8,10 @@ import com.film.bazar.appusercore.model.UserType
 import com.film.bazar.home_ui.detail.MovieDetailFragment
 import com.film.bazar.notification.NotificationFragment
 import com.film.bazar.profile.ProfileFragment
+import com.film.bazar.profile.editprofile.EditProfileFragment
+import com.film.bazar.profile.helpsupport.HelpSupportFragment
+import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
+import com.film.bazar.profile.termscondition.TermsConditionFragment
 
 object MenuGetter {
 
@@ -18,6 +22,10 @@ object MenuGetter {
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> MovieDetailFragment()
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> NotificationFragment()
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> ProfileFragment()
+            NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> EditProfileFragment()
+            NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> HelpSupportFragment()
+            NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT -> TermsConditionFragment()
+            NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT -> PaymentDetailsFragment()
             else -> null
         }
     }
