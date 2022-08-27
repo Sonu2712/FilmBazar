@@ -7,7 +7,8 @@ import java.io.Serializable
 class AppTitle private constructor(
     @JvmField val titleStr: String?,
     @param:StringRes @JvmField val title: Int,
-    @param:DrawableRes @JvmField val icon: Int
+    @param:DrawableRes @JvmField val icon: Int,
+    @JvmField val subTitle : Boolean = false
 ) : Serializable {
 
   val isEmpty: Boolean
@@ -61,6 +62,11 @@ class AppTitle private constructor(
     @JvmStatic
     fun withTitle(title: String): AppTitle {
       return AppTitle(title, 0, 0)
+    }
+
+    @JvmStatic
+    fun withSubTitle(@StringRes title: Int, subTitle: Boolean): AppTitle {
+      return AppTitle(null, title, 0, true)
     }
 
     @JvmStatic

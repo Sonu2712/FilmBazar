@@ -17,6 +17,10 @@ class WalletFragment : MOSLCommonFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentWelcomeBinding.bind(view)
-        setAppTitle("Wallet")
+        setTitle("Wallet")
+    }
+
+    override fun getInitialState(): ContainerState {
+        return ContainerState.showBackNavigation(showBottomBar = true)
     }
 }

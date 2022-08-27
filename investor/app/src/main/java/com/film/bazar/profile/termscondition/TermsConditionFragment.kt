@@ -17,7 +17,7 @@ class TermsConditionFragment : MOSLCommonFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentWelcomeBinding.bind(view)
-        setAppTitle("Terms and Condition")
+        setTitle("Terms and Condition")
     }
 
     override fun getInitialState(): ContainerState {

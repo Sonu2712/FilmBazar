@@ -10,6 +10,7 @@ import com.film.commons.data.UiModel
 import com.film.commons.data.onSuccess
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.LinearLayoutSpaceDecorator
+import com.film.bazar.coreui.navigatorlib.AppTitle
 import com.film.bazar.home_domain.MovieData
 import com.film.bazar.home_domain.MovieInfo
 import com.film.bazar.home_domain.MovieTab
@@ -61,7 +62,7 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
         binding = FragmentHomeBinding.bind(view)
-        setTitle(R.string.page_title_home)
+        setTitle(AppTitle.withSubTitle(title = R.string.page_title_home, subTitle = true))
         setupRecyclerView()
         presenter.start()
         dataActionSubject.onNext(DataAction.Fetch)

@@ -17,7 +17,7 @@ class PaymentDetailsFragment : MOSLCommonFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentWelcomeBinding.bind(view)
-        setAppTitle("Payment details")
+        setTitle("Payment details")
     }
 
     override fun getInitialState(): ContainerState {

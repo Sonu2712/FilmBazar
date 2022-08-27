@@ -17,7 +17,7 @@ class EditProfileFragment : MOSLCommonFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentWelcomeBinding.bind(view)
-        setAppTitle("Edit Profile")
+        setTitle("Edit Profile")
     }
 
     override fun getInitialState(): ContainerState {

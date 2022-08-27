@@ -20,15 +20,16 @@ class InvestorToolbar @JvmOverloads constructor(
 
     fun setAppTitle(appTitle: AppTitle) {
         if (appTitle.hasTitle()) {
-            if (appTitle.hasStringRes()) {
+            if (appTitle.hasStringRes() && appTitle.subTitle) {
                 title = context.getString(appTitle.title)
                 subtitle = "bazar"
-
             } else {
                 title = appTitle.titleStr!!
+                subtitle = ""
             }
         } else {
             title = ""
+            subtitle = ""
         }
     }
 

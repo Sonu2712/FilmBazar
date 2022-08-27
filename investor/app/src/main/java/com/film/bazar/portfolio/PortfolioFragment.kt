@@ -17,6 +17,10 @@ class PortfolioFragment : MOSLCommonFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentWelcomeBinding.bind(view)
-        setAppTitle("Portfolio")
+        setTitle("Portfolio")
+    }
+
+    override fun getInitialState(): ContainerState {
+        return ContainerState.showBackNavigation(showBottomBar = true)
     }
 }
