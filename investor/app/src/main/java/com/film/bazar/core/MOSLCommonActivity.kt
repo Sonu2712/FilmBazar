@@ -218,43 +218,9 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
                     } else {
                         screenNavigator.goBack()
                     }
-                } else {
-                    openMenuDrawer()
                 }
             }
             .addTo(disposable)
-    }
-
-    fun logoutClicked(){
-        showDialogForConfirmation(
-            getString(R.string.app_msg_logout_alert),
-            negativeButton = getString(R.string.button_label_cancel),
-            cancelable = false
-        ) { positiveClicked ->
-            if (positiveClicked) {
-                doLogout()
-            }
-        }
-    }
-
-    fun doLogout() {
-        loginRepository
-            .logoutUser()
-            .toSingleDefault(true)
-            .toObservable()
-            .doOnNext { Timber.i("User Logged Out") }
-            .compose(applyUiModel())
-            .subscribe {
-                binding.progressBar.visibility = if (it.inProgress) View.VISIBLE else View.GONE
-                it.onSuccess {
-                    this.showToastForSuccess(getString(R.string.app_msg_log_out_successful))
-                    binding.drawerLayout.closeDrawers()
-                }
-            }.addTo(disposable)
-    }
-
-    private fun openMenuDrawer() {
-        binding.drawerLayout.openDrawer(GravityCompat.START)
     }
 
     override fun authorizationDialog(listener: (AuthorizationState) -> Unit) {
@@ -295,7 +261,7 @@ class MOSLCommonActivity : BaseActivity(), ContainerManager, ActivityDelegate, C
         bottomBarView.onMenuSelected()
             .subscribe {
                 val pageId = it.itemId.bottomBarStringMapper()
-               screenNavigator.openPage(pageId = pageId)
+               screenNavigator.openPage(pageId = pageId, addToStack = true)
             }.addTo(disposable)
         bottomBarView.start()
     }

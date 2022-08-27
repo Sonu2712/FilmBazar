@@ -17,6 +17,10 @@ object AppAccessHelper : PageAccessHelper() {
             NavigationConstants.NAVIGATE_TO_HOME -> true
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> true
             NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT -> true
+
+            NavigationConstants.NAVIGATE_TO_PORTFOLIO -> true
+            NavigationConstants.NAVIGATE_TO_WALLET -> true
+
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> true
