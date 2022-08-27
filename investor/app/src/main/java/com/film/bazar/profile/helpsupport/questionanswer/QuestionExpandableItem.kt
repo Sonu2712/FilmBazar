@@ -1,4 +1,4 @@
-package com.film.bazar.profile.helpsupport.paymentrefund
+package com.film.bazar.profile.helpsupport.questionanswer
 
 import android.view.View
 import androidx.core.view.isVisible
@@ -9,7 +9,7 @@ import com.film.bazar.databinding.ItemPaymentRefundExpandbleBinding
 import com.xwray.groupie.ExpandableGroup
 import com.xwray.groupie.ExpandableItem
 
-class PaymentRefundExpandableItem(
+class QuestionExpandableItem(
     val label : String
 ) : ViewBindingItem<ItemPaymentRefundExpandbleBinding>(), ExpandableItem {
     private lateinit var expandableGroup: ExpandableGroup
@@ -58,7 +58,7 @@ class PaymentRefundExpandableItem(
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as PaymentRefundExpandableItem
+        other as QuestionExpandableItem
 
         if (label != other.label) return false
         if (expandableGroup != other.expandableGroup) return false

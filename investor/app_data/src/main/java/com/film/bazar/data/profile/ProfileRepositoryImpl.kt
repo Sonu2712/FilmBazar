@@ -2,53 +2,80 @@ package com.film.bazar.data.profile
 
 import com.film.bazar.domain.drawermenu.profile.AnswerValue
 import com.film.bazar.domain.drawermenu.profile.ProfileRepository
+import com.film.bazar.domain.drawermenu.profile.HelpSupportQuestions
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 class ProfileRepositoryImpl @Inject constructor() : ProfileRepository {
-    override fun getPaymentRefundQandA(): Observable<List<AnswerValue>> {
-        return Observable.just(listOf(
-            AnswerValue(
-                id = 1,
-                key = "Officia deserunt mollit anim id est ",
-                value = listOf(
-                    "1. Go to the 'My Account' section in the app.",
-                    "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
-                    "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
-                    "On making the payment, your renewal process will be complete."
-                )
-            ),
-            AnswerValue(
-                id = 2,
-                key = "Dolore magna aliqua",
-                value = listOf(
-                    "1. Go to the 'My Account' section in the app.",
-                    "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
-                    "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
-                    "On making the payment, your renewal process will be complete."
-                )
-            ),
-            AnswerValue(
-                id = 3,
-                key = "Duis aute irure dolor in reprehen",
-                value = listOf(
-                    "1. Go to the 'My Account' section in the app.",
-                    "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
-                    "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
-                    "On making the payment, your renewal process will be complete."
-                )
-            ),
-            AnswerValue(
-                id = 4,
-                key = "Excepteur sint occaecat cupidatat non",
-                value = listOf(
-                    "1. Go to the 'My Account' section in the app.",
-                    "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
-                    "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
-                    "On making the payment, your renewal process will be complete."
+
+    override fun getHelpSupportQuestions(): Observable<List<HelpSupportQuestions>> {
+        return Observable.just(
+            listOf(
+                HelpSupportQuestions(
+                    questionId = 1,
+                    questionLabel = "Payment & refund"
+                ),
+                HelpSupportQuestions(
+                    questionId = 2,
+                    questionLabel = "Account related"
+                ),
+                HelpSupportQuestions(
+                    questionId = 3,
+                    questionLabel = "Wallet"
+                ),
+                HelpSupportQuestions(
+                    questionId = 4,
+                    questionLabel = "Investment"
                 )
             )
-        ))
+        )
+    }
+
+    override fun getPaymentRefundQandA(questionId : Int): Observable<List<AnswerValue>> {
+        return Observable.just(
+            listOf(
+                AnswerValue(
+                    id = 1,
+                    key = "Officia deserunt mollit anim id est ",
+                    value = listOf(
+                        "1. Go to the 'My Account' section in the app.",
+                        "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
+                        "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
+                        "On making the payment, your renewal process will be complete."
+                    )
+                ),
+                AnswerValue(
+                    id = 2,
+                    key = "Dolore magna aliqua",
+                    value = listOf(
+                        "1. Go to the 'My Account' section in the app.",
+                        "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
+                        "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
+                        "On making the payment, your renewal process will be complete."
+                    )
+                ),
+                AnswerValue(
+                    id = 3,
+                    key = "Duis aute irure dolor in reprehen",
+                    value = listOf(
+                        "1. Go to the 'My Account' section in the app.",
+                        "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
+                        "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
+                        "On making the payment, your renewal process will be complete."
+                    )
+                ),
+                AnswerValue(
+                    id = 4,
+                    key = "Excepteur sint occaecat cupidatat non",
+                    value = listOf(
+                        "1. Go to the 'My Account' section in the app.",
+                        "2. Select 'My Plan'. Here you can view all details related to your existing plan.",
+                        "3. Click on 'Renew'. You can choose to renew the same plan or upgrade to another plan.",
+                        "On making the payment, your renewal process will be complete."
+                    )
+                )
+            )
+        )
     }
 
     override fun submitQuery(): Observable<String> {

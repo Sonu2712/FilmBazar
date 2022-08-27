@@ -3,8 +3,8 @@ package com.film.bazar.profile
 import com.film.bazar.profile.editprofile.EditProfileFragment
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
 import com.film.bazar.profile.helpsupport.HelpSupportModule
-import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundFragment
-import com.film.bazar.profile.helpsupport.paymentrefund.PaymentRefundModule
+import com.film.bazar.profile.helpsupport.questionanswer.QuestionAnswerFragment
+import com.film.bazar.profile.helpsupport.questionanswer.PaymentRefundModule
 import com.film.bazar.profile.helpsupport.writeus.WriteToUsModule
 import com.film.bazar.profile.helpsupport.writeus.WriteUsFragment
 import com.film.bazar.profile.helpsupport.writeus.confirmation.ConfirmationBottomSheetFragment
@@ -26,7 +26,7 @@ abstract class ProfileProvider {
     abstract fun provideHelpSupportFragment(): HelpSupportFragment
 
     @ContributesAndroidInjector(modules = [PaymentRefundModule::class])
-    abstract fun providePaymentRefundFragment(): PaymentRefundFragment
+    abstract fun providePaymentRefundFragment(): QuestionAnswerFragment
 
     @ContributesAndroidInjector
     abstract fun provideTermsConditionFragment(): TermsConditionFragment

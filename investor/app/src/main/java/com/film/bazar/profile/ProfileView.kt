@@ -11,6 +11,6 @@ interface ProfileView : BaseView {
     fun onPaymentDetailsClicked() : Observable<Unit>
     fun onLogoutClicked() : Observable<Unit>
     fun showLogoutConfirmationDialog()
-    fun onLogoutConfirmed() : Observable<ProfileEvent.LogoutConfirmed>
+    fun onLogoutConfirmed() : Observable<ProfileUiEvent.LogoutConfirmed>
     fun renderSuccessLogout(uiModel: UiModel<Boolean>)
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,89 +19,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvPaymentRefund"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginTop="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:background="@color/white"
-        android:drawablePadding="@dimen/padding_normal"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/padding_extra_large"
-        android:paddingTop="@dimen/padding_normal"
-        android:paddingEnd="@dimen/padding_normal"
-        android:text="Payment &amp; refund"
-        app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
-        app:drawableEndCompat="@drawable/ic_arrow_right_black"
-        app:drawableStartCompat="@drawable/ic_edit"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSupport"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvStillFacing"
         app:layout_constraintEnd_toEndOf="@+id/tvHelpLabel"
         app:layout_constraintStart_toStartOf="@+id/tvHelpLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvHelpLabel" />
-
-    <TextView
-        android:id="@+id/tvAccountRelated"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginTop="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:background="@color/white"
-        android:drawablePadding="@dimen/padding_normal"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/padding_extra_large"
-        android:paddingTop="@dimen/padding_normal"
-        android:paddingEnd="@dimen/padding_normal"
-        android:text="Account related"
-        app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
-        app:drawableEndCompat="@drawable/ic_arrow_right_black"
-        app:drawableStartCompat="@drawable/ic_edit"
-        app:layout_constraintEnd_toEndOf="@+id/tvPaymentRefund"
-        app:layout_constraintStart_toStartOf="@+id/tvPaymentRefund"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentRefund" />
-
-    <TextView
-        android:id="@+id/tvWallet"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginTop="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:background="@color/white"
-        android:drawablePadding="@dimen/padding_normal"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/padding_extra_large"
-        android:paddingTop="@dimen/padding_normal"
-        android:paddingEnd="@dimen/padding_normal"
-        android:text="Wallet"
-        app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
-        app:drawableEndCompat="@drawable/ic_arrow_right_black"
-        app:drawableStartCompat="@drawable/ic_edit"
-        app:layout_constraintEnd_toEndOf="@+id/tvAccountRelated"
-        app:layout_constraintStart_toStartOf="@+id/tvAccountRelated"
-        app:layout_constraintTop_toBottomOf="@+id/tvAccountRelated" />
-
-    <TextView
-        android:id="@+id/tvInvestment"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginTop="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:background="@color/white"
-        android:drawablePadding="@dimen/padding_normal"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/padding_extra_large"
-        android:paddingTop="@dimen/padding_normal"
-        android:paddingEnd="@dimen/padding_normal"
-        android:text="Investment"
-        app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
-        app:drawableEndCompat="@drawable/ic_arrow_right_black"
-        app:drawableStartCompat="@drawable/ic_edit"
-        app:layout_constraintEnd_toEndOf="@+id/tvWallet"
-        app:layout_constraintStart_toStartOf="@+id/tvWallet"
-        app:layout_constraintTop_toBottomOf="@+id/tvWallet" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpLabel"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_help_support" />
 
     <TextView
         android:id="@+id/tvStillFacing"

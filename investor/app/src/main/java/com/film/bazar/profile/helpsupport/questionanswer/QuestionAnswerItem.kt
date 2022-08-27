@@ -1,11 +1,11 @@
-package com.film.bazar.profile.helpsupport.paymentrefund
+package com.film.bazar.profile.helpsupport.questionanswer
 
 import android.view.View
 import com.film.bazar.R
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.databinding.ItemPaymentRefundExpandbleAnswerBinding
 
-class PaymentRefundAnswerItem(
+class QuestionAnswerItem(
     val value : String
 ) : ViewBindingItem<ItemPaymentRefundExpandbleAnswerBinding>(){
     override fun getLayout(): Int {

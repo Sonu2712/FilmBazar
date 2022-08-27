@@ -1,4 +1,4 @@
-package com.film.bazar.profile.helpsupport.paymentrefund
+package com.film.bazar.profile.helpsupport.questionanswer
 
 import android.view.View
 import com.film.bazar.R
@@ -8,7 +8,7 @@ import com.film.bazar.databinding.ItemPaymentRefundYesNoBinding
 import com.film.bazar.domain.drawermenu.profile.AnswerValue
 import com.film.bazar.domain.drawermenu.profile.AnswerYesNo
 
-class PaymentRefundYesNoItem(
+class AnswerYesNoItem(
     val data: AnswerValue
 ) : ViewBindingItem<ItemPaymentRefundYesNoBinding>() {
     override fun getLayout(): Int {

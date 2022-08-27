@@ -1,4 +1,4 @@
-package com.film.bazar.profile.helpsupport.paymentrefund
+package com.film.bazar.profile.helpsupport.questionanswer
 
 import android.os.Bundle
 import android.view.View
@@ -21,7 +21,7 @@ import com.xwray.groupie.GroupieViewHolder
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
-class PaymentRefundFragment : MOSLCommonFragment(), PaymentRefundView {
+class QuestionAnswerFragment : MOSLCommonFragment(), PaymentRefundView {
     lateinit var binding: FragmentPaymentRefundBinding
 
     lateinit var section: DataManagerSection
@@ -37,7 +37,8 @@ class PaymentRefundFragment : MOSLCommonFragment(), PaymentRefundView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentPaymentRefundBinding.bind(view)
-        setTitle("Payment & refund")
+        val title = arguments?.getString(PaymentRefundView.ARG_QUESTION_TITLE) ?: ""
+        setTitle(title)
         setupRecyclerView()
         presenter.start()
         dataActionSubject.onNext(DataAction.Fetch)
@@ -64,11 +65,11 @@ class PaymentRefundFragment : MOSLCommonFragment(), PaymentRefundView {
         uiModel.onSuccess { data ->
             questionData = data
             data.map {
-                val expandableGroup = ExpandableGroup(PaymentRefundExpandableItem(it.key))
+                val expandableGroup = ExpandableGroup(QuestionExpandableItem(it.key))
                 it.value.map { data1 ->
-                    expandableGroup.add(PaymentRefundAnswerItem(data1))
+                    expandableGroup.add(QuestionAnswerItem(data1))
                 }
-                expandableGroup.add(PaymentRefundYesNoItem(it))
+                expandableGroup.add(AnswerYesNoItem(it))
                 section.add(expandableGroup)
             }
         }

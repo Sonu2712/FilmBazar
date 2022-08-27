@@ -7,7 +7,6 @@ import com.film.bazar.R
 import com.film.bazar.coreui.appcoreui.dialog.showDialogForConfirmation
 import com.film.bazar.coreui.core.ContainerState
 import com.film.bazar.coreui.core.MOSLCommonFragment
-import com.film.bazar.coreui.navigatorlib.AppTitle
 import com.film.bazar.databinding.FragmentProfileBinding
 import com.film.commons.data.UiModel
 import com.film.commons.data.onFailure
@@ -22,7 +21,7 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
 
     @Inject
     lateinit var presenter: ProfilePresenter
-    val uiEvent  = PublishSubject.create<ProfileEvent>()
+    val uiEvent  = PublishSubject.create<ProfileUiEvent>()
 
     override fun getLayout(): Int {
         return R.layout.fragment_profile
@@ -55,12 +54,12 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
             cancelable = false
         ) { positiveClicked ->
             if (positiveClicked) {
-                uiEvent.onNext(ProfileEvent.LogoutConfirmed)
+                uiEvent.onNext(ProfileUiEvent.LogoutConfirmed)
             }
         }
     }
 
-    override fun onLogoutConfirmed(): Observable<ProfileEvent.LogoutConfirmed> {
+    override fun onLogoutConfirmed(): Observable<ProfileUiEvent.LogoutConfirmed> {
         return uiEvent.ofType()
     }
 
