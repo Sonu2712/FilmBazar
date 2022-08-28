@@ -10,6 +10,33 @@ data class MovieDetail(
 
 )
 
+data class MovieSort(
+    val valueFrom : Double,
+    val valueTo : Double,
+    val selectedSort : MovieFilterType,
+    val sort : List<MovieSortKeyValue> = emptyList()
+)
+
+data class MovieSortKeyValue(
+    val label: String,
+    val filterType: MovieFilterType
+)
+
+data class MovieFilter(
+    val startAmount : Float,
+    val endAmount : Float,
+    val filterType : MovieFilterType
+)
+
+sealed class MovieFilterType{
+    object RecentlyAdded : MovieFilterType()
+    object PopularityHTL : MovieFilterType()
+    object PopularityLTH : MovieFilterType()
+    object DaysLeftForInvtHTL : MovieFilterType()
+    object DaysLeftForInvtLTH : MovieFilterType()
+    object Nothing : MovieFilterType()
+}
+
 data class CastCrewDetail(
     val directorName : String,
     val castCrew : List<CastCrew>

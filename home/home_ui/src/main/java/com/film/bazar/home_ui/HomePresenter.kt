@@ -31,6 +31,16 @@ class HomePresenter @Inject constructor(
             }.subscribe(view::renderMovie)
             .addTo(disposable)
 
+        view.sortFilterApplied()
+            .map { view.getSelectedMovieTab() to it.filter }
+            .switchMap {
+                repository.getMovieByProject(it.first, it.second)
+                    .compose(applyUiModel())
+            }
+            .subscribe {
+                view.renderMovie(it)
+            }.addTo(disposable)
+
         view.onFilterClicked()
             .map { view.getSelectedMovieTab() ?: MovieTab.OngoingProject}
             .subscribe { view.showSortFilterBottomSheet(it ?: MovieTab.OngoingProject) }
@@ -39,7 +49,6 @@ class HomePresenter @Inject constructor(
         view.onMovieInfoClicked()
             .map { it.copy(tabType = view.getSelectedMovieTab().toString()) }
             .subscribe {
-                Timber.d("${it.tabType}")
                 navigator.openMovieDetail(it.id, it.tabType)
             }.addTo(disposable)
 

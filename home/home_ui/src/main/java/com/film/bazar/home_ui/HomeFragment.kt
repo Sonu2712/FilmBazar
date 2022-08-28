@@ -36,7 +36,7 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
 
     @Inject
     lateinit var presenter: HomePresenter
-    private val uiEvent = PublishSubject.create<HomeUiEvent>()
+    val uiEvent = PublishSubject.create<HomeUiEvent>()
     lateinit var section: DataManagerSection
     lateinit var dataSection: DataManagerSection
     lateinit var mLayoutManager: LinearLayoutManager
@@ -146,9 +146,12 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
     }
 
     override fun showSortFilterBottomSheet(tab: MovieTab) {
-        toast(tab.toString())
         SortFilterBottomSheetFragment()
-            .show(childFragmentManager, "SortFilterBottomSheet")
+            .show(childFragmentManager, "SortFilterBottomSheetFragment")
+    }
+
+    override fun sortFilterApplied(): Observable<HomeUiEvent.FilterApplied> {
+        return uiEvent.ofType()
     }
 
     override fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent> {

@@ -12,6 +12,7 @@ import dagger.Module
 import dagger.Provides
 import com.film.annotations.InvestorAPIClient
 import com.film.annotations.PlaceOrderAPIClient
+import com.film.app.core.utils.RealClock
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -99,5 +100,10 @@ class DebugDataModule {
             .addInterceptor(signingInterceptor)
             .addInterceptor(loggingInterceptor)
             .build()
+    }
+
+    @Provides
+    internal fun provideRealClock(): RealClock {
+        return RealClock
     }
 }

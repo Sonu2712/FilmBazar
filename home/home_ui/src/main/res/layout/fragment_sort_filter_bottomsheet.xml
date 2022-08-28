@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <TextView
@@ -10,14 +11,13 @@
         style="@style/Widget.MoslTheme.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
         android:layout_gravity="end"
+        android:gravity="end"
         android:paddingStart="@dimen/padding_large"
         android:paddingTop="@dimen/padding_normal"
         android:paddingEnd="@dimen/padding_large"
         android:paddingBottom="@dimen/padding_normal"
-        android:text="Filter"
-        />
+        android:text="Filter" />
 
     <TextView
         android:id="@+id/tvInvestmentRange"
@@ -26,79 +26,32 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_normal"
         android:paddingBottom="@dimen/padding_normal"
-        android:text="Investment Range"
-        />
+        android:text="Investment Range" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/slInvestment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:values="@array/initial_slider_values"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:valueFrom="0.0"
-        android:valueTo="100.0"/>
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values" />
 
-    <TextView
-        android:id="@+id/tvRecentlyAdded"
-        android:padding="@dimen/padding_normal"
-        style="@style/Widget.MoslTheme.Label"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSort"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingBottom="@dimen/padding_normal"
-        android:text="Recently Added"
-        />
-
-    <TextView
-        android:id="@+id/tvPopularityHTL"
-        android:padding="@dimen/padding_normal"
-        style="@style/Widget.MoslTheme.Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:paddingBottom="@dimen/padding_normal"
-        android:text="Popularity - high to low"
-        />
-
-    <TextView
-        android:id="@+id/tvPopularityLTH"
-        android:padding="@dimen/padding_normal"
-        style="@style/Widget.MoslTheme.Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:paddingBottom="@dimen/padding_normal"
-        android:text="Popularity - low to high"
-        />
-
-    <TextView
-        android:id="@+id/tvDaysLeftHTL"
-        android:padding="@dimen/padding_normal"
-        style="@style/Widget.MoslTheme.Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:paddingBottom="@dimen/padding_normal"
-        android:text="Day's left for investment - high to low"
-        />
-
-    <TextView
-        android:id="@+id/tvDaysLeftLTH"
-        android:padding="@dimen/padding_normal"
-        style="@style/Widget.MoslTheme.Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:paddingBottom="@dimen/padding_normal"
-        android:text="Day's left for investment - low to high"
-        />
+        tools:listitem="@layout/item_moview_sort"
+        tools:itemCount="5"/>
 
     <Button
-        android:id="@+id/btnBuy"
+        android:id="@+id/btnApply"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginLeft="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_margin="@dimen/margin_normal"
         android:text="Apply" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

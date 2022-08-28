@@ -1,11 +1,16 @@
 package com.film.bazar.home_ui
 
+import com.film.bazar.home_domain.MovieFilter
+import com.film.bazar.home_domain.MovieSort
+import com.film.bazar.home_domain.MovieSortKeyValue
 import com.film.bazar.home_domain.MovieTab
 import io.reactivex.rxjava3.subjects.PublishSubject
 
 sealed class HomeUiEvent {
     object GoBack : HomeUiEvent()
     object OpenSortFilterBottomSheet : HomeUiEvent()
+    data class FilterApplied(val filter: MovieSort) : HomeUiEvent()
+    data class SortItemClicked(val filter: MovieSortKeyValue) : HomeUiEvent()
     data class NavigationEvent(val event: HomeNavEvent) : HomeUiEvent()
 
     data class MovieDetail(

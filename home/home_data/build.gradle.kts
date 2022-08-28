@@ -15,6 +15,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":moslcommons"))
     implementation(project(":annotations"))
     implementation(project(":rx_preferences"))
     implementation(project(":trading_api"))
