@@ -11,6 +11,11 @@ interface MovieDetailView : BaseView {
     fun openCastCrew() : Observable<HomeUiEvent.OpenCastCrew>
     fun renderCarsCrew(uiModel: UiModel<CastCrewDetail>)
     fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent>
-    fun render(uiModel: UiModel<MovieDetail>)
+    fun render(uiModel: UiModel<MovieDetail>, tabType : String)
     fun onBackClicked() : Observable<HomeUiEvent.GoBack>
+
+    companion object{
+        const val ARG_MOVIE_ID = "movieid"
+        const val ARG_MOVIE_TYPE = "movietype"
+    }
 }

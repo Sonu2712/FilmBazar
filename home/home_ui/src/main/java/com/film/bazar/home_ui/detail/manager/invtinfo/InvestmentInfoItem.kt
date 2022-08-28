@@ -2,6 +2,7 @@ package com.film.bazar.home_ui.detail.manager.invtinfo
 
 import android.view.View
 import coil.api.load
+import com.film.app.core.utils.toRoundedRupees
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.coreui.helper.LINEAR
 import com.film.bazar.home_domain.InvestmentInfo
@@ -23,7 +24,7 @@ class InvestmentInfoItem(
         viewBinding.apply {
             root.tag = LINEAR
             ivIcon.load(data.imageUrl)
-            tvLabel.text = data.label
+            tvLabel.text = if (data.label.isNotEmpty()) data.label else data.numberValue.toRoundedRupees()
             tvSubLabel.text = data.subLabel
         }
     }

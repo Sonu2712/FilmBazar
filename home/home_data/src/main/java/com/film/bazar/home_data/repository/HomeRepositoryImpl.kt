@@ -14,8 +14,8 @@ internal class HomeRepositoryImpl @Inject constructor(
         return Observable.just(if (tab == MovieTab.OngoingProject) movieInfoOnGoing else movieInfoPast)
     }
 
-    override fun getMovieDetail(): Observable<MovieDetail> {
-        return Observable.just(movieDetail)
+    override fun getMovieDetail(movieId: Int, tab : String): Observable<MovieDetail> {
+        return Observable.just(movieDetail(tab))
     }
 
     override fun getCastCrew(id: Int): Observable<CastCrewDetail> {

@@ -9,8 +9,10 @@ import com.film.app.core.events.DataAction
 import com.film.bazar.coreui.core.ContainerState
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.GridLayoutSpaceDecorator
+import com.film.bazar.home_data.repository.movieTab
 import com.film.bazar.home_domain.CastCrewDetail
 import com.film.bazar.home_domain.MovieDetail
+import com.film.bazar.home_domain.MovieTab
 import com.film.bazar.home_ui.HomeUiEvent
 import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.FragmentMovieDetailNewBinding
@@ -95,7 +97,7 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         }
     }
 
-    override fun render(uiModel: UiModel<MovieDetail>) {
+    override fun render(uiModel: UiModel<MovieDetail>, tabType : String) {
         toggleProgressBar(uiModel.inProgress)
         uiModel.onFailure {
             section.clearContent()
@@ -128,6 +130,7 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
             grouplist.add(videoGroup)
 
         }
+        binding.button.text = if (tabType.equals(MovieTab.OngoingProject.toString())) "Buy" else "Withdraw"
     }
 
     override fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent> {

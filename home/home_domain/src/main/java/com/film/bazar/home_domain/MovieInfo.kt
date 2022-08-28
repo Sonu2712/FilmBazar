@@ -12,21 +12,21 @@ data class MovieModel(
 )
 
 data class MovieInfo(
-    val imgUrl : String,
+    val imgUrl: String,
     val title: String,
-    val directorName : String,
-    val noOfDaysLeft : Int,
-    val noOfPeopleInvt : Double,
-    val perFoundProgress : Int,
-    val targetAmount : Double,
-    val targetGoal : Double,
-    val orderAction : String,
+    val directorName: String,
+    val noOfDaysLeft: Int,
+    val noOfPeopleInvt: Double,
+    val perFoundProgress: Int,
+    val targetAmount: Double,
+    val targetGoal: Double,
+    val orderAction: String,
     val tab: MovieTab
 )
 
 data class MovieBanner(
-    val imageUrl : String,
-    val deeplink : String
+    val imageUrl: String,
+    val deeplink: String
 )
 
 sealed class MovieTab {

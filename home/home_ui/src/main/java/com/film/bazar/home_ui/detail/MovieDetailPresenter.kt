@@ -12,15 +12,17 @@ class MovieDetailPresenter @Inject constructor(
     view: MovieDetailView,
     val repository: HomeRepository,
     val screenNavigator: ScreenNavigator,
-    val navHandler: HomeNavigationHandler
+    val navHandler: HomeNavigationHandler,
+    val movieId : Int,
+    val tabType : String
 ) : BasePresenter<MovieDetailView>(view = view){
 
     override fun start() {
         Observable.just(onFetchCalled(), onRetryCalled())
             .switchMap {
-                repository.getMovieDetail()
+                repository.getMovieDetail(movieId, tabType)
                     .compose(applyUiModel())
-            }.subscribe(view::render)
+            }.subscribe { view.render(it, tabType) }
             .addTo(disposable)
 
         view.openCastCrew()

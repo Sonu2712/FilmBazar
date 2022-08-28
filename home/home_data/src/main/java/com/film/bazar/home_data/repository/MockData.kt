@@ -192,7 +192,7 @@ val movieInfoPast = listOf(
         tab = MovieTab.PastProjects
     )
 )
-val movieDetail = MovieDetail(
+fun movieDetail(tab : String) = MovieDetail(
     bannerInfo = MovieDetailBannerInfo(
         bannerUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
@@ -204,7 +204,7 @@ val movieDetail = MovieDetail(
         targetAmount = 349593453.0,
         targetGoalAmount = 100000000.0
     ),
-    invtInfo = investmentInfo(),
+    invtInfo = if (tab.equals(MovieTab.OngoingProject.toString())) investmentInfo() else investmentInfoPast(),
     titleSubTitle = listOf(
         TitleSubTitle(
             invtMsg1 = "Major Investors info",
@@ -377,5 +377,56 @@ fun investmentInfo() = listOf(
         numberValue = 0.0,
         label = "Lorem ipsum",
         subLabel = "Investment flag"
+    )
+)
+
+fun investmentInfoPast() = listOf(
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 90000000.0,
+        label = "",
+        subLabel = "Budget"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 14567.0,
+        label = "",
+        subLabel = "Peoples invested"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 2000000000.0,
+        label = "",
+        subLabel = "Revenue generation"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 200000000.0,
+        label = "",
+        subLabel = "Projected / Net Return"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 900004500.0,
+        label = "Nadiadwala Grandson Entertainment",
+        subLabel = "Indian market business"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 1900000045000.0,
+        label = "",
+        subLabel = "Overseas market business"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 50000000.0,
+        label = "",
+        subLabel = "Satellite rights"
+    ),
+    InvestmentInfo(
+        imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        numberValue = 400000000.0,
+        label = "",
+        subLabel = "OTT revenue"
     )
 )

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.film.bazar.constants.NavigationConstants
 import com.film.bazar.coreui.navigator.ScreenNavigator
 import com.film.bazar.home_ui.HomeInterNavigator
+import com.film.bazar.home_ui.detail.MovieDetailView
 import com.film.bazar.video.VideoNavigator
 import com.film.bazar.video.VideoPlayActivity
 import javax.inject.Inject
@@ -27,7 +28,11 @@ class InterModuleNavigatorImpl @Inject constructor(
     }
 
     override fun openMovieDetail(id: Int, tabType: String) {
-        screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL, true)
+        val bundle = Bundle().apply {
+            putInt(MovieDetailView.ARG_MOVIE_ID, id)
+            putString(MovieDetailView.ARG_MOVIE_TYPE, tabType)
+        }
+        screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL, bundle, true)
     }
 
     override fun playVideo(videoId: String) {

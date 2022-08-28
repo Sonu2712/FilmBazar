@@ -6,7 +6,7 @@ interface HomeRepository {
     fun getHomeData() : Observable<MovieData>
     fun getMovieByProject(tab: MovieTab) : Observable<List<MovieInfo>>
 
-    fun getMovieDetail() : Observable<MovieDetail>
+    fun getMovieDetail(movieId: Int, movieTab: String) : Observable<MovieDetail>
 
     fun getCastCrew(id : Int) : Observable<CastCrewDetail>
 }
