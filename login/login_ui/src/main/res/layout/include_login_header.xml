@@ -10,7 +10,7 @@
             android:layout_height="@dimen/image_login_header_dimension"
             android:layout_gravity="center"
             android:scaleType="fitXY"
-            android:src="@mipmap/ic_app_launcher" />
+            android:src="@drawable/app_ic_film" />
 
         <TextView
             style="@style/FiraSans14PtMedium"
