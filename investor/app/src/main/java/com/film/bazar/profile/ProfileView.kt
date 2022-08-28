@@ -10,6 +10,9 @@ interface ProfileView : BaseView {
     fun onNotificationClicked() : Observable<Boolean>
     fun renderNotification(uiModel : UiModel<String>)
 
+    fun onLocationPermissionClicked() : Observable<Unit>
+    fun showLocationPermissionPopup()
+
     fun onEditProfileClicked() : Observable<Unit>
     fun onHelpSupportClicked() : Observable<Unit>
     fun onTermsConditionClicked() : Observable<Unit>

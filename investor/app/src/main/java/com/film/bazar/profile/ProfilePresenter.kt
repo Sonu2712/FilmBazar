@@ -33,6 +33,11 @@ class ProfilePresenter @Inject constructor(
             }.subscribe(view::renderNotification)
             .addTo(disposable)
 
+        view.onLocationPermissionClicked()
+            .subscribe {
+                view.showLocationPermissionPopup()
+            }
+
         view.onLogoutClicked()
             .subscribe { view.showLogoutConfirmationDialog() }
             .addTo(disposable)

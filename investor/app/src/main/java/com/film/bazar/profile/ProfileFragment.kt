@@ -1,7 +1,10 @@
 package com.film.bazar.profile
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
+import androidx.core.app.ActivityCompat
 import com.film.app.core.events.DataAction
 import com.film.bazar.R
 import com.film.bazar.coreui.appcoreui.dialog.showDialogForConfirmation
@@ -71,6 +74,14 @@ class ProfileFragment : MOSLCommonFragment(), ProfileView {
 
     override fun onNotificationClicked(): Observable<Boolean> {
         return binding.swNotification.checkedChanges()
+    }
+
+    override fun onLocationPermissionClicked(): Observable<Unit> {
+        return binding.lyLocation.clicks()
+    }
+
+    override fun showLocationPermissionPopup() {
+       toast("Need to show location popup")
     }
 
     override fun onLogoutConfirmed(): Observable<ProfileUiEvent.LogoutConfirmed> {
