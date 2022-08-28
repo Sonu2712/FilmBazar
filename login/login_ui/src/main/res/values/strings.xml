@@ -9,7 +9,7 @@
     <string name="text_label_guest_info_message_3">Analyze your portfolio &amp; get customized recommendations through Restructuring Tool</string>
 
     <string name="menu_view_markets">View Markets</string>
-    <string name="text_hint_customer_login"> Mobile No. / Email ID / Client Code</string>
+    <string name="text_hint_customer_login"> Mobile No</string>
     <string name="text_label_welcome_to_mo_investor">Welcome to FILM BAZAR</string>
 
     <string name="hint_password_customer_login">Please Enter Password</string>

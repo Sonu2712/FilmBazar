@@ -69,7 +69,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tilClientCode"
-                            app:passwordToggleDrawable="@drawable/selector_password_toggle"
                             app:passwordToggleEnabled="true"
                             app:passwordToggleTint="@color/color_primary">
 
@@ -82,6 +81,7 @@
                                 android:imeOptions="actionDone"
                                 android:inputType="text|textPassword|textNoSuggestions"
                                 android:maxLines="1"
+                                android:hint="Password"
                                 android:padding="@dimen/padding_medium"
                                 android:singleLine="true" />
                         </com.google.android.material.textfield.TextInputLayout>

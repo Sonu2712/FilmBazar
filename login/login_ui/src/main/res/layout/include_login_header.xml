@@ -14,7 +14,7 @@
 
         <TextView
             style="@style/FiraSans14PtMedium"
-            android:textColor="@color/action_text_color"
+            android:textColor="#264065"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_extra"
