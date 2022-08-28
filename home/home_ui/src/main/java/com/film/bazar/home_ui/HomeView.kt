@@ -8,12 +8,14 @@ import com.film.commons.data.UiModel
 import io.reactivex.rxjava3.core.Observable
 
 interface HomeView : BaseView {
-    fun onFilterClicked() : Observable<HomeUiEvent.OpenSortFilterBottomSheet>
+    fun onFilterClicked(): Observable<HomeUiEvent.OpenSortFilterBottomSheet>
     fun showSortFilterBottomSheet(tab: MovieTab)
     fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent>
 
-    fun onMovieInfoClicked() : Observable<HomeUiEvent.MovieDetail>
-    fun getSelectedMovieTab(): MovieTab?
+    fun onMovieTabClicked(): Observable<HomeUiEvent.MovieTabChanged>
+    fun renderMovie(uiModel: UiModel<List<MovieInfo>>)
+    fun onMovieInfoClicked(): Observable<HomeUiEvent.MovieDetail>
+    fun getSelectedMovieTab(): MovieTab
 
     fun renderWelcome(uiModel: UiModel<MovieData>)
 }

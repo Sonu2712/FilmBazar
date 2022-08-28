@@ -2,7 +2,8 @@ package com.film.bazar.home_domain
 
 data class MovieData(
     val banner: List<MovieBanner>,
-    val model: MovieModel
+    val tab: List<MovieTab>,
+    val info: List<MovieInfo>
 )
 
 data class MovieModel(
@@ -19,7 +20,8 @@ data class MovieInfo(
     val perFoundProgress : Int,
     val targetAmount : Double,
     val targetGoal : Double,
-    val orderAction : String
+    val orderAction : String,
+    val tab: MovieTab
 )
 
 data class MovieBanner(

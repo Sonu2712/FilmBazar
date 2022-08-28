@@ -1,5 +1,6 @@
 package com.film.bazar.home_ui
 
+import com.film.bazar.home_domain.MovieTab
 import io.reactivex.rxjava3.subjects.PublishSubject
 
 sealed class HomeUiEvent {
@@ -15,7 +16,8 @@ sealed class HomeUiEvent {
     data class OpenCastCrew(
         val id: Int
     ) : HomeUiEvent()
-    data class PlayVideo(val videoId: String) : HomeUiEvent()
+
+    data class MovieTabChanged(val tab: MovieTab) : HomeUiEvent()
 }
 
 sealed class HomeNavEvent {

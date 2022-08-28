@@ -14,27 +14,10 @@ import io.reactivex.rxjava3.subjects.PublishSubject
 class MovieInfoManager(
     val uiEvent: PublishSubject<HomeUiEvent>
 ) {
-    var currentTab: MovieTab = MovieTab.OngoingProject
-    lateinit var movieModel: MovieModel
-    lateinit var movieTabItem: MovieTabItem
-    fun render(movieInfo: MovieModel): Group {
-        this.movieModel = movieInfo
-        movieTabItem = MovieTabItem(
-            tabs = movieInfo.tab,
-            tabListener = object : SimpleTabListener() {
-                override fun onTabSelected(tab: TabLayout.Tab) {
-                    val selectedTab = tab.tag as MovieTab
-                    if(currentTab != selectedTab){
-                        currentTab = selectedTab
-                        movieTabItem.updatePosition(currentTab.toString())
-                    }
-                }
-            },
-            uiEvent = uiEvent
-        )
+    fun render(movieInfo: List<MovieInfo>): Group {
         val section = Section()
-        val items = movieInfo.info.map { MovieItem(it, uiEvent) }
-        section.setHeader(movieTabItem)
+        section.clear()
+        val items = movieInfo.map { MovieItem(it, uiEvent) }
         section.update(items)
         return section
     }

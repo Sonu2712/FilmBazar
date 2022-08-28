@@ -24,14 +24,11 @@ class MovieTabManager(
                     if(!currentTab.equals(selectedtab)){
                         currentTab = selectedtab
                         movieTabItem.updatePosition(currentTab.toString())
-                        /*uiEvents.onNext(
-                            HomeUiEvent.OnMarketsTabChanged(selectedtab.toString())
-                        )*/
+                        uiEvent.onNext(HomeUiEvent.MovieTabChanged(currentTab))
                     }
                 }
             }, uiEvent = uiEvent)
         section.add(movieTabItem)
-        section.setFooter(MovieFilterItem(uiEvent))
         return section
     }
 }

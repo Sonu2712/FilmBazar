@@ -113,6 +113,13 @@
                 app:layout_constraintTop_toTopOf="@+id/tvDaysValue"
                 tools:layout_editor_absoluteY="0dp" />
 
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="view1,tvDaysLabel,tvDaysValue"/>
+
             <TextView
                 android:id="@+id/tvPeopleInvestedLabel"
                 android:layout_width="wrap_content"
@@ -194,7 +201,7 @@
                 android:progress="60"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvDaysValue"
-                app:layout_constraintTop_toBottomOf="@+id/tvDaysLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPeopleInvestedValue" />
 
 
             <TextView
@@ -206,7 +213,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/tvDaysValue"
+                app:layout_constraintStart_toStartOf="@+id/pbGrowth"
                 app:layout_constraintTop_toBottomOf="@+id/pbGrowth" />
 
             <TextView

@@ -1,11 +1,13 @@
 package com.film.bazar.home_ui.movieinfo
 
 import android.view.View
+import androidx.core.view.isVisible
 import coil.api.load
 import com.film.app.core.utils.toFormattedValue
 import com.film.app.core.utils.toRoundedRupees
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.home_domain.MovieInfo
+import com.film.bazar.home_domain.MovieTab
 import com.film.bazar.home_ui.HomeUiEvent
 import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.ItemMovieBinding
@@ -24,6 +26,7 @@ class MovieItem(
     }
 
     override fun bind(viewBinding: ItemMovieBinding, position: Int) {
+        val isOngoing = data.tab == MovieTab.OngoingProject
         viewBinding.apply {
             imgScreen
                 .load(data.imgUrl)
@@ -36,6 +39,9 @@ class MovieItem(
             tvTargetValue.text = data.targetAmount.toRoundedRupees()
             tvTargetGoal.text = "of ${data.targetAmount.toRoundedRupees()} goals"
             btnBuy.text = data.orderAction
+            groupDays.isVisible = isOngoing
+            guideLine.setGuidelinePercent(if (isOngoing) .35f else 0.0f)
+            guideLineMiddle.setGuidelinePercent(if (isOngoing) .65f else 0.35f)
         }
         viewBinding.root.setOnClickListener(this)
     }

@@ -23,6 +23,14 @@ class HomePresenter @Inject constructor(
             }.subscribe(view::renderWelcome)
             .addTo(disposable)
 
+        view.onMovieTabClicked()
+            .map { view.getSelectedMovieTab() }
+            .switchMap {
+                repository.getMovieByProject(it)
+                    .compose(applyUiModel())
+            }.subscribe(view::renderMovie)
+            .addTo(disposable)
+
         view.onFilterClicked()
             .map { view.getSelectedMovieTab() ?: MovieTab.OngoingProject}
             .subscribe { view.showSortFilterBottomSheet(it ?: MovieTab.OngoingProject) }

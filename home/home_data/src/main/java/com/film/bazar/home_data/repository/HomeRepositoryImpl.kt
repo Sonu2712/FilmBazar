@@ -7,7 +7,11 @@ import javax.inject.Inject
 internal class HomeRepositoryImpl @Inject constructor(
 ) : HomeRepository {
     override fun getHomeData(): Observable<MovieData> {
-        return Observable.just(MovieData(movieBanner, MovieModel(movieTab,movieInfo)))
+        return Observable.just(MovieData(movieBanner, movieTab, movieInfoOnGoing))
+    }
+
+    override fun getMovieByProject(tab: MovieTab): Observable<List<MovieInfo>> {
+        return Observable.just(if (tab == MovieTab.OngoingProject) movieInfoOnGoing else movieInfoPast)
     }
 
     override fun getMovieDetail(): Observable<MovieDetail> {
@@ -15,6 +19,11 @@ internal class HomeRepositoryImpl @Inject constructor(
     }
 
     override fun getCastCrew(id: Int): Observable<CastCrewDetail> {
-        return Observable.just(CastCrewDetail(directorName = "ABC", castCrew = listOf(topCast(), topCrew())))
+        return Observable.just(
+            CastCrewDetail(
+                directorName = "ABC",
+                castCrew = listOf(topCast(), topCrew())
+            )
+        )
     }
 }

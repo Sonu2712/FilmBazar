@@ -20,7 +20,7 @@ val movieBanner = listOf(
 
 val movieTab = listOf(MovieTab.OngoingProject, MovieTab.PastProjects)
 
-val movieInfo = listOf(
+val movieInfoOnGoing = listOf(
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
         title = "Doctor Strange in the Multiverse of Madness",
@@ -30,7 +30,8 @@ val movieInfo = listOf(
         perFoundProgress = 75,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -41,7 +42,8 @@ val movieInfo = listOf(
         perFoundProgress = 5,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -52,7 +54,8 @@ val movieInfo = listOf(
         perFoundProgress = 75,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -63,7 +66,8 @@ val movieInfo = listOf(
         perFoundProgress = 15,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -74,7 +78,8 @@ val movieInfo = listOf(
         perFoundProgress = 75,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -85,7 +90,8 @@ val movieInfo = listOf(
         perFoundProgress = 50,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
     ),
     MovieInfo(
         imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -96,7 +102,94 @@ val movieInfo = listOf(
         perFoundProgress = 90,
         targetAmount = 50875.0,
         targetGoal = 100000000.0,
-        orderAction = "Buy"
+        orderAction = "Buy",
+        tab = MovieTab.OngoingProject
+    )
+)
+val movieInfoPast = listOf(
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 75,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 5,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 75,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 15,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 75,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 0,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 50,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Withdraw",
+        tab = MovieTab.PastProjects
+    ),
+    MovieInfo(
+        imgUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+        title = "Doctor Strange in the Multiverse of Madness",
+        directorName = "Sam Raimi",
+        noOfDaysLeft = 5,
+        noOfPeopleInvt = 100000.0,
+        perFoundProgress = 90,
+        targetAmount = 50875.0,
+        targetGoal = 100000000.0,
+        orderAction = "Buy",
+        tab = MovieTab.PastProjects
     )
 )
 val movieDetail = MovieDetail(

@@ -38,11 +38,12 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
     lateinit var presenter: HomePresenter
     private val uiEvent = PublishSubject.create<HomeUiEvent>()
     lateinit var section: DataManagerSection
+    lateinit var dataSection: DataManagerSection
     lateinit var mLayoutManager: LinearLayoutManager
     internal lateinit var groupAdapter: GroupAdapter<GroupieViewHolder>
 
     lateinit var bannerManager: MovieBannerManager
-    //lateinit var tabManager: MovieTabManager
+    lateinit var tabManager: MovieTabManager
     lateinit var infoManager: MovieInfoManager
     var grouplist = mutableListOf<Group>()
 
@@ -70,14 +71,18 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
 
     private fun setupRecyclerView() {
         bannerManager = MovieBannerManager()
-        //tabManager = MovieTabManager(uiEvent)
+        tabManager = MovieTabManager(uiEvent)
         infoManager = MovieInfoManager(uiEvent)
 
         section = DataManagerSection(onRetryClick)
+        dataSection = DataManagerSection(onRetryClick)
         groupAdapter = GroupAdapter()
         mLayoutManager = LinearLayoutManager(context)
         binding.rvHome.apply {
-            adapter = groupAdapter.apply { add(section) }
+            adapter = groupAdapter.apply {
+                add(section)
+                add(dataSection)
+            }
             layoutManager = mLayoutManager
             (itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
             addItemDecoration(
@@ -99,17 +104,37 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
                 section.add(bannerGroup)
                 grouplist.add(bannerGroup)
             }
-            /* if (!it.tab.isNullOrEmpty()){
-                 val tabGroup = tabManager.render(it.tab)
-                 section.add(tabGroup)
-                 grouplist.add(tabGroup)
-             }*/
+            if (!it.tab.isNullOrEmpty()) {
+                val tabGroup = tabManager.render(it.tab)
+                section.add(tabGroup)
+                grouplist.add(tabGroup)
+            }
 
-            val infoGroup = infoManager.render(it.model)
-            section.add(infoGroup)
-            grouplist.add(infoGroup)
+            render(it.info)
 
         }
+    }
+
+    fun render(movieInfo: List<MovieInfo>) {
+        dataSection.clearContent()
+        val infoGroup = infoManager.render(movieInfo)
+        dataSection.add(infoGroup)
+        grouplist.add(infoGroup)
+    }
+
+    override fun renderMovie(uiModel: UiModel<List<MovieInfo>>) {
+        dataSection.toggleProgress(uiModel.inProgress)
+        uiModel.onFailure {
+            dataSection.showError(it)
+        }
+
+        uiModel.onSuccess {
+            render(it)
+        }
+    }
+
+    override fun onMovieTabClicked(): Observable<HomeUiEvent.MovieTabChanged> {
+        return uiEvent.ofType()
     }
 
     override fun isDataEmpty(): Boolean {
@@ -130,8 +155,8 @@ class HomeFragment : MOSLCommonFragment(), HomeView {
         return uiEvent.ofType()
     }
 
-    override fun getSelectedMovieTab(): MovieTab? {
-        return infoManager.currentTab
+    override fun getSelectedMovieTab(): MovieTab {
+        return tabManager.currentTab
     }
 
     override fun onMovieInfoClicked(): Observable<HomeUiEvent.MovieDetail> {
