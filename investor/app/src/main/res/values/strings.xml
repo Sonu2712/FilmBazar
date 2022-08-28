@@ -17,7 +17,7 @@
     <string name="app_text_alert_check_network">Check Network</string>
     <string name="app_text_alert_exit_app">Exit App</string>
     <string name="app_msg_log_out_successful">Logged Out Successfully</string>
-    <string name="app_msg_click_again_to_exit">Please click back again to exit</string>
+    <string name="app_msg_click_again_to_exit">Double tap to exit</string>
 
     <string name="app_player_error">Error initializing YouTube player: %s</string>
 

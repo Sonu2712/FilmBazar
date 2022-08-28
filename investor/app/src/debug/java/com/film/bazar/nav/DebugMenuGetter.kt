@@ -11,8 +11,6 @@ object DebugMenuGetter {
   @JvmStatic
   fun getFragment(@DebugConstants pageId: String): Fragment? {
     return when (pageId) {
-      DebugConstants.NAVIGATE_TO_DASHBOARD -> DashboardFragment()
-      DebugConstants.NAVIGATE_TO_DRAWER_MENU -> DrawerMenuFragment()
       DebugConstants.NAVIGATE_TO_PLAYGROUND_01 -> FirstPlaygroundFragment()
       DebugConstants.NAVIGATE_TO_PLAYGROUND_02 -> SecondPlaygroundFragment()
       else -> null
@@ -22,8 +20,6 @@ object DebugMenuGetter {
   @JvmStatic
   fun isHandled(@DebugConstants pageId: String): Boolean {
     return when (pageId) {
-      DebugConstants.NAVIGATE_TO_DASHBOARD -> true
-      DebugConstants.NAVIGATE_TO_DRAWER_MENU -> true
       DebugConstants.NAVIGATE_TO_PLAYGROUND_01 -> true
       DebugConstants.NAVIGATE_TO_PLAYGROUND_02 -> true
       else -> false

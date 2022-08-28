@@ -87,9 +87,9 @@ import static android.view.WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
         // If you have not seen the debug drawer before, show it with a message
         if (!seenDebugDrawer.get()) {
             binding.debugDrawerLayout.postDelayed(() -> {
-                binding.debugDrawerLayout.openDrawer(GravityCompat.END);
-                Toast.makeText(drawerContext, R.string.debug_drawer_welcome, Toast.LENGTH_LONG)
-                    .show();
+                //binding.debugDrawerLayout.openDrawer(GravityCompat.END);
+                /*Toast.makeText(drawerContext, R.string.debug_drawer_welcome, Toast.LENGTH_LONG)
+                    .show();*/
             }, 1000);
             seenDebugDrawer.set(true);
         }
