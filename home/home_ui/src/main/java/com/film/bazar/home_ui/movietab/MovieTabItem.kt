@@ -52,7 +52,7 @@ class MovieTabItem(
     }
 
     fun updatePosition(tabname: String) {
-        if (tabname == MovieTab.OngoingProject.toString()) {
+        if (tabname == MovieTab.PastProjects.toString()) {
             selectedPosition = 1
         } else {
             selectedPosition = 0

@@ -49,4 +49,28 @@ class MovieItem(
     override fun onClick(v: View?) {
         uiEvent.onNext(HomeUiEvent.MovieDetail(1, ""))
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as MovieItem
+
+        if (data != other.data) return false
+        if (uiEvent != other.uiEvent) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = data.hashCode()
+        result = 31 * result + uiEvent.hashCode()
+        return result
+    }
+
+    override fun getId(): Long {
+        return data.hashCode().toLong()
+    }
+
+
 }
