@@ -16,6 +16,7 @@
 
     <style name="TextAppearance.MoslTheme.Toolbar" parent="">
         <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">false</item>
         <item name="android:textColor">#1D3557</item>
         <item name="android:fontFamily">@font/fira_sans_medium</item>
     </style>

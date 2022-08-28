@@ -120,14 +120,17 @@
     </style>
 
     <style name="Widget.MoslTheme.Resend.Button" parent="@style/FiraSans14Pt">
+        <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/resend_button_selector</item>
     </style>
 
     <style name="Widget.MoslTheme.Reset.Button" parent="@style/FiraSans14PtMedium">
+        <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/primary_text_color</item>
     </style>
 
     <style name="Widget.MoslTheme.Done.Button" parent="@style/FiraSans14PtMedium">
+        <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/action_text_color</item>
     </style>
 

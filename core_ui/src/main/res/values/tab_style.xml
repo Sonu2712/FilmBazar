@@ -10,7 +10,7 @@
 
     <style name="FiraSans14Pt.Tab.caps">
         <item name="textAppearanceButton">@style/TabTextApperance</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="FiraSans14Pt.Tab">
@@ -31,12 +31,14 @@
 
     <style name="Widget.MoslTheme.Tab.Caps" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabTextAppearance">@style/FiraSans14Pt.Tab.caps</item>
+        <item name="textAllCaps">false</item>
         <item name="tabTextColor">@color/tab_selector</item>
     </style>
 
     <style name="Widget.MoslTheme.TabColor.Caps" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabTextAppearance">@style/FiraSans14Pt.Tab.caps</item>
         <item name="tabTextColor">@color/tab_selector</item>
+        <item name="textAllCaps">false</item>
         <item name="android:background">?background</item>
     </style>
 
