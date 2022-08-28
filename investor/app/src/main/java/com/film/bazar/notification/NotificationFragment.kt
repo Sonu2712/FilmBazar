@@ -16,8 +16,10 @@ import com.film.commons.data.UiModel
 import com.film.commons.data.onFailure
 import com.film.commons.data.onSuccess
 import com.film.groupiex.section.DataManagerSection
+import com.jakewharton.rxbinding4.view.clicks
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
+import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 class NotificationFragment : MOSLCommonFragment() , NotificationView{
@@ -36,7 +38,7 @@ class NotificationFragment : MOSLCommonFragment() , NotificationView{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNotificationNewBinding.bind(view)
-        setAppTitle("Notifications")
+        setTitle("Notifications")
         setupRecyclerView()
         presenter.start()
         dataActionSubject.onNext(DataAction.Fetch)
@@ -45,6 +47,7 @@ class NotificationFragment : MOSLCommonFragment() , NotificationView{
     override fun getInitialState(): ContainerState {
         return ContainerState.showBackNavigation()
     }
+
     private fun setupRecyclerView(){
         section = DataManagerSection(onRetryClick)
         groupAdapter = GroupAdapter()
@@ -68,6 +71,10 @@ class NotificationFragment : MOSLCommonFragment() , NotificationView{
             val data = it.map { NotificationItem(it) }
             section.update(data)
         }
+    }
+
+    override fun onOkayClicked(): Observable<Unit> {
+        return binding.btnOkay.clicks()
     }
 
     override fun isDataEmpty(): Boolean {
