@@ -23,7 +23,7 @@ class CastCrewManager(
         catsListItem.update(castItems)
         expandableGroup.add(catsListItem)
         expandableGroup.add(ViewLineItem())
-        expandableGroup.add(CastCrewTitleItem(data.casts.title))
+        expandableGroup.add(CastCrewTitleItem(data.crews.title))
         val crewItems = data.crews.casts.map { crew -> CastCrewItem(crew) }
         crewListItem.update(crewItems)
         expandableGroup.add(crewListItem)
