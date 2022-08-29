@@ -53,10 +53,7 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
         sortFilterInput = LocalSortFilterInput()
 
         binding.slInvestment.setLabelFormatter { value: Float ->
-            val format = NumberFormat.getCurrencyInstance()
-            format.maximumFractionDigits = 0
-            format.currency = Currency.getInstance("IND")
-            format.format(value.toDouble())
+            "₹ ${value.toInt()}"
         }
         binding.slInvestment.addOnChangeListener { rangeSlider, value, fromUser ->
             val values = rangeSlider.values
