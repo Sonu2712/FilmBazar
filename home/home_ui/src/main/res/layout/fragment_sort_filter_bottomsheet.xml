@@ -38,10 +38,11 @@
         android:valueTo="100.0"
         app:values="@array/initial_slider_values" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <RadioGroup
         android:id="@+id/rvSort"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:minHeight="200dp"
         android:layout_weight="1"
         android:paddingBottom="@dimen/padding_normal"
         tools:listitem="@layout/item_moview_sort"

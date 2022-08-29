@@ -2,10 +2,7 @@ package com.film.bazar.home_ui.sortfilter
 
 import com.film.app.core.base.BasePresenter
 import com.film.app.core.base.BaseView
-import com.film.bazar.home_domain.HomeRepository
-import com.film.bazar.home_domain.MovieFilter
-import com.film.bazar.home_domain.MovieSort
-import com.film.bazar.home_domain.MovieSortKeyValue
+import com.film.bazar.home_domain.*
 import com.film.bazar.home_ui.HomeUiEvent
 import com.film.commons.data.UiModel
 import com.film.commons.rx.addTo
@@ -17,10 +14,9 @@ import javax.inject.Inject
 interface SortFilterView : BaseView {
     fun render(uiModel: UiModel<MovieSort>)
     fun onApplyClicked() : Observable<Unit>
-    fun onItemClicked(): Observable<HomeUiEvent.SortItemClicked>
-    fun overrideSortFilter(sortKeyValue: MovieSortKeyValue)
-    fun getFilter() : MovieSort
-    fun dismissFilter(uiModel: UiModel<MovieSort>)
+    fun overrideSortFilter(sortKeyValue: MovieSortFilter)
+    fun getFilter() : MovieFilter
+    fun dismissFilter(uiModel: UiModel<MovieFilter>)
 }
 
 class SortFilterPresenter @Inject constructor(
@@ -35,11 +31,6 @@ class SortFilterPresenter @Inject constructor(
                     .compose(applyUiModel())
             }.subscribe(view::render)
             .addTo(disposable)
-
-        view.onItemClicked()
-            .subscribe {
-                view.overrideSortFilter(it.filter)
-            }.addTo(disposable)
 
         view.onApplyClicked()
             .map { view.getFilter() }

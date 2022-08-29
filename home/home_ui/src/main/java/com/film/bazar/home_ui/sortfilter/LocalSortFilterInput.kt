@@ -1,12 +1,11 @@
 package com.film.bazar.home_ui.sortfilter
 
-import com.film.bazar.home_domain.MovieFilterType
-import com.film.bazar.home_domain.MovieSort
+import com.film.bazar.home_domain.MovieSortFilter
 
 class LocalSortFilterInput(
     var valueFrom1: Double = 0.0,
     var valueTo1: Double = 0.0,
-    var selectedSort: MovieFilterType = MovieFilterType.Nothing
+    var selectedSort: MovieSortFilter = MovieSortFilter.ADDED_NOTHING
 ) {
 
     fun saveAmountRange(valueFrom: Double, valueTo: Double) {
@@ -14,18 +13,7 @@ class LocalSortFilterInput(
         valueTo1 = valueTo
     }
 
-    fun setLocalSort(sort: MovieFilterType) {
+    fun setLocalSort(sort: MovieSortFilter) {
         selectedSort = sort
-    }
-
-    val sortFilterData = MovieSort(
-        valueFrom = valueFrom1,
-        valueTo = valueTo1,
-        selectedSort = selectedSort
-    )
-
-    fun setData(movieSort: MovieSort) {
-        setLocalSort(movieSort.selectedSort)
-        saveAmountRange(movieSort.valueFrom, movieSort.valueTo)
     }
 }

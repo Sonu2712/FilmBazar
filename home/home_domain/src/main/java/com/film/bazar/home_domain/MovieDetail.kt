@@ -5,43 +5,32 @@ data class MovieDetail(
     val movieFund: MovieFund,
     var invtInfo: List<InvestmentInfo>,
     val titleSubTitle: List<TitleSubTitle>,
-    val castCrewDetail : CastCrewDetail,
+    val castCrewDetail: CastCrewDetail,
     val videoInfo: List<VideoInfo>
 
 )
 
 data class MovieSort(
-    val valueFrom : Double,
-    val valueTo : Double,
-    val selectedSort : MovieFilterType,
-    val sort : List<MovieSortKeyValue> = emptyList()
-)
-
-data class MovieSortKeyValue(
-    val label: String,
-    val filterType: MovieFilterType
+    val valueFrom: Double,
+    val selectedFrom: Double?,
+    val valueTo: Double,
+    val selectedTo: Double? = null,
+    val selectedSort: MovieSortFilter,
+    val sort: List<MovieSortFilter> = emptyList()
 )
 
 data class MovieFilter(
-    val startAmount : Float,
-    val endAmount : Float,
-    val filterType : MovieFilterType
+    val startAmount: Double,
+    val endAmount: Double,
+    val filterType: MovieSortFilter
 )
-
-sealed class MovieFilterType{
-    object RecentlyAdded : MovieFilterType()
-    object PopularityHTL : MovieFilterType()
-    object PopularityLTH : MovieFilterType()
-    object DaysLeftForInvtHTL : MovieFilterType()
-    object DaysLeftForInvtLTH : MovieFilterType()
-    object Nothing : MovieFilterType()
-}
 
 data class CastCrewDetail(
-    val directorName : String,
-    val casts :CastCrew,
-    val crews : CastCrew
+    val directorName: String,
+    val casts: CastCrew,
+    val crews: CastCrew
 )
+
 data class CastCrew(
     val title: String,
     val casts: List<MovieCastCrew>
@@ -51,7 +40,7 @@ data class MovieCastCrew(
     val imageUrl: String,
     val fName: String,
     val lName: String,
-    val position : String
+    val position: String
 )
 
 data class TitleSubTitle(

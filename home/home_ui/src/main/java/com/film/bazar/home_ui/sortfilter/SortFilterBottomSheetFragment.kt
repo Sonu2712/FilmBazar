@@ -1,27 +1,21 @@
 package com.film.bazar.home_ui.sortfilter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.RadioButton
+import androidx.core.content.ContextCompat
 import com.film.app.core.events.DataAction
 import com.film.bazar.coreui.appcoreui.bottomsheet.DaggerBaseBottomSheetFragment
-import com.film.bazar.home_domain.MovieFilter
-import com.film.bazar.home_domain.MovieFilterType
-import com.film.bazar.home_domain.MovieSort
-import com.film.bazar.home_domain.MovieSortKeyValue
+import com.film.bazar.home_domain.*
 import com.film.bazar.home_ui.HomeFragment
 import com.film.bazar.home_ui.HomeUiEvent
 import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.FragmentSortFilterBottomsheetBinding
 import com.film.commons.data.UiModel
 import com.film.commons.data.onSuccess
-import com.film.commons.rx.ofType
-import com.google.android.material.slider.RangeSlider
 import com.jakewharton.rxbinding4.view.clicks
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.GroupieViewHolder
-import com.xwray.groupie.Section
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import timber.log.Timber
@@ -35,9 +29,8 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
     @Inject
     lateinit var presenter: SortFilterPresenter
     lateinit var uiEventSubject: PublishSubject<HomeUiEvent>
-    lateinit var section: Section
-    val itemList: MutableList<MovieSortItem> = mutableListOf()
     lateinit var sortFilterInput: LocalSortFilterInput
+
     override fun onAttach(context: Context) {
         uiEventSubject = (parentFragment as? HomeFragment)?.uiEvent
             ?: PublishSubject.create()
@@ -57,15 +50,7 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
 
     private fun setupRecyclerView() {
         sortFilterInput = LocalSortFilterInput()
-        section = Section()
-        val groupAdapter = GroupAdapter<GroupieViewHolder>()
-        groupAdapter.add(section)
 
-        binding.rvSort.apply {
-            adapter = groupAdapter
-            setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(context)
-        }
         binding.slInvestment.setLabelFormatter { value: Float ->
             val format = NumberFormat.getCurrencyInstance()
             format.maximumFractionDigits = 0
@@ -76,46 +61,72 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
             val values = rangeSlider.values
             sortFilterInput.saveAmountRange(values[0].toDouble(), values[1].toDouble())
         }
-    }
 
-    override fun render(uiModel: UiModel<MovieSort>) {
-        uiModel.onSuccess {
-            val sortFilter = sortFilterInput
-            val fromValue = if(sortFilter.valueFrom1 == 0.0) it.valueFrom else sortFilter.valueFrom1
-            val toValue = if(sortFilter.valueTo1 == 0.0) it.valueTo else sortFilter.valueTo1
-            binding.slInvestment.apply {
-                setValues(fromValue.toFloat(), toValue.toFloat())
-                valueTo = toValue.toFloat()
-                valueFrom = fromValue.toFloat()
-            }
-            val items = it.sort.map { MovieSortItem(it, uiEventSubject) }
-            itemList.clear()
-            itemList.addAll(items)
-            section.update(itemList)
+        binding.rvSort.setOnCheckedChangeListener { group, checkedId ->
+            sortFilterInput.setLocalSort(MovieSortFilter.getInstance(checkedId))
         }
     }
 
-    override fun onItemClicked(): Observable<HomeUiEvent.SortItemClicked> {
-        return uiEventSubject.ofType()
+    override fun render(uiModel: UiModel<MovieSort>) {
+        uiModel.onSuccess { sort ->
+            binding.slInvestment.apply {
+                try {
+                    setValues(
+                        sort.selectedFrom?.toFloat() ?: 0.0f,
+                        sort.selectedTo?.toFloat() ?: 1.0f
+                    )
+                    valueTo = sort.valueTo.toFloat()
+                    valueFrom = sort.valueFrom.toFloat()
+                } catch (exception: IllegalStateException) {
+                    Timber.d("FilmD : (valueFrom,SelectedFrom) : (${sort.valueFrom}, ${sort.selectedFrom}), (valueTo, selectedTo) : (${sort.valueTo}, ${sort.selectedTo}), Exception $exception")
+                }
+
+            }
+            sort.sort.map {
+                val radioButton = getRadioSortButton(it, sort.selectedSort)
+                binding.rvSort.addView(radioButton)
+            }
+        }
     }
 
-    override fun overrideSortFilter(sortKeyValue: MovieSortKeyValue) {
-        sortFilterInput.setLocalSort(sortKeyValue.filterType)
+    private fun getRadioSortButton(
+        data: MovieSortFilter,
+        selectedFilter: MovieSortFilter
+    ): RadioButton {
+        val rb = RadioButton(requireContext())
+        val params = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        rb.layoutParams = params
+        params.setMargins(18, 12, 12, 12)
+        rb.setPadding(12, 12, 12, 12)
+        rb.setButtonDrawable(R.color.transparent)
+        rb.background = ContextCompat.getDrawable(requireContext(), R.drawable.sort_radio_bg)
+        rb.id = data.id
+        rb.tag = data.label
+        rb.text = data.label
+        rb.isChecked = data == selectedFilter
+        return rb
+    }
+
+    override fun overrideSortFilter(sortKeyValue: MovieSortFilter) {
+        sortFilterInput.setLocalSort(sortKeyValue)
     }
 
     override fun onApplyClicked(): Observable<Unit> {
         return binding.btnApply.clicks()
     }
 
-    override fun getFilter(): MovieSort {
-        return MovieSort(
-            valueFrom = sortFilterInput.valueFrom1,
-            valueTo = sortFilterInput.valueTo1,
-            selectedSort = sortFilterInput.selectedSort
+    override fun getFilter(): MovieFilter {
+        return MovieFilter(
+            startAmount = sortFilterInput.valueFrom1,
+            endAmount = sortFilterInput.valueTo1,
+            filterType = sortFilterInput.selectedSort
         )
     }
 
-    override fun dismissFilter(uiModel: UiModel<MovieSort>) {
+    override fun dismissFilter(uiModel: UiModel<MovieFilter>) {
         uiModel.onSuccess {
             dismiss()
             uiEventSubject.onNext(HomeUiEvent.FilterApplied(it))
@@ -124,7 +135,6 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
 
     override fun onDestroy() {
         presenter.stop()
-        binding.rvSort.adapter = null
         super.onDestroy()
     }
 }
