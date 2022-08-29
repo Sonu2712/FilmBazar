@@ -6,6 +6,7 @@ import io.reactivex.rxjava3.subjects.PublishSubject
 
 sealed class HomeUiEvent {
     object GoBack : HomeUiEvent()
+    object ResetSortFilter : HomeUiEvent()
     object OpenSortFilterBottomSheet : HomeUiEvent()
     data class FilterApplied(val filter: MovieFilter) : HomeUiEvent()
     data class NavigationEvent(val event: HomeNavEvent) : HomeUiEvent()

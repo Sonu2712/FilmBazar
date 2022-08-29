@@ -11,7 +11,7 @@ import io.reactivex.rxjava3.subjects.PublishSubject
 class MovieTabManager(
     val uiEvent: PublishSubject<HomeUiEvent>
 ) {
-    var currentTab: MovieTab = MovieTab.OngoingProject
+    var currentTab: MovieTab = MovieTab.ONGOING_PROJECT
     lateinit var movieTabItem: MovieTabItem
 
     fun render(tab : List<MovieTab>): Group {

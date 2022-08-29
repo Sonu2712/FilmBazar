@@ -3,7 +3,6 @@ package com.film.bazar.home_ui.sortfilter
 import com.film.app.core.base.BasePresenter
 import com.film.app.core.base.BaseView
 import com.film.bazar.home_domain.*
-import com.film.bazar.home_ui.HomeUiEvent
 import com.film.commons.data.UiModel
 import com.film.commons.rx.addTo
 import dagger.Binds
@@ -13,16 +12,17 @@ import javax.inject.Inject
 
 interface SortFilterView : BaseView {
     fun render(uiModel: UiModel<MovieSort>)
-    fun onApplyClicked() : Observable<Unit>
+    fun onApplyClicked(): Observable<Unit>
     fun overrideSortFilter(sortKeyValue: MovieSortFilter)
-    fun getFilter() : MovieFilter
+    fun getFilter(): MovieFilter
+    fun onResetClicked(): Observable<Unit>
     fun dismissFilter(uiModel: UiModel<MovieFilter>)
 }
 
 class SortFilterPresenter @Inject constructor(
-    view : SortFilterView,
+    view: SortFilterView,
     val homeRepository: HomeRepository
-) : BasePresenter<SortFilterView>(view){
+) : BasePresenter<SortFilterView>(view) {
 
     override fun start() {
         onFetchCalled()
@@ -40,11 +40,20 @@ class SortFilterPresenter @Inject constructor(
             }.subscribe {
                 view.dismissFilter(it)
             }.addTo(disposable)
+
+        view.onResetClicked()
+            .map { view.getFilter() }
+            .switchMap {
+                homeRepository.resetFilter()
+                    .compose(applyUiModel())
+            }.subscribe {
+                view.dismissFilter(it)
+            }
     }
 }
 
 @Module
-abstract class SortFilterModule{
+abstract class SortFilterModule {
     @Binds
-    abstract fun provideSortFilterView(fragment: SortFilterBottomSheetFragment) : SortFilterView
+    abstract fun provideSortFilterView(fragment: SortFilterBottomSheetFragment): SortFilterView
 }

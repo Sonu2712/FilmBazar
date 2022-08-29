@@ -6,8 +6,6 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.film.app.core.events.DataAction
-import com.film.commons.data.UiModel
-import com.film.commons.data.onSuccess
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.LinearLayoutSpaceDecorator
 import com.film.bazar.coreui.navigatorlib.AppTitle
@@ -17,10 +15,11 @@ import com.film.bazar.home_domain.MovieTab
 import com.film.bazar.home_ui.databinding.FragmentHomeBinding
 import com.film.bazar.home_ui.moviebanner.MovieBannerManager
 import com.film.bazar.home_ui.movieinfo.MovieInfoManager
-import com.film.bazar.home_ui.movieinfo.MovieItem
 import com.film.bazar.home_ui.movietab.MovieTabManager
 import com.film.bazar.home_ui.sortfilter.SortFilterBottomSheetFragment
+import com.film.commons.data.UiModel
 import com.film.commons.data.onFailure
+import com.film.commons.data.onSuccess
 import com.film.commons.rx.ofType
 import com.film.groupiex.section.DataManagerSection
 import com.xwray.groupie.Group

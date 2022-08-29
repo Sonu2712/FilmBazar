@@ -3,14 +3,11 @@ package com.film.bazar.home_ui.detail
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.film.app.core.events.DataAction
 import com.film.bazar.coreui.core.ContainerState
 import com.film.bazar.coreui.core.MOSLCommonFragment
 import com.film.bazar.coreui.helper.GridLayoutSpaceDecorator
-import com.film.bazar.home_data.repository.movieTab
-import com.film.bazar.home_domain.CastCrewDetail
 import com.film.bazar.home_domain.MovieDetail
 import com.film.bazar.home_domain.MovieTab
 import com.film.bazar.home_ui.HomeUiEvent
@@ -44,12 +41,12 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
     protected lateinit var gridLayoutManager: GridLayoutManager
     internal lateinit var groupAdapter: GroupAdapter<GroupieViewHolder>
 
-    lateinit var bannerHeaderManager : MovieDetailBannerManager
+    lateinit var bannerHeaderManager: MovieDetailBannerManager
     lateinit var fundingProgressManager: FundingProgressManager
     lateinit var investmentInfoManager: InvestmentInfoManager
-    lateinit var titleSubtitleManager : TitleSubtitlePairManager
+    lateinit var titleSubtitleManager: TitleSubtitlePairManager
     lateinit var castCrewManager: CastCrewManager
-    lateinit var videoManager : MovieVideoManager
+    lateinit var videoManager: MovieVideoManager
 
     var grouplist = mutableListOf<Group>()
 
@@ -75,7 +72,7 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         investmentInfoManager = InvestmentInfoManager()
         titleSubtitleManager = TitleSubtitlePairManager()
         castCrewManager = CastCrewManager(uiEvent)
-        videoManager = MovieVideoManager(uiEvent = uiEvent )
+        videoManager = MovieVideoManager(uiEvent = uiEvent)
 
         section = DataManagerSection(onRetryClick)
         groupAdapter = GroupAdapter<GroupieViewHolder>().apply {
@@ -97,7 +94,7 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         }
     }
 
-    override fun render(uiModel: UiModel<MovieDetail>, tabType : String) {
+    override fun render(uiModel: UiModel<MovieDetail>, tabType: String) {
         toggleProgressBar(uiModel.inProgress)
         uiModel.onFailure {
             section.clearContent()
@@ -130,7 +127,8 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
             grouplist.add(videoGroup)
 
         }
-        binding.button.text = if (tabType.equals(MovieTab.OngoingProject.toString())) "Buy" else "Withdraw"
+        binding.button.text =
+            if (MovieTab.getInstance(tabType).isOnGoingProject()) "Buy" else "Withdraw"
     }
 
     override fun onNavigationEvent(): Observable<HomeUiEvent.NavigationEvent> {

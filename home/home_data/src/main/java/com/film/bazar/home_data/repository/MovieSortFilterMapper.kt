@@ -1,5 +1,6 @@
 package com.film.bazar.home_data.repository
 
+import com.film.bazar.home_domain.MovieFilter
 import com.film.bazar.home_domain.MovieInfo
 import com.film.bazar.home_domain.MovieSortFilter
 

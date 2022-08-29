@@ -20,6 +20,7 @@ data class MovieSort(
 )
 
 data class MovieFilter(
+    val tab: MovieTab = MovieTab.ONGOING_PROJECT,
     val startAmount: Double,
     val endAmount: Double,
     val filterType: MovieSortFilter

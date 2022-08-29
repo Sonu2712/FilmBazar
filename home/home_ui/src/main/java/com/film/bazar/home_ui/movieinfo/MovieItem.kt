@@ -26,7 +26,7 @@ class MovieItem(
     }
 
     override fun bind(viewBinding: ItemMovieBinding, position: Int) {
-        val isOngoing = data.tab == MovieTab.OngoingProject
+        val isOngoing = data.tab == MovieTab.ONGOING_PROJECT
         viewBinding.apply {
             imgScreen
                 .load(data.imgUrl)

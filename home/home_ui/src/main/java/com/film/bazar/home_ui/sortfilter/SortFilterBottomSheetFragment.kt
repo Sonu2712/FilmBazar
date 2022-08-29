@@ -15,6 +15,7 @@ import com.film.bazar.home_ui.R
 import com.film.bazar.home_ui.databinding.FragmentSortFilterBottomsheetBinding
 import com.film.commons.data.UiModel
 import com.film.commons.data.onSuccess
+import com.film.commons.rx.ofType
 import com.jakewharton.rxbinding4.view.clicks
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject
@@ -106,7 +107,7 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
         rb.id = data.id
         rb.tag = data.label
         rb.text = data.label
-        rb.isChecked = data == selectedFilter
+        rb.isChecked = data.id == selectedFilter.id
         return rb
     }
 
@@ -116,6 +117,10 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
 
     override fun onApplyClicked(): Observable<Unit> {
         return binding.btnApply.clicks()
+    }
+
+    override fun onResetClicked(): Observable<Unit> {
+        return binding.tvReset.clicks()
     }
 
     override fun getFilter(): MovieFilter {
@@ -136,5 +141,10 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
     override fun onDestroy() {
         presenter.stop()
         super.onDestroy()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        uiEventSubject.onNext(HomeUiEvent.ResetSortFilter)
     }
 }

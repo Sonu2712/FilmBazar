@@ -7,8 +7,9 @@ interface HomeRepository {
     fun getMovieByProject(tab: MovieTab, filter: MovieFilter? = null): Observable<List<MovieInfo>>
 
     fun getMovieSort(): Observable<MovieSort>
-    fun resetFilter(): Observable<MovieSort>
-    fun saveFilter(filter: MovieFilter): Observable<MovieFilter>
+    fun resetFilter() : Observable<MovieFilter>
+    fun saveFilter(filter: MovieFilter) : Observable<MovieFilter>
+    fun saveMovieTab(movieTab: MovieTab)
 
     fun getMovieDetail(movieId: Int, movieTab: String): Observable<MovieDetail>
 }

@@ -6,11 +6,6 @@ data class MovieData(
     val info: List<MovieInfo>
 )
 
-data class MovieModel(
-    val tab: List<MovieTab>,
-    val info: List<MovieInfo>
-)
-
 data class MovieInfo(
     val imgUrl: String,
     val title: String,
@@ -28,17 +23,3 @@ data class MovieBanner(
     val imageUrl: String,
     val deeplink: String
 )
-
-sealed class MovieTab {
-    object OngoingProject : MovieTab() {
-        override fun toString(): String {
-            return "Ongoing Projects"
-        }
-    }
-
-    object PastProjects : MovieTab() {
-        override fun toString(): String {
-            return "Past Projects"
-        }
-    }
-}

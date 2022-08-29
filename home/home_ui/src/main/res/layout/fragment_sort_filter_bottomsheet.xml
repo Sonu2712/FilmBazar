@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvFilter"
-        style="@style/Widget.MoslTheme.Title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:gravity="end"
-        android:paddingStart="@dimen/padding_large"
-        android:paddingTop="@dimen/padding_normal"
-        android:paddingEnd="@dimen/padding_large"
-        android:paddingBottom="@dimen/padding_normal"
-        android:text="Filter" />
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/tvReset"
+            style="@style/Widget.MoslTheme.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_normal"
+            android:text="Reset" />
+
+        <TextView
+            android:id="@+id/tvFilter"
+            style="@style/Widget.MoslTheme.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_normal"
+            android:text="Filter" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvInvestmentRange"
@@ -42,11 +63,11 @@
         android:id="@+id/rvSort"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:minHeight="200dp"
         android:layout_weight="1"
+        android:minHeight="200dp"
         android:paddingBottom="@dimen/padding_normal"
-        tools:listitem="@layout/item_moview_sort"
-        tools:itemCount="5"/>
+        tools:itemCount="5"
+        tools:listitem="@layout/item_moview_sort" />
 
     <Button
         android:id="@+id/btnApply"
