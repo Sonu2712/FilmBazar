@@ -18,10 +18,6 @@ sealed class HomeUiEvent {
         @JvmField val tabType : String
     ): HomeUiEvent()
 
-    data class OpenCastCrew(
-        val id: Int
-    ) : HomeUiEvent()
-
     data class MovieTabChanged(val tab: MovieTab) : HomeUiEvent()
 }
 

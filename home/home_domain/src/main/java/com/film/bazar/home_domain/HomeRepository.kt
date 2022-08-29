@@ -11,6 +11,4 @@ interface HomeRepository {
     fun getMovieByProject(tab: MovieTab, sort: MovieSort? = null): Observable<List<MovieInfo>>
 
     fun getMovieDetail(movieId: Int, movieTab: String): Observable<MovieDetail>
-
-    fun getCastCrew(id: Int): Observable<CastCrewDetail>
 }

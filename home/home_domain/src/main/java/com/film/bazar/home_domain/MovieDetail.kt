@@ -39,7 +39,8 @@ sealed class MovieFilterType{
 
 data class CastCrewDetail(
     val directorName : String,
-    val castCrew : List<CastCrew>
+    val casts :CastCrew,
+    val crews : CastCrew
 )
 data class CastCrew(
     val title: String,
@@ -49,7 +50,8 @@ data class CastCrew(
 data class MovieCastCrew(
     val imageUrl: String,
     val fName: String,
-    val lName: String
+    val lName: String,
+    val position : String
 )
 
 data class TitleSubTitle(

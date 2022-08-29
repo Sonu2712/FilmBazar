@@ -137,21 +137,6 @@ class MovieDetailFragment : MOSLCommonFragment(), MovieDetailView {
         return uiEvent.ofType()
     }
 
-    override fun openCastCrew(): Observable<HomeUiEvent.OpenCastCrew> {
-        return uiEvent.ofType()
-    }
-
-    override fun renderCarsCrew(uiModel: UiModel<CastCrewDetail>) {
-        toggleProgressBar(uiModel.inProgress)
-        uiModel.onFailure {
-            showOnFailurePopup(it)
-        }
-
-        uiModel.onSuccess {
-            castCrewManager.renderCastCrewDetail(it)
-        }
-    }
-
     override fun onBackClicked(): Observable<HomeUiEvent.GoBack> {
         return uiEvent.ofType()
     }

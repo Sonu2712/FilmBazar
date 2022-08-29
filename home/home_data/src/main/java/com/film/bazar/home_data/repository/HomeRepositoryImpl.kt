@@ -13,6 +13,17 @@ internal class HomeRepositoryImpl @Inject constructor(
         return Observable.just(MovieData(movieBanner, movieTab, movieInfoOnGoing))
     }
 
+    override fun getMovieByProject(tab: MovieTab, sort: MovieSort?): Observable<List<MovieInfo>> {
+        this.tab = tab
+        val list = if (tab == MovieTab.OngoingProject) movieInfoOnGoing else movieInfoPast
+        sort?.let {
+            list.filterValue(sort.valueFrom, sort.valueTo)
+                .sortValue(it.selectedSort)
+        }
+        return Observable.just(list)
+    }
+
+
     override fun getMovieSort(): Observable<MovieSort> {
         val movieIfo = if (tab == MovieTab.OngoingProject) movieInfoOnGoing else movieInfoPast
         return Observable.just(
@@ -75,17 +86,6 @@ internal class HomeRepositoryImpl @Inject constructor(
         }
     }
 
-
-    override fun getMovieByProject(tab: MovieTab, sort: MovieSort?): Observable<List<MovieInfo>> {
-        this.tab = tab
-        val list = if (tab == MovieTab.OngoingProject) movieInfoOnGoing else movieInfoPast
-        sort?.let {
-            list.filterValue(sort.valueFrom, sort.valueTo)
-                .sortValue(it.selectedSort)
-        }
-        return Observable.just(list)
-    }
-
     fun List<MovieInfo>.filterValue(fromValue: Double, toValue: Double): List<MovieInfo> {
         return filter {
             it.targetAmount in fromValue..toValue
@@ -105,15 +105,6 @@ internal class HomeRepositoryImpl @Inject constructor(
 
     override fun getMovieDetail(movieId: Int, tab: String): Observable<MovieDetail> {
         return Observable.just(movieDetail(tab))
-    }
-
-    override fun getCastCrew(id: Int): Observable<CastCrewDetail> {
-        return Observable.just(
-            CastCrewDetail(
-                directorName = "ABC",
-                castCrew = listOf(topCast(), topCrew())
-            )
-        )
     }
 
     companion object {

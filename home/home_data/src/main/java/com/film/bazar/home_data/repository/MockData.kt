@@ -192,6 +192,7 @@ val movieInfoPast = listOf(
         tab = MovieTab.PastProjects
     )
 )
+
 fun movieDetail(tab : String) = MovieDetail(
     bannerInfo = MovieDetailBannerInfo(
         bannerUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
@@ -215,7 +216,7 @@ fun movieDetail(tab : String) = MovieDetail(
             invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
         )
     ),
-    castCrewDetail = CastCrewDetail(directorName = "ABC", castCrew = listOf(topCast(), topCrew())),
+    castCrewDetail = CastCrewDetail(directorName = "Sam Raimi", casts = topCast(), crews = topCrew()),
     videoInfo = videoInfo()
 )
 
@@ -224,38 +225,39 @@ fun topCast() = CastCrew(
     casts = listOf(
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Benedict",
+            lName = "Cumberbatch",
+            position = ""
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Elizabeth",
+            lName = "Olsen",
+            position = ""
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "ChiweteI",
+            lName = "Ejiofor",
+            position = ""
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Benedict",
+            lName = "Wong",
+            position = ""
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Xochitl",
+            lName = "Gome",
+            position = ""
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
-        ),
-        MovieCastCrew(
-            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Rachel",
+            lName = "McAdams",
+            position = ""
         )
     )
 )
@@ -265,38 +267,39 @@ fun topCrew() = CastCrew(
     casts = listOf(
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Sam Raimi",
+            lName = "",
+            position = "Directer"
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Michael Waldron",
+            lName = "",
+            position = "Writer"
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Victoria Alonso",
+            lName = "",
+            position = "Executive producer"
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Danny Elfman",
+            lName = "",
+            position = "Musician"
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Bob Murawski",
+            lName = "",
+            position = "Editor"
         ),
         MovieCastCrew(
             imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
-        ),
-        MovieCastCrew(
-            imageUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-            fName = "Benedict Cumberbatch",
-            lName = "Cumberbatch"
+            fName = "Sarah Finn",
+            lName = "",
+            position = "Casting director "
         )
     )
 )

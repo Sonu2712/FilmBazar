@@ -25,13 +25,6 @@ class MovieDetailPresenter @Inject constructor(
             }.subscribe { view.render(it, tabType) }
             .addTo(disposable)
 
-        view.openCastCrew()
-            .switchMap {
-                repository.getCastCrew(it.id)
-                    .compose(applyUiModel())
-            }.subscribe(view::renderCarsCrew)
-            .addTo(disposable)
-
         view.onBackClicked()
             .subscribe { screenNavigator.goBack() }
             .addTo(disposable)
