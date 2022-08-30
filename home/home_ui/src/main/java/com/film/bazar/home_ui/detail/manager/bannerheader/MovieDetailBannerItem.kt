@@ -2,10 +2,12 @@ package com.film.bazar.home_ui.detail.manager.bannerheader
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.setPadding
 import coil.api.load
 import com.film.bazar.coreui.groupie.ViewBindingItem
 import com.film.bazar.home_domain.MovieDetailBannerInfo
@@ -48,31 +50,33 @@ private fun createAmountChips(amount: String, context: Context): Chip {
         ViewGroup.LayoutParams.WRAP_CONTENT,
         ViewGroup.LayoutParams.WRAP_CONTENT
     ).apply {
-        setMargins(0, 0, 16, 0)
+        setMargins(0, 0, 12, 0)
     }
 
     val chip = Chip(context)
     chip.apply {
         chipBackgroundColor = ColorStateList.valueOf(
             ContextCompat.getColor(
-                context, R.color.color_surface
+                context, R.color.film_text_color_background
             )
         )
-        shapeAppearanceModel = ShapeAppearanceModel.Builder().setAllCornerSizes(8F).build()
+        shapeAppearanceModel = ShapeAppearanceModel.Builder().setAllCornerSizes(10F).build()
         chipStrokeColor = ColorStateList.valueOf(
             ContextCompat.getColor(
                 context,
-                R.color.action_text_color
+                R.color.white
             )
         )
+        setPadding(0)
         chipStrokeWidth = 1f
+        textSize = 10.0f
         tag = amount
         text = amount
         setTextColor(
             ColorStateList.valueOf(
                 ContextCompat.getColor(
                     context,
-                    R.color.action_text_color
+                    R.color.film_text_color
                 )
             )
         )

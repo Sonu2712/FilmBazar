@@ -36,5 +36,7 @@
     <color name="film_orange_warming">#FAAD14</color>
     <color name="film_gray_disable">#BFBFBF</color>
     <color name="film_title_color">#282828</color>
+    <color name="film_text_color">#BCBCBC</color>
+    <color name="film_text_color_background">#7B7B7B</color>
 
 </resources>

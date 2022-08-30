@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
         android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_small"
         android:orientation="vertical">
 
         <TextView
@@ -64,7 +64,8 @@
                 android:id="@+id/llInvestmentAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_medium"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
                 android:orientation="horizontal" />
 
         </HorizontalScrollView>
