@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:drawablePadding="@dimen/padding_normal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:drawableStart="@drawable/ic_arrow_back_black_24dp"
+            android:drawableStart="@drawable/ic_arrow_back_white"
             android:text="Doctor Strange in the Multiverse of Madness" />
 
         <TextView

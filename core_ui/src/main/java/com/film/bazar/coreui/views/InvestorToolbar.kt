@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import com.film.bazar.coreui.R
 import com.film.bazar.coreui.navigatorlib.AppTitle
@@ -49,7 +50,9 @@ class InvestorToolbar @JvmOverloads constructor(
     fun setNavigationMode(goBack: Boolean = false, showNavigationIcon: Boolean = true) {
         if (goBack) {
             setTag(R.id.tool_bar_go_back, true)
-            setNavigationIcon(R.drawable.ic_arrow_back_black_24dp)
+            setNavigationIcon(R.drawable.ic_arrow_back_black)
+            setTitleTextColor(ContextCompat.getColor(context, R.color.film_title_color))
+            setPadding(12,12,0,12)
             setNavigationContentDescription(R.string.text_label_go_back)
         } else {
             setTag(R.id.tool_bar_go_back, false)

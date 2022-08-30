@@ -15,15 +15,12 @@
             android:id="@+id/ivThumbnail"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginTop="@dimen/margin_medium"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDays"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="@+id/txt_title" />
 
         <TextView
             android:id="@+id/txt_title"
@@ -68,6 +65,19 @@
             app:layout_constraintStart_toStartOf="@+id/txt_title"
             app:layout_constraintTop_toBottomOf="@+id/txtSubtitle"
             tools:text="30 mins ago"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            app:layout_constraintTop_toBottomOf="@+id/tvDays"
+            app:layout_constraintStart_toStartOf="@+id/tvDays"
+            app:layout_constraintEnd_toEndOf="@+id/txtSubtitle"
+            android:background="#E6E6E6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

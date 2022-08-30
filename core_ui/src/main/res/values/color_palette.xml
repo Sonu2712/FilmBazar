@@ -35,5 +35,6 @@
     <color name="film_green_success">#52C41A</color>
     <color name="film_orange_warming">#FAAD14</color>
     <color name="film_gray_disable">#BFBFBF</color>
+    <color name="film_title_color">#282828</color>
 
 </resources>
