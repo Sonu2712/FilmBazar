@@ -19,4 +19,26 @@
         <item name="tabIndicatorColor">#1D3557</item>
         <item name="tabTextColor">@color/tab_selector</item>
     </style>
+
+    <style name="SliderRangeTooltip" parent="TextAppearance.MaterialComponents.Tooltip">
+        <item name="android:textColor">#282828</item>
+    </style>
+    
+    <style name="SliderToolTipShapeAppernace" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textAppearance">@style/SliderRangeTooltip</item>
+        <item name="android:visible">true</item>
+    </style>
+
+    <style name="Widget.FilmBazar.SliderRange" parent="Widget.MaterialComponents.Slider">
+        <item name="haloColor">@color/red</item>
+        <item name="haloRadius">20dp</item>
+        <item name="thumbColor">@color/white</item>
+        <item name="thumbStrokeColor">@color/green</item>
+        <item name="labelStyle">@style/SliderToolTipShapeAppernace</item>
+        <item name="tickColorActive">@color/fiml_slider_active_tick_marks_color</item>
+        <item name="tickColorInactive">@color/film_slider_inactive_tick_marks_color</item>
+        <item name="trackColorActive">@color/film_slider_active_track_color</item>
+        <item name="trackColorInactive">@color/film_slider_inactive_track_color</item>
+        <item name="trackHeight">2dp</item>
+    </style>
 </resources>
