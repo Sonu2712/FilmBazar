@@ -25,12 +25,12 @@ fun Int.bottomBarStringMapper(): String {
 
 fun String.getIcon() : Int {
     return when {
-        this == NavigationConstants.NAVIGATE_TO_LOGOUT -> R.drawable.app_ic_logout
-        this == NavigationConstants.NAVIGATE_TO_HOME -> R.drawable.app_ic_home
-        this ==  NavigationConstants.NAVIGATE_TO_PORTFOLIO -> R.drawable.app_ic_other_essentials
-        this ==  NavigationConstants.NAVIGATE_TO_WALLET -> R.drawable.app_ic_help_me_invest
-        this ==  NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> R.drawable.app_ic_learn
-        else -> R.drawable.app_ic_home
+        this == NavigationConstants.NAVIGATE_TO_LOGOUT -> R.drawable.ic_check_circle_green
+        this == NavigationConstants.NAVIGATE_TO_HOME -> R.drawable.ic_check_circle_green
+        this ==  NavigationConstants.NAVIGATE_TO_PORTFOLIO -> R.drawable.ic_check_circle_green
+        this ==  NavigationConstants.NAVIGATE_TO_WALLET -> R.drawable.ic_check_circle_green
+        this ==  NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> R.drawable.ic_check_circle_green
+        else -> R.drawable.ic_check_circle_green
     }
 }
 

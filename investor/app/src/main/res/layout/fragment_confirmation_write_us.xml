@@ -19,7 +19,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_insta_checked" />
+        android:src="@drawable/ic_check_circle_green" />
 
     <TextView
         android:id="@+id/tvWrite"
