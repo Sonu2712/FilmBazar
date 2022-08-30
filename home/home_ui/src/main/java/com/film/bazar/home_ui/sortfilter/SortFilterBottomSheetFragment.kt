@@ -116,6 +116,14 @@ class SortFilterBottomSheetFragment : DaggerBaseBottomSheetFragment(), SortFilte
         return binding.btnApply.clicks()
     }
 
+    override fun onCloseClicked(): Observable<Unit> {
+        return binding.imgClose.clicks()
+    }
+
+    override fun dismissBottomSheet() {
+        dismiss()
+    }
+
     override fun onResetClicked(): Observable<Unit> {
         return binding.tvReset.clicks()
     }

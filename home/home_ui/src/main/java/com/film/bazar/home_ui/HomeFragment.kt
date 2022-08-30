@@ -3,6 +3,7 @@ package com.film.bazar.home_ui
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.film.app.core.events.DataAction

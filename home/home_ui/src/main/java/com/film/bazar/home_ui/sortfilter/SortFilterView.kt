@@ -13,6 +13,8 @@ import javax.inject.Inject
 interface SortFilterView : BaseView {
     fun render(uiModel: UiModel<MovieSort>)
     fun onApplyClicked(): Observable<Unit>
+    fun onCloseClicked() : Observable<Unit>
+    fun dismissBottomSheet()
     fun overrideSortFilter(sortKeyValue: MovieSortFilter)
     fun getFilter(): MovieFilter
     fun onResetClicked(): Observable<Unit>
@@ -49,6 +51,10 @@ class SortFilterPresenter @Inject constructor(
             }.subscribe {
                 view.dismissFilter(it)
             }
+
+        view.onCloseClicked()
+            .subscribe { view.dismissBottomSheet() }
+            .addTo(disposable)
     }
 }
 

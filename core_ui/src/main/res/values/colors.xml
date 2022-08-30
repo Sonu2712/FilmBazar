@@ -2,7 +2,7 @@
 <resources>
     <color name="color_primary">#FFFFFF</color>
     <color name="color_primary_variant">@color/light_peach</color>
-    <color name="color_secondary">@color/orangey_yellow</color>
+    <color name="color_secondary">#47DB79</color>
     <color name="color_secondary_variant">@color/orangey_yellow</color>
 
     <color name="color_background">@color/white_four</color>
