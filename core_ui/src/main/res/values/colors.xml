@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_primary">@color/pumpkin</color>
+    <color name="color_primary">#FFFFFF</color>
     <color name="color_primary_variant">@color/light_peach</color>
     <color name="color_secondary">@color/orangey_yellow</color>
     <color name="color_secondary_variant">@color/orangey_yellow</color>
 
     <color name="color_background">@color/white_four</color>
     <color name="color_surface">@color/white_three</color>
-    <color name="color_error">@color/copper</color>
+    <color name="color_error">@color/film_red_error</color>
 
     <color name="color_on_primary">@color/white_three</color>
     <color name="color_on_secondary">@color/black</color>
     <color name="color_on_background">@color/warm_grey</color>
-    <color name="color_on_surface">@color/warm_grey</color>
+    <color name="color_on_surface">#FBB4B9</color>
     <color name="color_on_error">@color/white</color>
     <color name="icon_color">@color/black</color>
     <color name="icon_color_light">@color/warm_grey</color>
@@ -39,12 +39,12 @@
     <color name="other_reports_background_color">@color/white_two</color>
 
     <!--    <color name="colorNotSelectedDot">#f7fbfb</color>-->
-    <color name="white">#FFFFFF</color>
+    <color name="text_color_white">@color/white</color>
     <color name="divider_color">@color/lightwhite</color>
 
 
-    <color name="background_color_error">#d53b23</color>
-    <color name="background_color_success">#5eb73b</color>
+    <color name="background_color_error">#FF4D4F</color>
+    <color name="background_color_success">#52C41A</color>
     <color name="background_color_confirmation">#fcae16</color>
 
 </resources>

@@ -8,7 +8,7 @@ fun String.bottomBarIntMapper(): Int {
         NavigationConstants.NAVIGATE_TO_HOME -> MENU_HOME
         NavigationConstants.NAVIGATE_TO_PORTFOLIO -> MENU_PORTFOLIO
         NavigationConstants.NAVIGATE_TO_WALLET -> MENU_WALLET
-        NavigationConstants.NAVIGATE_TO_MORE -> MENU_MORE
+        NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> MENU_MORE
         else -> MENU_HOME
     }
 }
@@ -25,12 +25,11 @@ fun Int.bottomBarStringMapper(): String {
 
 fun String.getIcon() : Int {
     return when {
-        this == NavigationConstants.NAVIGATE_TO_LOGOUT -> R.drawable.ic_check_circle_green
-        this == NavigationConstants.NAVIGATE_TO_HOME -> R.drawable.ic_check_circle_green
-        this ==  NavigationConstants.NAVIGATE_TO_PORTFOLIO -> R.drawable.ic_check_circle_green
-        this ==  NavigationConstants.NAVIGATE_TO_WALLET -> R.drawable.ic_check_circle_green
-        this ==  NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> R.drawable.ic_check_circle_green
-        else -> R.drawable.ic_check_circle_green
+        this == NavigationConstants.NAVIGATE_TO_HOME -> R.drawable.ic_home
+        this ==  NavigationConstants.NAVIGATE_TO_PORTFOLIO -> R.drawable.ic_portolio
+        this ==  NavigationConstants.NAVIGATE_TO_WALLET -> R.drawable.ic_wallet
+        this ==  NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> R.drawable.ic_more_vertical
+        else -> R.drawable.ic_home
     }
 }
 

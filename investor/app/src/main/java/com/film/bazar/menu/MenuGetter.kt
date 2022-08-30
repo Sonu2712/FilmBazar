@@ -23,17 +23,17 @@ object MenuGetter {
     fun getFragment(@NavigationConstants menuCode: String): Fragment? {
         return when (menuCode) {
             NavigationConstants.NAVIGATE_TO_HOME -> HomeFragment()
+            NavigationConstants.NAVIGATE_TO_PORTFOLIO -> PortfolioFragment()
+            NavigationConstants.NAVIGATE_TO_WALLET -> WalletFragment()
+            NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> ProfileFragment()
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> MovieDetailFragment()
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> NotificationFragment()
-            NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> ProfileFragment()
             NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> EditProfileFragment()
             NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> HelpSupportFragment()
             NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT -> QuestionAnswerFragment()
             NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT -> WriteUsFragment()
             NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT -> TermsConditionFragment()
             NavigationConstants.NAVIGATE_TO_PAYMENT_DETAILS_FRAGMENT -> PaymentDetailsFragment()
-            NavigationConstants.NAVIGATE_TO_PORTFOLIO -> PortfolioFragment()
-            NavigationConstants.NAVIGATE_TO_WALLET -> WalletFragment()
             else -> null
         }
     }

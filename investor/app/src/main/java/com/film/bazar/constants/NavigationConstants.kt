@@ -19,8 +19,7 @@ import kotlin.annotation.AnnotationRetention.SOURCE
     NavigationConstants.NAVIGATE_TO_TERMS_CONDITION_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_SETTINGS_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_PORTFOLIO,
-    NavigationConstants.NAVIGATE_TO_WALLET,
-    NavigationConstants.NAVIGATE_TO_MORE
+    NavigationConstants.NAVIGATE_TO_WALLET
 )
 annotation class NavigationConstants {
     companion object {
@@ -32,10 +31,7 @@ annotation class NavigationConstants {
         const val NAVIGATE_TO_MOVIE_DETAIL = "mvoiedetail"
 
         const val NAVIGATE_TO_PORTFOLIO = "portfolio"
-
         const val NAVIGATE_TO_WALLET = "wallet"
-
-        const val NAVIGATE_TO_MORE = "more"
         const val NAVIGATE_TO_NOTIFICATION_DETAIL = "notificationdetail"
         const val NAVIGATE_TO_NOTIFICATION = "notification"
         const val NAVIGATE_TO_SETTINGS_FRAGMENT = "settings"

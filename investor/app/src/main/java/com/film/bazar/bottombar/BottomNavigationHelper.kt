@@ -5,8 +5,8 @@ import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_HOME
-import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_MORE
 import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_PORTFOLIO
+import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_PROFILE_FRAGMENT
 import com.film.bazar.constants.NavigationConstants.Companion.NAVIGATE_TO_WALLET
 import com.film.bazar.domain.drawermenu.UBottomBarMenu
 import com.film.bazar.home_ui.HomeFragment
@@ -74,7 +74,7 @@ fun bottomNavigationCheckable(
                 screen is HomeFragment) -> true
         (pageId == NAVIGATE_TO_PORTFOLIO) -> true
         (pageId == NAVIGATE_TO_WALLET) -> true
-        (pageId == NAVIGATE_TO_MORE) -> true
+        (pageId == NAVIGATE_TO_PROFILE_FRAGMENT) -> true
          else -> false
     }
 }

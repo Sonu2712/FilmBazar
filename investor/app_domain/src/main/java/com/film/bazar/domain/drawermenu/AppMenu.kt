@@ -27,11 +27,6 @@ class ChildMenu constructor(
     isDynamic:Boolean=false
 ) : AppMenu(pageId, enabled, secure,isDynamic=isDynamic,title = label)
 
-class OtherMenu(pageId: String) : AppMenu(pageId, enabled = true, secure = false)
-
-class DarkModeSwitchMenu(pageId: String, val data: Boolean) :
-    AppMenu(pageId, enabled = true, secure = false)
-
 data class AppMenus(
     @JvmField val baseMenu: List<BaseMenu>,
     @JvmField val bottomMenu: List<UBottomBarMenu>,

@@ -22,4 +22,18 @@
     <color name="colorNotSelectedDot">#f7fbfb</color>
     <color name="transparent">#00000000</color>
     <color name="lightwhite">#dedede</color>
+
+    <!-- Hell -->
+    <color name="white">#FFFFFF</color>
+    <color name="film_red">#E63946</color>
+    <color name="film_red_error">#FF4D4F</color>
+    <color name="film_white_off">#F1FAEE</color>
+    <color name="film_blue">#1D3557</color>
+    <color name="film_blue_light">#457B9D</color>
+    <color name="film_green_light">#A8DADC</color>
+    <color name="film_blue_link">#A8DADC</color>
+    <color name="film_green_success">#52C41A</color>
+    <color name="film_orange_warming">#FAAD14</color>
+    <color name="film_gray_disable">#BFBFBF</color>
+
 </resources>

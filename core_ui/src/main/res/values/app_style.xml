@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Widget.MoslTheme.Label" parent="FiraSans11Pt" />
-
     <style name="Widget.MoslTheme.Value" parent="Roboto16Pt" />
-
     <style name="Widget.MoslTheme.SchemeName" parent="FiraSans14Pt" />
-
-
 </resources>

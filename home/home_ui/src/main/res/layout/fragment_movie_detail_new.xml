@@ -18,6 +18,7 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.MoslTheme.PrimaryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_normal"

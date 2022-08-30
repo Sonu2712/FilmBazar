@@ -39,45 +39,14 @@
       "isDefault": true
     },
     {
-      "id": "more",
-      "title": "More",
+      "id": "profile",
+      "title": "Profile",
       "icon": "",
       "titleHi": "",
       "titleGu": "",
       "isDefault": true
     }
   ],
-  "startUpMenus": [
-    {
-      "id": "home",
-      "title": "Home",
-      "titleHi": "होम",
-      "titleGu": "હોમ"
-    },
-    {
-      "id": "marketequity",
-      "title": "Markets",
-      "titleHi": "मार्केट",
-      "titleGu": "બજાર"
-    },
-    {
-      "id": "portfolio",
-      "title": "Portfolio",
-      "titleHi": "पोर्टफोलियो",
-      "titleGu": "પોર્ટફોલિયોનું"
-    },
-    {
-      "id": "tradingreport",
-      "title": "Trading Reports",
-      "titleHi": "ट्रेडिंग रिपोर्ट",
-      "titleGu": "ટ્રેડિંગ રિપોર્ટ"
-    },
-    {
-      "id": "watchlisthome",
-      "title": "Watchlist",
-      "titleHi": "वॉचलिस्ट",
-      "titleGu": "વોચલિસ્ટ"
-    }
-  ],
+  "startUpMenus": [],
   "pinkAssist": []
 }
