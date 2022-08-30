@@ -96,7 +96,6 @@
 
                         <TextView
                             android:id="@+id/otpMessage"
-                            style="@style/Widget.MoslTheme.ReportsTextPrimary"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_medium"
@@ -105,7 +104,6 @@
 
                         <Button
                             android:id="@+id/btnLogin"
-                            style="@style/Widget.MoslTheme.SecondaryButton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_large"
@@ -169,7 +167,6 @@
 
         <Button
             android:id="@+id/btnOpenAccount"
-            style="@style/Widget.MoslTheme.SecondaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_extra"

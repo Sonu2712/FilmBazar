@@ -1,74 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Roboto24Pt">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto22Pt">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
     <style name="Roboto16Pt">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/secondary_text_color</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
     </style>
 
-    <style name="Roboto18Pt">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
     <style name="Roboto14Pt">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto14PtMedium">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans_medium</item>
-    </style>
-
-    <style name="Roboto14PtLight">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto11Pt">
-        <item name="android:textSize">11sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto12Pt">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto12PtLight">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
-    </style>
-
-    <style name="Roboto12PMedium">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/action_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans_medium</item>
-    </style>
-
-    <style name="Roboto10Pt">
-        <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/secondary_text_color</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
     </style>
@@ -80,13 +20,6 @@
         <item name="android:fontFamily">@font/fira_sans</item>
     </style>
 
-    <style name="FiraSans16PtMedium">
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineSpacingExtra">3sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans_medium</item>
-    </style>
-
     <style name="FiraSans14Pt">
         <item name="android:textSize">14sp</item>
         <item name="android:lineSpacingExtra">3sp</item>
@@ -94,29 +27,8 @@
         <item name="android:fontFamily">@font/fira_sans</item>
     </style>
 
-    <style name="FiraSans12PtDark">
-        <item name="android:textSize">12sp</item>
-        <item name="android:lineSpacingExtra">3sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-    </style>
-
-    <style name="FiraSans14PtLight">
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">3sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-    </style>
-
     <style name="FiraSans14PtMedium">
         <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">3sp</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans_medium</item>
-    </style>
-
-    <style name="FiraSans20PtMedium">
-        <item name="android:textSize">20sp</item>
         <item name="android:lineSpacingExtra">3sp</item>
         <item name="android:textColor">@color/secondary_text_color</item>
         <item name="android:fontFamily">@font/fira_sans_medium</item>
@@ -130,12 +42,6 @@
 
     <style name="FiraSans11Pt">
         <item name="android:textSize">11sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-    </style>
-
-    <style name="FiraSans10Pt">
-        <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/primary_text_color</item>
         <item name="android:fontFamily">@font/fira_sans</item>
     </style>

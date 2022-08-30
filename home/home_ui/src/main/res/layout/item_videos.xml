@@ -30,11 +30,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ic_search" />
+                tools:srcCompat="@drawable/ic_search_close_grey" />
 
             <ImageView
-                android:layout_width="@dimen/icon_size_normal"
-                android:layout_height="@dimen/icon_size_normal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 app:layout_constraintBottom_toBottomOf="@id/iv_youtube_view"
                 app:layout_constraintEnd_toEndOf="@id/iv_youtube_view"
                 app:layout_constraintStart_toStartOf="@id/iv_youtube_view"

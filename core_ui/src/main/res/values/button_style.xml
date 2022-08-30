@@ -9,19 +9,6 @@
         <item name="android:letterSpacing" tools:ignore="NewApi">0.03</item>
     </style>
 
-    <style name="appIntroOutline" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="colorSurface">@color/color_surface</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="fontFamily">@font/fira_sans</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-        <item name="android:letterSpacing" tools:ignore="NewApi">0.03</item>
-        <item name="rippleColor">@color/color_primary</item>
-        <item name="endIconTint">@color/color_primary</item>
-        <item name="iconTint">@color/color_primary</item>
-    </style>
-
     <style name="ButtonTextApperance" parent="@style/ButtonTextApperanceBase">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="fontFamily">@font/fira_sans_medium</item>
@@ -30,89 +17,12 @@
         <item name="android:letterSpacing" tools:ignore="NewApi">0</item>
     </style>
 
-    <style name="InstaButtonTextApperance" parent="@style/ButtonTextApperanceBase">
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="android:textColor">@color/white_three</item>
-        <item name="android:letterSpacing" tools:ignore="NewApi">0</item>
-    </style>
-
-    <style name="RadioButtonTextApperance" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="fontFamily">@font/fira_sans_medium</item>
-        <item name="android:fontFamily">@font/fira_sans_medium</item>
-        <item name="android:letterSpacing" tools:ignore="NewApi">0.03</item>
-        <item name="android:textColor">@drawable/placeorder_button_text_color</item>
-        <item name="textAllCaps">false</item>
-    </style>
-
-    <style name="Widget.MoslTheme.Button" parent="Widget.MaterialComponents.Button">
-        <item name="textAppearanceButton">@style/ButtonTextApperance</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
-        <item name="android:padding">@dimen/padding_medium</item>
-        <item name="textAllCaps">false</item>
-    </style>
-
-    <style name="Widget.MoslTheme.RadioButtonBase" parent="">
-        <item name="android:textAppearance">@style/ButtonTextApperanceBase</item>
-        <item name="textAllCaps">false</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="Widget.MoslTheme.IconButton" parent="">
-        <item name="android:background">@drawable/card_button_background</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
-    </style>
-
-    <style name="Widget.MoslTheme.IconButtonPumpkin" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/color_primary_variant</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
-    </style>
-
     <style name="Widget.MoslTheme.PrimaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textAppearanceButton">@style/ButtonTextApperance</item>
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="textAllCaps">false</item>
         <item name="android:padding">@dimen/padding_medium</item>
         <item name="strokeColor">@color/oultline_button_stroke_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.SecondaryButton" parent="Widget.MoslTheme.Button" />
-
-    <style name="Widget.MoslTheme.SellButton" parent="Widget.MoslTheme.Button">
-        <item name="backgroundTint">@color/sell_button_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.BuyButton" parent="Widget.MoslTheme.Button">
-        <item name="backgroundTint">@color/buy_button_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.BulkButton" parent="Widget.MoslTheme.Button">
-        <item name="backgroundColor">@color/color_surface</item>
-    </style>
-
-    <style name="widget.MoslTheme.ActionButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textAppearanceButton">@style/ButtonTextApperance</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-        <item name="textAllCaps">false</item>
-        <item name="android:letterSpacing" tools:ignore="NewApi">0.03</item>
-    </style>
-
-    <style name="Widget.MoslTheme.PrimaryActionButton" parent="widget.MoslTheme.ActionButton" />
-
-    <style name="Widget.MoslTheme.SecondaryActionButton" parent="widget.MoslTheme.ActionButton">
-        <item name="textAllCaps">false</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-    </style>
-
-    <style name="wl_filterTextStyle" parent="@style/FiraSans12Pt">
-        <item name="android:textColor">@color/filter_text_color_selector</item>
-        <item name="android:padding">@dimen/padding_medium</item>
-    </style>
-
-    <style name="Widget.MoslTheme.InstaButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textAppearanceButton">@style/InstaButtonTextApperance</item>
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="textAllCaps">false</item>
     </style>
 
 </resources>

@@ -6,6 +6,6 @@
         android:id="@+id/nav_notification"
         android:icon="@drawable/ic_notification_home"
         android:orderInCategory="3"
-        android:title="@string/menu_notification"
+        android:title="Notification"
         app:showAsAction="always" />
 </menu>

@@ -4,57 +4,10 @@
     <string name="text_label_drawer_menu">ડ્રોઅર મેનૂ</string>
     <string name="text_label_go_back">પાછા જાવ</string>
 
-    <string name="tools_spinner_prompt">ડેટા પસંદ કરો</string>
-    <string name="btn_text_yes">હા</string>
-    <string name="btn_text_no">ના</string>
-    <string name="btn_text_okay">ઠીક છે</string>
-    <string name="btn_text_do_not_show_again">ફરીથી બતાવો નહિં</string>
-    <string name="text_label_quote_ask">આસ્ક</string>
-    <string name="text_label_quote_ask_size">આસ્ક સાઈઝ</string>
-    <string name="text_label_quote_bid">બિડ</string>
-    <string name="text_label_quote_bid_size">બિડ સાઈઝ</string>
-    <string name="text_label_top_5_bid_ask">ટોચના 5 બિડ અને આસ્ક કિંમત</string>
     <string name="btn_lbl_resend_otp">ઓ.ટી.પી ફરીથી મોકલો</string>
     <string name="retry_after">ફરીથી પ્રયત્ન કરો : %ds</string>
     <string name="attempts_remaining">પ્રયાસો બાકી છે: : %d</string>
-    <string name="text_label_quote_total">કુલ</string>
 
-    <string name="string_label_view_all">તમામ જુઓ</string>
-    <string name="string_label_view_more">વધુ જાણો</string>
-    <string name="menu_notification">સૂચના</string>
-    <string name="menu_profile">પ્રોફાઈલ</string>
-    <string name="video_chapter_one">પ્રકરણ 1 : 1/%1$s</string>
-    <string name="total_chapters">%1$s પ્રકરણ</string>
-    <string name="stock_news_holding">જથ્થો %1$s</string>
-
-    <string name="permission_grant_for_contact">કૃપા કરી મંજૂરી આપો અન્યથા કેટલીક કાર્યક્ષમતા કામ કરશે નહીં</string>
-    <string name="permission_for_contact">કૃપા કરીને સંપર્કને એક્સેસ કરવાની પરવાનગી આપો</string>
-    <string name="home_label_beginner_module">પ્રારંભિક મોડ્યુલ</string>
-    <string name="home_label_intermediate_module">મધ્યવર્તી મોડ્યુલ</string>
-    <string name="home_label_advanced_module">અદ્યતન મોડ્યુલ</string>
-    <string name="page_title_stock_sip">સ્ટોક એસ.આઈ.પી</string>
-    <string name="page_title_stock_orders_bulk">ઓર્ડર એક્સક્યુશન</string>
-    <string name="text_label_order_type">ઓર્ડરનો પ્રકાર</string>
-    <string name="app_menu_title_send_feedback">પ્રતિસાદ મોકલો</string>
-
-    <string name="alert_title_rate_app">અમારી એપ્લિકેશન ને રેટ કરો</string>
-    <string name="button_label_sure">ખાત્રિ કર</string>
-    <string name="button_label_later">પછીથી</string>
-    <string name="tr_text_label_total_gl">કુલ  નફો/નુકશાન</string>
-    <string name="po_non_poa_message_1">કારણ કે તમે એવા શેર્સનું વેચાણ કરી રહ્યા છો જે તમારી હોલ્ડિંગમાં નથી, અમે માર્કેટ બંધ થયાના 15 મિનિટ પહેલા ઓટો સ્ક્વેર-ફ મુકીશું.</string>
-    <string name="po_non_poa_message_2">એક્સચેન્જમાં સરળતાથી ચૂકવણી માટે ઇ-ડી.આઇ.એસ પેજ (સીડીએસએલ દ્વારા સગવડ થયેલ) ની મુલાકાત લઈને ટી.પી.આઇ.એન દ્વારા તમારા શોર્ટ-સોલ્ડ શેર્સને કૃપા કરીને અધિકૃત કરો.
-જો તમે અધિકૃત કરવામાં નિષ્ફળ જાઓ છો, તો બજાર બંધ થયાના 15 મિનિટ પહેલાં અનધિકૃત સ્થિતિને સ્વચાલિત કરશે.
-</string>
     <string name="returns_display_text">પ્રદર્શિત વળતર ચક્રવૃદ્ધિ વાર્ષિક વૃદ્ધિ દર (CAGR) નાઆધારે છે</string>
-    <string name="app_fund_transfer_dialog_title">મોતીલાલ ઓસ્વાલ</string>
-    <string name="app_fund_transfer_dialog_msg">ફંડ સફળતાપૂર્વક ઉમેરાયું</string>
-    <string name="app_dialog_mtf_name">પ્રિય %s,</string>
-    <string name="app_dialog_mtf_title">માર્જિન ટ્રેડિંગ સુવિધા</string>
-    <string name="app_dialog_mtf_consent_click_here">અધિકારો અને જવાબદારીઓ જોવા માટે અહીં ક્લિક કરો</string>
-    <string name="app_dialog_btl_lbl_agree">હું સહમત છુ</string>
-    <string name="app_dialog_btl_lbl_do_not_agree">સંમત નથી</string>
-    <string name="app_dialog_mtf_message">મોતીલાલ ઓસ્વાલ ફાયનાન્સિયલ સર્વિસીસ લિમિટેડ તરફથી શુભેચ્છાઓ. \nઅમે તમને જણાવવા ઈચ્છીએ છીએ કે MOFSL હવે તેના ગ્રાહકોને માર્જિન ટ્રેડિંગ સુવિધા પ્રદાન કરી રહી છે. MTF એકાઉન્ટ્સ રૂ. 5 કરોડ મંજૂર મર્યાદા સાથે સક્રિય કરવામાં આવશે.\n\nજો તમે આ સુવિધા મેળવવા માંગતા હો, તો કૃપા કરીને નીચે "હું સંમત છું" પર ક્લિક કરીને તમારી સંમતિ આપો. <b>\"હું સંમત છું" પર ક્લિક કરવા પર તમે MOFSL દ્વારા પૂરી પાડવામાં આવેલ માર્જિન ટ્રેડિંગ સુવિધાના સંદર્ભમાં અધિકારો અને જવાબદારીઓ વાંચી અને સમજ્યા હોવાની પુષ્ટિ કરો છો અને તેનું પાલન કરવા માટે સંમત થાઓ છો.</b></string>
 
-    <string name="lbl_fund_wise_allocation_title">પ્રિય ગ્રાહક,\n\nફંડિંગ શુલ્ક વસૂલવામાં આવશે કારણ કે તમારી પાસે આ ઓર્ડર આપવા માટે પૂરતું ભંડોળ નથી. \nશું તમે ચાલુ રાખવા માંગો છો?</string>
-    <string name="lbl_fund_wise_allocation_consent">* સંમતિ માત્ર દિવસ માટે માન્ય છે</string>
 </resources>

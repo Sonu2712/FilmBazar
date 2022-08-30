@@ -7,66 +7,20 @@
     <dimen name="large_component_corner_size">16dp</dimen>
     <dimen name="medium_component_corner_size">4dp</dimen>
     <dimen name="medium_component_elevation">8dp</dimen>
-    <dimen name="drawerLayoutWidth">280dp</dimen>
 
-    <dimen name="toolbar_height">38dp</dimen>
-    <dimen name="padding_very_large">32dp</dimen>
-
-    <dimen name="image_btn_min_size">28dp</dimen>
-
-    <dimen name="tab_bar_height">48dp</dimen>
     <dimen name="bottom_sheet_corner_radius">8dp</dimen>
-    <dimen name="card_corner_radius">8dp</dimen>
     <dimen name="bottom_sheet_top_padding">8dp</dimen>
 
-    <dimen name="icon_size_normal">48dp</dimen>
-    <dimen name="icon_size_medium">38dp</dimen>
-    <dimen name="icon_size_small">20dp</dimen>
-
     <!--Place Order-->
-    <dimen name="place_order_page_side_padding">@dimen/padding_medium</dimen>
-    <dimen name="place_order_page_side_margin">@dimen/margin_medium</dimen>
     <!--place_order_page_padding should be page_side_padding-8-->
-    <dimen name="place_order_page_padding">0dp</dimen>
     <!---->
-    <dimen name="button_text_size">18dp</dimen>
     <dimen name="elevation_small">4dp</dimen>
-    <dimen name="elevation_extra_small">2dp</dimen>
     <dimen name="recycler_bottom_padding">16dp</dimen>
-
-    <!--PageLevel Padding and Margin-->
-    <dimen name="recycler_view_side_padding">@dimen/padding_medium</dimen>
-    <dimen name="recycler_view_top_padding">@dimen/padding_medium</dimen>
-    <dimen name="recycler_view_bottom_padding">@dimen/padding_medium</dimen>
-
-    <dimen name="page_top_padding">@dimen/padding_medium</dimen>
-    <dimen name="page_bottom_padding">@dimen/padding_medium</dimen>
-    <dimen name="page_side_padding">@dimen/padding_medium</dimen>
-    <dimen name="page_side_margin">@dimen/margin_medium</dimen>
-
-    <dimen name="card_top_bottom_padding">@dimen/padding_medium</dimen>
-    <dimen name="card_side_padding">@dimen/padding_medium</dimen>
-    <dimen name="card_top_bottom_margin">@dimen/margin_medium</dimen>
-    <dimen name="card_side_margin">@dimen/margin_medium</dimen>
-
-    <dimen name="item_top_margin">@dimen/margin_small</dimen>
-    <dimen name="item_bottom_margin">@dimen/margin_small</dimen>
-
-    <dimen name="separator_height">1dp</dimen>
-    <dimen name="view_height_small">1dp</dimen>
-    <dimen name="tab_height">40dp</dimen>
+    <dimen name="button_text_size">18dp</dimen>
     <dimen name="view_height">2dp</dimen>
 
-    <dimen name="width_view_in_watchlist">10dp</dimen>
-    <dimen name="height_view_in_watchlist">48dp</dimen>
+    <!--PageLevel Padding and Margin-->
 
-    <dimen name="img_width_40">40dp</dimen>
-    <dimen name="img_width_64">64dp</dimen>
-    <dimen name="img_width_36">36dp</dimen>
-    <dimen name="img_height_40">40dp</dimen>
-    <dimen name="img_height_50">50dp</dimen>
-    <dimen name="text_action_height">40dp</dimen>
-    <dimen name="img_hw_24">24dp</dimen>
     <!---->
 
     <dimen name="padding_extra_small">2dp</dimen>

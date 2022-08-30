@@ -6,10 +6,4 @@
         <item name="android:background">@color/color_surface</item>
     </style>
 
-    <style name="Widget.MoslTheme.AutoCompleteSpinner" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <item name="boxStrokeWidth">0dp</item>
-        <item name="boxStrokeColor">@color/color_surface</item>
-        <item name="endIconDrawable">@drawable/ic_spinner_arrow_down</item>
-    </style>
-
 </resources>

@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="app_inset_foreground_color">@color/material_500</color>
 </resources>

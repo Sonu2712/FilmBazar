@@ -1,63 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">core_ui</string>
-    <string name="tools_spinner_prompt">Select Data</string>
-    <string name="btn_text_yes">Yes</string>
-    <string name="btn_text_no">No</string>
-    <string name="btn_text_okay">Okay</string>
-    <string name="btn_text_do_not_show_again">Do Not Show Again</string>
-    <string name="text_label_quote_ask">Ask</string>
-    <string name="text_label_quote_ask_size">Ask Size</string>
-    <string name="text_label_quote_bid">Bid </string>
-    <string name="text_label_quote_bid_size">Bid Size</string>
-    <string name="text_label_top_5_bid_ask">Top 5 Bid/Ask Price</string>
     <string name="btn_lbl_resend_otp">Resend OTP</string>
     <string name="retry_after">Retry After : %ds</string>
     <string name="attempts_remaining">Attempts Remaining: : %d</string>
-    <string name="text_label_quote_total">Total</string>
 
-    <string name="string_label_view_all">View All</string>
-    <string name="string_label_view_more">View More</string>
-    <string name="menu_notification">Notification</string>
-    <string name="menu_profile">Profile</string>
-    <string name="date_picker_hyphen" translatable="false">-</string>
-    <string name="video_chapter_one">Chapter 1 : 1/%1$s</string>
-    <string name="total_chapters">%1$s Chapters</string>
-    <string name="stock_news_holding">Quantity %1$s</string>
-
-    <string name="permission_grant_for_contact">Please grant permission else some functionality may not work</string>
-    <string name="permission_for_contact">Please Provide Permission to Access Contacts</string>
-    <string name="home_label_beginner_module">Beginner Module</string>
-    <string name="home_label_intermediate_module">Intermediate Module</string>
-    <string name="home_label_advanced_module">Advanced Module</string>
-    <string name="page_title_stock_sip">Stock Sip</string>
-    <string name="page_title_stock_orders_bulk">Order Execution</string>
-    <string name="text_label_order_type">Order Type</string>
-    <string name="coachmark_final_submit" translatable="false">GOT IT</string>
-    <string name="coachmark_skip" translatable="false">SKIP</string>
-    <string name="coackmark_next" translatable="false">NEXT</string>
-    <string name="app_menu_title_send_feedback">Send feedback</string>
-
-    <string name="alert_title_rate_app">Rate Our App</string>
-    <string name="button_label_sure">Sure</string>
-    <string name="button_label_later">Later</string>
-    <string name="tr_text_label_total_gl">Total G/L</string>
-    <string name="po_non_poa_message_1">Since you are selling a stock which is not in your holdings, we will auto square-off the position anytime on or before 15 mins of the market close</string>
-    <string name="po_non_poa_message_2">Kindly authorize your shares short-sold through TPIN by visiting the e-DIS page (as facilitated by CDSL) for a smooth pay-in to the exchange. In case if you fail to authorize, the system will auto square-off the non-authorized transactions anytime on or before 15 mins of the market close.</string>
     <string name="returns_display_text">Returns displayed are as per Compound Annual Growth Rate (CAGR) basis</string>
-    <string name="app_fund_transfer_dialog_title">FILM BAZAR</string>
-    <string name="app_fund_transfer_dialog_msg">Fund Added Sucessfully</string>
-    <string name="app_dialog_mtf_title">Margin Trading Facility</string>
-    <string name="app_dialog_mtf_name">Dear %s,</string>
-    <string name="app_dialog_mtf_message">Greetings from Film Bazar Financial Services Ltd. \nWe wish to inform you that MOFSL is now rendering Margin Trading Facility to its clients.MTF accounts will be activated with Rs.5 cr. sanctioned limit.\n\nIf you wish to avail this facility, please provide your consent by clicking I Agree below. by clicking <b>\"I Agree\" you confirm to have read and understood the Rights and Obligations with regards to Margin Trading Facility provided by MOFSL and agree to abide by the same.</b></string>
-    <string name="app_dialog_mtf_consent_click_here">Click here to view Rights &amp; Obligation</string>
-    <string name="app_dialog_btl_lbl_agree">I Agree</string>
-    <string name="app_dialog_btl_lbl_do_not_agree">Do Not Agree</string>
-    <string name="lbl_fund_wise_allocation_title">Dear Customer,\n\nFunding charges will be levied as you do not have sufficient funds for placing this order. \nDo you wish to continue?</string>
-    <string name="lbl_fund_wise_allocation_consent">* Consent is valid only for the day</string>
 
-    <string name="button_label_cancel">Cancel</string>
-    <string name="button_label_submit">Submit</string>
-    <string name="button_label_clear">Clear</string>
     <string name="button_label_retry">Retry</string>
     <string name="button_label_ok">OK</string>
 </resources>

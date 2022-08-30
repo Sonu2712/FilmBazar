@@ -10,7 +10,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class DebugActivityBuilder {
     @ActivityScoped
     @ContributesAndroidInjector(
-        modules = [CommonActivityModule::class, DebugFragmentsProvider::class, DebugActivityModule::class]
+        modules = [CommonActivityModule::class, DebugActivityModule::class]
     )
     abstract fun bindCommonActivity(): MOSLCommonActivity
 }

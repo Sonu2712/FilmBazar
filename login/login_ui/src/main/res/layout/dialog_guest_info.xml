@@ -16,7 +16,6 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.MoslTheme.HeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -62,7 +61,6 @@
 
         <Button
             android:id="@+id/btnTryNow"
-            style="@style/Widget.MoslTheme.CardFlatButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

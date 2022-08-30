@@ -6,9 +6,6 @@ import com.film.bazar.coreui.navigatorlib.FragmentResolver
 
 object DebugFragmentResolver : FragmentResolver {
     override fun resolve(pageId: String): Fragment? {
-        return when {
-            DebugMenuGetter.isHandled(pageId) -> DebugMenuGetter.getFragment(pageId)
-            else -> MenuGetter.getFragment(pageId)
-        }
+        return  MenuGetter.getFragment(pageId)
     }
 }

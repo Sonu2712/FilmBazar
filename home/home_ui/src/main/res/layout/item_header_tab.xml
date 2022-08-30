@@ -19,5 +19,5 @@
         android:layout_height="48dp"
         android:layout_gravity="end"
         android:padding="@dimen/padding_medium"
-        app:srcCompat="@drawable/ic_filter" />
+        app:srcCompat="@drawable/app_ic_film" />
 </LinearLayout>

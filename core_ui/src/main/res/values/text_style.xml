@@ -8,43 +8,13 @@
         <item name="android:fontFamily">@font/fira_sans</item>
     </style>
 
-    <style name="Widget.MoslTheme.HeaderText" parent="@style/FiraSans14Pt">
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="Widget.MoslTheme.Header2Text" parent="@style/FiraSans14Pt" />
-
-    <style name="Widget.MoslTheme.Header2Text.Medium" parent="@style/FiraSans14PtMedium" />
-
-    <style name="Widget.MoslTheme.Header3Text.Medium" parent="@style/FiraSans16PtMedium" />
-
-    <style name="Widget.MoslTheme.HeaderInfoText" parent="Widget.MoslTheme.Text">
-        <item name="android:textSize">@dimen/text_size_small</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
-    </style>
-
     <style name="Widget.MoslTheme.DecorativeText" parent="@style/FiraSans14Pt">
         <item name="android:textColor">@color/action_text_color</item>
     </style>
 
-    <style name="Widget.MoslTheme.DecorativeText.Small" parent="@style/FiraSans11Pt">
-        <item name="android:textColor">@color/action_text_color</item>
-    </style>
-    <style name="Widget.MoslTheme.DecorativeText.Normal" parent="@style/FiraSans12Pt">
-        <item name="android:textColor">@color/action_text_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.LoginMenuText" parent="@style/FiraSans16PtMedium">
-        <item name="android:textColor">@color/action_text_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.EditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-        <item name="android:fontFamily">@font/fira_sans</item>
-        <item name="hintTextColor">@color/secondary_text_color</item>
-        <item name="android:textColorHint">@color/secondary_text_color</item>
-        <item name="android:textColorHighlight">@color/primary_text_color</item>
+    <style name="Main.Menu" parent="Widget.MoslTheme.Text">
+        <item name="android:textColor">@color/text_selector_main_menu</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
     </style>
 
     <style name="Widget.MoslTheme.EditTextView" parent="Widget.AppCompat.EditText">
@@ -79,44 +49,9 @@
         <item name="android:textSize">@dimen/text_size_normal</item>
     </style>
 
-    <style name="Widget.MoslTheme.NumberText" parent="@style/Roboto16Pt">
-    </style>
-
-    <style name="Widget.MoslTheme.NumberText.ExtraSmall" parent="@style/Roboto10Pt">
-        <item name="android:textColor">@color/primary_text_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.NumberText.Header" parent="@style/Roboto24Pt">
-    </style>
-
-    <style name="Widget.MoslTheme.NumberText.Info" parent="@style/Roboto12Pt"></style>
-
-    <style name="Widget.MoslTheme.NumberText.Info.Ligh" parent="@style/Roboto12Pt">
-        <item name="android:textColor">?android:textColorPrimary</item>
-    </style>
-
-    <style name="Main.Menu" parent="Widget.MoslTheme.Text">
-        <item name="android:textColor">@color/text_selector_main_menu</item>
-        <item name="android:textSize">@dimen/text_size_normal</item>
-    </style>
-
     <style name="Sub.Menu" parent="Widget.MoslTheme.Text">
         <item name="android:textColor">@color/text_selector_main_sub_menu</item>
         <item name="android:textSize">@dimen/text_size_small</item>
-    </style>
-
-    <style name="Widget.MoslTheme.Header.Small" parent="FiraSans11Pt" />
-
-    <style name="Widget.MoslTheme.Header.Extra.Small" parent="FiraSans12Pt">
-        <item name="android:textColor">@color/action_text_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.NumberText.Normal" parent="@style/Roboto14Pt" />
-
-    <style name="Widget.MoslTheme.Header3Text" parent="@style/FiraSans16Pt" />
-
-    <style name="Widget.MoslTheme.NumberText.Info.Small" parent="@style/Widget.MoslTheme.NumberText.Info">
-        <item name="android:textSize">@dimen/text_size_extra_small</item>
     </style>
 
     <style name="Widget.MoslTheme.Resend.Button" parent="@style/FiraSans14Pt">
@@ -124,20 +59,9 @@
         <item name="android:textColor">@color/resend_button_selector</item>
     </style>
 
-    <style name="Widget.MoslTheme.Reset.Button" parent="@style/FiraSans14PtMedium">
-        <item name="textAllCaps">false</item>
-        <item name="android:textColor">@color/primary_text_color</item>
-    </style>
-
     <style name="Widget.MoslTheme.Done.Button" parent="@style/FiraSans14PtMedium">
         <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/action_text_color</item>
     </style>
-
-    <style name="Widget.MoslTheme.SwipeActionText" parent="FiraSans16PtMedium">
-        <item name="android:textColor">@color/white_text_color</item>
-    </style>
-
-    <style name="Widget.MoslTheme.ReportDate" parent="Roboto14Pt"></style>
 
 </resources>

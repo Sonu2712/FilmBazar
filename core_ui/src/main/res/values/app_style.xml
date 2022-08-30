@@ -1,53 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.MoslTheme.Title" parent="FiraSans16PtMedium" />
-
-    <style name="Widget.MoslTheme.TitleLarge" parent="FiraSans20PtMedium" />
-
-    <style name="Widget.MoslTheme.TitleSecondary" parent="FiraSans14PtMedium" />
-
-    <style name="Widget.MoslTheme.ScripName" parent="FiraSans16Pt" />
-
-    <style name="Widget.MoslTheme.Description" parent="FiraSans14PtLight" />
-
-    <style name="Widget.MoslTheme.LTP" parent="Roboto18Pt" />
-
-    <style name="Widget.MoslTheme.ChangeChangePer" parent="Roboto14Pt" />
-
-    <style name="Widget.MoslTheme.ChangeChangePerSmall" parent="Roboto11Pt" />
-
-    <style name="Widget.MoslTheme.ScripDescription" parent="Roboto11Pt" />
-
-    <style name="Widget.MoslTheme.Date" parent="Roboto11Pt" />
-
     <style name="Widget.MoslTheme.Label" parent="FiraSans11Pt" />
 
     <style name="Widget.MoslTheme.Value" parent="Roboto16Pt" />
 
     <style name="Widget.MoslTheme.SchemeName" parent="FiraSans14Pt" />
-
-    <style name="Widget.MoslTheme.NAV" parent="Roboto16Pt" />
-
-    <style name="Widget.MoslTheme.NAVChange" parent="Roboto14Pt" />
-
-    <style name="Widget.MoslTheme.ReportsTextPrimary" parent="FiraSans14Pt" />
-
-    <style name="Widget.MoslTheme.ReportsTextPrimaryBold" parent="FiraSans14Pt">
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="Widget.MoslTheme.ReportsTextSecondary" parent="FiraSans12Pt" />
-
-    <style name="Widget.MoslTheme.ReportsNumberPrimary" parent="Roboto14Pt" />
-
-    <style name="Widget.MoslTheme.ReportsNumberSecondary" parent="Roboto12PtLight" />
-
-    <style name="Widget.MoslTheme.ReportsNumberSecondaryDark" parent="Roboto12Pt" />
-    <style name="Widget.MoslTheme.ReportsTextSecondary.Decorative" parent="FiraSans12Pt" >
-    <item name="android:textColor">@color/action_text_color</item>
-    </style>
-
 
 
 </resources>
