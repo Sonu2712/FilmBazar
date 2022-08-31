@@ -57,18 +57,18 @@ private fun createAmountChips(amount: String, context: Context): Chip {
     chip.apply {
         chipBackgroundColor = ColorStateList.valueOf(
             ContextCompat.getColor(
-                context, R.color.film_text_color_background
+                context, R.color.film_text_color_background_1
             )
         )
         shapeAppearanceModel = ShapeAppearanceModel.Builder().setAllCornerSizes(10F).build()
         chipStrokeColor = ColorStateList.valueOf(
             ContextCompat.getColor(
                 context,
-                R.color.white
+                R.color.film_text_color_background
             )
         )
         setPadding(0)
-        chipStrokeWidth = 1f
+        chipStrokeWidth = 2f
         textSize = 10.0f
         tag = amount
         text = amount

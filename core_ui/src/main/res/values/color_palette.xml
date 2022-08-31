@@ -38,5 +38,6 @@
     <color name="film_title_color">#282828</color>
     <color name="film_text_color">#BCBCBC</color>
     <color name="film_text_color_background">#7B7B7B</color>
+    <color name="film_text_color_background_1">#CC060606</color>
 
 </resources>

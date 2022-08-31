@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clAccountDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_normal"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="@dimen/margin_normal"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -18,10 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_normal"
-            android:drawableStart="@drawable/ic_profile"
             android:drawablePadding="@dimen/padding_normal"
+            android:fontFamily="@font/fira_sans_medium"
             android:gravity="center_vertical"
             android:text="Accounts &amp; Settings"
+            android:textColor="#282828"
+            android:textSize="@dimen/text_size_medium"
+            app:drawableStartCompat="@drawable/ic_user"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,10 +35,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_large"
-            app:layout_constraintTop_toBottomOf="@+id/tvAccountSetting"
-            app:layout_constraintStart_toStartOf="@+id/tvAccountSetting"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="@+id/tvAccountSetting"
-            android:orientation="vertical">
+            app:layout_constraintStart_toStartOf="@+id/tvAccountSetting"
+            app:layout_constraintTop_toBottomOf="@+id/tvAccountSetting">
+
             <LinearLayout
                 android:id="@+id/lyBank"
                 android:layout_width="match_parent"
@@ -49,7 +54,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_normal"
                     android:layout_weight="1"
-                    android:text="Saved Payment Details" />
+                    android:text="Saved Payment Details"
+                    android:textColor="#777777"
+                    android:textSize="@dimen/text_size_normal" />
 
                 <TextView
                     android:id="@+id/tvPaymentValue"
@@ -58,7 +65,9 @@
                     android:drawableEnd="@drawable/ic_arrow_right_black"
                     android:gravity="end"
                     android:padding="@dimen/padding_normal"
-                    android:text="HDFC Bank" />
+                    android:text="HDFC Bank"
+                    android:textColor="#B5B5B5"
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,7 +85,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_normal"
                     android:layout_weight="1"
-                    android:text="Active Devices" />
+                    android:text="Active Devices"
+                    android:textColor="#777777"
+                    android:textSize="@dimen/text_size_normal" />
 
                 <TextView
                     android:id="@+id/tvActiveDeviceValue"
@@ -84,7 +95,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:padding="@dimen/padding_normal"
-                    android:text="Apple iPhone 11 Pro" />
+                    android:text="Apple iPhone 11 Pro"
+                    android:textColor="#B5B5B5"
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -102,7 +115,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_normal"
                     android:layout_weight="1"
-                    android:text="Location Permission" />
+                    android:text="Location Permission"
+                    android:textColor="#777777"
+                    android:textSize="@dimen/text_size_normal" />
 
                 <TextView
                     android:id="@+id/tvLocationValue"
@@ -111,7 +126,9 @@
                     android:drawableEnd="@drawable/ic_arrow_right_black"
                     android:gravity="end"
                     android:padding="@dimen/padding_normal"
-                    android:text="While using the app" />
+                    android:text="While using the app"
+                    android:textColor="#B5B5B5"
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,7 +146,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_normal"
                     android:layout_weight="1"
-                    android:text="Notification Permission" />
+                    android:text="Notification Permission"
+                    android:textColor="#777777"
+                    android:textSize="@dimen/text_size_normal" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/swNotification"
@@ -144,74 +163,83 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginEnd="@dimen/margin_normal"
             android:layout_marginTop="@dimen/margin_extra_large"
-            android:drawableStart="@drawable/ic_edit"
-            android:drawableEnd="@drawable/ic_arrow_right_black"
-            android:drawableBottom="@drawable/quotes_horizontal_dash_line"
+            android:layout_marginEnd="@dimen/margin_normal"
             android:drawablePadding="@dimen/padding_normal"
+            android:fontFamily="@font/fira_sans_medium"
             android:gravity="center_vertical"
             android:text="Edit Profile"
+            android:textColor="#282828"
+            android:textSize="@dimen/text_size_medium"
+            app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
+            app:drawableEndCompat="@drawable/ic_arrow_right_black"
+            app:drawableStartCompat="@drawable/ic_edit"
             app:layout_constraintEnd_toEndOf="@+id/lyAccountDetails"
             app:layout_constraintStart_toStartOf="@+id/lyAccountDetails"
             app:layout_constraintTop_toBottomOf="@+id/lyAccountDetails" />
 
         <View
             android:id="@+id/view1"
-            android:background="#D9D9D9"
             android:layout_width="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvEditProfile"
-            app:layout_constraintStart_toStartOf="@+id/tvEditProfile"
+            android:layout_height="1dp"
+            android:background="#D9D9D9"
             app:layout_constraintEnd_toEndOf="@+id/tvEditProfile"
-            android:layout_height="1dp"/>
+            app:layout_constraintStart_toStartOf="@+id/tvEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
 
         <TextView
             android:id="@+id/tvHelpSupport"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="@dimen/margin_normal"
-            android:drawableStart="@drawable/ic_edit"
-            android:drawableEnd="@drawable/ic_arrow_right_black"
-            android:drawableBottom="@drawable/quotes_horizontal_dash_line"
             android:drawablePadding="@dimen/padding_normal"
+            android:fontFamily="@font/fira_sans_medium"
             android:gravity="center_vertical"
             android:text="Help &amp; Support"
+            android:textColor="#282828"
+            android:textSize="@dimen/text_size_medium"
+            app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
+            app:drawableEndCompat="@drawable/ic_arrow_right_black"
+            app:drawableStartCompat="@drawable/ic_help_support"
             app:layout_constraintEnd_toEndOf="@+id/tvEditProfile"
             app:layout_constraintStart_toStartOf="@+id/tvEditProfile"
             app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
 
         <View
             android:id="@+id/view2"
-            android:background="#D9D9D9"
             android:layout_width="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvHelpSupport"
-            app:layout_constraintStart_toStartOf="@+id/tvHelpSupport"
+            android:layout_height="1dp"
+            android:background="#D9D9D9"
             app:layout_constraintEnd_toEndOf="@+id/tvHelpSupport"
-            android:layout_height="1dp"/>
+            app:layout_constraintStart_toStartOf="@+id/tvHelpSupport"
+            app:layout_constraintTop_toBottomOf="@+id/tvHelpSupport" />
 
         <TextView
             android:id="@+id/tvTermsCond"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="@dimen/margin_normal"
-            android:drawableStart="@drawable/ic_edit"
-            android:drawableEnd="@drawable/ic_arrow_right_black"
-            android:drawableBottom="@drawable/quotes_horizontal_dash_line"
             android:drawablePadding="@dimen/padding_normal"
+            android:fontFamily="@font/fira_sans_medium"
             android:gravity="center_vertical"
             android:text="Terms &amp; Condition"
+            android:textColor="#282828"
+            android:textSize="@dimen/text_size_medium"
+            app:drawableBottomCompat="@drawable/quotes_horizontal_dash_line"
+            app:drawableEndCompat="@drawable/ic_arrow_right_black"
+            app:drawableStartCompat="@drawable/ic_terms_condition"
             app:layout_constraintEnd_toEndOf="@+id/tvHelpSupport"
             app:layout_constraintStart_toStartOf="@+id/tvHelpSupport"
             app:layout_constraintTop_toBottomOf="@+id/tvHelpSupport" />
 
         <View
             android:id="@+id/view3"
-            android:background="#D9D9D9"
             android:layout_width="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvTermsCond"
-            app:layout_constraintStart_toStartOf="@+id/tvTermsCond"
+            android:layout_height="1dp"
+            android:background="#D9D9D9"
             app:layout_constraintEnd_toEndOf="@+id/tvTermsCond"
-            android:layout_height="1dp"/>
+            app:layout_constraintStart_toStartOf="@+id/tvTermsCond"
+            app:layout_constraintTop_toBottomOf="@+id/tvTermsCond" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -221,9 +249,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_normal"
         android:layout_marginEnd="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_normal"
         android:text="Logout"
-        android:layout_marginTop="@dimen/margin_normal"
         app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
