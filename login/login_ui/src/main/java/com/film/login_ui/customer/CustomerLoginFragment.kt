@@ -111,10 +111,6 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
             filters = arrayOf(emojiFilter, InputFilter.LengthFilter(100))
         }
 
-        binding.btnOpenAccount.setOnClickListener {
-
-        }
-
         val guestView =
             LayoutInflater.from(requireContext()).inflate(R.layout.dialog_guest_info, null)
 
@@ -141,42 +137,49 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
             selectedView.isVisible = true
             selectedView.animate().x(0f).setDuration(100)
             binding.apply {
-                toggleButtonGroup.item1.setTextColor(ContextCompat.getColor(requireContext(),R.color.film_blue_light))
+                toggleButtonGroup.item1.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.film_blue_light
+                    )
+                )
                 toggleButtonGroup.item2.setTextColor(colorStateList)
-                /*etSpreadValue.isVisible = false
-                tvSpreadValue.isVisible = true*/
+                tilClientCode.visibility = View.VISIBLE
+                txtForgotPass.visibility = View.VISIBLE
+                btnLogin.text = "Login"
             }
-            /*mConFirmArgumentData = mConFirmArgumentData.copy(isLimit = false)
-            uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(true))*/
+            //uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(true))
         } else {
-            binding.setLimitView(false)
-            /*mConFirmArgumentData = mConFirmArgumentData.copy(isLimit = true)
-            uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(false))*/
+            binding.apply {
+                setLimitView(false)
+                tilClientCode.visibility = View.VISIBLE
+                txtForgotPass.visibility = View.GONE
+                btnLogin.text = "Request OTP"
+            }
+            //uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(false))
         }
     }
 
     fun FragmentCustomerLoginBinding.setLimitView(isDefaultLimit: Boolean) {
-        binding.apply {
-            toggleButtonGroup.item1.setTextColor(colorStateList)
-            toggleButtonGroup.item2.setTextColor(ContextCompat.getColor(requireContext(),R.color.film_blue_light))
-           /* etSpreadValue.isVisible = true
-            tvSpreadValue.isVisible = false*/
-        }
+        toggleButtonGroup.item1.setTextColor(colorStateList)
+        toggleButtonGroup.item2.setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.film_blue_light
+            )
+        )
         if (isDefaultLimit) {
-            binding.toggleButtonGroup.item2.background =
+            toggleButtonGroup.item2.background =
                 ContextCompat.getDrawable(requireContext(), R.drawable.back_select)
-            binding.toggleButtonGroup.item1.background = null
+            toggleButtonGroup.item1.background = null
             selectedView.isVisible = false
-            //binding.setEditTextValues(mConFirmArgumentData.limitPrice)
         } else {
             val size = binding.toggleButtonGroup.item2.width.toFloat()
             selectedView.animate().x(size).setDuration(100)
-           // binding.setEditTextValues(mConFirmArgumentData.entryPrice)
         }
     }
 
     override fun onDestroyView() {
-        binding.btnOpenAccount.setOnClickListener(null)
         presenter.stop()
         clearPref()
         super.onDestroyView()
@@ -204,9 +207,9 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
             setTextColor(ContextCompat.getColor(requireContext(), R.color.action_text_color))
             setText(R.string.menu_view_markets)
             setPadding(16, 0, 16, 0)
-           /* setOnClickListener {
-                uiEvents.onNext("ViewMarkets")
-            }*/
+            /* setOnClickListener {
+                 uiEvents.onNext("ViewMarkets")
+             }*/
         }
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -247,7 +250,7 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
     }
 
     override fun getClientCode(): String {
-        return  ""
+        return ""
     }
 
     override fun setRetainedUser(user: String) {

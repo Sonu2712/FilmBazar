@@ -1,8 +1,9 @@
 <resources>
 
-    <string name="error_msg_client_code_mobile_no_email_id_empty">Enter Mobile No.</string>
+    <string name="error_msg_client_code_mobile_no_email_id_empty">Please enter email ID</string>
 
-    <string name="msg_password_empty">Enter password</string>
+    <string name="msg_password_empty">Please enter password</string>
+
     <string name="text_label_guest_info_message">Track &amp; Monitor Markets conveniently across segments on the Go</string>
     <string name="text_label_guest_info_message_1">Create your own Watchlist &amp; Track your favourite Stocks / Contracts from anywhere</string>
     <string name="text_label_guest_info_message_2">Browse through our wide range of Advanced &amp; Personalized Product Offerings</string>

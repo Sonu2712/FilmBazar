@@ -21,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/imgFilm"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_app_film_white"
                 app:layout_constraintBottom_toBottomOf="@+id/tvBazar"
@@ -49,7 +49,6 @@
                     android:id="@+id/tvBazar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_extra_small"
                     android:text="bazar"
                     android:lineSpacingExtra="9sp"
                     android:textColor="#FFFFFF"
