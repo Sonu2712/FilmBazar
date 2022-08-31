@@ -1,116 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/app_ic_splash"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:background="@drawable/app_ic_splash">
 
         <LinearLayout
+            android:id="@+id/lyFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgFilm"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_app_film_white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBazar"
+                app:layout_constraintTop_toTopOf="@+id/tvFilm"
+                tools:layout_editor_absoluteX="112dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFilm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="film"
+                    android:textColor="#FFFFFF"
+                    android:lineSpacingExtra="30sp"
+                    android:textSize="30sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/tvBazar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="bazar"
+                    android:lineSpacingExtra="9sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyFilm">
 
             <FrameLayout
                 android:id="@+id/flLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                android:layout_height="wrap_content" />
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:id="@+id/llRow1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/color_surface"
-            android:gravity="bottom"
-            android:minHeight="@dimen/min_height_row_1"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/padding_normal"
-            android:paddingRight="@dimen/padding_normal">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tvRow1Label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center|start"
-                    android:text="@string/lbl_try_as_a_guest"
-                    android:textSize="@dimen/text_size_medium" />
-
-                <ImageView
-                    android:id="@+id/ivInfo"
-                    android:layout_width="@dimen/info_icon_dimension"
-                    android:layout_height="@dimen/info_icon_dimension"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/margin_large"
-                    android:padding="@dimen/padding_normal"
-                    app:srcCompat="@drawable/ic_login_information" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvRow1Action"
-                style="@style/Widget.MoslTheme.DecorativeText"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:gravity="center|end"
-                android:text="@string/lbl_try_it_now"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_medium"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@color/login_separator"
-            app:layout_constraintBottom_toTopOf="@id/llRow2" />
-
-        <LinearLayout
-            android:id="@+id/llRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/color_surface"
-            android:minHeight="@dimen/min_height_row_2"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/padding_normal"
-            android:paddingRight="@dimen/padding_normal">
-
-            <TextView
-                android:id="@+id/tvRow2Label"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|start"
-                android:text="@string/lbl_don_t_have_an_account"
-                android:textSize="@dimen/text_size_medium" />
-
-            <TextView
-                android:id="@+id/tvRow2Action"
-                style="@style/Widget.MoslTheme.DecorativeText"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:gravity="center|end"
-                android:text="@string/lbl_open_account"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_medium"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

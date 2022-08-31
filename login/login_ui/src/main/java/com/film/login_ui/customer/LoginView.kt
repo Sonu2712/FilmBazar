@@ -14,11 +14,9 @@ interface LoginView : BaseView {
     fun registerLoginEvent()
     fun onSubmitClicked() : Observable<LoginSubmit>
     fun onForgotPasswordClicked(): Observable<Unit>
-    fun onSignUpClicked(): Observable<Unit>
     fun getUserName(): String
     fun getClientCode() : String
     fun getPassword(): String
-    fun getOtp() :String
     fun getUserType(): String
     fun setRetainedUser(user: String)
     fun renderLogin(uiModel: UiModel<LoginResponse>)

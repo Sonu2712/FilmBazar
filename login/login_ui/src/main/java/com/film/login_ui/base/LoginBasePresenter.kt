@@ -11,10 +11,5 @@ class LoginBasePresenter @Inject constructor(
 ) : BasePresenter<LoginPagerView>(view) {
 
     override fun start() {
-
-        view.onFirstRowActionClicked()
-            .map { view.getFirstRowAction() }
-            .subscribe(view::onActionSelected)
-            .addTo(disposable)
     }
 }

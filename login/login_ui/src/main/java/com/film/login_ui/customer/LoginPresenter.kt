@@ -20,7 +20,6 @@ class LoginPresenter @Inject constructor(
     val userManager: UserManager,
     val loginRepository: LoginRepository,
     val navigator: LoginNavigator,
-    val appInfo: AppInfo,
     var preferences: SharedPreferences,
     @param:AppShortCutId protected val appShortCutId: StringPreference
 ) : BasePresenter<LoginView>(view) {
@@ -51,11 +50,6 @@ class LoginPresenter @Inject constructor(
 
         view.onForgotPasswordClicked()
             .map { LoginType.Forgot() }
-            .subscribe(view::postNavigationEvent)
-            .addTo(disposable)
-
-        view.onSignUpClicked()
-            .map { LoginType.Guest() }
             .subscribe(view::postNavigationEvent)
             .addTo(disposable)
     }

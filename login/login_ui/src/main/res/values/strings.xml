@@ -1,18 +1,18 @@
 <resources>
 
-    <string name="error_msg_client_code_mobile_no_email_id_empty">Please enter Mobile No. / Email ID / Client Code</string>
+    <string name="error_msg_client_code_mobile_no_email_id_empty">Enter Mobile No.</string>
 
-    <string name="msg_password_empty">Please enter password</string>
+    <string name="msg_password_empty">Enter password</string>
     <string name="text_label_guest_info_message">Track &amp; Monitor Markets conveniently across segments on the Go</string>
     <string name="text_label_guest_info_message_1">Create your own Watchlist &amp; Track your favourite Stocks / Contracts from anywhere</string>
     <string name="text_label_guest_info_message_2">Browse through our wide range of Advanced &amp; Personalized Product Offerings</string>
     <string name="text_label_guest_info_message_3">Analyze your portfolio &amp; get customized recommendations through Restructuring Tool</string>
 
     <string name="menu_view_markets">View Markets</string>
-    <string name="text_hint_customer_login"> Mobile No</string>
+    <string name="text_hint_customer_login"> Email ID</string>
     <string name="text_label_welcome_to_mo_investor">Welcome to FILM BAZAR</string>
 
-    <string name="hint_password_customer_login">Please Enter Password</string>
+    <string name="hint_password_customer_login">Enter Password</string>
     <string name="lbl_try_as_a_guest">Try as a Guest Now</string>
     <string name="lbl_try_it_now">Try it Now</string>
     <string name="lbl_don_t_have_an_account">Don\'t have an account?</string>

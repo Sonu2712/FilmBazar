@@ -4,7 +4,8 @@
     <style name="MoslTheme" parent="Base.MoslTheme" />
 
     <style name="LoginTheme" parent="MoslTheme">
-        <item name="background">@android:color/transparent</item>
+        <item name="background">@color/white</item>
+        <item name="colorSurface">@color/white</item>
         <item name="actionMenuTextColor">@color/action_text_color</item>
         <item name="colorControlNormal">@color/action_text_color</item>
     </style>

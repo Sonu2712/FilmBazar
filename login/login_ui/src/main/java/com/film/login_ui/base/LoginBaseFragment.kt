@@ -2,7 +2,6 @@ package com.film.login_ui.base
 
 import android.os.Bundle
 import android.view.View
-import com.jakewharton.rxbinding4.view.clicks
 import com.film.bazar.coreui.appcoreui.base.BaseFragment
 import com.film.commons.rx.addTo
 import com.film.commons.rx.safeMap
@@ -13,7 +12,6 @@ import com.film.login_ui.core.LoginActivity
 import com.film.login_ui.customer.CustomerLoginFragment
 import com.film.login_ui.databinding.FragmentLoginBaseBinding
 import com.film.login_ui.nav.LoginConstants
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
@@ -63,7 +61,6 @@ class LoginBaseFragment : BaseFragment(), LoginPagerView, LoginEventProvider {
     private fun render(pair: Pair<LoginType, Pair<LoginPageDataModel, LoginPageDataModel>>) {
         loginType = pair.first
         loadFragment(pair.first.id)
-        loadActions(pair.second)
     }
 
     private fun loadFragment(pageId: Int) {
@@ -82,11 +79,6 @@ class LoginBaseFragment : BaseFragment(), LoginPagerView, LoginEventProvider {
         fragmentTransaction.commit()
     }
 
-    private fun loadActions(pair: Pair<LoginPageDataModel, LoginPageDataModel>) {
-        binding.showFirstRow(pair.first)
-        binding.showSecondRow(pair.second)
-    }
-
     override fun onBackPressed(): Boolean {
         if (loginType.id == 0) {
             return super.onBackPressed()
@@ -96,43 +88,12 @@ class LoginBaseFragment : BaseFragment(), LoginPagerView, LoginEventProvider {
         return true
     }
 
-    private fun FragmentLoginBaseBinding.showFirstRow(model: LoginPageDataModel) {
-        llRow1.visibility = if (model.visible) View.VISIBLE else View.GONE
-        tvRow1Label.text = model.key
-        tvRow1Action.text = model.value
-        tvRow1Action.tag = model.type
-        ivInfo.visibility = if (model.showInfo) View.VISIBLE else View.GONE
-    }
-
-    private fun FragmentLoginBaseBinding.showSecondRow(model: LoginPageDataModel) {
-        llRow2.visibility = if (model.visible) View.VISIBLE else View.GONE
-        tvRow2Label.text = model.key
-        tvRow2Action.text = model.value
-        tvRow2Action.tag = model.type
-    }
-
     override fun onActionSelected(loginType: LoginType) {
         navigation.onNext(loginType)
     }
 
     override val navigationEvent: PublishSubject<LoginType>
         get() = navigation
-
-    override fun onFirstRowActionClicked(): Observable<Unit> {
-        return binding.tvRow1Action.clicks()
-    }
-
-    override fun onSecondRowActionClicked(): Observable<Unit> {
-        return binding.tvRow2Action.clicks()
-    }
-
-    override fun getFirstRowAction(): LoginType {
-        return binding.tvRow1Action.tag as LoginType
-    }
-
-    override fun getSecondRowAction(): LoginType {
-        return binding.tvRow2Action.tag as LoginType
-    }
 
     override fun onDestroyView() {
         presenter.stop()

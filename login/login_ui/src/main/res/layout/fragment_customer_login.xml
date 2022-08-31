@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -16,157 +17,117 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_large"
                 android:orientation="vertical">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcvLogin"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_extra"
-                    android:orientation="vertical">
+                    android:text="Login account"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="#282828"/>
 
-                    <LinearLayout
+                <include
+                    android:id="@+id/toggleButtonGroup"
+                    layout="@layout/layout_custom_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilClientCode"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_large"
+                    app:boxBackgroundColor="?colorSurface"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edClientCode"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/margin_large"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_hint_customer_login"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapCharacters"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/min_height_client_code"
+                        android:padding="@dimen/padding_medium" />
 
-                        <include layout="@layout/include_login_header" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/tilClientCode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_extra_large"
-                            android:theme="@style/Widget.MoslTheme.EditText.Normal"
-                            app:boxBackgroundColor="?colorSurface"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edClientCode"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/text_hint_customer_login"
-                                android:imeOptions="actionNext"
-                                android:inputType="text|textCapCharacters"
-                                android:maxLines="1"
-                                android:minHeight="@dimen/min_height_client_code"
-                                android:padding="@dimen/padding_medium" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/tilPassword"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_normal"
-                            android:theme="@style/Widget.MoslTheme.EditText.Normal"
-                            app:boxBackgroundColor="?colorSurface"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tilClientCode"
-                            app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/color_primary">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edClientPass"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="@string/login_password_digits"
-                                android:drawablePadding="@dimen/padding_medium"
-                                android:imeOptions="actionDone"
-                                android:inputType="text|textPassword|textNoSuggestions"
-                                android:maxLines="1"
-                                android:hint="Password"
-                                android:padding="@dimen/padding_medium"
-                                android:singleLine="true" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.film.bazar.coreui.views.AutoReadOTPView
-                            android:id="@+id/autoReadOtp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_normal"
-                            android:visibility="gone"
-                            tools:visibility="visible" />
-
-                        <TextView
-                            android:id="@+id/otpMessage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_medium"
-                            android:gravity="center"
-                            tools:text="Otp message" />
-
-                        <Button
-                            android:id="@+id/btnLogin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_large"
-                            android:minHeight="@dimen/min_height_button_login"
-                            android:text="@string/button_login"
-                            android:textSize="@dimen/text_size_medium"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tilPassword" />
-
-                        <TextView
-                            android:id="@+id/txtForgotPass"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/margin_small"
-                            android:gravity="center"
-                            android:padding="@dimen/padding_medium"
-                            android:text="@string/text_label_generate_password"
-                            android:visibility="gone"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/btnLogin"
-                            tools:visibility="visible" />
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <LinearLayout
-                    android:id="@+id/llGuest"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    style="@style/TextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/margin_large"
-                    android:gravity="center">
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:textColor="#282828"
+                    android:textSize="14sp"
+                    app:boxBackgroundColor="?colorSurface"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                    app:layout_constraintTop_toBottomOf="@id/tilClientCode"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/color_primary">
 
-                    <TextView
-                        android:id="@+id/tvGuest"
-                        style="@style/Widget.MoslTheme.DecorativeText"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edClientPass"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/lbl_try_as_a_guest"
-                        android:textAllCaps="false"
-                        android:textSize="@dimen/text_size_medium"
-                        android:textStyle="bold" />
+                        android:digits="@string/login_password_digits"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:hint="Password"
+                        android:imeOptions="actionDone"
+                        android:inputType="text|textPassword|textNoSuggestions"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_medium"
+                        android:singleLine="true"
+                        android:textColor="#282828"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                    <ImageView
-                        android:id="@+id/ivGuestInfo"
-                        android:layout_width="@dimen/info_icon_dimension"
-                        android:layout_height="@dimen/info_icon_dimension"
-                        android:layout_gravity="center"
-                        android:padding="@dimen/padding_normal"
-                        app:srcCompat="@drawable/ic_login_information" />
+                <TextView
+                    android:id="@+id/txtForgotPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="end"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/text_label_generate_password"
+                    android:textColor="#457B9D"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                    tools:visibility="visible" />
 
-                </LinearLayout>
+                <Button
+                    android:id="@+id/btnLogin"
+                    style="@style/Widget.MoslTheme.PrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:minHeight="@dimen/min_height_button_login"
+                    android:text="@string/button_login"
+                    android:textSize="@dimen/text_size_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilPassword" />
 
             </LinearLayout>
         </ScrollView>
 
         <Button
             android:id="@+id/btnOpenAccount"
+            style="@style/Widget.MoslTheme.PrimaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_extra"
@@ -181,8 +142,9 @@
 
     <ProgressBar
         android:id="@+id/progress_bar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:visibility="gone"
+        android:layout_gravity="center"
         tools:visibility="visible" />
 </FrameLayout>

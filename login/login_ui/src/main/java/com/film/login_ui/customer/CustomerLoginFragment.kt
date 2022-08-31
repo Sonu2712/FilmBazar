@@ -1,6 +1,8 @@
 package com.film.login_ui.customer
 
 import android.content.SharedPreferences
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.InputFilter
@@ -15,6 +17,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.film.login.data.model.LoginResponse
 import com.film.login_ui.LoginType
 import com.film.login_ui.R
@@ -43,7 +46,7 @@ import io.reactivex.rxjava3.kotlin.ofType
 import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
-class CustomerLoginFragment : BaseFragment(), LoginView {
+class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
     lateinit var binding: FragmentCustomerLoginBinding
 
     @Inject
@@ -73,6 +76,9 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
 
     private val loginUiEvents = PublishSubject.create<LoginUiEvent>()
 
+    lateinit var selectedView: TextView
+    lateinit var colorStateList: ColorStateList
+
     override fun getLayout(): Int {
         return R.layout.fragment_customer_login
     }
@@ -87,6 +93,11 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
     }
 
     private fun setUpView() {
+        selectedView = binding.toggleButtonGroup.select
+        colorStateList = binding.toggleButtonGroup.item2.textColors
+        binding.toggleButtonGroup.item1.setOnClickListener(this)
+        binding.toggleButtonGroup.item2.setOnClickListener(this)
+
         binding.tilPassword.apply {
             getString(R.string.hint_password_customer_login)
         }
@@ -111,11 +122,6 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
         val alertDialog = builder.create()
         alertDialog.setCancelable(false)
         alertDialog.setCanceledOnTouchOutside(false)
-        binding.ivGuestInfo.setOnClickListener {
-            if (!alertDialog.isShowing) {
-                alertDialog.show()
-            }
-        }
 
         val btnTryNow = guestView.findViewById<Button>(R.id.btnTryNow)
         val btnClose = guestView.findViewById<ImageView>(R.id.btn_close)
@@ -126,15 +132,50 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
 
         btnTryNow.setOnClickListener {
             alertDialog.dismiss()
-            binding.tvGuest.performClick()
         }
+    }
 
-        binding.llGuest.isInvisible = !guestSignUp.get()
+    override fun onClick(v: View) {
+        if (v.id == R.id.item1) {
+            binding.toggleButtonGroup.item2.background = null
+            selectedView.isVisible = true
+            selectedView.animate().x(0f).setDuration(100)
+            binding.apply {
+                toggleButtonGroup.item1.setTextColor(ContextCompat.getColor(requireContext(),R.color.film_blue_light))
+                toggleButtonGroup.item2.setTextColor(colorStateList)
+                /*etSpreadValue.isVisible = false
+                tvSpreadValue.isVisible = true*/
+            }
+            /*mConFirmArgumentData = mConFirmArgumentData.copy(isLimit = false)
+            uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(true))*/
+        } else {
+            binding.setLimitView(false)
+            /*mConFirmArgumentData = mConFirmArgumentData.copy(isLimit = true)
+            uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(false))*/
+        }
+    }
+
+    fun FragmentCustomerLoginBinding.setLimitView(isDefaultLimit: Boolean) {
+        binding.apply {
+            toggleButtonGroup.item1.setTextColor(colorStateList)
+            toggleButtonGroup.item2.setTextColor(ContextCompat.getColor(requireContext(),R.color.film_blue_light))
+           /* etSpreadValue.isVisible = true
+            tvSpreadValue.isVisible = false*/
+        }
+        if (isDefaultLimit) {
+            binding.toggleButtonGroup.item2.background =
+                ContextCompat.getDrawable(requireContext(), R.drawable.back_select)
+            binding.toggleButtonGroup.item1.background = null
+            selectedView.isVisible = false
+            //binding.setEditTextValues(mConFirmArgumentData.limitPrice)
+        } else {
+            val size = binding.toggleButtonGroup.item2.width.toFloat()
+            selectedView.animate().x(size).setDuration(100)
+           // binding.setEditTextValues(mConFirmArgumentData.entryPrice)
+        }
     }
 
     override fun onDestroyView() {
-        binding.autoReadOtp.destroyView()
-        binding.ivGuestInfo.setOnClickListener(null)
         binding.btnOpenAccount.setOnClickListener(null)
         presenter.stop()
         clearPref()
@@ -193,20 +234,12 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
         return binding.txtForgotPass.clicks()
     }
 
-    override fun onSignUpClicked(): Observable<Unit> {
-        return binding.tvGuest.clicks()
-    }
-
     override fun getUserName(): String {
         return binding.edClientCode.text.toString().trim()
     }
 
     override fun getPassword(): String {
         return binding.edClientPass.text.toString()
-    }
-
-    override fun getOtp(): String {
-        return binding.autoReadOtp.getOTP()
     }
 
     override fun getUserType(): String {
@@ -242,7 +275,6 @@ class CustomerLoginFragment : BaseFragment(), LoginView {
 
         uiModel.onFailure { error ->
             showOnFailurePopup(error)
-            binding.autoReadOtp.clearOTP()
         }
 
         uiModel.onSuccess {
