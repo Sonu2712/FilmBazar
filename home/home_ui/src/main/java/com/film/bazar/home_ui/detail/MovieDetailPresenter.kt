@@ -18,7 +18,7 @@ class MovieDetailPresenter @Inject constructor(
 ) : BasePresenter<MovieDetailView>(view = view){
 
     override fun start() {
-        Observable.just(onFetchCalled(), onRetryCalled())
+        Observable.merge(onFetchCalled(), onRetryCalled())
             .switchMap {
                 repository.getMovieDetail(movieId, tabType)
                     .compose(applyUiModel())

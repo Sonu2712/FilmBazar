@@ -18,32 +18,45 @@ val movieBanner = listOf(
     )
 )
 
-fun movieDetail(tab : String) = MovieDetail(
-    bannerInfo = MovieDetailBannerInfo(
-        bannerUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
-        title = "Doctor Strange in the Multiverse of Madness",
-        movieGenre = listOf("Action", "Adventure", "Fantasy")
-    ),
-    movieFund = MovieFund(
-        daysLeft = 10,
-        fundingPer = 12,
-        targetAmount = 900000000.0,
-        targetGoalAmount = 100000000.0
-    ),
-    invtInfo = if (MovieTab.getInstance(tab).isOnGoingProject()) investmentInfo() else investmentInfoPast(),
-    titleSubTitle = listOf(
-        TitleSubTitle(
-            invtMsg1 = "Major Investors info",
-            invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+fun movieDetail(tab: String): MovieDetail {
+    val movieTab = MovieTab.getInstance(tab)
+    val invtInfo = if (movieTab.isOnGoingProject())
+        investmentInfo()
+    else if (movieTab.isPastProject())
+        investmentInfoPast()
+    else
+        investmentInfo()
+    return MovieDetail(
+        bannerInfo = MovieDetailBannerInfo(
+            bannerUrl = "https://images.indianexpress.com/2021/12/strange.jpg",
+            title = "Doctor Strange in the Multiverse of Madness",
+            movieGenre = listOf("Action", "Adventure", "Fantasy")
         ),
-        TitleSubTitle(
-            invtMsg1 = "Investment info",
-            invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
-        )
-    ),
-    castCrewDetail = CastCrewDetail(directorName = "Sam Raimi", casts = topCast(), crews = topCrew()),
-    videoInfo = videoInfo()
-)
+        movieFund = MovieFund(
+            daysLeft = 10,
+            fundingPer = 12,
+            targetAmount = 900000000.0,
+            targetGoalAmount = 100000000.0
+        ),
+        invtInfo = invtInfo,
+        titleSubTitle = listOf(
+            TitleSubTitle(
+                invtMsg1 = "Major Investors info",
+                invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+            ),
+            TitleSubTitle(
+                invtMsg1 = "Investment info",
+                invtMsg2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+            )
+        ),
+        castCrewDetail = CastCrewDetail(
+            directorName = "Sam Raimi",
+            casts = topCast(),
+            crews = topCrew()
+        ),
+        videoInfo = videoInfo()
+    )
+}
 
 fun topCast() = CastCrew(
     title = "Top cast",

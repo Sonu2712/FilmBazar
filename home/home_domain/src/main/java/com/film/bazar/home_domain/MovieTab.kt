@@ -15,6 +15,22 @@ class MovieTab internal constructor(
         return this == PAST_PROJECT
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as MovieTab
+
+        if (label != other.label) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return label.hashCode()
+    }
+
+
     companion object {
         val ONGOING_PROJECT = MovieTab("Ongoing Projects")
         val PAST_PROJECT = MovieTab("Past Projects")
@@ -24,7 +40,7 @@ class MovieTab internal constructor(
         fun getInstance(label: String): MovieTab {
             return when {
                 label.equals(ONGOING_PROJECT.label, true) -> ONGOING_PROJECT
-                label.equals(PAST_PROJECT.label, true) -> ONGOING_PROJECT
+                label.equals(PAST_PROJECT.label, true) -> PAST_PROJECT
                 else -> ONGOING_PROJECT
             }
         }
