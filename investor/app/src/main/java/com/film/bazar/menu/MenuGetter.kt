@@ -11,6 +11,7 @@ import com.film.bazar.portfolio.PortfolioFragment
 import com.film.bazar.profile.ProfileFragment
 import com.film.bazar.profile.editprofile.EditProfileFragment
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
+import com.film.bazar.profile.helpsupport.chatwithus.ChatFragment
 import com.film.bazar.profile.helpsupport.questionanswer.QuestionAnswerFragment
 import com.film.bazar.profile.helpsupport.writeus.WriteUsFragment
 import com.film.bazar.profile.paymentdetails.PaymentDetailsFragment
@@ -29,6 +30,7 @@ object MenuGetter {
             NavigationConstants.NAVIGATE_TO_MOVIE_DETAIL -> MovieDetailFragment()
             NavigationConstants.NAVIGATE_TO_NOTIFICATION -> NotificationFragment()
             NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> EditProfileFragment()
+            NavigationConstants.NAVIGATE_TO_CHAT_WITH_US_FRAGMENT -> ChatFragment()
             NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> HelpSupportFragment()
             NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT -> QuestionAnswerFragment()
             NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT -> WriteUsFragment()

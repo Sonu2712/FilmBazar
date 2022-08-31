@@ -24,6 +24,7 @@
         android:paddingBottom="@dimen/recycler_bottom_padding" />
 
     <Button
+        style="@style/Widget.MoslTheme.PrimaryButton"
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

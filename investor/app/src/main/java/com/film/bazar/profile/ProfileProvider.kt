@@ -4,6 +4,7 @@ import com.film.bazar.profile.editprofile.EditProfileFragment
 import com.film.bazar.profile.editprofile.EditProfileModule
 import com.film.bazar.profile.helpsupport.HelpSupportFragment
 import com.film.bazar.profile.helpsupport.HelpSupportModule
+import com.film.bazar.profile.helpsupport.chatwithus.ChatFragment
 import com.film.bazar.profile.helpsupport.questionanswer.QuestionAnswerFragment
 import com.film.bazar.profile.helpsupport.questionanswer.PaymentRefundModule
 import com.film.bazar.profile.helpsupport.writeus.WriteToUsModule
@@ -41,4 +42,7 @@ abstract class ProfileProvider {
 
     @ContributesAndroidInjector(modules = [ConfirmationBottomSheetModule::class])
     abstract fun provideConfirmationBottomSheetFragment(): ConfirmationBottomSheetFragment
+
+    @ContributesAndroidInjector
+    abstract fun provideChatFragment() : ChatFragment
 }

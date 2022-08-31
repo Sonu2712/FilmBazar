@@ -12,6 +12,7 @@ import kotlin.annotation.AnnotationRetention.SOURCE
     NavigationConstants.NAVIGATE_TO_NOTIFICATION_DETAIL,
     NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT,
+    NavigationConstants.NAVIGATE_TO_CHAT_WITH_US_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT,
     NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT,
@@ -38,6 +39,7 @@ annotation class NavigationConstants {
 
         const val NAVIGATE_TO_PROFILE_FRAGMENT = "profile"
         const val NAVIGATE_TO_EDIT_PROFILE_FRAGMENT = "editprofile"
+        const val NAVIGATE_TO_CHAT_WITH_US_FRAGMENT = "chatwithus"
 
         const val NAVIGATE_TO_HELP_SUPPORT_FRAGMENT = "helpsupport"
         const val NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT = "helppaymentrefund"

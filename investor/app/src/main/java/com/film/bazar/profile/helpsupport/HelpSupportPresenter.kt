@@ -43,5 +43,18 @@ class HelpSupportPresenter @Inject constructor(
                 screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT, true)
             }
             .addTo(disposable)
+
+        view.onCallClicked()
+            .subscribe {
+                view.callToTradePopup()
+            }.addTo(disposable)
+
+        view.onChatClicked()
+            .subscribe {
+                screenNavigator.openPage(
+                    NavigationConstants.NAVIGATE_TO_CHAT_WITH_US_FRAGMENT,
+                    true
+                )
+            }.addTo(disposable)
     }
 }

@@ -7,7 +7,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMobile"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -24,12 +24,14 @@
             android:gravity="start"
             android:hint="Mobile number"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="89999999" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmailId"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -46,12 +48,14 @@
             android:gravity="start"
             android:hint="Email ID"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="milindh24@gmail.com" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPanNumber"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,12 +72,14 @@
             android:gravity="start"
             android:hint="PAN no."
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="AFJPH6357H" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilAddress"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -91,18 +97,21 @@
             android:gravity="start"
             android:hint="Address"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="001, 15-A, Aarti, Sevenstar colony, Gokuldham,
 Goregaon (E), Mumbai - 400063" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnSave"
+        style="@style/Widget.MoslTheme.PrimaryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_large"
         android:text="Save"
-        app:layout_constraintStart_toStartOf="@+id/tilAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tilAddress"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tilAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

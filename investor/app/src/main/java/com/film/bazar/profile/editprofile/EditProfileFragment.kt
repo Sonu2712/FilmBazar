@@ -71,9 +71,9 @@ class EditProfileFragment : MOSLCommonFragment(), EditProfileView {
 
     fun FragmentEditProfileBinding.bindData(userProfile: UserProfile) {
         edtMobile.setText(userProfile.mNumber)
-        edtEmailId.setText(userProfile.mNumber)
-        edtPanNumber.setText(userProfile.mNumber)
-        edtAddress.setText(userProfile.mNumber)
+        edtEmailId.setText(userProfile.emailId)
+        edtPanNumber.setText(userProfile.panNumber)
+        edtAddress.setText(userProfile.address)
     }
 
     override fun getInitialState(): ContainerState {

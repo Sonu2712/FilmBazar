@@ -64,4 +64,12 @@
         <item name="android:textColor">@color/action_text_color</item>
     </style>
 
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">14sp</item>
+        <item name="boxStrokeColor">@color/film_text_input_layout_outlined_stroke_color</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">@color/film_mtrl_indicator_text_color</item>
+    </style>
+
 </resources>

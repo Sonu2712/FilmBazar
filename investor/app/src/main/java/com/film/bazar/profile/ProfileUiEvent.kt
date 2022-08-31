@@ -5,5 +5,8 @@ sealed class ProfileUiEvent {
         val id: Int,
         val label : String
     ) : ProfileUiEvent()
+
+    object CallUS : ProfileUiEvent()
+    object ChatWithUS : ProfileUiEvent()
     object LogoutConfirmed : ProfileUiEvent()
 }

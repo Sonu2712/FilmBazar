@@ -14,6 +14,7 @@
         android:layout_marginEnd="@dimen/margin_normal"
         android:text="What do you need help with?"
         android:textColor="#282828"
+        android:textStyle="bold"
         android:textSize="@dimen/text_size_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

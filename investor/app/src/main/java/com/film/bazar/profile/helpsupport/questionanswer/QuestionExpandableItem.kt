@@ -38,7 +38,7 @@ class QuestionExpandableItem(
 
     private fun setIcon() {
         val correctIcon: Int = if (isExpanded)
-            R.drawable.ic_arrow_up else R.drawable.ic_spinner_arrow_down_dark
+            R.drawable.ic_arrow_up_gray else R.drawable.ic_arrow_down_gray
         binding?.view?.isVisible = !isExpanded
         binding?.imageExp?.let {
             it.visibility = View.VISIBLE

@@ -7,7 +7,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilBankName"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -24,12 +24,14 @@
             android:gravity="start"
             android:hint="Bank name"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="HDFC Bank" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilAccHolderName"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -46,12 +48,14 @@
             android:gravity="start"
             android:hint="Account holder name"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="Milind Anand Haldankar" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilAccountNumber"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,12 +72,14 @@
             android:gravity="start"
             android:hint="Account number"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="001246567903290" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilIfscCode"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -91,17 +97,20 @@
             android:gravity="start"
             android:hint="IFSC code"
             android:padding="@dimen/padding_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
             tools:text="HDFC000012" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnSave"
+        style="@style/Widget.MoslTheme.PrimaryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_large"
         android:text="Save"
-        app:layout_constraintStart_toStartOf="@+id/tilIfscCode"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tilIfscCode"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tilIfscCode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

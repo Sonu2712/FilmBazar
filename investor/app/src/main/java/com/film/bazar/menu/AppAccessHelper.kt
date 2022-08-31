@@ -23,6 +23,7 @@ object AppAccessHelper : PageAccessHelper() {
 
             NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_EDIT_PROFILE_FRAGMENT -> true
+            NavigationConstants.NAVIGATE_TO_CHAT_WITH_US_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_HELP_SUPPORT_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_PAYMENT_REFUND_FRAGMENT -> true
             NavigationConstants.NAVIGATE_TO_WRITE_US_FRAGMENT -> true

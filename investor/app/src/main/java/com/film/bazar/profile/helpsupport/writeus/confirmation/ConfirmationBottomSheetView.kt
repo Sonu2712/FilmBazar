@@ -26,7 +26,7 @@ class ConfirmationBottomSheetPresenter @Inject constructor(
     override fun start() {
         view.onSubmitClicked()
             .subscribe {
-                screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_PROFILE_FRAGMENT)
+                screenNavigator.openPage(NavigationConstants.NAVIGATE_TO_HOME)
             }.addTo(disposable)
 
         view.onCloseClicked()
