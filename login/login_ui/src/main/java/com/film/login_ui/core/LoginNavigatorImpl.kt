@@ -38,11 +38,7 @@ class LoginNavigatorImpl @Inject constructor(
     }
 
     override fun login(userType: UserType) {
-        if (userType.isGuest) {
-            openPage(LoginConstants.NAVIGATE_TO_GUEST_LOGIN, false)
-        } else {
-            openPage(LoginConstants.NAVIGATE_TO_CUSTOMER_LOGIN, false)
-        }
+        openPage(LoginConstants.NAVIGATE_TO_CUSTOMER_LOGIN, false)
     }
 
     override fun goBack() {

@@ -15,12 +15,6 @@ object LoginUiMapper {
             LoginConstants.NAVIGATE_TO_OPEN_ACCOUNT -> {
                 LoginType.OpenAccount()
             }
-            LoginConstants.NAVIGATE_TO_FORGOT_PASSWORD -> {
-                LoginType.Forgot()
-            }
-            LoginConstants.NAVIGATE_TO_GUEST_LOGIN -> {
-                LoginType.Guest()
-            }
             else -> LoginType.Customer()
         }
     }

@@ -69,13 +69,6 @@ class UrlNavigatorImpl @Inject constructor(
     private fun Uri.parseDeepLink(): NavigationRequest {
 //        Timber.d("Last Path Segment :$lastPathSegment")
         val request = when (lastPathSegment) {
-            LoginConstants.NAVIGATE_TO_EKYC_HELPER -> {
-                val deepLinkString = this.toString().split("&source")[0]
-                NavigationRequest(
-                    pageId = lastPathSegment!!,
-                    data = OpenAccountDeepLinkNavigationEntry(deepLinkString)
-                )
-            }
 
             LoginConstants.NAVIGATE_TO_OPEN_ACCOUNT -> {
                 NavigationRequest(

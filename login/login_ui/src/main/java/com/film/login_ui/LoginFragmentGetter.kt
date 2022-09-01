@@ -3,6 +3,7 @@ package com.film.login_ui
 import com.film.bazar.coreui.appcoreui.base.BaseFragment
 import com.film.login_ui.base.LoginBaseFragment
 import com.film.login_ui.customer.CustomerLoginFragment
+import com.film.login_ui.forgotpassword.ForgotPasswordBottomSheetFragment
 import com.film.login_ui.nav.LoginConstants
 
 object LoginFragmentGetter {
@@ -19,8 +20,6 @@ object LoginFragmentGetter {
     fun isHandled(@LoginConstants pageId: String): Boolean {
         return when (pageId) {
             LoginConstants.NAVIGATE_TO_CUSTOMER_LOGIN -> true
-            LoginConstants.NAVIGATE_TO_GUEST_LOGIN -> true
-            LoginConstants.NAVIGATE_TO_FORGOT_PASSWORD -> true
             LoginConstants.NAVIGATE_TO_LOGIN_BASE -> true
             LoginConstants.NAVIGATE_TO_OPEN_ACCOUNT -> true
             else -> false

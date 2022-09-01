@@ -13,7 +13,6 @@ interface LoginView : BaseView {
     fun onDoneClicked(): Observable<Int>
     fun registerLoginEvent()
     fun onSubmitClicked() : Observable<LoginSubmit>
-    fun onForgotPasswordClicked(): Observable<Unit>
     fun getUserName(): String
     fun getClientCode() : String
     fun getPassword(): String
@@ -22,6 +21,9 @@ interface LoginView : BaseView {
     fun renderLogin(uiModel: UiModel<LoginResponse>)
     fun renderProceed(uiModel: UiModel<String>)
     fun postNavigationEvent(type: LoginType)
+
+    fun onForgotPasswordClicked(): Observable<Unit>
+    fun showForgotPasswordBottomSheet()
 }
 
 data class LoginPageData(

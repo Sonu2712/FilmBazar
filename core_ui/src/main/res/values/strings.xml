@@ -1,5 +1,5 @@
 <resources>
-    <string name="btn_lbl_resend_otp">Resend OTP</string>
+    <string name="btn_lbl_resend_otp"><u>Resend</u></string>
     <string name="retry_after">Retry After : %ds</string>
     <string name="attempts_remaining">Attempts Remaining: : %d</string>
 
@@ -7,4 +7,5 @@
 
     <string name="button_label_retry">Retry</string>
     <string name="button_label_ok">OK</string>
+    <string name="text_label_mail"><u>moremipsumloremipsum@gmail.com</u></string>
 </resources>

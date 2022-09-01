@@ -16,6 +16,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.film.login.data.model.LoginResponse
@@ -41,6 +42,7 @@ import com.film.annotations.FromForgotPassword
 import com.film.annotations.GuestSignUp
 import com.film.annotations.PreLogin
 import com.film.bazar.appusercore.model.UserType
+import com.film.login_ui.forgotpassword.ForgotPasswordBottomSheetFragment
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.kotlin.ofType
 import io.reactivex.rxjava3.subjects.PublishSubject
@@ -283,6 +285,15 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
         uiModel.onSuccess {
             clearPref()
         }
+    }
+
+    override fun showForgotPasswordBottomSheet() {
+        ForgotPasswordBottomSheetFragment()
+            .apply {
+                isCancelable = false
+                arguments = bundleOf()
+            }
+            .show(childFragmentManager, "ForgotPasswordBottomSheetFragment")
     }
 
 }

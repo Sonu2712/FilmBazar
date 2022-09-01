@@ -135,7 +135,7 @@ class AutoReadOTPView(context: Context, @Nullable attrs: AttributeSet) :
             .subscribe { sec ->
                 val remainingSec = counter - sec
                 binding.tvTimer.apply {
-                    text = context.getString(R.string.retry_after, remainingSec)
+                    text = remainingSec.toString()
                 }
                 binding.tvTimer.visibility = if (remainingSec > 0) View.VISIBLE else View.GONE
             }.addTo(disposable)
@@ -183,7 +183,7 @@ class AutoReadOTPView(context: Context, @Nullable attrs: AttributeSet) :
     }
 
     private fun toggleResend(enable: Boolean) {
-        binding.tvResendOTP.isEnabled = enable
+        binding.tvResendOTP.isVisible = enable
     }
 
     fun destroyView() {

@@ -49,8 +49,7 @@ class LoginPresenter @Inject constructor(
             }.addTo(disposable)
 
         view.onForgotPasswordClicked()
-            .map { LoginType.Forgot() }
-            .subscribe(view::postNavigationEvent)
+            .subscribe { view.showForgotPasswordBottomSheet() }
             .addTo(disposable)
     }
 
