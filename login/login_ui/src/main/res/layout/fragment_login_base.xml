@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -63,7 +63,7 @@
             android:id="@+id/cdView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             app:cardCornerRadius="10dp"
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,13 +71,111 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lyFilm">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
             <FrameLayout
                 android:id="@+id/flLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:id="@+id/lyOtherOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginStart="@dimen/padding_large"
+                    android:layout_marginEnd="@dimen/padding_large"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:layout_marginTop="@dimen/padding_large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="1dp"
+                            android:background="#D9D9D9" />
+
+                        <TextView
+                            android:id="@+id/signWithGoggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_large"
+                            android:layout_marginEnd="@dimen/margin_large"
+                            android:text="Sign in with Google"
+                            android:textColor="#838383"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="1dp"
+                            android:background="#D9D9D9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/bg_rounded"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_google" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:text="Continue with Google"
+                            android:textColor="#282828"
+                            android:textSize="@dimen/text_size_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_extra_large"
+                        android:layout_marginBottom="@dimen/margin_extra_large"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Don’t have an account?"
+                            android:textColor="#282828"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:text="@string/text_label_register"
+                            android:textColor="#457B9D"
+                            android:textSize="@dimen/text_size_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

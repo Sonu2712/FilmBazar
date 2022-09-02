@@ -6,13 +6,30 @@ import com.film.login.data.model.LoginResponse
 import com.film.login_ui.LoginType
 import com.film.login_ui.verifypan.LoginUiEvent.LoginSubmit
 import com.film.bazar.appusercore.model.UserType
+import com.film.bazar.coreui.views.AutoReadOTPEvents
+import com.film.login_ui.verifypan.LoginUiEvent
 import io.reactivex.rxjava3.core.Observable
 
 interface LoginView : BaseView {
+    fun isLoginWithIdPassword() : Boolean
+    fun onEmailIdChanged() : Observable<String>
+    fun onPasswordChanged() : Observable<String>
+    fun toggleLoginButton(isEnabled : Boolean)
+    fun toggleViewForResend(isOtpFlow : Boolean)
+
+    fun onResendOtpClicked(): Observable<AutoReadOTPEvents.ResendOTPEvent>
+    fun getEmailId() : String
+    fun renderResendOtp()
+
+    fun onOtpChanged() : Observable<AutoReadOTPEvents.ToggleSubmitButtonEvent>
+
     fun onLoginClicked(): Observable<Unit>
     fun onDoneClicked(): Observable<Int>
     fun registerLoginEvent()
     fun onSubmitClicked() : Observable<LoginSubmit>
+    fun onRequestOtpClicked() : Observable<LoginUiEvent.LoginRequestOtp>
+    fun onVerifyOtpClicked() : Observable<LoginUiEvent.LoginVerifyOtp>
+    fun getOtp() : String
     fun getUserName(): String
     fun getClientCode() : String
     fun getPassword(): String

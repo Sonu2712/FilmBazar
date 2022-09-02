@@ -42,7 +42,10 @@ import com.film.annotations.FromForgotPassword
 import com.film.annotations.GuestSignUp
 import com.film.annotations.PreLogin
 import com.film.bazar.appusercore.model.UserType
+import com.film.bazar.coreui.views.AutoReadOTPEvents
+import com.film.bazar.coreui.views.ResendData
 import com.film.login_ui.forgotpassword.ForgotPasswordBottomSheetFragment
+import com.jakewharton.rxbinding4.widget.textChanges
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.kotlin.ofType
 import io.reactivex.rxjava3.subjects.PublishSubject
@@ -80,6 +83,9 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
 
     lateinit var selectedView: TextView
     lateinit var colorStateList: ColorStateList
+    private var isFromIdPassword = true
+    private var isFromRequestOtp = false
+    private var isFromVerifyOtp = false
 
     override fun getLayout(): Int {
         return R.layout.fragment_customer_login
@@ -134,6 +140,7 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+        binding.autoReadOtp.visibility = View.GONE
         if (v.id == R.id.item1) {
             binding.toggleButtonGroup.item2.background = null
             selectedView.isVisible = true
@@ -145,20 +152,43 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
                         R.color.film_blue_light
                     )
                 )
+                autoReadOtp.clearOTP()
                 toggleButtonGroup.item2.setTextColor(colorStateList)
                 tilClientCode.visibility = View.VISIBLE
+                edClientCode.hint = "Email ID"
+                tilPassword.visibility = View.VISIBLE
                 txtForgotPass.visibility = View.VISIBLE
                 btnLogin.text = "Login"
+                isFromIdPassword = true
+                isFromRequestOtp = false
+                isFromVerifyOtp = false
             }
-            //uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(true))
         } else {
             binding.apply {
                 setLimitView(false)
+                autoReadOtp.clearOTP()
                 tilClientCode.visibility = View.VISIBLE
+                edClientCode.hint = "Password"
+                tilPassword.visibility = View.GONE
                 txtForgotPass.visibility = View.GONE
                 btnLogin.text = "Request OTP"
+                isFromIdPassword = false
+                isFromRequestOtp = true
+                isFromVerifyOtp = false
             }
-            //uiEventSubject.onNext(OrderPreviewEvent.OnMarketSwitchChanged(false))
+        }
+    }
+
+    override fun toggleViewForResend(isOtpFlow: Boolean) {
+        binding.apply {
+            autoReadOtp.visibility = View.VISIBLE
+            tilClientCode.visibility = View.GONE
+            btnLogin.text = "Verify OTP"
+            btnLogin.isEnabled = false
+            binding.autoReadOtp.renderSubmit(30)
+            isFromIdPassword = false
+            isFromRequestOtp = false
+            isFromVerifyOtp = true
         }
     }
 
@@ -225,13 +255,27 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
     }
 
     override fun registerLoginEvent() {
-        if (fromForgotPassPref.get())
-            loginUiEvents.onNext(LoginUiEvent.LoginVerify)
-        else
+        if (isFromIdPassword)
             loginUiEvents.onNext(LoginUiEvent.LoginSubmit)
+        if (!isFromIdPassword)
+            loginUiEvents.onNext(LoginUiEvent.LoginRequestOtp)
+        if (isFromVerifyOtp)
+            loginUiEvents.onNext(LoginUiEvent.LoginVerifyOtp)
     }
 
     override fun onSubmitClicked(): Observable<LoginUiEvent.LoginSubmit> {
+        return loginUiEvents.ofType()
+    }
+
+    override fun onOtpChanged(): Observable<AutoReadOTPEvents.ToggleSubmitButtonEvent> {
+        return binding.autoReadOtp.autoReadOTPEvents.ofType()
+    }
+
+    override fun onVerifyOtpClicked(): Observable<LoginUiEvent.LoginVerifyOtp> {
+        return loginUiEvents.ofType()
+    }
+
+    override fun onRequestOtpClicked(): Observable<LoginUiEvent.LoginRequestOtp> {
         return loginUiEvents.ofType()
     }
 
@@ -253,6 +297,10 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
 
     override fun getClientCode(): String {
         return ""
+    }
+
+    override fun getOtp(): String {
+        return binding.autoReadOtp.getOTP()
     }
 
     override fun setRetainedUser(user: String) {
@@ -285,6 +333,39 @@ class CustomerLoginFragment : BaseFragment(), LoginView, View.OnClickListener {
         uiModel.onSuccess {
             clearPref()
         }
+    }
+
+    override fun onEmailIdChanged(): Observable<String> {
+        return binding.edClientCode.textChanges().map { it.toString() }
+    }
+
+    override fun onPasswordChanged(): Observable<String> {
+        return binding.edClientPass.textChanges().map { it.toString() }
+    }
+
+    override fun toggleLoginButton(isEnabled: Boolean) {
+        binding.btnLogin.isEnabled = isEnabled
+    }
+
+    override fun isLoginWithIdPassword(): Boolean {
+        return isFromIdPassword
+    }
+
+    override fun onResendOtpClicked(): Observable<AutoReadOTPEvents.ResendOTPEvent> {
+        return binding.autoReadOtp.autoReadOTPEvents.ofType()
+    }
+
+    override fun getEmailId(): String {
+        return ""
+    }
+
+    override fun renderResendOtp() {
+        binding.autoReadOtp.renderResend(
+            ResendData(
+                resendCounter = 1,
+                retryAfter = 30
+            ), false
+        )
     }
 
     override fun showForgotPasswordBottomSheet() {

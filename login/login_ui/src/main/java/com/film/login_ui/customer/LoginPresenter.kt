@@ -13,6 +13,7 @@ import com.film.annotations.AppShortCutId
 import com.film.bazar.appuser.repository.UserManager
 import com.film.bazar.appusercore.model.UserType
 import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.functions.BiFunction
 import javax.inject.Inject
 
 class LoginPresenter @Inject constructor(
@@ -31,12 +32,60 @@ class LoginPresenter @Inject constructor(
             view.setRetainedUser(loginInfo.userCode)
         }
 
+        val emailIdChangedObs = view.onEmailIdChanged().share()
+
+        Observable.combineLatest(emailIdChangedObs.filter { view.isLoginWithIdPassword() },
+            view.onPasswordChanged(), BiFunction { t1 : String, t2 : String -> t1 to t2 })
+            .map { it.first.length > 5 && it.second.length > 5 }
+            .subscribe(view::toggleLoginButton)
+            .addTo(disposable)
+
+        view.onResendOtpClicked()
+            .map { view.getEmailId() }
+            .subscribe {
+                view.renderResendOtp()
+            }.addTo(disposable)
+
+        view.onOtpChanged()
+            .subscribe {
+                view.toggleLoginButton(it.toggle)
+            }.addTo(disposable)
+
+        emailIdChangedObs
+            .map { !view.isLoginWithIdPassword() && it.length > 5 }
+            .subscribe(view::toggleLoginButton)
+            .addTo(disposable)
+
         Observable.merge(view.onLoginClicked(), view.onDoneClicked())
             .subscribe { view.registerLoginEvent() }
             .addTo(disposable)
 
+        view.onRequestOtpClicked()
+            .subscribe { view.toggleViewForResend(true) }
+            .addTo(disposable)
+
         view.onSubmitClicked()
             .map { view.getLoginFormInput() }
+            .switchMap { input ->
+                LoginValidator.validate(input)
+                    .flatMap(loginRepository::login)
+                    .compose(applyUiModel())
+            }.subscribe { it ->
+                view.renderLogin(it)
+                it.onSuccess {
+                    navigator.openHome()
+                }
+            }.addTo(disposable)
+
+        view.onVerifyOtpClicked()
+            .map { view.getOtp() }
+            .filter { it.length > 4}
+            .map { view.getLoginFormInput().copy(
+                userType = UserType.from(UserType.TRADING.label),
+                userName = "ekjfsevkbsvsb",
+                clientCode = "dvdsvsvs",
+                password = "svddsvsv"
+            ) }
             .switchMap { input ->
                 LoginValidator.validate(input)
                     .flatMap(loginRepository::login)

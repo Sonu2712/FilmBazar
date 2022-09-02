@@ -4,5 +4,6 @@ sealed class LoginUiEvent {
     object Authenticated : LoginUiEvent()
     object OnResume : LoginUiEvent()
     object LoginSubmit : LoginUiEvent()
-    object LoginVerify : LoginUiEvent()
+    object LoginRequestOtp : LoginUiEvent()
+    object LoginVerifyOtp : LoginUiEvent()
 }
