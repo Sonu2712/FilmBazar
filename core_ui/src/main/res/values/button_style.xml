@@ -25,6 +25,12 @@
         <item name="android:padding">@dimen/padding_medium</item>
     </style>
 
+    <style name="Widget.MoslTheme.PrimaryButtonToggle" parent="Widget.MoslTheme.PrimaryButton">
+        <item name="backgroundTint">@color/confirm_color_selector</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
     <style name="Widget.MoslTheme.PrimaryButtonOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textAppearanceButton">@style/ButtonTextApperance</item>
         <item name="backgroundTint">?colorSurface</item>

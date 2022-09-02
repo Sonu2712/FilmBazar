@@ -14,6 +14,7 @@ import com.film.login_ui.R
 import com.film.login_ui.databinding.FragmentForgotBottomsheetBinding
 import com.film.login_ui.helper.emojiFilter
 import com.jakewharton.rxbinding4.view.clicks
+import com.jakewharton.rxbinding4.widget.textChanges
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
@@ -30,6 +31,11 @@ class ForgotPasswordBottomSheetFragment : DaggerBaseBottomSheetFragment(), Forgo
     override fun setupView(view: View) {
         binding = FragmentForgotBottomsheetBinding.bind(view)
         presenter.start()
+        binding.apply {
+            btnDone.isEnabled = false
+            btnVerfiy.isEnabled = false
+            btnResetDone.isEnabled = false
+        }
     }
 
     override fun setupView(isFromForgotPassword: Boolean) {
@@ -119,6 +125,35 @@ class ForgotPasswordBottomSheetFragment : DaggerBaseBottomSheetFragment(), Forgo
         dismiss()
         Toast.makeText(requireContext(), "Your password has been changed successfully", Toast.LENGTH_LONG).show()
     }
+
+    override fun onEmailIdChanged(): Observable<Int> {
+        return binding.edClientCode.textChanges().map { it.length }
+    }
+
+    override fun toggleDoneButton(isEnabled: Boolean) {
+        binding.btnDone.isEnabled = isEnabled
+    }
+
+    override fun onOtpChanged(): Observable<AutoReadOTPEvents.ToggleSubmitButtonEvent> {
+        return binding.autoReadOtp.autoReadOTPEvents.ofType()
+    }
+
+    override fun toggleVerifyButton(isEnabled: Boolean) {
+        binding.btnVerfiy.isEnabled = isEnabled
+    }
+
+    override fun onPasswordChanged(): Observable<String> {
+        return binding.edClientPass.textChanges().map { it.toString() }
+    }
+
+    override fun onConfirmPasswordChanged(): Observable<String> {
+        return binding.edClientConfirmPass.textChanges().map { it.toString() }
+    }
+
+    override fun toggleRestButton(isEnabled: Boolean) {
+        binding.btnResetDone.isEnabled = isEnabled
+    }
+
 
     override fun dismissBottomSheet() {
         dismiss()

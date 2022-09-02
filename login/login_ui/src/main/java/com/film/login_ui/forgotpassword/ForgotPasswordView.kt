@@ -9,16 +9,24 @@ interface ForgotPasswordView : BaseView {
     fun dismissBottomSheet()
 
     fun onDoneClicked() : Observable<Unit>
+    fun onEmailIdChanged() : Observable<Int>
+    fun toggleDoneButton(isEnabled : Boolean)
     fun renderDone(isVerifyOtp : Boolean)
 
     fun onVerifyClicked() : Observable<Unit>
+    fun onOtpChanged() : Observable<AutoReadOTPEvents.ToggleSubmitButtonEvent>
+    fun toggleVerifyButton(isEnabled: Boolean)
     fun renderVerify(isFromReset : Boolean)
 
-    fun onResetDoneClicked() : Observable<Unit>
-    fun renderResetDone()
     fun onResendOtpClicked(): Observable<AutoReadOTPEvents.ResendOTPEvent>
     fun getEmailId() : String
     fun renderResendOtp()
+
+    fun onResetDoneClicked() : Observable<Unit>
+    fun onPasswordChanged() : Observable<String>
+    fun onConfirmPasswordChanged() : Observable<String>
+    fun toggleRestButton(isEnabled: Boolean)
+    fun renderResetDone()
 
     fun setupView(isFromForgotPassword : Boolean)
 }

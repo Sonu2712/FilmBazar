@@ -93,6 +93,9 @@
                 android:imeOptions="actionDone"
                 android:inputType="text|textCapCharacters"
                 android:maxLines="1"
+                android:textColor="#282828"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="hhhhhhhh@gmail.com"
                 android:minHeight="@dimen/min_height_client_code"
                 android:padding="@dimen/padding_medium" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,7 +125,7 @@
                 android:digits="@string/login_password_digits"
                 android:drawablePadding="@dimen/padding_medium"
                 android:hint="Password"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionNext"
                 android:inputType="text|textPassword|textNoSuggestions"
                 android:maxLines="1"
                 android:padding="@dimen/padding_medium"
@@ -155,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:digits="@string/login_password_digits"
                 android:drawablePadding="@dimen/padding_medium"
-                android:hint="Password"
+                android:hint="Confirm Password"
                 android:imeOptions="actionDone"
                 android:inputType="text|textPassword|textNoSuggestions"
                 android:maxLines="1"
@@ -181,7 +184,7 @@
 
         <Button
             android:id="@+id/btnDone"
-            style="@style/Widget.MoslTheme.PrimaryButton"
+            style="@style/Widget.MoslTheme.PrimaryButtonToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
@@ -194,7 +197,7 @@
 
         <Button
             android:id="@+id/btnVerfiy"
-            style="@style/Widget.MoslTheme.PrimaryButton"
+            style="@style/Widget.MoslTheme.PrimaryButtonToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
@@ -207,7 +210,7 @@
 
         <Button
             android:id="@+id/btnResetDone"
-            style="@style/Widget.MoslTheme.PrimaryButton"
+            style="@style/Widget.MoslTheme.PrimaryButtonToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"

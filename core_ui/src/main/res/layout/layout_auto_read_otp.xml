@@ -46,7 +46,10 @@
             android:inputType="number"
             android:maxLength="1"
             android:minHeight="48dp"
-            android:padding="@dimen/padding_medium" />
+            android:padding="@dimen/padding_medium"
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="1" />
 
         <EditText
             android:id="@+id/edOTP2"
@@ -63,7 +66,9 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:padding="@dimen/padding_medium"
-            android:theme="@style/Widget.MoslTheme.EditText.NumberInput" />
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="2" />
 
         <EditText
             android:id="@+id/edOTP3"
@@ -80,7 +85,9 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:padding="@dimen/padding_medium"
-            android:theme="@style/Widget.MoslTheme.EditText.NumberInput" />
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="3" />
 
         <EditText
             android:id="@+id/edOTP4"
@@ -97,7 +104,9 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:padding="@dimen/padding_medium"
-            android:theme="@style/Widget.MoslTheme.EditText.NumberInput" />
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="4" />
 
         <EditText
             android:id="@+id/edOTP5"
@@ -114,7 +123,9 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:padding="@dimen/padding_medium"
-            android:theme="@style/Widget.MoslTheme.EditText.NumberInput" />
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="5" />
 
         <EditText
             android:id="@+id/edOTP6"
@@ -130,7 +141,9 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:padding="@dimen/padding_medium"
-            android:theme="@style/Widget.MoslTheme.EditText.NumberInput" />
+            android:textStyle="bold"
+            android:theme="@style/Widget.MoslTheme.EditText.NumberInput"
+            tools:text="6" />
 
     </LinearLayout>
 
@@ -171,7 +184,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:visibility="gone"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
     </LinearLayout>
 
