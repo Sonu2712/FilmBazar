@@ -11,4 +11,5 @@ interface LoginNavigator : BaseNavigator {
     fun finish()
     fun openUrl(context: Context, url: String)
     fun navigateToMarkets()
+    fun openAnAccount()
 }

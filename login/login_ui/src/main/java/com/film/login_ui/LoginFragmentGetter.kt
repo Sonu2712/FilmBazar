@@ -5,6 +5,7 @@ import com.film.login_ui.base.LoginBaseFragment
 import com.film.login_ui.customer.CustomerLoginFragment
 import com.film.login_ui.forgotpassword.ForgotPasswordBottomSheetFragment
 import com.film.login_ui.nav.LoginConstants
+import com.film.login_ui.openanaccount.OpenAnAccountFragment
 
 object LoginFragmentGetter {
     @JvmStatic
@@ -12,6 +13,7 @@ object LoginFragmentGetter {
         return when (menuCode) {
             LoginConstants.NAVIGATE_TO_LOGIN_BASE -> LoginBaseFragment()
             LoginConstants.NAVIGATE_TO_CUSTOMER_LOGIN -> CustomerLoginFragment()
+            LoginConstants.NAVIGATE_TO_OPEN_ACCOUNT -> OpenAnAccountFragment()
             else -> null
         }
     }

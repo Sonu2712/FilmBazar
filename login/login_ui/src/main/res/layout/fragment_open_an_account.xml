@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintCircleRadius="@dimen/padding_medium">
+
+        <TextView
+            android:id="@+id/tvRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:paddingBottom="@dimen/padding_normal"
+            android:text="Registration"
+            android:textColor="#282828"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFullName"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            app:boxBackgroundColor="?colorSurface">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full name*"
+                android:imeOptions="actionNext"
+                android:inputType="text|textCapCharacters"
+                android:maxLines="1"
+                android:minHeight="@dimen/min_height_client_code"
+                android:padding="@dimen/padding_medium"
+                android:textColor="#282828"
+                android:textSize="@dimen/text_size_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailId"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
+            app:boxBackgroundColor="?colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilClientCode">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/login_password_digits"
+                android:drawablePadding="@dimen/padding_medium"
+                android:hint="Email ID*"
+                android:imeOptions="actionNext"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:maxLines="1"
+                android:padding="@dimen/padding_medium"
+                android:singleLine="true"
+                android:textColor="#282828"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMobileNumber"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
+            app:boxBackgroundColor="?colorSurface">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/login_password_digits"
+                android:drawablePadding="@dimen/padding_medium"
+                android:hint="Mobile number*"
+                android:imeOptions="actionNext"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:maxLines="1"
+                android:padding="@dimen/padding_medium"
+                android:singleLine="true"
+                android:textColor="#282828"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="#282828"
+            android:textSize="14sp"
+            app:boxBackgroundColor="?colorSurface"
+            app:passwordToggleDrawable="@drawable/selector_password_toggle"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#282828">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/login_password_digits"
+                android:drawablePadding="@dimen/padding_medium"
+                android:hint="Password*"
+                android:imeOptions="actionDone"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:maxLines="1"
+                android:padding="@dimen/padding_medium"
+                android:singleLine="true"
+                android:textColor="#282828"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:maxHeight="20dip"
+                android:minHeight="20dip"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/passwordStrength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:gravity="center_horizontal"
+                android:text="Weak" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDone"
+            style="@style/Widget.MoslTheme.PrimaryButtonToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:text="Register" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

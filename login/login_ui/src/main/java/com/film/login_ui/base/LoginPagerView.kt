@@ -6,4 +6,6 @@ import io.reactivex.rxjava3.core.Observable
 
 interface LoginPagerView : BaseView {
     fun onActionSelected(loginType: LoginType)
+    fun onRegisterClicked() : Observable<Unit>
+    fun postNavigationEvent(type: LoginType)
 }

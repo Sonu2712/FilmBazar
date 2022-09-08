@@ -110,4 +110,8 @@ class LoginNavigatorImpl @Inject constructor(
         activity.setResult(MarketsEquityRequested)
         activity.finish()
     }
+
+    override fun openAnAccount() {
+        openPage(LoginConstants.NAVIGATE_TO_OPEN_ACCOUNT, true)
+    }
 }

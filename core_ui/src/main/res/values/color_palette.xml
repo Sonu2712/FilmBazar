@@ -40,4 +40,7 @@
     <color name="film_text_color_background">#7B7B7B</color>
     <color name="film_text_color_background_1">#CC060606</color>
 
+    <color name="fil_passowrd_medim">#FF891D</color>
+    <color name="fil_passowrd_good">#FAAD14</color>
+
 </resources>

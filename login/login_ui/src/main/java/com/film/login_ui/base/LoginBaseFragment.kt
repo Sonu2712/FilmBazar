@@ -12,6 +12,9 @@ import com.film.login_ui.core.LoginActivity
 import com.film.login_ui.customer.CustomerLoginFragment
 import com.film.login_ui.databinding.FragmentLoginBaseBinding
 import com.film.login_ui.nav.LoginConstants
+import com.film.login_ui.openanaccount.OpenAnAccountFragment
+import com.jakewharton.rxbinding4.view.clicks
+import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
@@ -61,16 +64,21 @@ class LoginBaseFragment : BaseFragment(), LoginPagerView, LoginEventProvider {
     private fun render(pair: Pair<LoginType, Pair<LoginPageDataModel, LoginPageDataModel>>) {
         loginType = pair.first
         loadFragment(pair.first.id)
+       // loadActions(pair.second)
     }
+
+   /* private fun loadActions(pair: Pair<LoginPageDataModel, LoginPageDataModel>) {
+        binding.tvAccount.setText(pair.first.key)
+    }*/
 
     private fun loadFragment(pageId: Int) {
         val fragment: BaseFragment = when (pageId) {
             0 -> CustomerLoginFragment().apply {
                 this.arguments = this@LoginBaseFragment.arguments
             }
-            1 -> CustomerLoginFragment()
+            1 -> OpenAnAccountFragment()
             2 -> CustomerLoginFragment()
-            3 -> CustomerLoginFragment()
+            3 -> OpenAnAccountFragment()
             else -> CustomerLoginFragment()
         }
         val fragmentTransaction = childFragmentManager.beginTransaction()
@@ -86,6 +94,14 @@ class LoginBaseFragment : BaseFragment(), LoginPagerView, LoginEventProvider {
             navigation.onNext(LoginType.Customer())
         } // Setting First Page
         return true
+    }
+
+    override fun onRegisterClicked(): Observable<Unit> {
+        return binding.lyRegister.clicks()
+    }
+
+    override fun postNavigationEvent(type: LoginType) {
+        navigation.onNext(loginType)
     }
 
     override fun onActionSelected(loginType: LoginType) {

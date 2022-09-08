@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintCircleRadius="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/ic_close_black" />
+
+        <TextView
+            android:id="@+id/tvVerification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:paddingBottom="@dimen/padding_normal"
+            android:text="Verification"
+            android:textColor="#282828"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.film.bazar.coreui.views.AutoReadOTPView
+            android:id="@+id/autoReadOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            style="@style/Widget.MoslTheme.PrimaryButtonToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:text="Verify OTP" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>
